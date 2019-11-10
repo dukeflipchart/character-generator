@@ -1,5 +1,5 @@
 {
-    "Gender": [
+    "gender": [
         {
             "name": "Cis Male",
             "weight": 20
@@ -19,9 +19,13 @@
         {
             "name": "Agender",
             "weight": 1
+        },
+        {
+            "name": "Genderfluid",
+            "weight": 1
         }
     ],
-    "Sexuality": [
+    "sexuality": [
         {
             "name": "Heterosexual",
             "weight": 20
@@ -39,7 +43,7 @@
             "weight": 1
         }
     ],
-    "Ancestry": [
+    "ancestry": [
         {
             "name": "Varene",
             "weight": 10
@@ -49,7 +53,7 @@
             "weight": 10
         }
     ],
-    "Age": [
+    "age": [
         {
             "name": "20s",
             "weight": 10
