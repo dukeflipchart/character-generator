@@ -1,0 +1,62 @@
+{
+    "Gender": [
+        {
+            "name": "Cis Male",
+            "weight": 20
+        },
+        {
+            "name": "Cis Female",
+            "weight": 20
+        },
+        {
+            "name": "Trans Male",
+            "weight": 1
+        },
+        {
+            "name": "Trans Female",
+            "weight": 1
+        },
+        {
+            "name": "Agender",
+            "weight": 1
+        }
+    ],
+    "Sexuality": [
+        {
+            "name": "Heterosexual",
+            "weight": 20
+        },
+        {
+            "name": "Homosexual",
+            "weight": 20
+        },
+        {
+            "name": "Bisexual",
+            "weight": 1
+        },
+        {
+            "name": "Asexual",
+            "weight": 1
+        }
+    ],
+    "Ancestry": [
+        {
+            "name": "Varene",
+            "weight": 10
+        },
+        {
+            "name": "Jaekoli",
+            "weight": 10
+        }
+    ],
+    "Age": [
+        {
+            "name": "20s",
+            "weight": 10
+        },
+        {
+            "name": "30s",
+            "weight": 30
+        }
+    ]
+}

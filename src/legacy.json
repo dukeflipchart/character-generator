@@ -1,0 +1,144 @@
+{
+    "Gender": [
+        {
+            "name": "Cis Male",
+            "weight": 20
+        },
+        {
+            "name": "Cis Female",
+            "weight": 20
+        },
+        {
+            "name": "Trans Male",
+            "weight": 1
+        },
+        {
+            "name": "Trans Female",
+            "weight": 1
+        },
+        {
+            "name": "Agender",
+            "weight": 1
+        }
+    ],
+    "Sexuality": [
+        {
+            "name": "Heterosexual",
+            "weight": 20
+        },
+        {
+            "name": "Homosexual",
+            "weight": 20
+        },
+        {
+            "name": "Bisexual",
+            "weight": 1
+        },
+        {
+            "name": "Asexual",
+            "weight": 1
+        }
+    ],
+    "Ancestry": [
+        { 
+            "name": "Mandarin", 
+            "weight": 93
+        },
+        { 
+            "name": "Spanish", 
+            "weight": 39
+        },
+        { 
+            "name": "English", 
+            "weight": 36
+        },
+        { 
+            "name": "Hindi", 
+            "weight": 29
+        },
+        { 
+            "name": "Arabic", 
+            "weight": 28
+        },
+        { 
+            "name": "Portuguese", 
+            "weight": 20
+        },
+        { 
+            "name": "Bengali", 
+            "weight": 20
+        },
+        { 
+            "name": "Russian", 
+            "weight": 16
+        },
+        { 
+            "name": "Japanese", 
+            "weight": 12
+        },
+        { 
+            "name": "Punjabi", 
+            "weight": 9
+        },
+        { 
+            "name": "German", 
+            "weight": 9
+        },
+        { 
+            "name": "Javanese", 
+            "weight": 8
+        },
+        { 
+            "name": "Wu", 
+            "weight": 8
+        },
+        { 
+            "name": "Malay", 
+            "weight": 7
+        },
+        { 
+            "name": "Telugu", 
+            "weight": 7
+        },
+        { 
+            "name": "Vietnamese", 
+            "weight": 7
+        },
+        { 
+            "name": "Korean", 
+            "weight": 7
+        },
+        { 
+            "name": "French", 
+            "weight": 7
+        },
+        { 
+            "name": "Marathi", 
+            "weight": 7
+        },
+        { 
+            "name": "Tamil", 
+            "weight": 7
+        },
+        { 
+            "name": "Urdu", 
+            "weight": 6
+        },
+        { 
+            "name": "Turkish", 
+            "weight": 6
+        },
+        { 
+            "name": "Italian", 
+            "weight": 5
+        },
+        { 
+            "name": "Yue", 
+            "weight": 5
+        },
+        { 
+            "name": "Thai", 
+            "weight": 5
+        }
+    ]
+}
