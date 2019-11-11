@@ -132,22 +132,15 @@ class CharacterSheet extends React.Component {
         }
     }
 
-    renderAttributes() {
-        let attributes = [];
-
-        for (let attribute in this.state.attributes) {
-            attributes.push(<Attribute name={attribute.name} onClick={this.handleClick(attribute.name)} value={attribute.value} />);
-            console.log('attribute: ' + attribute);
-        }
-
-        return attributes;
-    }
-
     render() {
-
         return (
             <div className="sheet">
-                {this.renderAttributes()}
+                {
+                    Object.values(this.state.attributes)
+                        .map(attribute => 
+                            <Attribute name={attribute.name} onClick={this.handleClick(attribute.name)} value={attribute.value} />
+                        )
+                }
             </div>
         );
     }
