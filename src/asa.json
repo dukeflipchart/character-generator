@@ -9,20 +9,16 @@
             "weight": 20
         },
         {
-            "name": "Trans Male",
-            "weight": 1
+            "name": "Trans Male"
         },
         {
-            "name": "Trans Female",
-            "weight": 1
+            "name": "Trans Female"
         },
         {
-            "name": "Agender",
-            "weight": 1
+            "name": "Agender"
         },
         {
-            "name": "Genderfluid",
-            "weight": 1
+            "name": "Genderfluid"
         }
     ],
     "sexuality": [
@@ -35,25 +31,31 @@
             "weight": 20
         },
         {
-            "name": "Bisexual",
-            "weight": 1
+            "name": "Bisexual"
         },
         {
-            "name": "Asexual",
-            "weight": 1
+            "name": "Asexual"
         }
     ],
     "ancestry": [
         {
-            "name": "Varene",
+            "name": "Varena",
             "weight": 10
         },
         {
-            "name": "Jaekoli",
+            "name": "Jaekol",
             "weight": 10
         }
     ],
     "age": [
+        {
+            "name": "Small child",
+            "weight": 1
+        },
+        {
+            "name": "Teenager",
+            "weight": 2
+        },
         {
             "name": "20s",
             "weight": 10
@@ -61,6 +63,354 @@
         {
             "name": "30s",
             "weight": 30
+        },
+        {
+            "name": "40s",
+            "weight": 20
+        },
+        {
+            "name": "50s",
+            "weight": 10
+        },
+        {
+            "name": "60s",
+            "weight": 5
+        },
+        {
+            "name": "70s",
+            "weight": 2
+        },
+        {
+            "name": "80s",
+            "weight": 1
+        },
+        {
+            "name": "90s",
+            "weight": 1
         }
-    ]
+    ],
+    "givenName": {
+        "Varena": {
+            "Male": [
+                {
+                    "name": "Algirdas"
+                },
+                {
+                    "name": "Domas"
+                },
+                {
+                    "name": "Erikas"
+                },
+                {
+                    "name": "Ignas"
+                },
+                {
+                    "name": "Jurgis"
+                },
+                {
+                    "name": "Kajus"
+                },
+                {
+                    "name": "Laurynas"
+                },
+                {
+                    "name": "Linas"
+                },
+                {
+                    "name": "Mantas"
+                },
+                {
+                    "name": "Ramunas"
+                },
+                {
+                    "name": "Titas"
+                },
+                {
+                    "name": "Vincas"
+                },
+                {
+                    "name": "Visvaldas"
+                }
+            ],
+            "Female": [
+                {
+                    "name": "Aiste"
+                },
+                {
+                    "name": "Ausra"
+                },
+                {
+                    "name": "Birute"
+                },
+                {
+                    "name": "Daiva"
+                },
+                {
+                    "name": "Egle"
+                },
+                {
+                    "name": "Estera"
+                },
+                {
+                    "name": "Giedre"
+                },
+                {
+                    "name": "Katre"
+                },
+                {
+                    "name": "Lina"
+                },
+                {
+                    "name": "Rasa"
+                },
+                {
+                    "name": "Ruta"
+                },
+                {
+                    "name": "Saule"
+                },
+                {
+                    "name": "Vilte"
+                },
+                {
+                    "name": "Vytaute"
+                }
+            ],
+            "Agender": [
+                {
+                    "name": "Pieva"
+                },
+                {
+                    "name": "Menulis"
+                },
+                {
+                    "name": "Suoras"
+                },
+                {
+                    "name": "Laimingas"
+                },
+                {
+                    "name": "Shvelnus"
+                },
+                {
+                    "name": "Upelis"
+                }
+            ]
+        },
+        "Jaekol": {
+            "Male": [
+                {
+                    "name": "Alister"
+                },
+                {
+                    "name": "Aodhan"
+                },
+                {
+                    "name": "Cailean"
+                },
+                {
+                    "name": "Cinaed"
+                },
+                {
+                    "name": "Cormag"
+                },
+                {
+                    "name": "Deorsa"
+                },
+                {
+                    "name": "Duff"
+                },
+                {
+                    "name": "Gawain"
+                },
+                {
+                    "name": "Greer"
+                },
+                {
+                    "name": "Iagan"
+                },
+                {
+                    "name": "Irvine"
+                },
+                {
+                    "name": "Keir"
+                },
+                {
+                    "name": "Marcas"
+                },
+                {
+                    "name": "Ruadh"
+                },
+                {
+                    "name": "Seoras"
+                },
+                {
+                    "name": "Shug"
+                },
+                {
+                    "name": "Ualan"
+                }
+            ],
+            "Female": [
+                {
+                    "name": "Deoiridh"
+                },
+                {
+                    "name": "Edna"
+                },
+                {
+                    "name": "Eimhir"
+                },
+                {
+                    "name": "Finley"
+                },
+                {
+                    "name": "Gormlaith"
+                },
+                {
+                    "name": "Isla"
+                },
+                {
+                    "name": "Keavy"
+                },
+                {
+                    "name": "Lilias"
+                },
+                {
+                    "name": "Liusaidh"
+                },
+                {
+                    "name": "Marsaili"
+                },
+                {
+                    "name": "Sileas"
+                }
+            ],
+            "Agender": [
+                {
+                    "name": "Ainsley"
+                },
+                {
+                    "name": "Athol"
+                },
+                {
+                    "name": "Blair"
+                },
+                {
+                    "name": "Fergie"
+                },
+                {
+                    "name": "Finley"
+                },
+                {
+                    "name": "Greer"
+                },
+                {
+                    "name": "Innes"
+                },
+                {
+                    "name": "Lennox"
+                },
+                {
+                    "name": "Lindsay"
+                },
+                {
+                    "name": "Logan"
+                }
+            ]
+        }
+    },
+    "familyName": {
+        "Varena": [
+            {
+                "name": "Kasparaitis"
+            },
+            {
+                "name": "Kapranos"
+            },
+            {
+                "name": "Kromas"
+            },
+            {
+                "name": "Ruskevicius"
+            },
+            {
+                "name": "Minkelis"
+            },
+            {
+                "name": "Jusas"
+            },
+            {
+                "name": "Markunas"
+            },
+            {
+                "name": "Vinciunas"
+            },
+            {
+                "name": "Sova"
+            },
+            {
+                "name": "Serekytis"
+            },
+            {
+                "name": "Vileniskytis"
+            },
+            {
+                "name": "Venclauskaitis"
+            },
+            {
+                "name": "Neiboraitis"
+            },
+            {
+                "name": "Asauskaitis"
+            },
+            {
+                "name": "Stralytis"
+            },
+            {
+                "name": "Nevirauskaitis"
+            }
+        ],
+        "Jaekol": [
+            {
+                "name": "n'Tulach"
+            },
+            {
+                "name": "n'Rath"
+            },
+            {
+                "name": "Ariss"
+            },
+            {
+                "name": "Bhasa"
+            },
+            {
+                "name": "Brun"
+            },
+            {
+                "name": "Dubhach"
+            },
+            {
+                "name": "Gall"
+            },
+            {
+                "name": "Greum"
+            },
+            {
+                "name": "Liosach"
+            },
+            {
+                "name": "Maollosa"
+            },
+            {
+                "name": "Meireanach"
+            },
+            {
+                "name": "Ros"
+            },
+            {
+                "name": "Sudrach"
+            }
+        ]
+    }
 }
