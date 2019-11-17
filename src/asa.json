@@ -1,18 +1,18 @@
 {
     "gender": [
         {
-            "name": "Cis man",
+            "name": "Cis male",
             "weight": 20
         },
         {
-            "name": "Cis woman",
+            "name": "Cis female",
             "weight": 20
         },
         {
-            "name": "Trans man"
+            "name": "Trans male"
         },
         {
-            "name": "Trans woman"
+            "name": "Trans female"
         },
         {
             "name": "Agender"
@@ -93,9 +93,221 @@
         },
         {
             "name": "Very old adult",
-            "weight": 5
+            "weight": 1
         }
     ],
+    "race": {
+        "Varena": [
+            {
+                "name": "Human",
+                "weight": 500
+            },
+            {
+                "name": "Elf",
+                "weight": 50
+            },
+            {
+                "name": "Halfling",
+                "weight": 100
+            },
+            {
+                "name": "Dwarf",
+                "weight": 100
+            },
+            {
+                "name": "Tiefling",
+                "weight": 200
+            },
+            {
+                "name": "Half-elf",
+                "weight": 100
+            },
+            {
+                "name": "Half-orc",
+                "weight": 5
+            },
+            {
+                "name": "Gnome",
+                "weight": 50
+            },
+            {
+                "name": "Firbolg",
+                "weight": 1
+            },
+            {
+                "name": "Genasi",
+                "weight": 5
+            },
+            {
+                "name": "Aasimar",
+                "weight": 20
+            },
+            {
+                "name": "Tabaxi",
+                "weight": 10
+            },
+            {
+                "name": "Goliath",
+                "weight": 1
+            },
+            {
+                "name": "Kenku",
+                "weight": 1
+            },
+            {
+                "name": "Lizardfolk",
+                "weight": 1
+            },
+            {
+                "name": "Orc",
+                "weight": 1
+            },
+            {
+                "name": "Goblin",
+                "weight": 5
+            }
+        ],
+        "Jaekol": [
+            {
+                "name": "Human",
+                "weight": 250
+            },
+            {
+                "name": "Elf",
+                "weight": 50
+            },
+            {
+                "name": "Halfling",
+                "weight": 50
+            },
+            {
+                "name": "Dwarf",
+                "weight": 50
+            },
+            {
+                "name": "Tiefling",
+                "weight": 50
+            },
+            {
+                "name": "Half-elf",
+                "weight": 100
+            },
+            {
+                "name": "Half-orc",
+                "weight": 20
+            },
+            {
+                "name": "Gnome",
+                "weight": 25
+            },
+            {
+                "name": "Firbolg",
+                "weight": 1
+            },
+            {
+                "name": "Genasi",
+                "weight": 10
+            },
+            {
+                "name": "Aasimar",
+                "weight": 1
+            },
+            {
+                "name": "Tabaxi",
+                "weight": 1
+            },
+            {
+                "name": "Goliath",
+                "weight": 25
+            },
+            {
+                "name": "Kenku",
+                "weight": 10
+            },
+            {
+                "name": "Lizardfolk",
+                "weight": 5
+            },
+            {
+                "name": "Orc",
+                "weight": 5
+            },
+            {
+                "name": "Goblin",
+                "weight": 10
+            }
+        ],
+        "Kithara": [
+            {
+                "name": "Human",
+                "weight": 10
+            },
+            {
+                "name": "Elf",
+                "weight": 500
+            },
+            {
+                "name": "Halfling",
+                "weight": 25
+            },
+            {
+                "name": "Dwarf",
+                "weight": 25
+            },
+            {
+                "name": "Tiefling",
+                "weight": 100
+            },
+            {
+                "name": "Half-elf",
+                "weight": 50
+            },
+            {
+                "name": "Half-orc",
+                "weight": 25
+            },
+            {
+                "name": "Gnome",
+                "weight": 5
+            },
+            {
+                "name": "Firbolg",
+                "weight": 200
+            },
+            {
+                "name": "Genasi",
+                "weight": 50
+            },
+            {
+                "name": "Aasimar",
+                "weight": 100
+            },
+            {
+                "name": "Tabaxi",
+                "weight": 25
+            },
+            {
+                "name": "Goliath",
+                "weight": 25
+            },
+            {
+                "name": "Kenku",
+                "weight": 10
+            },
+            {
+                "name": "Lizardfolk",
+                "weight": 5
+            },
+            {
+                "name": "Orc",
+                "weight": 5
+            },
+            {
+                "name": "Goblin",
+                "weight": 1
+            }
+        ]
+    },
     "givenName": {
         "Varena": {
             "Masculine": [

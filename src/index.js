@@ -61,6 +61,10 @@ class CharacterSheet extends React.Component {
             name: 'familyName',
             value: this.generateFamilyName(Asa.familyName, this.state.ancestry.value)
         }
+        this.state.race = {
+            name: 'race',
+            value: this.generateRace(Asa.race, this.state.ancestry.value)
+        }
     }
 
     handleClick(attribute) {
@@ -86,6 +90,14 @@ class CharacterSheet extends React.Component {
                     }
                 });
                 break;
+            case 'race':
+                this.setState({
+                    [attribute]: {
+                        name: 'race',
+                        value: this.generateRace(Asa.race, this.state.ancestry.value, previous)
+                    }
+                });
+                break;
             case 'ancestry':
                 this.setState({
                     [attribute]: {
@@ -95,6 +107,7 @@ class CharacterSheet extends React.Component {
                 }, () => {
                     this.reshuffle('givenName');
                     this.reshuffle('familyName');
+                    this.reshuffle('race');
                 });
                 break;
             case 'gender':
@@ -148,15 +161,15 @@ class CharacterSheet extends React.Component {
     }
 
     generateSexuality(options, gender, oldValue) {
-        if (gender === 'Cis man' || gender === 'Trans man' || gender === 'Cis woman' || gender === 'Trans woman') { gender = 'MaleFemale'; }
+        if (gender === 'Cis male' || gender === 'Trans male' || gender === 'Cis female' || gender === 'Trans female') { gender = 'MaleFemale'; }
         if (gender === 'Genderfluid' || gender === 'Agender') { gender = 'GenderfluidAgender'; }
 
         return this.chooseValue(options[gender], oldValue);
     }
 
     generateGivenName(options, ancestry, gender, oldValue) {
-        if (gender === 'Cis man' || gender === 'Trans man') { gender = 'Masculine'; }
-        if (gender === 'Cis woman' || gender === 'Trans woman') { gender = 'Feminine'; }
+        if (gender === 'Cis male' || gender === 'Trans male') { gender = 'Masculine'; }
+        if (gender === 'Cis female' || gender === 'Trans female') { gender = 'Feminine'; }
         if (gender === 'Genderfluid') { gender = (Math.random() >= 0.5) ? 'Masculine' : 'Feminine'; }
         //console.log(`name gender: ${gender}`);
 
@@ -164,6 +177,11 @@ class CharacterSheet extends React.Component {
     }
 
     generateFamilyName(options, ancestry, oldValue) {
+
+        return this.chooseValue(options[ancestry], oldValue);
+    }
+
+    generateRace(options, ancestry, oldValue) {
 
         return this.chooseValue(options[ancestry], oldValue);
     }
@@ -181,6 +199,8 @@ class CharacterSheet extends React.Component {
                     <Attribute name='gender' onClick={() => this.handleClick('gender')} value={this.state.gender.value} />,
                     {' '}
                     <Attribute name='age' onClick={() => this.handleClick('age')} value={this.state.age.value} />,
+                    {' '}
+                    <Attribute name='race' onClick={() => this.handleClick('race')} value={this.state.race.value} />,
                     {' '}
                     <Attribute name='sexuality' onClick={() => this.handleClick('sexuality')} value={this.state.sexuality.value} />
                 </div>
