@@ -1797,26 +1797,134 @@
             },
             {
                 "name": "Nevirauskaitis"
+            },
+            {
+                "name": "Adomaitis"
+            },
+            {
+                "name": "Andris"
+            },
+            {
+                "name": "Balchunas"
+            },
+            {
+                "name": "Barkus"
+            },
+            {
+                "name": "Danis"
+            },
+            {
+                "name": "Dargis"
+            },
+            {
+                "name": "Derus"
+            },
+            {
+                "name": "Dinius"
+            },
+            {
+                "name": "Gaida"
+            },
+            {
+                "name": "Galinis"
+            },
+            {
+                "name": "Grigas"
+            },
+            {
+                "name": "Gudaitis"
+            },
+            {
+                "name": "Kairis"
+            },
+            {
+                "name": "Kubilus"
+            },
+            {
+                "name": "Lanka"
+            },
+            {
+                "name": "Melis"
+            },
+            {
+                "name": "Miskinis"
+            },
+            {
+                "name": "Moris"
+            },
+            {
+                "name": "Norkus"
+            },
+            {
+                "name": "Rubis"
+            },
+            {
+                "name": "Shaulis"
+            },
+            {
+                "name": "Vidas"
+            },
+            {
+                "name": "Wirkus"
+            },
+            {
+                "name": "Zukas"
             }
         ],
         "Jaekol": [
             {
-                "name": "n'Tulach"
+                "name": "Allanach"
             },
             {
-                "name": "n'Rath"
+                "name": "Arasgain"
             },
             {
                 "name": "Ariss"
             },
             {
+                "name": "Barrach"
+            },
+            {
                 "name": "Bhasa"
+            },
+            {
+                "name": "Blarach"
+            },
+            {
+                "name": "Braigheach"
+            },
+            {
+                "name": "Breac"
             },
             {
                 "name": "Brun"
             },
             {
+                "name": "Caileanach"
+            },
+            {
+                "name": "Catanach"
+            },
+            {
+                "name": "Ciarach"
+            },
+            {
+                "name": "Dalais"
+            },
+            {
+                "name": "Deoir"
+            },
+            {
                 "name": "Dubhach"
+            },
+            {
+                "name": "Dunaid"
+            },
+            {
+                "name": "Folais"
+            },
+            {
+                "name": "Flachnan"
             },
             {
                 "name": "Gall"
@@ -1825,19 +1933,64 @@
                 "name": "Greum"
             },
             {
+                "name": "Griogal"
+            },
+            {
+                "name": "Guaire"
+            },
+            {
+                "name": "Iomharach"
+            },
+            {
                 "name": "Liosach"
+            },
+            {
+                "name": "Lobhdain"
+            },
+            {
+                "name": "Lutair"
             },
             {
                 "name": "Maollosa"
             },
             {
-                "name": "Meireanach"
+                "name": "Mawr"
+            },
+            {
+                "name": "Meinnearach"
+            },
+            {
+                "name": "n'Tulach"
+            },
+            {
+                "name": "n'Rath"
+            },
+            {
+                "name": "n'Sginnearach"
+            },
+            {
+                "name": "n'Sailcirc"
+            },
+            {
+                "name": "n'Ruaidh"
+            },
+            {
+                "name": "Paorach"
             },
             {
                 "name": "Ros"
             },
             {
+                "name": "Salmond"
+            },
+            {
+                "name": "Singleir"
+            },
+            {
                 "name": "Sudrach"
+            },
+            {
+                "name": "Tuairnear"
             }
         ],
         "Kithara": [
