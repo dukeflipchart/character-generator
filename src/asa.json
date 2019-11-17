@@ -1,18 +1,18 @@
 {
     "gender": [
         {
-            "name": "Cis Man",
+            "name": "Cis man",
             "weight": 20
         },
         {
-            "name": "Cis Woman",
+            "name": "Cis woman",
             "weight": 20
         },
         {
-            "name": "Trans Man"
+            "name": "Trans man"
         },
         {
-            "name": "Trans Woman"
+            "name": "Trans woman"
         },
         {
             "name": "Agender"
@@ -56,36 +56,24 @@
             "weight": 2
         },
         {
-            "name": "20s",
+            "name": "Young adult",
             "weight": 10
         },
         {
-            "name": "30s",
-            "weight": 30
-        },
-        {
-            "name": "40s",
+            "name": "Adult",
             "weight": 20
         },
         {
-            "name": "50s",
+            "name": "Middle-aged",
             "weight": 10
         },
         {
-            "name": "60s",
+            "name": "Old adult",
             "weight": 5
         },
         {
-            "name": "70s",
-            "weight": 2
-        },
-        {
-            "name": "80s",
-            "weight": 1
-        },
-        {
-            "name": "90s",
-            "weight": 1
+            "name": "Very old adult",
+            "weight": 5
         }
     ],
     "givenName": {

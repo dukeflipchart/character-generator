@@ -140,8 +140,8 @@ class CharacterSheet extends React.Component {
     }
 
     generateGivenName(options, ancestry, gender, oldValue) {
-        if (gender === 'Cis Man' || gender === 'Trans Man') { gender = 'Man'; }
-        if (gender === 'Cis Woman' || gender === 'Trans Woman') { gender = 'Woman'; }
+        if (gender === 'Cis man' || gender === 'Trans man') { gender = 'Man'; }
+        if (gender === 'Cis woman' || gender === 'Trans woman') { gender = 'Woman'; }
         if (gender === 'Genderfluid') { gender = (Math.random() >= 0.5) ? 'Man' : 'Woman'; }
         console.log(`name gender: ${gender}`);
 
