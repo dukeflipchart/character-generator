@@ -1,19 +1,19 @@
 {
     "Gender": [
         {
-            "name": "Cis Male",
+            "name": "Cis Man",
             "weight": 20
         },
         {
-            "name": "Cis Female",
+            "name": "Cis Woman",
             "weight": 20
         },
         {
-            "name": "Trans Male",
+            "name": "Trans Man",
             "weight": 1
         },
         {
-            "name": "Trans Female",
+            "name": "Trans Woman",
             "weight": 1
         },
         {

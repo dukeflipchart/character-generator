@@ -1,18 +1,18 @@
 {
     "gender": [
         {
-            "name": "Cis Male",
+            "name": "Cis Man",
             "weight": 20
         },
         {
-            "name": "Cis Female",
+            "name": "Cis Woman",
             "weight": 20
         },
         {
-            "name": "Trans Male"
+            "name": "Trans Man"
         },
         {
-            "name": "Trans Female"
+            "name": "Trans Woman"
         },
         {
             "name": "Agender"
@@ -24,11 +24,10 @@
     "sexuality": [
         {
             "name": "Heterosexual",
-            "weight": 20
+            "weight": 10
         },
         {
-            "name": "Homosexual",
-            "weight": 20
+            "name": "Homosexual"
         },
         {
             "name": "Bisexual"
@@ -49,7 +48,7 @@
     ],
     "age": [
         {
-            "name": "Small child",
+            "name": "Child",
             "weight": 1
         },
         {
@@ -91,7 +90,7 @@
     ],
     "givenName": {
         "Varena": {
-            "Male": [
+            "Man": [
                 {
                     "name": "Algirdas"
                 },
@@ -132,7 +131,7 @@
                     "name": "Visvaldas"
                 }
             ],
-            "Female": [
+            "Woman": [
                 {
                     "name": "Aiste"
                 },
@@ -198,7 +197,7 @@
             ]
         },
         "Jaekol": {
-            "Male": [
+            "Man": [
                 {
                     "name": "Alister"
                 },
@@ -251,7 +250,7 @@
                     "name": "Ualan"
                 }
             ],
-            "Female": [
+            "Woman": [
                 {
                     "name": "Deoiridh"
                 },
