@@ -100,6 +100,195 @@
             "weight": 1
         }
     ],
+    "motivation": [
+        {
+            "name": "Achievement - To overcome obstacles and succeed; to become the best"
+        },
+        {
+            "name": "Acquisition - To obtain possessions/wealth"
+        },
+        {
+            "name": "Adoration - To be cherished, admired, and wanted by others"
+        },
+        {
+            "name": "Balance/Peace - To bring all things into harmony and equilibrium"
+        },
+        {
+            "name": "Beneficence - To protect the helpless, heal the sick, or feed the hungry"
+        },
+        {
+            "name": "Chaos - To disrupt, to cause confusion and discord"
+        },
+        {
+            "name": "Competition - To seek out or create rule-based win/lose scenarios; to defeat others in contests"
+        },
+        {
+            "name": "Conflict - To seek out or create rivalry, fighting, or animosity"
+        },
+        {
+            "name": "Conquest - To conquer other peoples, to bring them into one’s own culture/rule"
+        },
+        {
+            "name": "Corruption - To despoil, ruin, humiliate, or make depraved"
+        },
+        {
+            "name": "Creation - To build or make new, such as art, culture, invention, design"
+        },
+        {
+            "name": "Destruction - To annihilate, exterminate, and unmake"
+        },
+        {
+            "name": "Discovery/Adventure - To explore, uncover mysteries, and pioneer"
+        },
+        {
+            "name": "Domesticity - To get married, have children, and live a family life"
+        },
+        {
+            "name": "Education - To provide information, teach, enlighten, or train"
+        },
+        {
+            "name": "Entertainment - To entertain, amuse, and delight others"
+        },
+        {
+            "name": "Enslavement - To force others into servitude"
+        },
+        {
+            "name": "Hedonism - To enjoy all things sensuous"
+        },
+        {
+            "name": "Heroism - To find valor and honor through battle or self-sacrifice"
+        },
+        {
+            "name": "Liberation - To free the self and/or others from perceived captivity or enslavement"
+        },
+        {
+            "name": "Love - To experience/share affection and emotional commitment, whether romantic or platonic"
+        },
+        {
+            "name": "Nobility/Honor - To exalt ideals such as generosity, honesty, bravery, and courtliness"
+        },
+        {
+            "name": "Order - To arrange, organize, and reduce chaos"
+        },
+        {
+            "name": "Play - To have fun, to enjoy life"
+        },
+        {
+            "name": "Power - To control and lead others"
+        },
+        {
+            "name": "Proselytization - To spread a belief system; indoctrinate others"
+        },
+        {
+            "name": "Purity - To achieve a state of moral or spiritual perfection, of self and/or others"
+        },
+        {
+            "name": "Rebellion - To fight against power structures; to undermine authority"
+        },
+        {
+            "name": "Recognition - To gain approval, social status, or fame"
+        },
+        {
+            "name": "Service - To follow a person, government, order, or religion"
+        },
+        {
+            "name": "Torment - To inflict pain and suffering, on others and/or the self"
+        },
+        {
+            "name": "Understanding - To seek knowledge or wisdom (spiritual, scientific, or magical)"
+        },
+        {
+            "name": "Vice - To enable or engage in self-destructive behavior"
+        }
+    ],
+    "usualMood": [
+        {
+            "name": "Joyful"
+        },
+        {
+            "name": "Anxious"
+        },
+        {
+            "name": "Melancholy"
+        },
+        {
+            "name": "Curious"
+        },
+        {
+            "name": "Calm"
+        },
+        {
+            "name": "Angry"
+        },
+        {
+            "name": "Contemptuous"
+        },
+        {
+            "name": "Excited"
+        },
+        {
+            "name": "Apathetic"
+        },
+        {
+            "name": "Ashamed"
+        }
+    ],
+    "outlook": [
+        {
+            "name": "Optimistic - Idealistic, confident, trusting, hopeful, upbeat"
+        },
+        {
+            "name": "Pessimistic - Cynical, bleak, distrustful, foreboding, resigned"
+        }
+    ],
+    "integrity": [
+        {
+            "name": "Conscientious - Industrious, honest, responsible, meticulous, pragmatic"
+        },
+        {
+            "name": "Unscrupulous - Lazy, deceitful, unreliable, manipulative, slipshod, impractical"
+        }
+    ],
+    "impulsiveness": [
+        {
+            "name": "Controlled - Deliberate, focused, steady, thoughtful"
+        },
+        {
+            "name": "Spontaneous - Capricious, flighty, hyperactive, rash"
+        }
+    ],
+    "boldness": [
+        {
+            "name": "Intrepid - Daring, reckless, valorous, dauntless, audacious, confident"
+        },
+        {
+            "name": "Cautious - Timid, paranoid, vigilant, nervous, tentative"
+        }
+    ],
+    "agreeableness": [
+        {
+            "name": "Agreeable - Warm, empathic, tolerant, forgiving, open-minded, adaptable, altruistic"
+        },
+        {
+            "name": "Disagreeable- Cold, rigid, tense, intractable, narrow-minded, cantankerous, stingy"
+        }
+    ],
+    "interactivity": [
+        {
+            "name": "Engaging - Talkative, candid, entertaining, touchy"
+        },
+        {
+            "name": "Reserved - Shy, loner, taciturn, evasive, cryptic"
+        }
+    ],
+    "conformity": [
+        {
+            "name": "Conventional - Orthodox, formal, down-to-earth, mainstream, traditional"
+        },
+        {
+            "name": "Heterodox - Rebellious, arty, shocking, freethinking, exotic"
+        }
+    ],
     "race": {
         "Varena": [
             {
@@ -140,11 +329,11 @@
             },
             {
                 "name": "Genasi",
-                "weight": 5
+                "weight": 1
             },
             {
                 "name": "Aasimar",
-                "weight": 20
+                "weight": 2
             },
             {
                 "name": "Tabaxi",
@@ -210,7 +399,7 @@
             },
             {
                 "name": "Genasi",
-                "weight": 10
+                "weight": 1
             },
             {
                 "name": "Aasimar",
@@ -222,19 +411,19 @@
             },
             {
                 "name": "Goliath",
-                "weight": 25
-            },
-            {
-                "name": "Kenku",
                 "weight": 10
             },
             {
+                "name": "Kenku",
+                "weight": 1
+            },
+            {
                 "name": "Lizardfolk",
-                "weight": 5
+                "weight": 2
             },
             {
                 "name": "Orc",
-                "weight": 5
+                "weight": 2
             },
             {
                 "name": "Goblin",
@@ -280,7 +469,7 @@
             },
             {
                 "name": "Genasi",
-                "weight": 50
+                "weight": 10
             },
             {
                 "name": "Aasimar",
