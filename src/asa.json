@@ -59,11 +59,15 @@
         },
         {
             "name": "Jaekol",
-            "weight": 10
+            "weight": 5
         },
         {
             "name": "Kithara",
-            "weight": 10
+            "weight": 5
+        },
+        {
+            "name": "Sjellan",
+            "weight": 5
         }
     ],
     "age": [
@@ -194,7 +198,7 @@
             },
             {
                 "name": "Half-orc",
-                "weight": 20
+                "weight": 10
             },
             {
                 "name": "Gnome",
@@ -293,6 +297,76 @@
             {
                 "name": "Kenku",
                 "weight": 10
+            },
+            {
+                "name": "Lizardfolk",
+                "weight": 5
+            },
+            {
+                "name": "Orc",
+                "weight": 5
+            },
+            {
+                "name": "Goblin",
+                "weight": 1
+            }
+        ],
+        "Sjellan": [
+            {
+                "name": "Human",
+                "weight": 50
+            },
+            {
+                "name": "Elf",
+                "weight": 500
+            },
+            {
+                "name": "Halfling",
+                "weight": 50
+            },
+            {
+                "name": "Dwarf",
+                "weight": 250
+            },
+            {
+                "name": "Tiefling",
+                "weight": 10
+            },
+            {
+                "name": "Half-elf",
+                "weight": 50
+            },
+            {
+                "name": "Half-orc",
+                "weight": 20
+            },
+            {
+                "name": "Gnome",
+                "weight": 5
+            },
+            {
+                "name": "Firbolg",
+                "weight": 100
+            },
+            {
+                "name": "Genasi",
+                "weight": 50
+            },
+            {
+                "name": "Aasimar",
+                "weight": 5
+            },
+            {
+                "name": "Tabaxi",
+                "weight": 1
+            },
+            {
+                "name": "Goliath",
+                "weight": 50
+            },
+            {
+                "name": "Kenku",
+                "weight": 1
             },
             {
                 "name": "Lizardfolk",
@@ -1247,6 +1321,242 @@
                     "name": "Yasir"
                 }
             ]
+        },
+        "Sjellan": {
+            "Masculine": [
+                {
+                    "name": "Aghi"
+                },
+                {
+                    "name": "Agmundr"
+                },
+                {
+                    "name": "Aki"
+                },
+                {
+                    "name": "Aleifr"
+                },
+                {
+                    "name": "Ari"
+                },
+                {
+                    "name": "Arni"
+                },
+                {
+                    "name": "Arnvidr"
+                },
+                {
+                    "name": "Asbjorn"
+                },
+                {
+                    "name": "Asvaldr"
+                },
+                {
+                    "name": "Bardr"
+                },
+                {
+                    "name": "Bjarni"
+                },
+                {
+                    "name": "Bjartr"
+                },
+                {
+                    "name": "Bui"
+                },
+                {
+                    "name": "Dagr"
+                },
+                {
+                    "name": "Einarr"
+                },
+                {
+                    "name": "Eirikr"
+                },
+                {
+                    "name": "Finnr"
+                },
+                {
+                    "name": "Folki"
+                },
+                {
+                    "name": "Gauti"
+                },
+                {
+                    "name": "Gautstafr"
+                },
+                {
+                    "name": "Gudbrandr"
+                },
+                {
+                    "name": "Hakon"
+                },
+                {
+                    "name": "Hallr"
+                },
+                {
+                    "name": "Havardr"
+                },
+                {
+                    "name": "Hrafn"
+                },
+                {
+                    "name": "Hroarr"
+                },
+                {
+                    "name": "Ingimarr"
+                },
+                {
+                    "name": "Ivarr"
+                },
+                {
+                    "name": "Jarl"
+                },
+                {
+                    "name": "Kari"
+                },
+                {
+                    "name": "Ketill"
+                },
+                {
+                    "name": "Knutr"
+                },
+                {
+                    "name": "Njall"
+                },
+                {
+                    "name": "Ragnvaldr"
+                },
+                {
+                    "name": "Runi"
+                },
+                {
+                    "name": "Sindri"
+                },
+                {
+                    "name": "Stigr"
+                },
+                {
+                    "name": "Sumarlidi"
+                },
+                {
+                    "name": "Sveinn"
+                },
+                {
+                    "name": "Tryggvi"
+                },
+                {
+                    "name": "Vragi"
+                }
+            ],
+            "Feminine": [
+                {
+                    "name": "Alfhildr"
+                },
+                {
+                    "name": "Asa"
+                },
+                {
+                    "name": "Asdis"
+                },
+                {
+                    "name": "Aslaug"
+                },
+                {
+                    "name": "Asta"
+                },
+                {
+                    "name": "Bjorg"
+                },
+                {
+                    "name": "Brynja"
+                },
+                {
+                    "name": "Dagmaer"
+                },
+                {
+                    "name": "Eydis"
+                },
+                {
+                    "name": "Gulla"
+                },
+                {
+                    "name": "Gunnvor"
+                },
+                {
+                    "name": "Gudlaug"
+                },
+                {
+                    "name": "Hjordis"
+                },
+                {
+                    "name": "Hlif"
+                },
+                {
+                    "name": "Hreidunn"
+                },
+                {
+                    "name": "Ingridr"
+                },
+                {
+                    "name": "Katla"
+                },
+                {
+                    "name": "Olaug"
+                },
+                {
+                    "name": "Ragna"
+                },
+                {
+                    "name": "Runa"
+                },
+                {
+                    "name": "Signy"
+                },
+                {
+                    "name": "Solveig"
+                },
+                {
+                    "name": "Svanhildr"
+                },
+                {
+                    "name": "Unnr"
+                },
+                {
+                    "name": "Valdis"
+                },
+                {
+                    "name": "Vigdis"
+                },
+                {
+                    "name": "Yngvildr"
+                }
+            ],
+            "Agender": [
+                {
+                    "name": "Arnvidr"
+                },
+                {
+                    "name": "Bui"
+                },
+                {
+                    "name": "Dagr"
+                },
+                {
+                    "name": "Gudbrandr"
+                },
+                {
+                    "name": "Jarl"
+                },
+                {
+                    "name": "Gunnvor"
+                },
+                {
+                    "name": "Hlif"
+                },
+                {
+                    "name": "Unnr"
+                }
+            ]
         }
     },
     "familyName": {
@@ -1386,6 +1696,68 @@
             },
             {
                 "name": "Vaigyaanik"
+            }
+        ],
+        "Sjellan": [
+            {
+                "name": "Agmundrsson"
+            },
+            {
+                "name": "Arnisson"
+            },
+            {
+                "name": "Asvaldrsson"
+            },
+            {
+                "name": "Dagrsson"
+            },
+            {
+                "name": "Einarsson"
+            },
+            {
+                "name": "Folkisson"
+            },
+            {
+                "name": "Havardrsson"
+            },
+            {
+                "name": "Hrafnsson"
+            },
+            {
+                "name": "Ketilsson"
+            },
+            {
+                "name": "Runisson"
+            },
+            {
+                "name": "Sveinsson"
+            },
+            {
+                "name": "Aslaugsson"
+            },
+            {
+                "name": "Brynjasson"
+            },
+            {
+                "name": "Dagmaersson"
+            },
+            {
+                "name": "Gunnvorsson"
+            },
+            {
+                "name": "Hjordisson"
+            },
+            {
+                "name": "Katlasson"
+            },
+            {
+                "name": "Runasson"
+            },
+            {
+                "name": "Solveigsson"
+            },
+            {
+                "name": "Vigdisson"
             }
         ]
     }
