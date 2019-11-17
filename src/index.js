@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { 
+    AttributeGroup,
     AttributeLabel,
     CharacterSheetContainer,
     NameWrapper
@@ -195,7 +196,7 @@ class CharacterSheet extends React.Component {
                     {' '}
                     <Attribute name='familyName' onClick={() => this.handleClick('familyName')} value={this.state.familyName.value} />
                 </NameWrapper>
-                <div>
+                <AttributeGroup>
                     <Attribute name='gender' onClick={() => this.handleClick('gender')} value={this.state.gender.value} />,
                     {' '}
                     <Attribute name='age' onClick={() => this.handleClick('age')} value={this.state.age.value} />,
@@ -203,10 +204,10 @@ class CharacterSheet extends React.Component {
                     <Attribute name='race' onClick={() => this.handleClick('race')} value={this.state.race.value} />,
                     {' '}
                     <Attribute name='sexuality' onClick={() => this.handleClick('sexuality')} value={this.state.sexuality.value} />
-                </div>
-                <div>
+                </AttributeGroup>
+                <AttributeGroup>
                     From <Attribute name='ancestry' onClick={() => this.handleClick('ancestry')} value={this.state.ancestry.value} />
-                </div>
+                </AttributeGroup>
             </CharacterSheetContainer>
         );
     }

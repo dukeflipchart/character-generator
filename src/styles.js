@@ -5,6 +5,10 @@ export const CharacterSheetContainer = styled.div`
     margin: 0 auto;
 `;
 
+export const AttributeGroup = styled.div`
+    margin-bottom: 1rem;
+`;
+
 export const AttributeLabel = styled.span`
 
     :hover {
