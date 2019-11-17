@@ -21,21 +21,37 @@
             "name": "Genderfluid"
         }
     ],
-    "sexuality": [
-        {
-            "name": "Heterosexual",
-            "weight": 10
-        },
-        {
-            "name": "Homosexual"
-        },
-        {
-            "name": "Bisexual"
-        },
-        {
-            "name": "Asexual"
-        }
-    ],
+    "sexuality": {
+        "MaleFemale": [
+            {
+                "name": "Heterosexual",
+                "weight": 10
+            },
+            {
+                "name": "Homosexual"
+            },
+            {
+                "name": "Bisexual"
+            },
+            {
+                "name": "Asexual"
+            }
+        ],
+        "GenderfluidAgender": [
+            {
+                "name": "Androsexual"
+            },
+            {
+                "name": "Gynosexual"
+            },
+            {
+                "name": "Bisexual"
+            },
+            {
+                "name": "Asexual"
+            }
+        ]
+    },
     "ancestry": [
         {
             "name": "Varena",
@@ -43,6 +59,10 @@
         },
         {
             "name": "Jaekol",
+            "weight": 10
+        },
+        {
+            "name": "Kithara",
             "weight": 10
         }
     ],
@@ -78,18 +98,39 @@
     ],
     "givenName": {
         "Varena": {
-            "Man": [
+            "Masculine": [
+                {
+                    "name": "Aras"
+                },
                 {
                     "name": "Algirdas"
+                },
+                {
+                    "name": "Azuolas"
+                },
+                {
+                    "name": "Benas"
+                },
+                {
+                    "name": "Daumantas"
                 },
                 {
                     "name": "Domas"
                 },
                 {
+                    "name": "Egidijus"
+                },
+                {
                     "name": "Erikas"
                 },
                 {
+                    "name": "Gvidas"
+                },
+                {
                     "name": "Ignas"
+                },
+                {
+                    "name": "Juozas"
                 },
                 {
                     "name": "Jurgis"
@@ -98,7 +139,13 @@
                     "name": "Kajus"
                 },
                 {
+                    "name": "Kestutis"
+                },
+                {
                     "name": "Laurynas"
+                },
+                {
+                    "name": "Leonas"
                 },
                 {
                     "name": "Linas"
@@ -107,19 +154,40 @@
                     "name": "Mantas"
                 },
                 {
+                    "name": "Nojus"
+                },
+                {
                     "name": "Ramunas"
                 },
                 {
+                    "name": "Simas"
+                },
+                {
+                    "name": "Tadas"
+                },
+                {
                     "name": "Titas"
+                },
+                {
+                    "name": "Valdemaras"
                 },
                 {
                     "name": "Vincas"
                 },
                 {
                     "name": "Visvaldas"
+                },
+                {
+                    "name": "Zydrunas"
                 }
             ],
-            "Woman": [
+            "Feminine": [
+                {
+                    "name": "Agne"
+                },
+                {
+                    "name": "Aldona"
+                },
                 {
                     "name": "Aiste"
                 },
@@ -130,22 +198,58 @@
                     "name": "Birute"
                 },
                 {
+                    "name": "Daina"
+                },
+                {
                     "name": "Daiva"
+                },
+                {
+                    "name": "Danute"
+                },
+                {
+                    "name": "Domante"
                 },
                 {
                     "name": "Egle"
                 },
                 {
+                    "name": "Elze"
+                },
+                {
                     "name": "Estera"
+                },
+                {
+                    "name": "Genovaite"
                 },
                 {
                     "name": "Giedre"
                 },
                 {
+                    "name": "Gintare"
+                },
+                {
+                    "name": "Ieva"
+                },
+                {
                     "name": "Katre"
                 },
                 {
+                    "name": "Laima"
+                },
+                {
+                    "name": "Leja"
+                },
+                {
                     "name": "Lina"
+                },
+                {
+                    "name": "Lukne"
+                },
+                {
+                    "name": "Milda"
+                },
+                {
+                    "name": "Morta"
                 },
                 {
                     "name": "Rasa"
@@ -155,6 +259,15 @@
                 },
                 {
                     "name": "Saule"
+                },
+                {
+                    "name": "Smilte"
+                },
+                {
+                    "name": "Ugne"
+                },
+                {
+                    "name": "Urte"
                 },
                 {
                     "name": "Vilte"
@@ -185,18 +298,30 @@
             ]
         },
         "Jaekol": {
-            "Man": [
+            "Masculine": [
                 {
                     "name": "Alister"
                 },
                 {
+                    "name": "Amhlaidh"
+                },
+                {
                     "name": "Aodhan"
+                },
+                {
+                    "name": "Arran"
+                },
+                {
+                    "name": "Bhatair"
                 },
                 {
                     "name": "Cailean"
                 },
                 {
                     "name": "Cinaed"
+                },
+                {
+                    "name": "Coinneach"
                 },
                 {
                     "name": "Cormag"
@@ -208,10 +333,31 @@
                     "name": "Duff"
                 },
                 {
+                    "name": "Eachann"
+                },
+                {
+                    "name": "Ealair"
+                },
+                {
+                    "name": "Eoghan"
+                },
+                {
+                    "name": "Erskine"
+                },
+                {
+                    "name": "Fearchar"
+                },
+                {
+                    "name": "Fearghas"
+                },
+                {
                     "name": "Gawain"
                 },
                 {
-                    "name": "Greer"
+                    "name": "Glenn"
+                },
+                {
+                    "name": "Grier"
                 },
                 {
                     "name": "Iagan"
@@ -220,25 +366,88 @@
                     "name": "Irvine"
                 },
                 {
+                    "name": "Innes"
+                },
+                {
+                    "name": "Islay"
+                },
+                {
                     "name": "Keir"
+                },
+                {
+                    "name": "Kentigern"
+                },
+                {
+                    "name": "Labhrainn"
+                },
+                {
+                    "name": "Lauchlan"
                 },
                 {
                     "name": "Marcas"
                 },
                 {
+                    "name": "Muir"
+                },
+                {
+                    "name": "Murchadh"
+                },
+                {
+                    "name": "Naoise"
+                },
+                {
+                    "name": "Naomhan"
+                },
+                {
+                    "name": "Rab"
+                },
+                {
                     "name": "Ruadh"
+                },
+                {
+                    "name": "Ruairi"
                 },
                 {
                     "name": "Seoras"
                 },
                 {
+                    "name": "Seumas"
+                },
+                {
                     "name": "Shug"
                 },
                 {
+                    "name": "Sioltach"
+                },
+                {
+                    "name": "Suibhne"
+                },
+                {
+                    "name": "Tadhg"
+                },
+                {
+                    "name": "Tearlach"
+                },
+                {
                     "name": "Ualan"
+                },
+                {
+                    "name": "Uisdean"
                 }
             ],
-            "Woman": [
+            "Feminine": [
+                {
+                    "name": "Ailsa"
+                },
+                {
+                    "name": "Ainsley"
+                },
+                {
+                    "name": "Athol"
+                },
+                {
+                    "name": "Caoimhe"
+                },
                 {
                     "name": "Deoiridh"
                 },
@@ -246,7 +455,13 @@
                     "name": "Edna"
                 },
                 {
+                    "name": "Eilidh"
+                },
+                {
                     "name": "Eimhir"
+                },
+                {
+                    "name": "Eithne"
                 },
                 {
                     "name": "Finley"
@@ -255,10 +470,19 @@
                     "name": "Gormlaith"
                 },
                 {
+                    "name": "Iona"
+                },
+                {
                     "name": "Isla"
                 },
                 {
                     "name": "Keavy"
+                },
+                {
+                    "name": "Kenna"
+                },
+                {
+                    "name": "Lennox"
                 },
                 {
                     "name": "Lilias"
@@ -270,7 +494,28 @@
                     "name": "Marsaili"
                 },
                 {
+                    "name": "Moira"
+                },
+                {
+                    "name": "Morven"
+                },
+                {
+                    "name": "Oighrig"
+                },
+                {
+                    "name": "Seonaidh"
+                },
+                {
                     "name": "Sileas"
+                },
+                {
+                    "name": "Slaine"
+                },
+                {
+                    "name": "Sorcha"
+                },
+                {
+                    "name": "Tearlag"
                 }
             ],
             "Agender": [
@@ -303,6 +548,491 @@
                 },
                 {
                     "name": "Logan"
+                }
+            ]
+        },
+        "Kithara": {
+            "Masculine": [
+                {
+                    "name": "Aamir"
+                },
+                {
+                    "name": "Aarti"
+                },
+                {
+                    "name": "Abhay"
+                },
+                {
+                    "name": "Adnan"
+                },
+                {
+                    "name": "Aishwarya"
+                },
+                {
+                    "name": "Akash"
+                },
+                {
+                    "name": "Amala"
+                },
+                {
+                    "name": "Anik"
+                },
+                {
+                    "name": "Anisha"
+                },
+                {
+                    "name": "Aruna"
+                },
+                {
+                    "name": "Asha"
+                },
+                {
+                    "name": "Azra"
+                },
+                {
+                    "name": "Bishal"
+                },
+                {
+                    "name": "Darshan"
+                },
+                {
+                    "name": "Dhaval"
+                },
+                {
+                    "name": "Durai"
+                },
+                {
+                    "name": "Gauhar"
+                },
+                {
+                    "name": "Gayatri"
+                },
+                {
+                    "name": "Hari"
+                },
+                {
+                    "name": "Hema"
+                },
+                {
+                    "name": "Hira"
+                },
+                {
+                    "name": "Isha"
+                },
+                {
+                    "name": "Jai"
+                },
+                {
+                    "name": "Jayesh"
+                },
+                {
+                    "name": "Kailash"
+                },
+                {
+                    "name": "Kalyani"
+                },
+                {
+                    "name": "Kanti"
+                },
+                {
+                    "name": "Kaur"
+                },
+                {
+                    "name": "Kiran"
+                },
+                {
+                    "name": "Laila"
+                },
+                {
+                    "name": "Lina"
+                },
+                {
+                    "name": "Manju"
+                },
+                {
+                    "name": "Mira"
+                },
+                {
+                    "name": "Mukta"
+                },
+                {
+                    "name": "Narayan"
+                },
+                {
+                    "name": "Nila"
+                },
+                {
+                    "name": "Nitin"
+                },
+                {
+                    "name": "Parvati"
+                },
+                {
+                    "name": "Prasad"
+                },
+                {
+                    "name": "Rachna"
+                },
+                {
+                    "name": "Raju"
+                },
+                {
+                    "name": "Raza"
+                },
+                {
+                    "name": "Reva"
+                },
+                {
+                    "name": "Riya"
+                },
+                {
+                    "name": "Roshan"
+                },
+                {
+                    "name": "Saira"
+                },
+                {
+                    "name": "Sakshi"
+                },
+                {
+                    "name": "Shila"
+                },
+                {
+                    "name": "Sitara"
+                },
+                {
+                    "name": "Suraj"
+                },
+                {
+                    "name": "Suriya"
+                },
+                {
+                    "name": "Vasu"
+                },
+                {
+                    "name": "Yasir"
+                }
+            ],
+            "Feminine": [
+                {
+                    "name": "Aamir"
+                },
+                {
+                    "name": "Aarti"
+                },
+                {
+                    "name": "Abhay"
+                },
+                {
+                    "name": "Adnan"
+                },
+                {
+                    "name": "Aishwarya"
+                },
+                {
+                    "name": "Akash"
+                },
+                {
+                    "name": "Amala"
+                },
+                {
+                    "name": "Anik"
+                },
+                {
+                    "name": "Anisha"
+                },
+                {
+                    "name": "Aruna"
+                },
+                {
+                    "name": "Asha"
+                },
+                {
+                    "name": "Azra"
+                },
+                {
+                    "name": "Bishal"
+                },
+                {
+                    "name": "Darshan"
+                },
+                {
+                    "name": "Dhaval"
+                },
+                {
+                    "name": "Durai"
+                },
+                {
+                    "name": "Gauhar"
+                },
+                {
+                    "name": "Gayatri"
+                },
+                {
+                    "name": "Hari"
+                },
+                {
+                    "name": "Hema"
+                },
+                {
+                    "name": "Hira"
+                },
+                {
+                    "name": "Isha"
+                },
+                {
+                    "name": "Jai"
+                },
+                {
+                    "name": "Jayesh"
+                },
+                {
+                    "name": "Kailash"
+                },
+                {
+                    "name": "Kalyani"
+                },
+                {
+                    "name": "Kanti"
+                },
+                {
+                    "name": "Kaur"
+                },
+                {
+                    "name": "Kiran"
+                },
+                {
+                    "name": "Laila"
+                },
+                {
+                    "name": "Lina"
+                },
+                {
+                    "name": "Manju"
+                },
+                {
+                    "name": "Mira"
+                },
+                {
+                    "name": "Mukta"
+                },
+                {
+                    "name": "Narayan"
+                },
+                {
+                    "name": "Nila"
+                },
+                {
+                    "name": "Nitin"
+                },
+                {
+                    "name": "Parvati"
+                },
+                {
+                    "name": "Prasad"
+                },
+                {
+                    "name": "Rachna"
+                },
+                {
+                    "name": "Raju"
+                },
+                {
+                    "name": "Raza"
+                },
+                {
+                    "name": "Reva"
+                },
+                {
+                    "name": "Riya"
+                },
+                {
+                    "name": "Roshan"
+                },
+                {
+                    "name": "Saira"
+                },
+                {
+                    "name": "Sakshi"
+                },
+                {
+                    "name": "Shila"
+                },
+                {
+                    "name": "Sitara"
+                },
+                {
+                    "name": "Suraj"
+                },
+                {
+                    "name": "Suriya"
+                },
+                {
+                    "name": "Vasu"
+                },
+                {
+                    "name": "Yasir"
+                }
+            ],
+            "Agender": [
+                {
+                    "name": "Aamir"
+                },
+                {
+                    "name": "Aarti"
+                },
+                {
+                    "name": "Abhay"
+                },
+                {
+                    "name": "Adnan"
+                },
+                {
+                    "name": "Aishwarya"
+                },
+                {
+                    "name": "Akash"
+                },
+                {
+                    "name": "Amala"
+                },
+                {
+                    "name": "Anik"
+                },
+                {
+                    "name": "Anisha"
+                },
+                {
+                    "name": "Aruna"
+                },
+                {
+                    "name": "Asha"
+                },
+                {
+                    "name": "Azra"
+                },
+                {
+                    "name": "Bishal"
+                },
+                {
+                    "name": "Darshan"
+                },
+                {
+                    "name": "Dhaval"
+                },
+                {
+                    "name": "Durai"
+                },
+                {
+                    "name": "Gauhar"
+                },
+                {
+                    "name": "Gayatri"
+                },
+                {
+                    "name": "Hari"
+                },
+                {
+                    "name": "Hema"
+                },
+                {
+                    "name": "Hira"
+                },
+                {
+                    "name": "Isha"
+                },
+                {
+                    "name": "Jai"
+                },
+                {
+                    "name": "Jayesh"
+                },
+                {
+                    "name": "Kailash"
+                },
+                {
+                    "name": "Kalyani"
+                },
+                {
+                    "name": "Kanti"
+                },
+                {
+                    "name": "Kaur"
+                },
+                {
+                    "name": "Kiran"
+                },
+                {
+                    "name": "Laila"
+                },
+                {
+                    "name": "Lina"
+                },
+                {
+                    "name": "Manju"
+                },
+                {
+                    "name": "Mira"
+                },
+                {
+                    "name": "Mukta"
+                },
+                {
+                    "name": "Narayan"
+                },
+                {
+                    "name": "Nila"
+                },
+                {
+                    "name": "Nitin"
+                },
+                {
+                    "name": "Parvati"
+                },
+                {
+                    "name": "Prasad"
+                },
+                {
+                    "name": "Rachna"
+                },
+                {
+                    "name": "Raju"
+                },
+                {
+                    "name": "Raza"
+                },
+                {
+                    "name": "Reva"
+                },
+                {
+                    "name": "Riya"
+                },
+                {
+                    "name": "Roshan"
+                },
+                {
+                    "name": "Saira"
+                },
+                {
+                    "name": "Sakshi"
+                },
+                {
+                    "name": "Shila"
+                },
+                {
+                    "name": "Sitara"
+                },
+                {
+                    "name": "Suraj"
+                },
+                {
+                    "name": "Suriya"
+                },
+                {
+                    "name": "Vasu"
+                },
+                {
+                    "name": "Yasir"
                 }
             ]
         }
@@ -397,6 +1127,53 @@
             },
             {
                 "name": "Sudrach"
+            }
+        ],
+        "Kithara": [
+            {
+                "name": "Darjee"
+            },
+            {
+                "name": "Vakta"
+            },
+            {
+                "name": "Rasoiya"
+            },
+            {
+                "name": "Prabandhak"
+            },
+            {
+                "name": "Yaatree"
+            },
+            {
+                "name": "Shikaaree"
+            },
+            {
+                "name": "Kisaan"
+            },
+            {
+                "name": "Pratinidhi"
+            },
+            {
+                "name": "Munshee"
+            },
+            {
+                "name": "Kavi"
+            },
+            {
+                "name": "Gaayak"
+            },
+            {
+                "name": "Lohaar"
+            },
+            {
+                "name": "Karaamaatee"
+            },
+            {
+                "name": "Dukaanadaar"
+            },
+            {
+                "name": "Vaigyaanik"
             }
         ]
     }
