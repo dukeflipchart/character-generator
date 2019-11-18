@@ -4,6 +4,9 @@
   "private": true,
   "homepage": "https://dukeflipchart.github.io/character-generator",
   "dependencies": {
+    "@svgr/cli": "^4.3.3",
+    "clipboard-copy": "^3.1.0",
+    "dedent": "^0.7.0",
     "gh-pages": "^2.1.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
@@ -16,6 +19,7 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "svgr": "svgr -d src/icons/ assets/"
   }
 }

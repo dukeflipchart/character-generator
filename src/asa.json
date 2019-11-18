@@ -235,58 +235,50 @@
     ],
     "outlook": [
         {
-            "name": "Optimistic - Idealistic, confident, trusting, hopeful, upbeat"
+            "name": "Optimistic"
         },
         {
-            "name": "Pessimistic - Cynical, bleak, distrustful, foreboding, resigned"
+            "name": "Pessimistic"
         }
     ],
     "integrity": [
         {
-            "name": "Conscientious - Industrious, honest, responsible, meticulous, pragmatic"
+            "name": "Honest"
         },
         {
-            "name": "Unscrupulous - Lazy, deceitful, unreliable, manipulative, slipshod, impractical"
+            "name": "Deceitful"
         }
     ],
     "impulsiveness": [
         {
-            "name": "Controlled - Deliberate, focused, steady, thoughtful"
+            "name": "Deliberate"
         },
         {
-            "name": "Spontaneous - Capricious, flighty, hyperactive, rash"
+            "name": "Spontaneous"
         }
     ],
     "boldness": [
         {
-            "name": "Intrepid - Daring, reckless, valorous, dauntless, audacious, confident"
+            "name": "Bold"
         },
         {
-            "name": "Cautious - Timid, paranoid, vigilant, nervous, tentative"
+            "name": "Cautious"
         }
     ],
     "agreeableness": [
         {
-            "name": "Agreeable - Warm, empathic, tolerant, forgiving, open-minded, adaptable, altruistic"
+            "name": "Friendly"
         },
         {
-            "name": "Disagreeable- Cold, rigid, tense, intractable, narrow-minded, cantankerous, stingy"
-        }
-    ],
-    "interactivity": [
-        {
-            "name": "Engaging - Talkative, candid, entertaining, touchy"
-        },
-        {
-            "name": "Reserved - Shy, loner, taciturn, evasive, cryptic"
+            "name": "Unfriendly"
         }
     ],
     "conformity": [
         {
-            "name": "Conventional - Orthodox, formal, down-to-earth, mainstream, traditional"
+            "name": "Traditional"
         },
         {
-            "name": "Heterodox - Rebellious, arty, shocking, freethinking, exotic"
+            "name": "Progressive"
         }
     ],
     "race": {

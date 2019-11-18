@@ -1,27 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { 
+import {
     AttributeGroup,
+    AttributeGroupLabel,
     AttributeLabel,
+    AttributeList,
     CharacterSheetContainer,
-    NameWrapper
+    Column,
+    CopyButton,
+    NameWrapper,
+    Row
     } from './styles.js';
 import Asa from './asa';
 import './index.css';
+import dedent from 'dedent';
 
-function DefaultAttribute(props) {
-
-    return (
-        <div className="attribute">
-            <a href="#" onClick={props.onClick} className="attribute__name">
-                {props.name}
-            </a>
-            <div className="attribute__value">
-                {props.value}
-            </div>
-        </div>
-    );
-}
+const copy = require('clipboard-copy');
 
 function Attribute(props) {
     
@@ -76,10 +70,6 @@ class CharacterSheet extends React.Component {
             agreeableness: {
                 name: 'agreeableness',
                 value: this.chooseValue(Asa.agreeableness)
-            },
-            interactivity: {
-                name: 'interactivity',
-                value: this.chooseValue(Asa.interactivity)
             },
             conformity: {
                 name: 'conformity',
@@ -208,7 +198,6 @@ class CharacterSheet extends React.Component {
         if (gender === 'Cis male' || gender === 'Trans male') { gender = 'Masculine'; }
         if (gender === 'Cis female' || gender === 'Trans female') { gender = 'Feminine'; }
         if (gender === 'Genderfluid') { gender = (Math.random() >= 0.5) ? 'Masculine' : 'Feminine'; }
-        //console.log(`name gender: ${gender}`);
 
         return this.chooseValue(options[ancestry][gender], oldValue);
     }
@@ -227,6 +216,13 @@ class CharacterSheet extends React.Component {
 
         return (
             <CharacterSheetContainer>
+                <CopyButton onClick={copy(dedent(
+                        `${this.state.givenName.value} ${this.state.familyName.value}
+                        ${this.state.gender.value} ${this.state.age.value} ${this.state.race.value} from ${this.state.ancestry.value}, ${this.state.sexuality.value}
+                        Mood: ${this.state.usualMood.value}
+                        Life goal: ${this.state.motivation.value}
+                        Personality traits: ${this.state.outlook.value}, ${this.state.integrity.value}, ${this.state.impulsiveness.value}, ${this.state.boldness.value}, ${this.state.agreeableness.value}, ${this.state.conformity.value}`
+                        ))} />
                 <NameWrapper>
                     <Attribute name='givenName' onClick={() => this.handleClick('givenName')} value={this.state.givenName.value} />
                     {' '}
@@ -243,24 +239,31 @@ class CharacterSheet extends React.Component {
                     {' '}
                     <Attribute name='sexuality' onClick={() => this.handleClick('sexuality')} value={this.state.sexuality.value} />
                 </AttributeGroup>
-                <AttributeGroup>
-                    Motivation: <Attribute name='motivation' onClick={() => this.handleClick('motivation')} value={this.state.motivation.value} />
-                </AttributeGroup>
-                <AttributeGroup>
-                    Usual mood: <Attribute name='usualMood' onClick={() => this.handleClick('usualMood')} value={this.state.usualMood.value} />
-                </AttributeGroup>
-                <AttributeGroup>
-                    Personality traits:
-                    <ul>
-                        <li><Attribute name='outlook' onClick={() => this.handleClick('outlook')} value={this.state.outlook.value} /></li>
-                        <li><Attribute name='integrity' onClick={() => this.handleClick('integrity')} value={this.state.integrity.value} /></li>
-                        <li><Attribute name='impulsiveness' onClick={() => this.handleClick('impulsiveness')} value={this.state.impulsiveness.value} /></li>
-                        <li><Attribute name='boldness' onClick={() => this.handleClick('boldness')} value={this.state.boldness.value} /></li>
-                        <li><Attribute name='agreeableness' onClick={() => this.handleClick('agreeableness')} value={this.state.agreeableness.value} /></li>
-                        <li><Attribute name='interactivity' onClick={() => this.handleClick('interactivity')} value={this.state.interactivity.value} /></li>
-                        <li><Attribute name='conformity' onClick={() => this.handleClick('conformity')} value={this.state.conformity.value} /></li>
-                    </ul>
-                </AttributeGroup>
+                <Row>
+                    <Column>
+                        <AttributeGroup>
+                            <AttributeGroupLabel>Personality traits</AttributeGroupLabel>
+                            <AttributeList>
+                                <li><Attribute name='outlook' onClick={() => this.handleClick('outlook')} value={this.state.outlook.value} /></li>
+                                <li><Attribute name='integrity' onClick={() => this.handleClick('integrity')} value={this.state.integrity.value} /></li>
+                                <li><Attribute name='impulsiveness' onClick={() => this.handleClick('impulsiveness')} value={this.state.impulsiveness.value} /></li>
+                                <li><Attribute name='boldness' onClick={() => this.handleClick('boldness')} value={this.state.boldness.value} /></li>
+                                <li><Attribute name='agreeableness' onClick={() => this.handleClick('agreeableness')} value={this.state.agreeableness.value} /></li>
+                                <li><Attribute name='conformity' onClick={() => this.handleClick('conformity')} value={this.state.conformity.value} /></li>
+                            </AttributeList>
+                        </AttributeGroup>
+                    </Column>
+                    <Column>
+                        <AttributeGroup>
+                            <AttributeGroupLabel>Mood</AttributeGroupLabel>
+                            <Attribute name='usualMood' onClick={() => this.handleClick('usualMood')} value={this.state.usualMood.value} />
+                        </AttributeGroup>
+                        <AttributeGroup>
+                            <AttributeGroupLabel>Life goal</AttributeGroupLabel>
+                            <Attribute name='motivation' onClick={() => this.handleClick('motivation')} value={this.state.motivation.value} />
+                        </AttributeGroup>
+                    </Column>
+                </Row>
             </CharacterSheetContainer>
         );
     }
