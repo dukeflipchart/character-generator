@@ -11,260 +11,97 @@ import {
     NameWrapper,
     Row
     } from './styles.js';
-import Asa from './asa';
 import './index.css';
 import dedent from 'dedent';
-
-const copy = require('clipboard-copy');
+import copy from 'clipboard-copy';
+import {
+    generateCharacter,
+    reshuffle
+} from './character';
 
 function Attribute(props) {
-    
     return (
         <AttributeLabel onClick={props.onClick}>{props.value}</AttributeLabel>
     );
 }
 
-class CharacterSheet extends React.Component {
-
-    constructor(props) {
-
-        super(props);
-
-        this.state = {
-            gender: {
-                name: 'gender',
-                value: this.chooseValue(Asa.gender)
-            },
-            ancestry: {
-                name: 'ancestry',
-                value: this.chooseValue(Asa.ancestry)
-            },
-            age: {
-                name: 'age',
-                value: this.chooseValue(Asa.age)
-            },
-            motivation: {
-                name: 'motivation',
-                value: this.chooseValue(Asa.motivation)
-            },
-            usualMood: {
-                name: 'usualMood',
-                value: this.chooseValue(Asa.usualMood)
-            },
-            outlook: {
-                name: 'outlook',
-                value: this.chooseValue(Asa.outlook)
-            },
-            integrity: {
-                name: 'integrity',
-                value: this.chooseValue(Asa.integrity)
-            },
-            impulsiveness: {
-                name: 'impulsiveness',
-                value: this.chooseValue(Asa.impulsiveness)
-            },
-            boldness: {
-                name: 'boldness',
-                value: this.chooseValue(Asa.boldness)
-            },
-            friendliness: {
-                name: 'friendliness',
-                value: this.chooseValue(Asa.friendliness)
-            },
-            conformity: {
-                name: 'conformity',
-                value: this.chooseValue(Asa.conformity)
-            }
-        }
-        this.state.sexuality = {
-            name: 'sexuality',
-            value: this.generateSexuality(Asa.sexuality, this.state.gender.value)
-        }
-        this.state.givenName = {
-            name: 'givenName',
-            value: this.generateGivenName(Asa.givenName, this.state.ancestry.value, this.state.gender.value)
-        }
-        this.state.familyName = {
-            name: 'familyName',
-            value: this.generateFamilyName(Asa.familyName, this.state.ancestry.value)
-        }
-        this.state.race = {
-            name: 'race',
-            value: this.generateRace(Asa.race, this.state.ancestry.value)
-        }
-    }
-
-    handleClick(attribute) {
-        this.reshuffle(attribute);
-    }
-
-    reshuffle(attribute) {
-        let previous = this.state[attribute].value;
-        switch(attribute) {
-            case 'givenName':
-                this.setState({
-                    [attribute]: {
-                        name: 'givenName',
-                        value: this.generateGivenName(Asa.givenName, this.state.ancestry.value, this.state.gender.value, previous)
-                    }
-                });
-                break;
-            case 'familyName':
-                this.setState({
-                    [attribute]: {
-                        name: 'familyName',
-                        value: this.generateFamilyName(Asa.familyName, this.state.ancestry.value, previous)
-                    }
-                });
-                break;
-            case 'race':
-                this.setState({
-                    [attribute]: {
-                        name: 'race',
-                        value: this.generateRace(Asa.race, this.state.ancestry.value, previous)
-                    }
-                });
-                break;
-            case 'ancestry':
-                this.setState({
-                    [attribute]: {
-                        name: 'ancestry',
-                        value: this.chooseValue(Asa.ancestry, previous)
-                    }
-                }, () => {
-                    this.reshuffle('givenName');
-                    this.reshuffle('familyName');
-                    this.reshuffle('race');
-                });
-                break;
-            case 'gender':
-                this.setState({
-                    [attribute]: {
-                        name: 'gender',
-                        value: this.chooseValue(Asa.gender, previous)
-                    }
-                }, () => {
-                    this.reshuffle('sexuality');
-                    this.reshuffle('givenName');
-                    this.reshuffle('familyName');
-                });
-                break;
-            case 'sexuality':
-                this.setState({
-                    [attribute]: {
-                        name: 'sexuality',
-                        value: this.generateSexuality(Asa.sexuality, this.state.gender.value, previous)
-                    }
-                });
-                break;
-            default:
-                this.setState({
-                    [attribute]: {
-                        name: attribute,
-                        value: this.chooseValue(Asa[attribute], previous)
-                    }
-                });
-        }
-    }
-
-    chooseValue(pool, oldValue) {
-        // taking the last value out of the pool so we get a new one every time
-        pool = pool.filter(option => option.name !== oldValue);
-        let sumWeights = 0;
-        for (let index in pool) {
-            //console.log("option.weight: " + pool[index].weight);
-            sumWeights += pool[index].weight ? pool[index].weight : 1;
-        }
-        //console.log("sumWeights: " + sumWeights);
-        let winner = Math.floor(Math.random() * sumWeights);
-        //console.log("winner: " + winner);
-        for (let index in pool) {
-            winner -= pool[index].weight ? pool[index].weight : 1;
-            //console.log("weight: " + pool[index].weight + ", winner is reduced to: " + winner)
-            if (winner < 0) {
-                return pool[index].name;
-            }
-        }
-    }
-
-    generateSexuality(options, gender, oldValue) {
-        if (gender === 'Cis male' || gender === 'Trans male' || gender === 'Cis female' || gender === 'Trans female') { gender = 'MaleFemale'; }
-        if (gender === 'Genderfluid' || gender === 'Agender') { gender = 'GenderfluidAgender'; }
-
-        return this.chooseValue(options[gender], oldValue);
-    }
-
-    generateGivenName(options, ancestry, gender, oldValue) {
-        if (gender === 'Cis male' || gender === 'Trans male') { gender = 'Masculine'; }
-        if (gender === 'Cis female' || gender === 'Trans female') { gender = 'Feminine'; }
-        if (gender === 'Genderfluid') { gender = (Math.random() >= 0.5) ? 'Masculine' : 'Feminine'; }
-
-        return this.chooseValue(options[ancestry][gender], oldValue);
-    }
-
-    generateFamilyName(options, ancestry, oldValue) {
-
-        return this.chooseValue(options[ancestry], oldValue);
-    }
-
-    generateRace(options, ancestry, oldValue) {
-
-        return this.chooseValue(options[ancestry], oldValue);
-    }
-
-    render() {
-
-        return (
-            <CharacterSheetContainer>
+const CharacterCard = ({ reshuffle, character }) => {   
+    
+    return (
+        <CharacterSheetContainer>
                 <CopyButton onClick={copy(dedent(
-                        `${this.state.givenName.value} ${this.state.familyName.value}
-                        ${this.state.gender.value} ${this.state.age.value} ${this.state.race.value} from ${this.state.ancestry.value}, ${this.state.sexuality.value}
-                        Mood: ${this.state.usualMood.value}
-                        Life goal: ${this.state.motivation.value}
-                        Personality traits: ${this.state.outlook.value}, ${this.state.integrity.value}, ${this.state.impulsiveness.value}, ${this.state.boldness.value}, ${this.state.friendliness.value}, ${this.state.conformity.value}`
+                        `${character.givenName.value} ${character.familyName.value}
+                        ${character.gender.value} ${character.age.value} ${character.race.value} from ${character.ancestry.value}, ${character.sexuality.value}
+                        Mood: ${character.usualMood.value}
+                        Life goal: ${character.motivation.value}
+                        Personality traits: ${character.outlook.value}, ${character.integrity.value}, ${character.impulsiveness.value}, ${character.boldness.value}, ${character.friendliness.value}, ${character.conformity.value}`
                         ))} />
                 <NameWrapper>
-                    <Attribute name='givenName' onClick={() => this.handleClick('givenName')} value={this.state.givenName.value} />
+                    <Attribute name='givenName' onClick={() => reshuffle('givenName')} value={character.givenName.value} />
                     {' '}
-                    <Attribute name='familyName' onClick={() => this.handleClick('familyName')} value={this.state.familyName.value} />
+                    <Attribute name='familyName' onClick={() => reshuffle('familyName')} value={character.familyName.value} />
                 </NameWrapper>
                 <AttributeGroup>
-                    <Attribute name='gender' onClick={() => this.handleClick('gender')} value={this.state.gender.value} />
+                    <Attribute name='gender' onClick={() => reshuffle('gender')} value={character.gender.value} />
                     {' '}
-                    <Attribute name='age' onClick={() => this.handleClick('age')} value={this.state.age.value} />
+                    <Attribute name='age' onClick={() => reshuffle('age')} value={character.age.value} />
                     {' '}
-                    <Attribute name='race' onClick={() => this.handleClick('race')} value={this.state.race.value} />
+                    <Attribute name='race' onClick={() => reshuffle('race')} value={character.race.value} />
                     {' '}
-                    from <Attribute name='ancestry' onClick={() => this.handleClick('ancestry')} value={this.state.ancestry.value} />,
+                    from <Attribute name='ancestry' onClick={() => reshuffle('ancestry')} value={character.ancestry.value} />,
                     {' '}
-                    <Attribute name='sexuality' onClick={() => this.handleClick('sexuality')} value={this.state.sexuality.value} />
+                    <Attribute name='sexuality' onClick={() => reshuffle('sexuality')} value={character.sexuality.value} />
                 </AttributeGroup>
                 <Row>
                     <Column>
                         <AttributeGroup>
                             <AttributeGroupLabel>Personality traits</AttributeGroupLabel>
                             <AttributeList>
-                                <li><Attribute name='friendliness' onClick={() => this.handleClick('friendliness')} value={this.state.friendliness.value} /></li>
-                                <li><Attribute name='integrity' onClick={() => this.handleClick('integrity')} value={this.state.integrity.value} /></li>
-                                <li><Attribute name='outlook' onClick={() => this.handleClick('outlook')} value={this.state.outlook.value} /></li>
-                                <li><Attribute name='impulsiveness' onClick={() => this.handleClick('impulsiveness')} value={this.state.impulsiveness.value} /></li>
-                                <li><Attribute name='boldness' onClick={() => this.handleClick('boldness')} value={this.state.boldness.value} /></li>
-                                <li><Attribute name='conformity' onClick={() => this.handleClick('conformity')} value={this.state.conformity.value} /></li>
+                                <li><Attribute name='friendliness' onClick={() => reshuffle('friendliness')} value={character.friendliness.value} /></li>
+                                <li><Attribute name='integrity' onClick={() => reshuffle('integrity')} value={character.integrity.value} /></li>
+                                <li><Attribute name='outlook' onClick={() => reshuffle('outlook')} value={character.outlook.value} /></li>
+                                <li><Attribute name='impulsiveness' onClick={() => reshuffle('impulsiveness')} value={character.impulsiveness.value} /></li>
+                                <li><Attribute name='boldness' onClick={() => reshuffle('boldness')} value={character.boldness.value} /></li>
+                                <li><Attribute name='conformity' onClick={() => reshuffle('conformity')} value={character.conformity.value} /></li>
                             </AttributeList>
                         </AttributeGroup>
                     </Column>
                     <Column>
                         <AttributeGroup>
                             <AttributeGroupLabel>Mood</AttributeGroupLabel>
-                            <Attribute name='usualMood' onClick={() => this.handleClick('usualMood')} value={this.state.usualMood.value} />
+                            <Attribute name='usualMood' onClick={() => reshuffle('usualMood')} value={character.usualMood.value} />
                         </AttributeGroup>
                         <AttributeGroup>
                             <AttributeGroupLabel>Life goal</AttributeGroupLabel>
-                            <Attribute name='motivation' onClick={() => this.handleClick('motivation')} value={this.state.motivation.value} />
+                            <Attribute name='motivation' onClick={() => reshuffle('motivation')} value={character.motivation.value} />
                         </AttributeGroup>
                     </Column>
                 </Row>
             </CharacterSheetContainer>
+    )
+}
+
+
+class CharacterSheet extends React.Component {
+
+    constructor(props) {
+
+        super(props);
+        this.state = {
+            character: generateCharacter()
+        }
+    }
+
+    reshuffleAttribute(attribute) {
+        this.setState({
+            character: reshuffle(this.state.character, attribute)
+        });
+    }  
+
+    render() {
+
+        return (
+           <CharacterCard character={this.state.character} reshuffle={(attribute) => this.reshuffleAttribute(attribute)}/>
         );
     }
 }
