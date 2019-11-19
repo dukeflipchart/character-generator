@@ -7,7 +7,7 @@ export const CharacterSheetContainer = styled.div`
     margin: 0 auto;
     padding: 2rem;
     border: 1px solid #ddd;
-    border-radius: 0.5rem;
+    border-radius: 1rem;
 `;
 
 export const CopyButton = styled(ClipboardSolid)`
