@@ -67,9 +67,9 @@ class CharacterSheet extends React.Component {
                 name: 'boldness',
                 value: this.chooseValue(Asa.boldness)
             },
-            agreeableness: {
-                name: 'agreeableness',
-                value: this.chooseValue(Asa.agreeableness)
+            friendliness: {
+                name: 'friendliness',
+                value: this.chooseValue(Asa.friendliness)
             },
             conformity: {
                 name: 'conformity',
@@ -221,7 +221,7 @@ class CharacterSheet extends React.Component {
                         ${this.state.gender.value} ${this.state.age.value} ${this.state.race.value} from ${this.state.ancestry.value}, ${this.state.sexuality.value}
                         Mood: ${this.state.usualMood.value}
                         Life goal: ${this.state.motivation.value}
-                        Personality traits: ${this.state.outlook.value}, ${this.state.integrity.value}, ${this.state.impulsiveness.value}, ${this.state.boldness.value}, ${this.state.agreeableness.value}, ${this.state.conformity.value}`
+                        Personality traits: ${this.state.outlook.value}, ${this.state.integrity.value}, ${this.state.impulsiveness.value}, ${this.state.boldness.value}, ${this.state.friendliness.value}, ${this.state.conformity.value}`
                         ))} />
                 <NameWrapper>
                     <Attribute name='givenName' onClick={() => this.handleClick('givenName')} value={this.state.givenName.value} />
@@ -244,11 +244,11 @@ class CharacterSheet extends React.Component {
                         <AttributeGroup>
                             <AttributeGroupLabel>Personality traits</AttributeGroupLabel>
                             <AttributeList>
-                                <li><Attribute name='outlook' onClick={() => this.handleClick('outlook')} value={this.state.outlook.value} /></li>
+                                <li><Attribute name='friendliness' onClick={() => this.handleClick('friendliness')} value={this.state.friendliness.value} /></li>
                                 <li><Attribute name='integrity' onClick={() => this.handleClick('integrity')} value={this.state.integrity.value} /></li>
+                                <li><Attribute name='outlook' onClick={() => this.handleClick('outlook')} value={this.state.outlook.value} /></li>
                                 <li><Attribute name='impulsiveness' onClick={() => this.handleClick('impulsiveness')} value={this.state.impulsiveness.value} /></li>
                                 <li><Attribute name='boldness' onClick={() => this.handleClick('boldness')} value={this.state.boldness.value} /></li>
-                                <li><Attribute name='agreeableness' onClick={() => this.handleClick('agreeableness')} value={this.state.agreeableness.value} /></li>
                                 <li><Attribute name='conformity' onClick={() => this.handleClick('conformity')} value={this.state.conformity.value} /></li>
                             </AttributeList>
                         </AttributeGroup>
