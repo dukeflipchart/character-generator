@@ -25,17 +25,20 @@ function Attribute(props) {
     );
 }
 
-const CharacterCard = ({ reshuffle, character }) => {   
-    
+const CharacterCard = ({ deleteCharacter, reshuffle, character }) => {   
+    console.log(deleteCharacter)
     return (
         <CharacterSheetContainer>
-                <CopyButton onClick={copy(dedent(
+                
+                <CopyButton 
+                    onClick={() => copy(dedent(
                         `${character.givenName.value} ${character.familyName.value}
                         ${character.gender.value} ${character.age.value} ${character.race.value} from ${character.ancestry.value}, ${character.sexuality.value}
                         Mood: ${character.usualMood.value}
                         Life goal: ${character.motivation.value}
                         Personality traits: ${character.outlook.value}, ${character.integrity.value}, ${character.impulsiveness.value}, ${character.boldness.value}, ${character.friendliness.value}, ${character.conformity.value}`
-                        ))} />
+                        ))}
+                />
                 <NameWrapper>
                     <Attribute name='givenName' onClick={() => reshuffle('givenName')} value={character.givenName.value} />
                     {' '}
@@ -53,6 +56,7 @@ const CharacterCard = ({ reshuffle, character }) => {
                     <Attribute name='sexuality' onClick={() => reshuffle('sexuality')} value={character.sexuality.value} />
                 </AttributeGroup>
                 <Row>
+                <button onClick={() => deleteCharacter()}>DELETE</button>
                     <Column>
                         <AttributeGroup>
                             <AttributeGroupLabel>Personality traits</AttributeGroupLabel>
@@ -88,20 +92,53 @@ class CharacterSheet extends React.Component {
 
         super(props);
         this.state = {
-            character: generateCharacter()
+            characters: {}
         }
     }
 
-    reshuffleAttribute(attribute) {
+    addCharacter() {
         this.setState({
-            character: reshuffle(this.state.character, attribute)
+            characters: {
+                ...this.state.characters,
+                [Date.now()]: generateCharacter()
+            }
+        });
+    }
+
+    deleteCharacter(uid) {
+        const {
+            [uid]: removedCharacter,
+            ...newCharacters
+        } = this.state.characters;
+
+        this.setState({
+            characters: newCharacters
+        });
+    }
+
+    reshuffleAttribute(uid, attribute) {
+        this.setState({
+            characters: {
+                ...this.state.characters,
+                [uid]: reshuffle(this.state.characters[uid], attribute)
+            }
         });
     }  
 
     render() {
 
         return (
-           <CharacterCard character={this.state.character} reshuffle={(attribute) => this.reshuffleAttribute(attribute)}/>
+            <div>
+                <button onClick={() => this.addCharacter()}>+</button>
+                {Object.entries(this.state.characters)
+                    .map(([uid, character]) => <CharacterCard
+                        key={uid}
+                        character={character}
+                        reshuffle={(attribute) => this.reshuffleAttribute(uid, attribute)}
+                        deleteCharacter={() => this.deleteCharacter(uid)}
+                    />)
+                }
+            </div> 
         );
     }
 }
