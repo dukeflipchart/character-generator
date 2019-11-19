@@ -135,15 +135,24 @@ export const reshuffle = (oldAttributes, targetAttribute) => {
             };
             break;
         case 'ancestry':
+            const newAncestry = chooseValue(Asa.ancestry, previousTargetAttributeValue);
             newAttributes = {
                 [targetAttribute]: {
                     name: 'ancestry',
-                    value: chooseValue(Asa.ancestry, previousTargetAttributeValue)
+                    value: newAncestry
+                },
+				givenName: {
+                    name: 'givenName',
+                    value: generateGivenName(Asa.givenName, newAncestry, oldAttributes.gender.value)
+                },
+				familyName: {
+                    name: 'familyName',
+                    value: generateFamilyName(Asa.familyName, newAncestry, oldAttributes.gender.value)
+                },
+				race: {
+                    name: 'race',
+                    value: generateRace(Asa.race, newAncestry)
                 }
-            }, () => {
-                this.reshuffle('givenName');
-                this.reshuffle('familyName');
-                this.reshuffle('race');
             };
             break;
         case 'gender':
