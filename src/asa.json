@@ -1,54 +1,54 @@
 {
     "gender": [
         {
-            "name": "Cis male",
+            "name": "cis male",
             "weight": 20
         },
         {
-            "name": "Cis female",
+            "name": "cis female",
             "weight": 20
         },
         {
-            "name": "Trans male"
+            "name": "trans male"
         },
         {
-            "name": "Trans female"
+            "name": "trans female"
         },
         {
-            "name": "Agender"
+            "name": "agender"
         },
         {
-            "name": "Genderfluid"
+            "name": "genderfluid"
         }
     ],
     "sexuality": {
         "MaleFemale": [
             {
-                "name": "Heterosexual",
+                "name": "heterosexual",
                 "weight": 10
             },
             {
-                "name": "Homosexual"
+                "name": "homosexual"
             },
             {
-                "name": "Bisexual"
+                "name": "bisexual"
             },
             {
-                "name": "Asexual"
+                "name": "asexual"
             }
         ],
         "GenderfluidAgender": [
             {
-                "name": "Androsexual"
+                "name": "androsexual"
             },
             {
-                "name": "Gynosexual"
+                "name": "gynosexual"
             },
             {
-                "name": "Bisexual"
+                "name": "bisexual"
             },
             {
-                "name": "Asexual"
+                "name": "asexual"
             }
         ]
     },
@@ -72,31 +72,31 @@
     ],
     "age": [
         {
-            "name": "Child",
+            "name": "child",
             "weight": 1
         },
         {
-            "name": "Teenager",
+            "name": "teenager",
             "weight": 2
         },
         {
-            "name": "Young adult",
+            "name": "young adult",
             "weight": 10
         },
         {
-            "name": "Adult",
+            "name": "adult",
             "weight": 20
         },
         {
-            "name": "Middle-aged",
+            "name": "middle-aged",
             "weight": 10
         },
         {
-            "name": "Old adult",
+            "name": "old",
             "weight": 5
         },
         {
-            "name": "Very old adult",
+            "name": "very old",
             "weight": 1
         }
     ],
@@ -243,26 +243,18 @@
     ],
     "integrity": [
         {
-            "name": "Honest"
+            "name": "Honest, industrious"
         },
         {
-            "name": "Deceitful"
+            "name": "Deceitful, lazy"
         }
     ],
     "impulsiveness": [
         {
-            "name": "Deliberate"
+            "name": "Deliberate, cautious"
         },
         {
-            "name": "Spontaneous"
-        }
-    ],
-    "boldness": [
-        {
-            "name": "Bold"
-        },
-        {
-            "name": "Cautious"
+            "name": "Spontaneous, bold"
         }
     ],
     "friendliness": [
@@ -284,281 +276,281 @@
     "race": {
         "Varena": [
             {
-                "name": "Human",
+                "name": "human",
                 "weight": 500
             },
             {
-                "name": "Elf",
+                "name": "elf",
+                "weight": 25
+            },
+            {
+                "name": "halfling",
                 "weight": 50
             },
             {
-                "name": "Halfling",
-                "weight": 100
+                "name": "dwarf",
+                "weight": 50
             },
             {
-                "name": "Dwarf",
-                "weight": 100
+                "name": "tiefling",
+                "weight": 50
             },
             {
-                "name": "Tiefling",
-                "weight": 200
+                "name": "half-elf",
+                "weight": 25
             },
             {
-                "name": "Half-elf",
-                "weight": 100
-            },
-            {
-                "name": "Half-orc",
+                "name": "half-orc",
                 "weight": 5
             },
             {
-                "name": "Gnome",
-                "weight": 50
+                "name": "gnome",
+                "weight": 25
             },
             {
-                "name": "Firbolg",
+                "name": "firbolg",
                 "weight": 1
             },
             {
-                "name": "Genasi",
+                "name": "genasi",
                 "weight": 1
             },
             {
-                "name": "Aasimar",
+                "name": "aasimar",
                 "weight": 2
             },
             {
-                "name": "Tabaxi",
-                "weight": 10
+                "name": "tabaxi",
+                "weight": 5
             },
             {
-                "name": "Goliath",
+                "name": "goliath",
                 "weight": 1
             },
             {
-                "name": "Kenku",
+                "name": "kenku",
                 "weight": 1
             },
             {
-                "name": "Lizardfolk",
+                "name": "lizardfolk",
                 "weight": 1
             },
             {
-                "name": "Orc",
+                "name": "orc",
                 "weight": 1
             },
             {
-                "name": "Goblin",
+                "name": "goblin",
                 "weight": 5
             }
         ],
         "Jaekol": [
             {
-                "name": "Human",
+                "name": "human",
                 "weight": 250
             },
             {
-                "name": "Elf",
+                "name": "elf",
                 "weight": 50
             },
             {
-                "name": "Halfling",
+                "name": "halfling",
                 "weight": 50
             },
             {
-                "name": "Dwarf",
+                "name": "dwarf",
                 "weight": 50
             },
             {
-                "name": "Tiefling",
+                "name": "tiefling",
                 "weight": 50
             },
             {
-                "name": "Half-elf",
-                "weight": 100
+                "name": "half-elf",
+                "weight": 50
             },
             {
-                "name": "Half-orc",
+                "name": "half-orc",
                 "weight": 10
             },
             {
-                "name": "Gnome",
+                "name": "gnome",
                 "weight": 25
             },
             {
-                "name": "Firbolg",
+                "name": "firbolg",
                 "weight": 1
             },
             {
-                "name": "Genasi",
+                "name": "genasi",
                 "weight": 1
             },
             {
-                "name": "Aasimar",
+                "name": "aasimar",
                 "weight": 1
             },
             {
-                "name": "Tabaxi",
+                "name": "tabaxi",
                 "weight": 1
             },
             {
-                "name": "Goliath",
+                "name": "goliath",
                 "weight": 10
             },
             {
-                "name": "Kenku",
+                "name": "kenku",
                 "weight": 1
             },
             {
-                "name": "Lizardfolk",
+                "name": "lizardfolk",
                 "weight": 2
             },
             {
-                "name": "Orc",
+                "name": "orc",
                 "weight": 2
             },
             {
-                "name": "Goblin",
+                "name": "goblin",
                 "weight": 10
             }
         ],
         "Kithara": [
             {
-                "name": "Human",
+                "name": "human",
                 "weight": 10
             },
             {
-                "name": "Elf",
+                "name": "elf",
                 "weight": 500
             },
             {
-                "name": "Halfling",
+                "name": "halfling",
                 "weight": 25
             },
             {
-                "name": "Dwarf",
+                "name": "dwarf",
                 "weight": 25
             },
             {
-                "name": "Tiefling",
+                "name": "tiefling",
                 "weight": 100
             },
             {
-                "name": "Half-elf",
+                "name": "half-elf",
                 "weight": 50
             },
             {
-                "name": "Half-orc",
+                "name": "half-orc",
                 "weight": 25
             },
             {
-                "name": "Gnome",
+                "name": "gnome",
                 "weight": 5
             },
             {
-                "name": "Firbolg",
+                "name": "firbolg",
                 "weight": 200
             },
             {
-                "name": "Genasi",
+                "name": "genasi",
                 "weight": 10
             },
             {
-                "name": "Aasimar",
+                "name": "aasimar",
                 "weight": 100
             },
             {
-                "name": "Tabaxi",
+                "name": "tabaxi",
+                "weight": 50
+            },
+            {
+                "name": "goliath",
                 "weight": 25
             },
             {
-                "name": "Goliath",
-                "weight": 25
-            },
-            {
-                "name": "Kenku",
+                "name": "kenku",
                 "weight": 10
             },
             {
-                "name": "Lizardfolk",
+                "name": "lizardfolk",
                 "weight": 5
             },
             {
-                "name": "Orc",
+                "name": "orc",
                 "weight": 5
             },
             {
-                "name": "Goblin",
+                "name": "goblin",
                 "weight": 1
             }
         ],
         "Sjellan": [
             {
-                "name": "Human",
+                "name": "human",
                 "weight": 50
             },
             {
-                "name": "Elf",
+                "name": "elf",
                 "weight": 500
             },
             {
-                "name": "Halfling",
+                "name": "halfling",
                 "weight": 50
             },
             {
-                "name": "Dwarf",
+                "name": "dwarf",
                 "weight": 250
             },
             {
-                "name": "Tiefling",
+                "name": "tiefling",
                 "weight": 10
             },
             {
-                "name": "Half-elf",
+                "name": "half-elf",
                 "weight": 50
             },
             {
-                "name": "Half-orc",
-                "weight": 20
+                "name": "half-orc",
+                "weight": 50
             },
             {
-                "name": "Gnome",
+                "name": "gnome",
                 "weight": 5
             },
             {
-                "name": "Firbolg",
+                "name": "firbolg",
                 "weight": 100
             },
             {
-                "name": "Genasi",
+                "name": "genasi",
                 "weight": 50
             },
             {
-                "name": "Aasimar",
+                "name": "aasimar",
                 "weight": 5
             },
             {
-                "name": "Tabaxi",
+                "name": "tabaxi",
                 "weight": 1
             },
             {
-                "name": "Goliath",
+                "name": "goliath",
                 "weight": 50
             },
             {
-                "name": "Kenku",
-                "weight": 1
+                "name": "kenku",
+                "weight": 10
             },
             {
-                "name": "Lizardfolk",
+                "name": "lizardfolk",
                 "weight": 5
             },
             {
-                "name": "Orc",
+                "name": "orc",
                 "weight": 5
             },
             {
-                "name": "Goblin",
+                "name": "goblin",
                 "weight": 1
             }
         ]

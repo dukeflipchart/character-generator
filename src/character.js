@@ -21,16 +21,16 @@ const chooseValue = (pool, oldValue) => {
 }
 
 const generateSexuality = (options, gender, oldValue) => {
-    if (gender === 'Cis male' || gender === 'Trans male' || gender === 'Cis female' || gender === 'Trans female') { gender = 'MaleFemale'; }
-    if (gender === 'Genderfluid' || gender === 'Agender') { gender = 'GenderfluidAgender'; }
+    if (gender === 'cis male' || gender === 'trans male' || gender === 'cis female' || gender === 'trans female') { gender = 'MaleFemale'; }
+    if (gender === 'genderfluid' || gender === 'agender') { gender = 'GenderfluidAgender'; }
 
     return chooseValue(options[gender], oldValue);
 }
 
 const generateGivenName = (options, ancestry, gender, oldValue) => {
-    if (gender === 'Cis male' || gender === 'Trans male') { gender = 'Masculine'; }
-    if (gender === 'Cis female' || gender === 'Trans female') { gender = 'Feminine'; }
-    if (gender === 'Genderfluid') { gender = (Math.random() >= 0.5) ? 'Masculine' : 'Feminine'; }
+    if (gender === 'cis male' || gender === 'trans male') { gender = 'Masculine'; }
+    if (gender === 'cis female' || gender === 'trans female') { gender = 'Feminine'; }
+    if (gender === 'genderfluid') { gender = (Math.random() >= 0.5) ? 'Masculine' : 'Feminine'; }
 
     return chooseValue(options[ancestry][gender], oldValue);
 }
@@ -71,10 +71,6 @@ export const generateCharacter = () => {
         impulsiveness: {
             name: 'impulsiveness',
             value: chooseValue(Asa.impulsiveness)
-        },
-        boldness: {
-            name: 'boldness',
-            value: chooseValue(Asa.boldness)
         },
         friendliness: {
             name: 'friendliness',

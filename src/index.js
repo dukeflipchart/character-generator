@@ -38,10 +38,10 @@ const CharacterCard = ({ deleteCharacter, reshuffle, character }) => {
             <CharacterCardToolbar>
                 <ToolbarButton onClick={() => copy(dedent(
                         `${character.givenName.value} ${character.familyName.value}
-                        ${character.gender.value} ${character.age.value} ${character.race.value} from ${character.ancestry.value}, ${character.sexuality.value}
+                        ${character.gender.value} ${character.age.value} ${character.sexuality.value} ${character.race.value} from ${character.ancestry.value} 
                         Mood: ${character.usualMood.value}
                         Life goal: ${character.motivation.value}
-                        Personality traits: ${character.outlook.value}, ${character.integrity.value}, ${character.impulsiveness.value}, ${character.boldness.value}, ${character.friendliness.value}, ${character.conformity.value}`
+                        Personality traits: ${character.outlook.value}, ${character.integrity.value}, ${character.impulsiveness.value}, ${character.friendliness.value}, ${character.conformity.value}`
                         ))}>
                     <ClipboardSolid />
                 </ToolbarButton>
@@ -55,15 +55,16 @@ const CharacterCard = ({ deleteCharacter, reshuffle, character }) => {
                 <Attribute name='familyName' onClick={() => reshuffle('familyName')} value={character.familyName.value} />
             </NameWrapper>
             <AttributeGroup>
+                is {['adult', 'old'].includes(character.age.value) ? 'an ' : 'a '} 
+                <Attribute name='age' onClick={() => reshuffle('age')} value={character.age.value} />
+                {' '}
                 <Attribute name='gender' onClick={() => reshuffle('gender')} value={character.gender.value} />
                 {' '}
-                <Attribute name='age' onClick={() => reshuffle('age')} value={character.age.value} />
+                <Attribute name='sexuality' onClick={() => reshuffle('sexuality')} value={character.sexuality.value} />
                 {' '}
                 <Attribute name='race' onClick={() => reshuffle('race')} value={character.race.value} />
                 {' '}
-                from <Attribute name='ancestry' onClick={() => reshuffle('ancestry')} value={character.ancestry.value} />,
-                {' '}
-                <Attribute name='sexuality' onClick={() => reshuffle('sexuality')} value={character.sexuality.value} />
+                from <Attribute name='ancestry' onClick={() => reshuffle('ancestry')} value={character.ancestry.value} />
             </AttributeGroup>
             <Row>
                 <Column>
@@ -74,7 +75,6 @@ const CharacterCard = ({ deleteCharacter, reshuffle, character }) => {
                             <li><Attribute name='integrity' onClick={() => reshuffle('integrity')} value={character.integrity.value} /></li>
                             <li><Attribute name='outlook' onClick={() => reshuffle('outlook')} value={character.outlook.value} /></li>
                             <li><Attribute name='impulsiveness' onClick={() => reshuffle('impulsiveness')} value={character.impulsiveness.value} /></li>
-                            <li><Attribute name='boldness' onClick={() => reshuffle('boldness')} value={character.boldness.value} /></li>
                             <li><Attribute name='conformity' onClick={() => reshuffle('conformity')} value={character.conformity.value} /></li>
                         </AttributeList>
                     </AttributeGroup>
