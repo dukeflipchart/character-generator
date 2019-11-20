@@ -130,7 +130,6 @@ export const AttributeGroup = styled.div`
 export const AttributeGroupLabel = styled.h4`
     font-family: Montserrat, sans-serif;
     font-size: 0.75rem;
-    color: ${colors.warlockPurple};
     text-transform: uppercase;
     margin-top: 0;
     margin-bottom: 0.3rem;

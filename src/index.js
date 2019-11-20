@@ -25,6 +25,10 @@ import {
     reshuffle
 } from './character';
 
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
 function Attribute(props) {
     return (
         <AttributeLabel onClick={props.onClick}>{props.value}</AttributeLabel>
@@ -60,7 +64,6 @@ const CharacterCard = ({ deleteCharacter, reshuffle, character }) => {
                 {' '}
                 <Attribute name='gender' onClick={() => reshuffle('gender')} value={character.gender.value} />
                 {' '}
-                <Attribute name='sexuality' onClick={() => reshuffle('sexuality')} value={character.sexuality.value} />
                 {' '}
                 <Attribute name='race' onClick={() => reshuffle('race')} value={character.race.value} />
                 {' '}
@@ -68,6 +71,10 @@ const CharacterCard = ({ deleteCharacter, reshuffle, character }) => {
             </AttributeGroup>
             <Row>
                 <Column>
+                    <AttributeGroup>
+                        <AttributeGroupLabel>Mood</AttributeGroupLabel>
+                        <Attribute capitalized name='usualMood' onClick={() => reshuffle('usualMood')} value={character.usualMood.value} />
+                    </AttributeGroup>
                     <AttributeGroup>
                         <AttributeGroupLabel>Personality traits</AttributeGroupLabel>
                         <AttributeList>
@@ -81,12 +88,15 @@ const CharacterCard = ({ deleteCharacter, reshuffle, character }) => {
                 </Column>
                 <Column>
                     <AttributeGroup>
-                        <AttributeGroupLabel>Mood</AttributeGroupLabel>
-                        <Attribute name='usualMood' onClick={() => reshuffle('usualMood')} value={character.usualMood.value} />
+                        <AttributeGroupLabel>Relationships</AttributeGroupLabel>
+                        <AttributeList>
+                            <li><Attribute name='sexuality' onClick={() => reshuffle('sexuality')} value={capitalizeFirstLetter(character.sexuality.value)} /></li>
+                            <li><Attribute name='relationship' onClick={() => reshuffle('relationship')} value={capitalizeFirstLetter(character.relationship.value)} /></li>
+                        </AttributeList>
                     </AttributeGroup>
                     <AttributeGroup>
                         <AttributeGroupLabel>Life goal</AttributeGroupLabel>
-                        <Attribute name='motivation' onClick={() => reshuffle('motivation')} value={character.motivation.value} />
+                        <Attribute capitalized name='motivation' onClick={() => reshuffle('motivation')} value={character.motivation.value} />
                     </AttributeGroup>
                 </Column>
             </Row>

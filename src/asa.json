@@ -100,6 +100,193 @@
             "weight": 1
         }
     ],
+    "appearance": [
+        {
+            "name": "Unusual hair color"
+        },
+        {
+            "name": "Elaborately braided hair or beard"
+        },
+        {
+            "name": "Bald"
+        },
+        {
+            "name": "Unkempt hair"
+        },
+        {
+            "name": "Waist-length hair"
+        },
+        {
+            "name": "Wears a wig"
+        },
+        {
+            "name": "Missing fingers"
+        },
+        {
+            "name": "Noticeable scar"
+        },
+        {
+            "name": "Blind in one eye"
+        },
+        {
+            "name": "Completely blind"
+        },
+        {
+            "name": "Hard of hearing"
+        },
+        {
+            "name": "Deaf"
+        },
+        {
+            "name": "Piercings"
+        },
+        {
+            "name": "Religious jewelry"
+        },
+        {
+            "name": "Ostentatious jewelry"
+        },
+        {
+            "name": "Muted, dark clothes"
+        },
+        {
+            "name": "Very vibrant clothes"
+        },
+        {
+            "name": "Expensive and flamboyant clothes"
+        },
+        {
+            "name": "Revealing clothes"
+        },
+        {
+            "name": "Ragged, dirty clothes"
+        },
+        {
+            "name": "Clean, proper clothes"
+        }
+    ],
+    "relationship": {
+        "child": [
+            {
+                "name": "single",
+                "weight": 50
+            },
+            {
+                "name": "has a crush on someone",
+                "weight": 20
+            },
+            {
+                "name": "is obsessed with someone",
+                "weight": 5
+            },
+            {
+                "name": "in a casual relationship",
+                "weight": 2
+            },
+            {
+                "name": "in a committed relationship",
+                "weight": 1
+            },
+            {
+                "name": "in a toxic relationship",
+                "weight": 1
+            },
+            {
+                "name": "recently broke up",
+                "weight": 1
+            }
+        ],
+        "teenager": [
+            {
+                "name": "single",
+                "weight": 10
+            },
+            {
+                "name": "has a crush on someone",
+                "weight": 10
+            },
+            {
+                "name": "is obsessed with someone",
+                "weight": 5
+            },
+            {
+                "name": "in a casual relationship",
+                "weight": 10
+            },
+            {
+                "name": "in a committed relationship",
+                "weight": 5
+            },
+            {
+                "name": "in a toxic relationship",
+                "weight": 5
+            },
+            {
+                "name": "recently broke up",
+                "weight": 2
+            }
+        ],
+        "young adult": [
+            {
+                "name": "single",
+                "weight": 10
+            },
+            {
+                "name": "has a crush on someone",
+                "weight": 5
+            },
+            {
+                "name": "is obsessed with someone",
+                "weight": 2
+            },
+            {
+                "name": "in a casual relationship",
+                "weight": 10
+            },
+            {
+                "name": "in a committed relationship",
+                "weight": 20
+            },
+            {
+                "name": "in a toxic relationship",
+                "weight": 5
+            },
+            {
+                "name": "recently broke up",
+                "weight": 1
+            }
+        ],
+        "older": [
+            {
+                "name": "single",
+                "weight": 10
+            },
+            {
+                "name": "has a crush on someone",
+                "weight": 2
+            },
+            {
+                "name": "is obsessed with someone",
+                "weight": 1
+            },
+            {
+                "name": "in a casual relationship",
+                "weight": 5
+            },
+            {
+                "name": "in a committed relationship",
+                "weight": 30
+            },
+            {
+                "name": "in a toxic relationship",
+                "weight": 10
+            },
+            {
+                "name": "recently broke up",
+                "weight": 2
+            }
+        ]
+    },
     "motivation": [
         {
             "name": "Achievement - To overcome obstacles and succeed; to become the best"

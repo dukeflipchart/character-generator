@@ -27,6 +27,12 @@ const generateSexuality = (options, gender, oldValue) => {
     return chooseValue(options[gender], oldValue);
 }
 
+const generateRelationship = (options, age, oldValue) => {
+    if (['adult', 'middle-aged', 'old', 'very old'].includes(age)) { age = 'older'; }
+
+    return chooseValue(options[age], oldValue);
+}
+
 const generateGivenName = (options, ancestry, gender, oldValue) => {
     if (gender === 'cis male' || gender === 'trans male') { gender = 'Masculine'; }
     if (gender === 'cis female' || gender === 'trans female') { gender = 'Feminine'; }
@@ -97,6 +103,10 @@ export const generateCharacter = () => {
         name: 'race',
         value: generateRace(Asa.race, character.ancestry.value)
     }
+    character.relationship = {
+        name: 'relationship',
+        value: generateRelationship(Asa.relationship, character.age.value)
+    }
 
     return character;
 }
@@ -133,7 +143,7 @@ export const reshuffle = (oldAttributes, targetAttribute) => {
         case 'ancestry':
             const newAncestry = chooseValue(Asa.ancestry, previousTargetAttributeValue);
             newAttributes = {
-                [targetAttribute]: {
+                ancestry: {
                     name: 'ancestry',
                     value: newAncestry
                 },
@@ -173,6 +183,27 @@ export const reshuffle = (oldAttributes, targetAttribute) => {
                 [targetAttribute]: {
                     name: 'sexuality',
                     value: generateSexuality(Asa.sexuality, oldAttributes.gender.value, previousTargetAttributeValue)
+                }
+            };
+            break;
+        case 'relationship':
+            newAttributes = {
+                [targetAttribute]: {
+                    name: 'relationship',
+                    value: generateRelationship(Asa.relationship, oldAttributes.age.value, previousTargetAttributeValue)
+                }
+            };
+            break;
+        case 'age':
+            const newAge = chooseValue(Asa[targetAttribute], previousTargetAttributeValue);
+            newAttributes = {
+                age: {
+                    name: 'age',
+                    value: newAge
+                },
+                relationship: {
+                    name: 'relationship',
+                    value: generateRelationship(Asa.relationship, newAge, oldAttributes.relationship.value)
                 }
             };
             break;
