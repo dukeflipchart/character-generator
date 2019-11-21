@@ -102,19 +102,28 @@
     ],
     "appearance": [
         {
+            "name": "Beautiful"
+        },
+        {
+            "name": "Ugly"
+        },
+        {
             "name": "Unusual hair color"
         },
         {
             "name": "Elaborately braided hair or beard"
         },
         {
+            "name": "Beads in hair or beard"
+        },
+        {
             "name": "Bald"
         },
         {
-            "name": "Unkempt hair"
+            "name": "Waist-length hair"
         },
         {
-            "name": "Waist-length hair"
+            "name": "Unkempt hair"
         },
         {
             "name": "Wears a wig"
@@ -138,7 +147,22 @@
             "name": "Deaf"
         },
         {
+            "name": "Missing an arm"
+        },
+        {
+            "name": "Missing a leg"
+        },
+        {
+            "name": "Holy symbol branded onto hand"
+        },
+        {
             "name": "Piercings"
+        },
+        {
+            "name": "Tatoos"
+        },
+        {
+            "name": "Spectacles"
         },
         {
             "name": "Religious jewelry"
