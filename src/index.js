@@ -35,7 +35,7 @@ function Attribute(props) {
     );
 }
 
-const CharacterCard = ({ deleteCharacter, reshuffle, character }) => {   
+const CharacterCard = ({ deleteCharacter, reshuffle, character }) => {
     return (
         <CharacterCardContainer>
             <CharacterCardToolbar>
