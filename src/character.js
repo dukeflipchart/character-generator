@@ -26,9 +26,10 @@ const generateSexuality = (options, gender, excludedText) => {
 }
 
 const generateRelationship = (options, age, excludedText) => {
-    if (['adult', 'middle-aged', 'old', 'very old'].includes(age)) { age = 'older'; }
+    let relationshipAge = age;
+    if (['adult', 'middle-aged', 'old', 'very old'].includes(age)) { relationshipAge = 'older'; }
 
-    return chooseAttribute(options[age], excludedText);
+    return chooseAttribute(options[relationshipAge], excludedText);
 }
 
 const generateGivenName = (options, ancestry, gender, excludedText) => {
@@ -48,153 +49,78 @@ const generateRace = (options, ancestry, excludedText) => chooseAttribute(option
 
 export const generateCharacter = () => {
     const character = {
-        gender: {
-            name: 'gender',
-            value: chooseAttribute(Asa.gender)
-        },
-        ancestry: {
-            name: 'ancestry',
-            value: chooseAttribute(Asa.ancestry)
-        },
-        age: {
-            name: 'age',
-            value: chooseAttribute(Asa.age)
-        },
-        motivation: {
-            name: 'motivation',
-            value: chooseAttribute(Asa.motivation)
-        },
-        usualMood: {
-            name: 'usualMood',
-            value: chooseAttribute(Asa.usualMood)
-        }
+        gender: chooseAttribute(Asa.gender),
+        ancestry: chooseAttribute(Asa.ancestry),
+        age: chooseAttribute(Asa.age),
+        motivation: chooseAttribute(Asa.motivation),
+        usualMood: chooseAttribute(Asa.usualMood)
     }
-    character.sexuality = {
-        name: 'sexuality',
-        value: generateSexuality(Asa.sexuality, character.gender.value.text)
-    }
-    character.givenName = {
-        name: 'givenName',
-        value: generateGivenName(Asa.givenName, character.ancestry.value.text, character.gender.value.text)
-    }
-    character.familyName = {
-        name: 'familyName',
-        value: generateFamilyName(Asa.familyName, character.ancestry.value.text)
-    }
-    character.race = {
-        name: 'race',
-        value: generateRace(Asa.race, character.ancestry.value.text)
-    }
-    character.relationship = {
-        name: 'relationship',
-        value: generateRelationship(Asa.relationship, character.age.value.text)
-    }
-
+    character.sexuality = generateSexuality(Asa.sexuality, character.gender.text);
+    character.givenName = generateGivenName(Asa.givenName, character.ancestry.text, character.gender.text);
+    character.familyName = generateFamilyName(Asa.familyName, character.ancestry.text);
+    character.race = generateRace(Asa.race, character.ancestry.text);
+    character.relationship = generateRelationship(Asa.relationship, character.age.text);
+    
     return character;
 }
 
 export const reshuffle = (oldAttributes, targetAttribute) => {
-	let previousTargetAttributeValueText = oldAttributes[targetAttribute].value.text;
+	let previousTargetAttributeText = oldAttributes[targetAttribute].text;
 
 	let newAttributes;
 	switch(targetAttribute) {
         case 'givenName':
             newAttributes = {
-                [targetAttribute]: {
-                    name: 'givenName',
-                    value: generateGivenName(Asa.givenName, oldAttributes.ancestry.value.text, oldAttributes.gender.value.text, previousTargetAttributeValueText)
-                }
+                givenName: generateGivenName(Asa.givenName, oldAttributes.ancestry.text, oldAttributes.gender.text, previousTargetAttributeText)
             };
             break;
         case 'familyName':
             newAttributes = {
-                [targetAttribute]: {
-                    name: 'familyName',
-                    value: generateFamilyName(Asa.familyName, oldAttributes.ancestry.value.text, previousTargetAttributeValueText)
-                }
+                familyName: generateFamilyName(Asa.familyName, oldAttributes.ancestry.text, previousTargetAttributeText)
             };
             break;
         case 'race':
             newAttributes = {
-                [targetAttribute]: {
-                    name: 'race',
-                    value: generateRace(Asa.race, oldAttributes.ancestry.value.text, previousTargetAttributeValueText)
-                }
+                race: generateRace(Asa.race, oldAttributes.ancestry.text, previousTargetAttributeText)
             };
             break;
         case 'ancestry':
-            const newAncestry = chooseAttribute(Asa.ancestry, previousTargetAttributeValueText);
+            const newAncestry = chooseAttribute(Asa.ancestry, previousTargetAttributeText);
             newAttributes = {
-                ancestry: {
-                    name: 'ancestry',
-                    value: newAncestry
-                },
-				givenName: {
-                    name: 'givenName',
-                    value: generateGivenName(Asa.givenName, newAncestry.text, oldAttributes.gender.value.text)
-                },
-				familyName: {
-                    name: 'familyName',
-                    value: generateFamilyName(Asa.familyName, newAncestry.text, oldAttributes.gender.value.text)
-                },
-				race: {
-                    name: 'race',
-                    value: generateRace(Asa.race, newAncestry.text)
-                }
+                ancestry: newAncestry,
+				givenName: generateGivenName(Asa.givenName, newAncestry.text, oldAttributes.gender.text),
+				familyName: generateFamilyName(Asa.familyName, newAncestry.text, oldAttributes.gender.text),
+				race: generateRace(Asa.race, newAncestry.text)
             };
             break;
         case 'gender':
-		    const newGender = chooseAttribute(Asa.gender, previousTargetAttributeValueText);
+		    const newGender = chooseAttribute(Asa.gender, previousTargetAttributeText);
 			newAttributes = {
-                gender: {
-                    name: 'gender',
-                    value: newGender
-				},
-				sexuality: {
-                    name: 'sexuality',
-                    value: generateSexuality(Asa.sexuality, newGender.text, oldAttributes.sexuality.value.text)
-				},
-				givenName: {
-                    name: 'givenName',
-                    value: generateGivenName(Asa.givenName, oldAttributes.ancestry.value.text, newGender.text)
-                }
+                gender: newGender,
+				sexuality: generateSexuality(Asa.sexuality, newGender.text, oldAttributes.sexuality.text),
+				givenName: generateGivenName(Asa.givenName, oldAttributes.ancestry.text, newGender.text)
             };
             break;
         case 'sexuality':
             newAttributes = {
-                [targetAttribute]: {
-                    name: 'sexuality',
-                    value: generateSexuality(Asa.sexuality, oldAttributes.gender.value.text, previousTargetAttributeValueText)
-                }
+                sexuality: generateSexuality(Asa.sexuality, oldAttributes.gender.text, previousTargetAttributeText)
             };
             break;
         case 'relationship':
             newAttributes = {
-                [targetAttribute]: {
-                    name: 'relationship',
-                    value: generateRelationship(Asa.relationship, oldAttributes.age.value.text, previousTargetAttributeValueText)
-                }
+                relationship: generateRelationship(Asa.relationship, oldAttributes.age.text, previousTargetAttributeText)
             };
             break;
         case 'age':
-            const newAge = chooseAttribute(Asa[targetAttribute], previousTargetAttributeValueText);
+            const newAge = chooseAttribute(Asa[targetAttribute], previousTargetAttributeText);
             newAttributes = {
-                age: {
-                    name: 'age',
-                    value: newAge
-                },
-                relationship: {
-                    name: 'relationship',
-                    value: generateRelationship(Asa.relationship, newAge.text)
-                }
+                age: newAge,
+                relationship: generateRelationship(Asa.relationship, newAge.text)
             };
             break;
         default:
             newAttributes = {
-                [targetAttribute]: {
-                    name: targetAttribute,
-                    value: chooseAttribute(Asa[targetAttribute], previousTargetAttributeValueText)
-                }
+                [targetAttribute]: chooseAttribute(Asa[targetAttribute], previousTargetAttributeText)
             };
     }
 

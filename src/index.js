@@ -40,10 +40,10 @@ const CharacterCard = ({ deleteCharacter, reshuffle, character }) => {
         <CharacterCardContainer>
             <CharacterCardToolbar>
                 <ToolbarButton onClick={() => copy(dedent(
-                        `${character.givenName.value.text} ${character.familyName.value.text}
-                        ${character.gender.value.text} ${character.age.value.text} ${character.sexuality.value.text} ${character.race.value.text} from ${character.ancestry.value.text} 
-                        Mood: ${character.usualMood.value.text}
-                        Life goal: ${character.motivation.value.text}`
+                        `${character.givenName.text} ${character.familyName.text}
+                        ${character.gender.text} ${character.age.text} ${character.sexuality.text} ${character.race.text} from ${character.ancestry.text} 
+                        Mood: ${character.usualMood.text}
+                        Life goal: ${character.motivation.text}`
                         ))}>
                     <ClipboardSolid />
                 </ToolbarButton>
@@ -52,39 +52,39 @@ const CharacterCard = ({ deleteCharacter, reshuffle, character }) => {
                 </ToolbarButton>
             </CharacterCardToolbar>
             <NameWrapper>
-                <Attribute name='givenName' onClick={() => reshuffle('givenName')} value={character.givenName.value.text} />
+                <Attribute name='givenName' onClick={() => reshuffle('givenName')} value={character.givenName.text} />
                 {' '}
-                <Attribute name='familyName' onClick={() => reshuffle('familyName')} value={character.familyName.value.text} />
+                <Attribute name='familyName' onClick={() => reshuffle('familyName')} value={character.familyName.text} />
             </NameWrapper>
             <AttributeGroup>
-                is {['adult', 'old'].includes(character.age.value.text) ? 'an ' : 'a '} 
-                <Attribute name='age' onClick={() => reshuffle('age')} value={character.age.value.text} />
+                is {['adult', 'old'].includes(character.age.text) ? 'an ' : 'a '} 
+                <Attribute name='age' onClick={() => reshuffle('age')} value={character.age.text} />
                 {' '}
-                <Attribute name='gender' onClick={() => reshuffle('gender')} value={character.gender.value.text} />
+                <Attribute name='gender' onClick={() => reshuffle('gender')} value={character.gender.text} />
                 {' '}
                 {' '}
-                <Attribute name='race' onClick={() => reshuffle('race')} value={character.race.value.text} />
+                <Attribute name='race' onClick={() => reshuffle('race')} value={character.race.text} />
                 {' '}
-                from <Attribute name='ancestry' onClick={() => reshuffle('ancestry')} value={character.ancestry.value.text} />
+                from <Attribute name='ancestry' onClick={() => reshuffle('ancestry')} value={character.ancestry.text} />
             </AttributeGroup>
             <Row>
                 <Column>
                     <AttributeGroup>
                         <AttributeGroupLabel>Mood</AttributeGroupLabel>
-                        <Attribute capitalized name='usualMood' onClick={() => reshuffle('usualMood')} value={character.usualMood.value.text} />
+                        <Attribute capitalized name='usualMood' onClick={() => reshuffle('usualMood')} value={character.usualMood.text} />
                     </AttributeGroup>
                 </Column>
                 <Column>
                     <AttributeGroup>
                         <AttributeGroupLabel>Relationships</AttributeGroupLabel>
                         <AttributeList>
-                            <li><Attribute name='sexuality' onClick={() => reshuffle('sexuality')} value={capitalizeFirstLetter(character.sexuality.value.text)} /></li>
-                            <li><Attribute name='relationship' onClick={() => reshuffle('relationship')} value={capitalizeFirstLetter(character.relationship.value.text)} /></li>
+                            <li><Attribute name='sexuality' onClick={() => reshuffle('sexuality')} value={capitalizeFirstLetter(character.sexuality.text)} /></li>
+                            <li><Attribute name='relationship' onClick={() => reshuffle('relationship')} value={capitalizeFirstLetter(character.relationship.text)} /></li>
                         </AttributeList>
                     </AttributeGroup>
                     <AttributeGroup>
                         <AttributeGroupLabel>Life goal</AttributeGroupLabel>
-                        <Attribute capitalized name='motivation' onClick={() => reshuffle('motivation')} value={character.motivation.value.text} />
+                        <Attribute capitalized name='motivation' onClick={() => reshuffle('motivation')} value={character.motivation.text} />
                     </AttributeGroup>
                 </Column>
             </Row>
