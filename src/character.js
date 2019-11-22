@@ -1,20 +1,16 @@
 import Asa from './asa';
 
-const chooseValue = (pool, oldValue) => {
-    // taking the last value out of the pool so we get a new one every time
-    pool = pool.filter(option => option.name !== oldValue);
+const chooseAttribute = (pool, excludedValue) => {
+    pool = pool.filter(option => option.name !== excludedValue);
     let sumWeights = 0;
     for (let index in pool) {
-        //console.log("option.weight: " + pool[index].weight);
         sumWeights += pool[index].weight ? pool[index].weight : 1;
     }
-    //console.log("sumWeights: " + sumWeights);
     let winner = Math.floor(Math.random() * sumWeights);
-    //console.log("winner: " + winner);
     for (let index in pool) {
         winner -= pool[index].weight ? pool[index].weight : 1;
-        //console.log("weight: " + pool[index].weight + ", winner is reduced to: " + winner)
         if (winner < 0) {
+
             return pool[index].name;
         }
     }
