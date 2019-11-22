@@ -130,21 +130,21 @@
             "weight": 1
         },
         {
-            "text": "unusual eye color",
+            "text": "has an unusual eye color",
             "tags": [
                 "eyes"
             ],
             "weight": 1
         },
         {
-            "text": "differently colored eyes",
+            "text": "has differently colored eyes",
             "tags": [
                 "eyes"
             ],
             "weight": 1
         },
         {
-            "text": "upturned nose",
+            "text": "has an upturned nose",
             "tags": [
                 "nose"
             ],
@@ -221,25 +221,18 @@
             "weight": 7
         },
         {
-            "text": "unusual hair color",
+            "text": "has an unusual hair color",
             "tags": [
                 "hair"
             ],
             "weight": 1
         },
         {
-            "text": "elaborately braided hair or beard",
+            "text": "has elaborately braided hair or beard",
             "tags": [
                 "hair"
             ],
             "weight": 2
-        },
-        {
-            "text": "beads in hair or beard",
-            "tags": [
-                "hair"
-            ],
-            "weight": 1
         },
         {
             "text": "bald",
@@ -249,14 +242,14 @@
             "weight": 3
         },
         {
-            "text": "waist-length hair",
+            "text": "has waist-length hair",
             "tags": [
                 "hair"
             ],
             "weight": 3
         },
         {
-            "text": "unkempt hair",
+            "text": "has unkempt hair",
             "tags": [
                 "hair"
             ],
@@ -328,28 +321,28 @@
             "weight": 1
         },
         {
-            "text": "holy symbol branded onto hand",
+            "text": "has a holy symbol branded onto hand",
             "tags": [
                 "jewelry"
             ],
             "weight": 3
         },
         {
-            "text": "piercings",
+            "text": "has several piercings",
             "tags": [
                 "jewelry"
             ],
             "weight": 5
         },
         {
-            "text": "tatoos",
+            "text": "has several tatoos",
             "tags": [
                 "jewelry"
             ],
             "weight": 5
         },
         {
-            "text": "spectacles",
+            "text": "wears spectacles",
             "tags": [
                 "jewelry",
                 "eyes"
@@ -357,56 +350,56 @@
             "weight": 2
         },
         {
-            "text": "religious jewelry",
+            "text": "wears religious jewelry",
             "tags": [
                 "jewelry"
             ],
             "weight": 5
         },
         {
-            "text": "ostentatious jewelry",
+            "text": "wears ostentatious jewelry",
             "tags": [
                 "jewelry"
             ],
             "weight": 2
         },
         {
-            "text": "muted, dark clothes",
+            "text": "wears muted, dark clothes",
             "tags": [
                 "clothes"
             ],
             "weight": 7
         },
         {
-            "text": "very vibrant clothes",
+            "text": "wears very vibrant clothes",
             "tags": [
                 "clothes"
             ],
             "weight": 5
         },
         {
-            "text": "expensive and flamboyant clothes",
+            "text": "wears expensive and flamboyant clothes",
             "tags": [
                 "clothes"
             ],
             "weight": 5
         },
         {
-            "text": "revealing clothes",
+            "text": "wears very revealing clothes",
             "tags": [
                 "clothes"
             ],
             "weight": 5
         },
         {
-            "text": "ragged, dirty clothes",
+            "text": "wears ragged, dirty clothes",
             "tags": [
                 "clothes"
             ],
             "weight": 7
         },
         {
-            "text": "clean, proper clothes",
+            "text": "wears clean, proper clothes",
             "tags": [
                 "clothes"
             ],

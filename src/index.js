@@ -76,24 +76,24 @@ const CharacterCard = ({ deleteCharacter, reshuffle, character }) => {
                         <Attribute name='appearance2' onClick={() => reshuffle('appearance2')} value={character.appearance2.text} />
                     </AttributeGroup>
                     <AttributeGroup>
+                        <AttributeGroupLabel>Mood</AttributeGroupLabel>
+                        <Attribute name='mood' onClick={() => reshuffle('mood')} value={character.mood.text} />
+                    </AttributeGroup>
+                </Column>
+                <Column>
+                    <AttributeGroup>
+                        <AttributeGroupLabel>Personality</AttributeGroupLabel>
+                        <Attribute name='personality1' onClick={() => reshuffle('personality1')} value={capitalizeFirstLetter(character.personality1.text)} /> and
+                        {' '}
+                        <Attribute name='personality2' onClick={() => reshuffle('personality2')} value={character.personality2.text} />
+                    </AttributeGroup>
+                    <AttributeGroup>
                         <AttributeGroupLabel>Relationships</AttributeGroupLabel>
                         <AttributeList>
                             <Attribute name='sexuality' onClick={() => reshuffle('sexuality')} value={capitalizeFirstLetter(character.sexuality.text)} />,
                             {' '}
                             <Attribute name='relationship' onClick={() => reshuffle('relationship')} value={character.relationship.text} />
                         </AttributeList>
-                    </AttributeGroup>
-                </Column>
-                <Column>
-                    <AttributeGroup>
-                        <AttributeGroupLabel>Mood</AttributeGroupLabel>
-                        <Attribute name='mood' onClick={() => reshuffle('mood')} value={character.mood.text} />
-                    </AttributeGroup>
-                    <AttributeGroup>
-                        <AttributeGroupLabel>Personality</AttributeGroupLabel>
-                        <Attribute name='personality1' onClick={() => reshuffle('personality1')} value={capitalizeFirstLetter(character.personality1.text)} /> and
-                        {' '}
-                        <Attribute name='personality2' onClick={() => reshuffle('personality2')} value={character.personality2.text} />
                     </AttributeGroup>
                 </Column>
                 <Column>
