@@ -106,14 +106,14 @@
             "tags": [
                 "beauty"
             ],
-            "weight": 5
+            "weight": 10
         },
         {
             "text": "Ugly",
             "tags": [
                 "beauty"
             ],
-            "weight": 5
+            "weight": 10
         },
         {
             "text": "Staggeringly beautiful",
@@ -128,6 +128,97 @@
                 "beauty"
             ],
             "weight": 1
+        },
+        {
+            "text": "Unusual eye color",
+            "tags": [
+                "eyes"
+            ],
+            "weight": 1
+        },
+        {
+            "text": "Differently colored eyes",
+            "tags": [
+                "eyes"
+            ],
+            "weight": 1
+        },
+        {
+            "text": "Upturned nose",
+            "tags": [
+                "nose"
+            ],
+            "weight": 3
+        },
+        {
+            "text": "Hawk-nosed",
+            "tags": [
+                "nose"
+            ],
+            "weight": 3
+        },
+        {
+            "text": "Wide-nosed",
+            "tags": [
+                "nose"
+            ],
+            "weight": 3
+        },
+        {
+            "text": "Missing teeth",
+            "tags": [
+                "teeth"
+            ],
+            "weight": 2
+        },
+        {
+            "text": "Very tall",
+            "tags": [
+                "height"
+            ],
+            "weight": 3
+        },
+        {
+            "text": "Tall",
+            "tags": [
+                "height"
+            ],
+            "weight": 7
+        },
+        {
+            "text": "Short",
+            "tags": [
+                "height"
+            ],
+            "weight": 7
+        },
+        {
+            "text": "Very short",
+            "tags": [
+                "height"
+            ],
+            "weight": 3
+        },
+        {
+            "text": "Athletic",
+            "tags": [
+                "build"
+            ],
+            "weight": 7
+        },
+        {
+            "text": "Heavyset",
+            "tags": [
+                "build"
+            ],
+            "weight": 7
+        },
+        {
+            "text": "Skinny",
+            "tags": [
+                "build"
+            ],
+            "weight": 7
         },
         {
             "text": "Unusual hair color",
@@ -155,14 +246,14 @@
             "tags": [
                 "hair"
             ],
-            "weight": 2
+            "weight": 3
         },
         {
             "text": "Waist-length hair",
             "tags": [
                 "hair"
             ],
-            "weight": 1
+            "weight": 3
         },
         {
             "text": "Unkempt hair",
@@ -240,21 +331,21 @@
             "tags": [
                 "jewelry"
             ],
-            "weight": 1
+            "weight": 3
         },
         {
             "text": "Piercings",
             "tags": [
                 "jewelry"
             ],
-            "weight": 2
+            "weight": 5
         },
         {
             "text": "Tatoos",
             "tags": [
                 "jewelry"
             ],
-            "weight": 3
+            "weight": 5
         },
         {
             "text": "Spectacles",
@@ -283,7 +374,7 @@
             "tags": [
                 "clothes"
             ],
-            "weight": 5
+            "weight": 7
         },
         {
             "text": "Very vibrant clothes",
@@ -297,28 +388,28 @@
             "tags": [
                 "clothes"
             ],
-            "weight": 3
+            "weight": 5
         },
         {
             "text": "Revealing clothes",
             "tags": [
                 "clothes"
             ],
-            "weight": 3
+            "weight": 5
         },
         {
             "text": "Ragged, dirty clothes",
             "tags": [
                 "clothes"
             ],
-            "weight": 5
+            "weight": 7
         },
         {
             "text": "Clean, proper clothes",
             "tags": [
                 "clothes"
             ],
-            "weight": 5
+            "weight": 7
         }
     ],
     "relationship": {
