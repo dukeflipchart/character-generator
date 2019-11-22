@@ -1,19 +1,20 @@
 import Asa from './asa';
 
-const chooseValue = (pool, oldValue) => {
-    // taking the last value out of the pool so we get a new one every time
-    pool = pool.filter(option => option.name !== oldValue);
+const chooseValue = (pool, excludedValues = false) => {
+    if (excludedValues) {
+        //console.log(pool);
+        //console.log(`excluding: ${excludedValues}`);
+        // taking excluded values out of the pool
+        pool = pool.filter(option => !excludedValues.includes(option.name));
+        //console.log(pool);
+    }
     let sumWeights = 0;
     for (let index in pool) {
-        //console.log("option.weight: " + pool[index].weight);
         sumWeights += pool[index].weight ? pool[index].weight : 1;
     }
-    //console.log("sumWeights: " + sumWeights);
     let winner = Math.floor(Math.random() * sumWeights);
-    //console.log("winner: " + winner);
     for (let index in pool) {
         winner -= pool[index].weight ? pool[index].weight : 1;
-        //console.log("weight: " + pool[index].weight + ", winner is reduced to: " + winner)
         if (winner < 0) {
             return pool[index].name;
         }
@@ -24,13 +25,13 @@ const generateSexuality = (options, gender, oldValue) => {
     if (gender === 'cis male' || gender === 'trans male' || gender === 'cis female' || gender === 'trans female') { gender = 'MaleFemale'; }
     if (gender === 'genderfluid' || gender === 'agender') { gender = 'GenderfluidAgender'; }
 
-    return chooseValue(options[gender], oldValue);
+    return chooseValue(options[gender], oldValue && [oldValue]);
 }
 
 const generateRelationship = (options, age, oldValue) => {
     if (['adult', 'middle-aged', 'old', 'very old'].includes(age)) { age = 'older'; }
 
-    return chooseValue(options[age], oldValue);
+    return chooseValue(options[age], oldValue && [oldValue]);
 }
 
 const generateGivenName = (options, ancestry, gender, oldValue) => {
@@ -38,11 +39,11 @@ const generateGivenName = (options, ancestry, gender, oldValue) => {
     if (gender === 'cis female' || gender === 'trans female') { gender = 'Feminine'; }
     if (gender === 'genderfluid') { gender = (Math.random() >= 0.5) ? 'Masculine' : 'Feminine'; }
 
-    return chooseValue(options[ancestry][gender], oldValue);
+    return chooseValue(options[ancestry][gender], oldValue && [oldValue]);
 }
 
-const generateFamilyName = (options, ancestry, oldValue) => chooseValue(options[ancestry], oldValue);
-const generateRace = (options, ancestry, oldValue) => chooseValue(options[ancestry], oldValue);
+const generateFamilyName = (options, ancestry, oldValue) => chooseValue(options[ancestry], oldValue && [oldValue]);
+const generateRace = (options, ancestry, oldValue) => chooseValue(options[ancestry], oldValue && [oldValue]);
 
 export const generateCharacter = () => {
     const character = {
@@ -66,26 +67,6 @@ export const generateCharacter = () => {
             name: 'usualMood',
             value: chooseValue(Asa.usualMood)
         },
-        outlook: {
-            name: 'outlook',
-            value: chooseValue(Asa.outlook)
-        },
-        integrity: {
-            name: 'integrity',
-            value: chooseValue(Asa.integrity)
-        },
-        impulsiveness: {
-            name: 'impulsiveness',
-            value: chooseValue(Asa.impulsiveness)
-        },
-        friendliness: {
-            name: 'friendliness',
-            value: chooseValue(Asa.friendliness)
-        },
-        conformity: {
-            name: 'conformity',
-            value: chooseValue(Asa.conformity)
-        }
     }
     character.sexuality = {
         name: 'sexuality',
@@ -141,7 +122,7 @@ export const reshuffle = (oldAttributes, targetAttribute) => {
             };
             break;
         case 'ancestry':
-            const newAncestry = chooseValue(Asa.ancestry, previousTargetAttributeValue);
+            const newAncestry = chooseValue(Asa.ancestry, [previousTargetAttributeValue]);
             newAttributes = {
                 ancestry: {
                     name: 'ancestry',
@@ -162,7 +143,7 @@ export const reshuffle = (oldAttributes, targetAttribute) => {
             };
             break;
         case 'gender':
-		    const newGender = chooseValue(Asa.gender, previousTargetAttributeValue);
+		    const newGender = chooseValue(Asa.gender, [previousTargetAttributeValue]);
 			newAttributes = {
                 gender: {
                     name: 'gender',
@@ -170,11 +151,11 @@ export const reshuffle = (oldAttributes, targetAttribute) => {
 				},
 				sexuality: {
                     name: 'sexuality',
-                    value: generateSexuality(Asa.sexuality, newGender, oldAttributes.sexuality.value)
+                    value: generateSexuality(Asa.sexuality, newGender)
 				},
 				givenName: {
                     name: 'givenName',
-                    value: generateGivenName(Asa.givenName, oldAttributes.ancestry.value, newGender, oldAttributes.givenName.value)
+                    value: generateGivenName(Asa.givenName, oldAttributes.ancestry.value, newGender)
                 }
             };
             break;
@@ -195,7 +176,7 @@ export const reshuffle = (oldAttributes, targetAttribute) => {
             };
             break;
         case 'age':
-            const newAge = chooseValue(Asa[targetAttribute], previousTargetAttributeValue);
+            const newAge = chooseValue(Asa[targetAttribute], [previousTargetAttributeValue]);
             newAttributes = {
                 age: {
                     name: 'age',
@@ -203,7 +184,7 @@ export const reshuffle = (oldAttributes, targetAttribute) => {
                 },
                 relationship: {
                     name: 'relationship',
-                    value: generateRelationship(Asa.relationship, newAge, oldAttributes.relationship.value)
+                    value: generateRelationship(Asa.relationship, newAge)
                 }
             };
             break;
@@ -211,7 +192,7 @@ export const reshuffle = (oldAttributes, targetAttribute) => {
             newAttributes = {
                 [targetAttribute]: {
                     name: targetAttribute,
-                    value: chooseValue(Asa[targetAttribute], previousTargetAttributeValue)
+                    value: chooseValue(Asa[targetAttribute], [previousTargetAttributeValue])
                 }
             };
     }

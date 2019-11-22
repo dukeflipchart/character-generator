@@ -36,7 +36,6 @@ function Attribute(props) {
 }
 
 const CharacterCard = ({ deleteCharacter, reshuffle, character }) => {   
-    console.log(deleteCharacter)
     return (
         <CharacterCardContainer>
             <CharacterCardToolbar>
@@ -44,8 +43,7 @@ const CharacterCard = ({ deleteCharacter, reshuffle, character }) => {
                         `${character.givenName.value} ${character.familyName.value}
                         ${character.gender.value} ${character.age.value} ${character.sexuality.value} ${character.race.value} from ${character.ancestry.value} 
                         Mood: ${character.usualMood.value}
-                        Life goal: ${character.motivation.value}
-                        Personality traits: ${character.outlook.value}, ${character.integrity.value}, ${character.impulsiveness.value}, ${character.friendliness.value}, ${character.conformity.value}`
+                        Life goal: ${character.motivation.value}`
                         ))}>
                     <ClipboardSolid />
                 </ToolbarButton>
@@ -76,14 +74,8 @@ const CharacterCard = ({ deleteCharacter, reshuffle, character }) => {
                         <Attribute capitalized name='usualMood' onClick={() => reshuffle('usualMood')} value={character.usualMood.value} />
                     </AttributeGroup>
                     <AttributeGroup>
-                        <AttributeGroupLabel>Personality traits</AttributeGroupLabel>
-                        <AttributeList>
-                            <li><Attribute name='friendliness' onClick={() => reshuffle('friendliness')} value={character.friendliness.value} /></li>
-                            <li><Attribute name='integrity' onClick={() => reshuffle('integrity')} value={character.integrity.value} /></li>
-                            <li><Attribute name='outlook' onClick={() => reshuffle('outlook')} value={character.outlook.value} /></li>
-                            <li><Attribute name='impulsiveness' onClick={() => reshuffle('impulsiveness')} value={character.impulsiveness.value} /></li>
-                            <li><Attribute name='conformity' onClick={() => reshuffle('conformity')} value={character.conformity.value} /></li>
-                        </AttributeList>
+                        <AttributeGroupLabel>Life goal</AttributeGroupLabel>
+                        <Attribute capitalized name='motivation' onClick={() => reshuffle('motivation')} value={character.motivation.value} />
                     </AttributeGroup>
                 </Column>
                 <Column>
@@ -93,10 +85,6 @@ const CharacterCard = ({ deleteCharacter, reshuffle, character }) => {
                             <li><Attribute name='sexuality' onClick={() => reshuffle('sexuality')} value={capitalizeFirstLetter(character.sexuality.value)} /></li>
                             <li><Attribute name='relationship' onClick={() => reshuffle('relationship')} value={capitalizeFirstLetter(character.relationship.value)} /></li>
                         </AttributeList>
-                    </AttributeGroup>
-                    <AttributeGroup>
-                        <AttributeGroupLabel>Life goal</AttributeGroupLabel>
-                        <Attribute capitalized name='motivation' onClick={() => reshuffle('motivation')} value={character.motivation.value} />
                     </AttributeGroup>
                 </Column>
             </Row>
