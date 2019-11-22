@@ -1,8 +1,8 @@
 import Asa from './asa';
 
-const chooseAttribute = (pool, excludedValue) => {
-    console.log(pool);
-    pool = pool.filter(option => option.text !== excludedValue);
+const chooseAttribute = (pool, excludedText) => {
+    //console.log(pool);
+    pool = pool.filter(option => option.text !== excludedText);
     let sumWeights = 0;
     for (let index in pool) {
         sumWeights += pool[index].weight ? pool[index].weight : 1;
@@ -17,31 +17,34 @@ const chooseAttribute = (pool, excludedValue) => {
     }
 }
 
-const generateSexuality = (options, gender, oldValue) => {
+const generateSexuality = (options, gender, excludedText) => {
     let sexualityGender = '';
     if (gender === 'cis male' || gender === 'trans male' || gender === 'cis female' || gender === 'trans female') { sexualityGender = 'MaleFemale'; }
     if (gender === 'genderfluid' || gender === 'agender') { sexualityGender = 'GenderfluidAgender'; }
 
-    return chooseAttribute(options[sexualityGender], oldValue);
+    return chooseAttribute(options[sexualityGender], excludedText);
 }
 
-const generateRelationship = (options, age, oldValue) => {
+const generateRelationship = (options, age, excludedText) => {
     if (['adult', 'middle-aged', 'old', 'very old'].includes(age)) { age = 'older'; }
 
-    return chooseAttribute(options[age], oldValue);
+    return chooseAttribute(options[age], excludedText);
 }
 
-const generateGivenName = (options, ancestry, gender, oldValue) => {
+const generateGivenName = (options, ancestry, gender, excludedText) => {
+    console.log(options);
+    console.log(`ancestry: ${ancestry}, gender: ${gender}, excludedText: ${excludedText}`);
     let nameGender = '';
     if (gender === 'cis male' || gender === 'trans male') { nameGender = 'Masculine'; }
     if (gender === 'cis female' || gender === 'trans female') { nameGender = 'Feminine'; }
     if (gender === 'genderfluid') { nameGender = (Math.random() >= 0.5) ? 'Masculine' : 'Feminine'; }
+    if (gender === 'agender') { nameGender = 'Agender'; }
 
-    return chooseAttribute(options[ancestry][nameGender], oldValue);
+    return chooseAttribute(options[ancestry][nameGender], excludedText);
 }
 
-const generateFamilyName = (options, ancestry, oldValue) => chooseAttribute(options[ancestry], oldValue);
-const generateRace = (options, ancestry, oldValue) => chooseAttribute(options[ancestry], oldValue);
+const generateFamilyName = (options, ancestry, excludedText) => chooseAttribute(options[ancestry], excludedText);
+const generateRace = (options, ancestry, excludedText) => chooseAttribute(options[ancestry], excludedText);
 
 export const generateCharacter = () => {
     const character = {
