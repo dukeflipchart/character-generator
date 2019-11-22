@@ -17,7 +17,7 @@ export const BoardContainer = styled.div`
     width: 100%;
     padding: 1rem;
 
-    @media only screen and (min-width: 40rem) {
+    @media only screen and (min-width: 35rem) {
         padding: 2rem;
     }
 `;
@@ -29,7 +29,7 @@ export const CharacterCardContainer = styled.div`
     border: 1px solid #ddd;
     border-radius: 1rem;
     
-    @media only screen and (min-width: 40rem) {
+    @media only screen and (min-width: 35rem) {
         margin: 2rem auto;
         padding: 2rem;
     }
@@ -73,7 +73,7 @@ export const AddCharacterButton = styled(Button)`
     border-radius: 1rem;
     padding: 1rem;
 
-    @media only screen and (min-width: 40rem) {
+    @media only screen and (min-width: 35rem) {
         margin-bottom: 2rem;
     }
 `;
@@ -83,11 +83,12 @@ export const CharacterCardToolbar = styled.div`
 `;
 
 export const ToolbarButton = styled(Button)`
-    width: 2rem;
-    height: 2rem;
+    width: 1.5rem;
+    height: 1.5rem;
     padding: 0;
     background-color: transparent;
     border: none;
+    margin-top: 0.45rem;
 
     :not(:last-of-type) {
         margin-right: 1em;
@@ -95,6 +96,8 @@ export const ToolbarButton = styled(Button)`
 
     svg {
         color: ${colors.warlockPurple};
+        width: 100%;
+        height: 100%;
     }
 
     :hover,
@@ -112,6 +115,12 @@ export const ToolbarButton = styled(Button)`
         svg {
             color: ${darken(0.2, colors.warlockPurple)};;
         }
+    }
+
+    @media only screen and (min-width: 35rem) {
+        width: 2rem;
+        height: 2rem;
+        margin-top: 0;
     }
 `;
 
@@ -151,14 +160,20 @@ export const AttributeList = styled.ul`
 `;
 
 export const NameWrapper = styled.h1`
-    margin-top: -1rem;
-    font-size: 2.5rem;
+    font-size: 1.5rem;
+    margin-top: 0;
     margin-bottom: 0.5rem;
+
+    @media only screen and (min-width: 35rem) {
+        font-size: 2.5rem;
+        margin-top: -1rem;
+        margin-bottom: 0.5rem;
+    }
 `;
 
 export const Row = styled.div`
 
-    @media only screen and (min-width: 40rem) {
+    @media only screen and (min-width: 35rem) {
         display: flex;
         flex-direction: row;
     }
@@ -171,7 +186,7 @@ export const Column = styled.div`
         margin-bottom: 1.65rem;
     }
 
-    @media only screen and (min-width: 40rem) {
+    @media only screen and (min-width: 35rem) {
 
         :not(:last-child) {
             border-right: 1px solid #ddd;
