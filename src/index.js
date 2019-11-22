@@ -70,6 +70,17 @@ const CharacterCard = ({ deleteCharacter, reshuffle, character }) => {
             <Row>
                 <Column>
                     <AttributeGroup>
+                        <AttributeGroupLabel>Appearance</AttributeGroupLabel>
+                        <AttributeList>
+                            <li>
+                                <Attribute capitalized name='appearance1' onClick={() => reshuffle('appearance1')} value={character.appearance1.text} />
+                            </li>
+                            <li>
+                                <Attribute capitalized name='appearance2' onClick={() => reshuffle('appearance2')} value={character.appearance2.text} />
+                            </li>
+                        </AttributeList>
+                    </AttributeGroup>
+                    <AttributeGroup>
                         <AttributeGroupLabel>Mood</AttributeGroupLabel>
                         <Attribute capitalized name='usualMood' onClick={() => reshuffle('usualMood')} value={character.usualMood.text} />
                     </AttributeGroup>
@@ -78,8 +89,12 @@ const CharacterCard = ({ deleteCharacter, reshuffle, character }) => {
                     <AttributeGroup>
                         <AttributeGroupLabel>Relationships</AttributeGroupLabel>
                         <AttributeList>
-                            <li><Attribute name='sexuality' onClick={() => reshuffle('sexuality')} value={capitalizeFirstLetter(character.sexuality.text)} /></li>
-                            <li><Attribute name='relationship' onClick={() => reshuffle('relationship')} value={capitalizeFirstLetter(character.relationship.text)} /></li>
+                            <li>
+                                <Attribute name='sexuality' onClick={() => reshuffle('sexuality')} value={capitalizeFirstLetter(character.sexuality.text)} />
+                            </li>
+                            <li>
+                                <Attribute name='relationship' onClick={() => reshuffle('relationship')} value={capitalizeFirstLetter(character.relationship.text)} />
+                            </li>
                         </AttributeList>
                     </AttributeGroup>
                     <AttributeGroup>

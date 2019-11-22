@@ -1,8 +1,12 @@
 import Asa from './asa';
 
-const chooseAttribute = (pool, excludedText) => {
-    //console.log(pool);
-    pool = pool.filter(option => option.text !== excludedText);
+const chooseAttribute = (pool, excludedTexts, excludedTags) => {
+    if (excludedTexts) {
+        pool = pool.filter(option => !excludedTexts.includes(option.text));
+    }
+    if (excludedTags) {
+        pool = pool.filter(option => option.tags.filter(tag => !excludedTags.includes(tag)).length);
+    }
     let sumWeights = 0;
     for (let index in pool) {
         sumWeights += pool[index].weight ? pool[index].weight : 1;
@@ -33,8 +37,6 @@ const generateRelationship = (options, age, excludedText) => {
 }
 
 const generateGivenName = (options, ancestry, gender, excludedText) => {
-    console.log(options);
-    console.log(`ancestry: ${ancestry}, gender: ${gender}, excludedText: ${excludedText}`);
     let nameGender = '';
     if (gender === 'cis male' || gender === 'trans male') { nameGender = 'Masculine'; }
     if (gender === 'cis female' || gender === 'trans female') { nameGender = 'Feminine'; }
@@ -53,39 +55,41 @@ export const generateCharacter = () => {
         ancestry: chooseAttribute(Asa.ancestry),
         age: chooseAttribute(Asa.age),
         motivation: chooseAttribute(Asa.motivation),
-        usualMood: chooseAttribute(Asa.usualMood)
+        usualMood: chooseAttribute(Asa.usualMood),
+        appearance1: chooseAttribute(Asa.appearance),
     }
     character.sexuality = generateSexuality(Asa.sexuality, character.gender.text);
     character.givenName = generateGivenName(Asa.givenName, character.ancestry.text, character.gender.text);
     character.familyName = generateFamilyName(Asa.familyName, character.ancestry.text);
     character.race = generateRace(Asa.race, character.ancestry.text);
     character.relationship = generateRelationship(Asa.relationship, character.age.text);
+    character.appearance2 = chooseAttribute(Asa.appearance, [character.appearance1.text], character.appearance1.tags);
     
     return character;
 }
 
 export const reshuffle = (oldAttributes, targetAttribute) => {
-	let previousTargetAttributeText = oldAttributes[targetAttribute].text;
+	let previousTargetAttribute = oldAttributes[targetAttribute];
 
 	let newAttributes;
 	switch(targetAttribute) {
         case 'givenName':
             newAttributes = {
-                givenName: generateGivenName(Asa.givenName, oldAttributes.ancestry.text, oldAttributes.gender.text, previousTargetAttributeText)
+                givenName: generateGivenName(Asa.givenName, oldAttributes.ancestry.text, oldAttributes.gender.text, [previousTargetAttribute.text])
             };
             break;
         case 'familyName':
             newAttributes = {
-                familyName: generateFamilyName(Asa.familyName, oldAttributes.ancestry.text, previousTargetAttributeText)
+                familyName: generateFamilyName(Asa.familyName, oldAttributes.ancestry.text, [previousTargetAttribute.text])
             };
             break;
         case 'race':
             newAttributes = {
-                race: generateRace(Asa.race, oldAttributes.ancestry.text, previousTargetAttributeText)
+                race: generateRace(Asa.race, oldAttributes.ancestry.text, [previousTargetAttribute.text])
             };
             break;
         case 'ancestry':
-            const newAncestry = chooseAttribute(Asa.ancestry, previousTargetAttributeText);
+            const newAncestry = chooseAttribute(Asa.ancestry, [previousTargetAttribute.text]);
             newAttributes = {
                 ancestry: newAncestry,
 				givenName: generateGivenName(Asa.givenName, newAncestry.text, oldAttributes.gender.text),
@@ -94,7 +98,7 @@ export const reshuffle = (oldAttributes, targetAttribute) => {
             };
             break;
         case 'gender':
-		    const newGender = chooseAttribute(Asa.gender, previousTargetAttributeText);
+		    const newGender = chooseAttribute(Asa.gender, [previousTargetAttribute.text]);
 			newAttributes = {
                 gender: newGender,
 				sexuality: generateSexuality(Asa.sexuality, newGender.text, oldAttributes.sexuality.text),
@@ -103,24 +107,34 @@ export const reshuffle = (oldAttributes, targetAttribute) => {
             break;
         case 'sexuality':
             newAttributes = {
-                sexuality: generateSexuality(Asa.sexuality, oldAttributes.gender.text, previousTargetAttributeText)
+                sexuality: generateSexuality(Asa.sexuality, oldAttributes.gender.text, [previousTargetAttribute.text])
             };
             break;
         case 'relationship':
             newAttributes = {
-                relationship: generateRelationship(Asa.relationship, oldAttributes.age.text, previousTargetAttributeText)
+                relationship: generateRelationship(Asa.relationship, oldAttributes.age.text, [previousTargetAttribute.text])
             };
             break;
         case 'age':
-            const newAge = chooseAttribute(Asa[targetAttribute], previousTargetAttributeText);
+            const newAge = chooseAttribute(Asa[targetAttribute], [previousTargetAttribute.text]);
             newAttributes = {
                 age: newAge,
                 relationship: generateRelationship(Asa.relationship, newAge.text)
             };
             break;
+        case 'appearance1':
+            newAttributes = {
+                appearance1: chooseAttribute(Asa.appearance, [previousTargetAttribute.text, oldAttributes.appearance2.text], [...previousTargetAttribute.tags, ...oldAttributes.appearance2.tags])
+            };
+            break;
+        case 'appearance2':
+            newAttributes = {
+                appearance2: chooseAttribute(Asa.appearance, [previousTargetAttribute.text, oldAttributes.appearance1.text], [...previousTargetAttribute.tags, ...oldAttributes.appearance1.tags])
+            };
+            break;
         default:
             newAttributes = {
-                [targetAttribute]: chooseAttribute(Asa[targetAttribute], previousTargetAttributeText)
+                [targetAttribute]: chooseAttribute(Asa[targetAttribute], [previousTargetAttribute.text])
             };
     }
 

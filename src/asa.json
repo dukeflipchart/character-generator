@@ -102,91 +102,223 @@
     ],
     "appearance": [
         {
-            "text": "Beautiful"
+            "text": "Beautiful",
+            "tags": [
+                "beauty"
+            ],
+            "weight": 5
         },
         {
-            "text": "Ugly"
+            "text": "Ugly",
+            "tags": [
+                "beauty"
+            ],
+            "weight": 5
         },
         {
-            "text": "Unusual hair color"
+            "text": "Staggeringly beautiful",
+            "tags": [
+                "beauty"
+            ],
+            "weight": 1
         },
         {
-            "text": "Elaborately braided hair or beard"
+            "text": "Staggeringly ugly",
+            "tags": [
+                "beauty"
+            ],
+            "weight": 1
         },
         {
-            "text": "Beads in hair or beard"
+            "text": "Unusual hair color",
+            "tags": [
+                "hair"
+            ],
+            "weight": 1
         },
         {
-            "text": "Bald"
+            "text": "Elaborately braided hair or beard",
+            "tags": [
+                "hair"
+            ],
+            "weight": 2
         },
         {
-            "text": "Waist-length hair"
+            "text": "Beads in hair or beard",
+            "tags": [
+                "hair"
+            ],
+            "weight": 1
         },
         {
-            "text": "Unkempt hair"
+            "text": "Bald",
+            "tags": [
+                "hair"
+            ],
+            "weight": 2
         },
         {
-            "text": "Wears a wig"
+            "text": "Waist-length hair",
+            "tags": [
+                "hair"
+            ],
+            "weight": 1
         },
         {
-            "text": "Missing fingers"
+            "text": "Unkempt hair",
+            "tags": [
+                "hair"
+            ],
+            "weight": 5
         },
         {
-            "text": "Noticeable scar"
+            "text": "Wears a wig",
+            "tags": [
+                "hair"
+            ],
+            "weight": 1
         },
         {
-            "text": "Blind in one eye"
+            "text": "Missing fingers",
+            "tags": [
+                "disability"
+            ],
+            "weight": 1
         },
         {
-            "text": "Completely blind"
+            "text": "Noticeable scar",
+            "tags": [
+                "disability"
+            ],
+            "weight": 1
         },
         {
-            "text": "Hard of hearing"
+            "text": "Blind in one eye",
+            "tags": [
+                "disability",
+                "eyes"
+            ],
+            "weight": 1
         },
         {
-            "text": "Deaf"
+            "text": "Completely blind",
+            "tags": [
+                "disability"
+            ],
+            "weight": 1
         },
         {
-            "text": "Missing an arm"
+            "text": "Hard of hearing",
+            "tags": [
+                "disability"
+            ],
+            "weight": 2
         },
         {
-            "text": "Missing a leg"
+            "text": "Deaf",
+            "tags": [
+                "disability"
+            ],
+            "weight": 1
         },
         {
-            "text": "Holy symbol branded onto hand"
+            "text": "Missing an arm",
+            "tags": [
+                "disability"
+            ],
+            "weight": 1
         },
         {
-            "text": "Piercings"
+            "text": "Missing a leg",
+            "tags": [
+                "disability"
+            ],
+            "weight": 1
         },
         {
-            "text": "Tatoos"
+            "text": "Holy symbol branded onto hand",
+            "tags": [
+                "jewelry"
+            ],
+            "weight": 1
         },
         {
-            "text": "Spectacles"
+            "text": "Piercings",
+            "tags": [
+                "jewelry"
+            ],
+            "weight": 2
         },
         {
-            "text": "Religious jewelry"
+            "text": "Tatoos",
+            "tags": [
+                "jewelry"
+            ],
+            "weight": 3
         },
         {
-            "text": "Ostentatious jewelry"
+            "text": "Spectacles",
+            "tags": [
+                "jewelry",
+                "eyes"
+            ],
+            "weight": 2
         },
         {
-            "text": "Muted, dark clothes"
+            "text": "Religious jewelry",
+            "tags": [
+                "jewelry"
+            ],
+            "weight": 5
         },
         {
-            "text": "Very vibrant clothes"
+            "text": "Ostentatious jewelry",
+            "tags": [
+                "jewelry"
+            ],
+            "weight": 2
         },
         {
-            "text": "Expensive and flamboyant clothes"
+            "text": "Muted, dark clothes",
+            "tags": [
+                "clothes"
+            ],
+            "weight": 5
         },
         {
-            "text": "Revealing clothes"
+            "text": "Very vibrant clothes",
+            "tags": [
+                "clothes"
+            ],
+            "weight": 5
         },
         {
-            "text": "Ragged, dirty clothes"
+            "text": "Expensive and flamboyant clothes",
+            "tags": [
+                "clothes"
+            ],
+            "weight": 3
         },
         {
-            "text": "Clean, proper clothes"
+            "text": "Revealing clothes",
+            "tags": [
+                "clothes"
+            ],
+            "weight": 3
+        },
+        {
+            "text": "Ragged, dirty clothes",
+            "tags": [
+                "clothes"
+            ],
+            "weight": 5
+        },
+        {
+            "text": "Clean, proper clothes",
+            "tags": [
+                "clothes"
+            ],
+            "weight": 5
         }
     ],
     "relationship": {
