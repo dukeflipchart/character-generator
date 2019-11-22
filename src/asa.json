@@ -1,767 +1,899 @@
 {
     "gender": [
         {
-            "name": "cis male",
+            "text": "cis male",
             "weight": 20
         },
         {
-            "name": "cis female",
+            "text": "cis female",
             "weight": 20
         },
         {
-            "name": "trans male"
+            "text": "trans male"
         },
         {
-            "name": "trans female"
+            "text": "trans female"
         },
         {
-            "name": "agender"
+            "text": "agender"
         },
         {
-            "name": "genderfluid"
+            "text": "genderfluid"
         }
     ],
     "sexuality": {
         "MaleFemale": [
             {
-                "name": "heterosexual",
-                "weight": 10
+                "text": "heterosexual",
+                "weight": 20
             },
             {
-                "name": "homosexual"
+                "text": "homosexual"
             },
             {
-                "name": "bisexual"
+                "text": "bisexual"
             },
             {
-                "name": "asexual"
+                "text": "asexual"
             }
         ],
         "GenderfluidAgender": [
             {
-                "name": "androsexual"
+                "text": "androsexual"
             },
             {
-                "name": "gynosexual"
+                "text": "gynosexual"
             },
             {
-                "name": "bisexual"
+                "text": "bisexual"
             },
             {
-                "name": "asexual"
+                "text": "asexual"
             }
         ]
     },
     "ancestry": [
         {
-            "name": "Varena",
+            "text": "Varena",
             "weight": 10
         },
         {
-            "name": "Jaekol",
+            "text": "Jaekol",
             "weight": 5
         },
         {
-            "name": "Kithara",
+            "text": "Kithara",
             "weight": 5
         },
         {
-            "name": "Sjellan",
+            "text": "Sjellan",
             "weight": 5
         }
     ],
     "age": [
         {
-            "name": "child",
+            "text": "child",
             "weight": 1
         },
         {
-            "name": "teenager",
+            "text": "teenager",
             "weight": 2
         },
         {
-            "name": "young adult",
+            "text": "young adult",
             "weight": 10
         },
         {
-            "name": "adult",
+            "text": "adult",
             "weight": 20
         },
         {
-            "name": "middle-aged",
+            "text": "middle-aged",
             "weight": 10
         },
         {
-            "name": "old",
+            "text": "old",
             "weight": 5
         },
         {
-            "name": "very old",
+            "text": "very old",
             "weight": 1
         }
     ],
     "appearance": [
         {
-            "name": "Beautiful"
+            "text": "Beautiful",
+            "tags": [
+                "beauty"
+            ],
+            "weight": 5
         },
         {
-            "name": "Ugly"
+            "text": "Ugly",
+            "tags": [
+                "beauty"
+            ],
+            "weight": 5
         },
         {
-            "name": "Unusual hair color"
+            "text": "Staggeringly beautiful",
+            "tags": [
+                "beauty"
+            ],
+            "weight": 1
         },
         {
-            "name": "Elaborately braided hair or beard"
+            "text": "Staggeringly ugly",
+            "tags": [
+                "beauty"
+            ],
+            "weight": 1
         },
         {
-            "name": "Beads in hair or beard"
+            "text": "Unusual hair color",
+            "tags": [
+                "hair"
+            ],
+            "weight": 1
         },
         {
-            "name": "Bald"
+            "text": "Elaborately braided hair or beard",
+            "tags": [
+                "hair"
+            ],
+            "weight": 2
         },
         {
-            "name": "Waist-length hair"
+            "text": "Beads in hair or beard",
+            "tags": [
+                "hair"
+            ],
+            "weight": 1
         },
         {
-            "name": "Unkempt hair"
+            "text": "Bald",
+            "tags": [
+                "hair"
+            ],
+            "weight": 2
         },
         {
-            "name": "Wears a wig"
+            "text": "Waist-length hair",
+            "tags": [
+                "hair"
+            ],
+            "weight": 1
         },
         {
-            "name": "Missing fingers"
+            "text": "Unkempt hair",
+            "tags": [
+                "hair"
+            ],
+            "weight": 5
         },
         {
-            "name": "Noticeable scar"
+            "text": "Wears a wig",
+            "tags": [
+                "hair"
+            ],
+            "weight": 1
         },
         {
-            "name": "Blind in one eye"
+            "text": "Missing fingers",
+            "tags": [
+                "disability"
+            ],
+            "weight": 1
         },
         {
-            "name": "Completely blind"
+            "text": "Noticeable scar",
+            "tags": [
+                "disability"
+            ],
+            "weight": 1
         },
         {
-            "name": "Hard of hearing"
+            "text": "Blind in one eye",
+            "tags": [
+                "disability",
+                "eyes"
+            ],
+            "weight": 1
         },
         {
-            "name": "Deaf"
+            "text": "Completely blind",
+            "tags": [
+                "disability"
+            ],
+            "weight": 1
         },
         {
-            "name": "Missing an arm"
+            "text": "Hard of hearing",
+            "tags": [
+                "disability"
+            ],
+            "weight": 2
         },
         {
-            "name": "Missing a leg"
+            "text": "Deaf",
+            "tags": [
+                "disability"
+            ],
+            "weight": 1
         },
         {
-            "name": "Holy symbol branded onto hand"
+            "text": "Missing an arm",
+            "tags": [
+                "disability"
+            ],
+            "weight": 1
         },
         {
-            "name": "Piercings"
+            "text": "Missing a leg",
+            "tags": [
+                "disability"
+            ],
+            "weight": 1
         },
         {
-            "name": "Tatoos"
+            "text": "Holy symbol branded onto hand",
+            "tags": [
+                "jewelry"
+            ],
+            "weight": 1
         },
         {
-            "name": "Spectacles"
+            "text": "Piercings",
+            "tags": [
+                "jewelry"
+            ],
+            "weight": 2
         },
         {
-            "name": "Religious jewelry"
+            "text": "Tatoos",
+            "tags": [
+                "jewelry"
+            ],
+            "weight": 3
         },
         {
-            "name": "Ostentatious jewelry"
+            "text": "Spectacles",
+            "tags": [
+                "jewelry",
+                "eyes"
+            ],
+            "weight": 2
         },
         {
-            "name": "Muted, dark clothes"
+            "text": "Religious jewelry",
+            "tags": [
+                "jewelry"
+            ],
+            "weight": 5
         },
         {
-            "name": "Very vibrant clothes"
+            "text": "Ostentatious jewelry",
+            "tags": [
+                "jewelry"
+            ],
+            "weight": 2
         },
         {
-            "name": "Expensive and flamboyant clothes"
+            "text": "Muted, dark clothes",
+            "tags": [
+                "clothes"
+            ],
+            "weight": 5
         },
         {
-            "name": "Revealing clothes"
+            "text": "Very vibrant clothes",
+            "tags": [
+                "clothes"
+            ],
+            "weight": 5
         },
         {
-            "name": "Ragged, dirty clothes"
+            "text": "Expensive and flamboyant clothes",
+            "tags": [
+                "clothes"
+            ],
+            "weight": 3
         },
         {
-            "name": "Clean, proper clothes"
+            "text": "Revealing clothes",
+            "tags": [
+                "clothes"
+            ],
+            "weight": 3
+        },
+        {
+            "text": "Ragged, dirty clothes",
+            "tags": [
+                "clothes"
+            ],
+            "weight": 5
+        },
+        {
+            "text": "Clean, proper clothes",
+            "tags": [
+                "clothes"
+            ],
+            "weight": 5
         }
     ],
     "relationship": {
         "child": [
             {
-                "name": "single",
+                "text": "single",
                 "weight": 50
             },
             {
-                "name": "has a crush on someone",
+                "text": "has a crush on someone",
                 "weight": 20
             },
             {
-                "name": "is obsessed with someone",
+                "text": "is obsessed with someone",
                 "weight": 5
             },
             {
-                "name": "in a casual relationship",
+                "text": "in a casual relationship",
                 "weight": 2
             },
             {
-                "name": "in a committed relationship",
+                "text": "in a committed relationship",
                 "weight": 1
             },
             {
-                "name": "in a toxic relationship",
+                "text": "in a toxic relationship",
                 "weight": 1
             },
             {
-                "name": "recently broke up",
+                "text": "recently broke up",
                 "weight": 1
             }
         ],
         "teenager": [
             {
-                "name": "single",
+                "text": "single",
                 "weight": 10
             },
             {
-                "name": "has a crush on someone",
+                "text": "has a crush on someone",
                 "weight": 10
             },
             {
-                "name": "is obsessed with someone",
+                "text": "is obsessed with someone",
                 "weight": 5
             },
             {
-                "name": "in a casual relationship",
+                "text": "in a casual relationship",
                 "weight": 10
             },
             {
-                "name": "in a committed relationship",
+                "text": "in a committed relationship",
                 "weight": 5
             },
             {
-                "name": "in a toxic relationship",
+                "text": "in a toxic relationship",
                 "weight": 5
             },
             {
-                "name": "recently broke up",
+                "text": "recently broke up",
                 "weight": 2
             }
         ],
         "young adult": [
             {
-                "name": "single",
+                "text": "single",
                 "weight": 10
             },
             {
-                "name": "has a crush on someone",
+                "text": "has a crush on someone",
                 "weight": 5
             },
             {
-                "name": "is obsessed with someone",
+                "text": "is obsessed with someone",
                 "weight": 2
             },
             {
-                "name": "in a casual relationship",
+                "text": "in a casual relationship",
                 "weight": 10
             },
             {
-                "name": "in a committed relationship",
+                "text": "in a committed relationship",
                 "weight": 20
             },
             {
-                "name": "in a toxic relationship",
+                "text": "in a toxic relationship",
                 "weight": 5
             },
             {
-                "name": "recently broke up",
+                "text": "recently broke up",
                 "weight": 1
             }
         ],
         "older": [
             {
-                "name": "single",
+                "text": "single",
                 "weight": 10
             },
             {
-                "name": "has a crush on someone",
+                "text": "has a crush on someone",
                 "weight": 2
             },
             {
-                "name": "is obsessed with someone",
+                "text": "is obsessed with someone",
                 "weight": 1
             },
             {
-                "name": "in a casual relationship",
+                "text": "in a casual relationship",
                 "weight": 5
             },
             {
-                "name": "in a committed relationship",
+                "text": "in a committed relationship",
                 "weight": 30
             },
             {
-                "name": "in a toxic relationship",
+                "text": "in a toxic relationship",
                 "weight": 10
             },
             {
-                "name": "recently broke up",
+                "text": "recently broke up",
                 "weight": 2
             }
         ]
     },
     "motivation": [
         {
-            "name": "Achievement - To overcome obstacles and succeed; to become the best"
+            "text": "Achievement - To overcome obstacles and succeed; to become the best"
         },
         {
-            "name": "Acquisition - To obtain possessions/wealth"
+            "text": "Acquisition - To obtain possessions/wealth"
         },
         {
-            "name": "Adoration - To be cherished, admired, and wanted by others"
+            "text": "Adoration - To be cherished, admired, and wanted by others"
         },
         {
-            "name": "Balance/Peace - To bring all things into harmony and equilibrium"
+            "text": "Balance/Peace - To bring all things into harmony and equilibrium"
         },
         {
-            "name": "Beneficence - To protect the helpless, heal the sick, or feed the hungry"
+            "text": "Beneficence - To protect the helpless, heal the sick, or feed the hungry"
         },
         {
-            "name": "Chaos - To disrupt, to cause confusion and discord"
+            "text": "Chaos - To disrupt, to cause confusion and discord"
         },
         {
-            "name": "Competition - To seek out or create rule-based win/lose scenarios; to defeat others in contests"
+            "text": "Competition - To seek out or create rule-based win/lose scenarios; to defeat others in contests"
         },
         {
-            "name": "Conflict - To seek out or create rivalry, fighting, or animosity"
+            "text": "Conflict - To seek out or create rivalry, fighting, or animosity"
         },
         {
-            "name": "Conquest - To conquer other peoples, to bring them into one’s own culture/rule"
+            "text": "Conquest - To conquer other peoples, to bring them into one’s own culture/rule"
         },
         {
-            "name": "Corruption - To despoil, ruin, humiliate, or make depraved"
+            "text": "Corruption - To despoil, ruin, humiliate, or make depraved"
         },
         {
-            "name": "Creation - To build or make new, such as art, culture, invention, design"
+            "text": "Creation - To build or make new, such as art, culture, invention, design"
         },
         {
-            "name": "Destruction - To annihilate, exterminate, and unmake"
+            "text": "Destruction - To annihilate, exterminate, and unmake"
         },
         {
-            "name": "Discovery/Adventure - To explore, uncover mysteries, and pioneer"
+            "text": "Discovery/Adventure - To explore, uncover mysteries, and pioneer"
         },
         {
-            "name": "Domesticity - To get married, have children, and live a family life"
+            "text": "Domesticity - To get married, have children, and live a family life"
         },
         {
-            "name": "Education - To provide information, teach, enlighten, or train"
+            "text": "Education - To provide information, teach, enlighten, or train"
         },
         {
-            "name": "Entertainment - To entertain, amuse, and delight others"
+            "text": "Entertainment - To entertain, amuse, and delight others"
         },
         {
-            "name": "Enslavement - To force others into servitude"
+            "text": "Enslavement - To force others into servitude"
         },
         {
-            "name": "Hedonism - To enjoy all things sensuous"
+            "text": "Hedonism - To enjoy all things sensuous"
         },
         {
-            "name": "Heroism - To find valor and honor through battle or self-sacrifice"
+            "text": "Heroism - To find valor and honor through battle or self-sacrifice"
         },
         {
-            "name": "Liberation - To free the self and/or others from perceived captivity or enslavement"
+            "text": "Liberation - To free the self and/or others from perceived captivity or enslavement"
         },
         {
-            "name": "Love - To experience/share affection and emotional commitment, whether romantic or platonic"
+            "text": "Love - To experience/share affection and emotional commitment, whether romantic or platonic"
         },
         {
-            "name": "Nobility/Honor - To exalt ideals such as generosity, honesty, bravery, and courtliness"
+            "text": "Nobility/Honor - To exalt ideals such as generosity, honesty, bravery, and courtliness"
         },
         {
-            "name": "Order - To arrange, organize, and reduce chaos"
+            "text": "Order - To arrange, organize, and reduce chaos"
         },
         {
-            "name": "Play - To have fun, to enjoy life"
+            "text": "Play - To have fun, to enjoy life"
         },
         {
-            "name": "Power - To control and lead others"
+            "text": "Power - To control and lead others"
         },
         {
-            "name": "Proselytization - To spread a belief system; indoctrinate others"
+            "text": "Proselytization - To spread a belief system; indoctrinate others"
         },
         {
-            "name": "Purity - To achieve a state of moral or spiritual perfection, of self and/or others"
+            "text": "Purity - To achieve a state of moral or spiritual perfection, of self and/or others"
         },
         {
-            "name": "Rebellion - To fight against power structures; to undermine authority"
+            "text": "Rebellion - To fight against power structures; to undermine authority"
         },
         {
-            "name": "Recognition - To gain approval, social status, or fame"
+            "text": "Recognition - To gain approval, social status, or fame"
         },
         {
-            "name": "Service - To follow a person, government, order, or religion"
+            "text": "Service - To follow a person, government, order, or religion"
         },
         {
-            "name": "Torment - To inflict pain and suffering, on others and/or the self"
+            "text": "Torment - To inflict pain and suffering, on others and/or the self"
         },
         {
-            "name": "Understanding - To seek knowledge or wisdom (spiritual, scientific, or magical)"
+            "text": "Understanding - To seek knowledge or wisdom (spiritual, scientific, or magical)"
         },
         {
-            "name": "Vice - To enable or engage in self-destructive behavior"
+            "text": "Vice - To enable or engage in self-destructive behavior"
         }
     ],
     "usualMood": [
         {
-            "name": "Joyful"
+            "text": "Joyful"
         },
         {
-            "name": "Anxious"
+            "text": "Anxious"
         },
         {
-            "name": "Melancholy"
+            "text": "Melancholy"
         },
         {
-            "name": "Curious"
+            "text": "Curious"
         },
         {
-            "name": "Calm"
+            "text": "Calm"
         },
         {
-            "name": "Angry"
+            "text": "Angry"
         },
         {
-            "name": "Contemptuous"
+            "text": "Contemptuous"
         },
         {
-            "name": "Excited"
+            "text": "Excited"
         },
         {
-            "name": "Apathetic"
+            "text": "Apathetic"
         },
         {
-            "name": "Ashamed"
+            "text": "Ashamed"
         }
     ],
     "outlook": [
         {
-            "name": "Optimistic"
+            "text": "Optimistic"
         },
         {
-            "name": "Pessimistic"
+            "text": "Pessimistic"
         }
     ],
     "integrity": [
         {
-            "name": "Honest, industrious"
+            "text": "Honest, industrious"
         },
         {
-            "name": "Deceitful, lazy"
+            "text": "Deceitful, lazy"
         }
     ],
     "impulsiveness": [
         {
-            "name": "Deliberate, cautious"
+            "text": "Deliberate, cautious"
         },
         {
-            "name": "Spontaneous, bold"
+            "text": "Spontaneous, bold"
         }
     ],
     "friendliness": [
         {
-            "name": "Friendly"
+            "text": "Friendly"
         },
         {
-            "name": "Unfriendly"
+            "text": "Unfriendly"
         }
     ],
     "conformity": [
         {
-            "name": "Traditional"
+            "text": "Traditional"
         },
         {
-            "name": "Progressive"
+            "text": "Progressive"
         }
     ],
     "race": {
         "Varena": [
             {
-                "name": "human",
+                "text": "human",
                 "weight": 500
             },
             {
-                "name": "elf",
+                "text": "elf",
                 "weight": 25
             },
             {
-                "name": "halfling",
+                "text": "halfling",
                 "weight": 50
             },
             {
-                "name": "dwarf",
+                "text": "dwarf",
                 "weight": 50
             },
             {
-                "name": "tiefling",
+                "text": "tiefling",
                 "weight": 50
             },
             {
-                "name": "half-elf",
+                "text": "half-elf",
                 "weight": 25
             },
             {
-                "name": "half-orc",
+                "text": "half-orc",
                 "weight": 5
             },
             {
-                "name": "gnome",
+                "text": "gnome",
                 "weight": 25
             },
             {
-                "name": "firbolg",
+                "text": "firbolg",
                 "weight": 1
             },
             {
-                "name": "genasi",
+                "text": "genasi",
                 "weight": 1
             },
             {
-                "name": "aasimar",
+                "text": "aasimar",
                 "weight": 2
             },
             {
-                "name": "tabaxi",
+                "text": "tabaxi",
                 "weight": 5
             },
             {
-                "name": "goliath",
+                "text": "goliath",
                 "weight": 1
             },
             {
-                "name": "kenku",
+                "text": "kenku",
                 "weight": 1
             },
             {
-                "name": "lizardfolk",
+                "text": "lizardfolk",
                 "weight": 1
             },
             {
-                "name": "orc",
+                "text": "orc",
                 "weight": 1
             },
             {
-                "name": "goblin",
+                "text": "goblin",
                 "weight": 5
             }
         ],
         "Jaekol": [
             {
-                "name": "human",
+                "text": "human",
                 "weight": 250
             },
             {
-                "name": "elf",
+                "text": "elf",
                 "weight": 50
             },
             {
-                "name": "halfling",
+                "text": "halfling",
                 "weight": 50
             },
             {
-                "name": "dwarf",
+                "text": "dwarf",
                 "weight": 50
             },
             {
-                "name": "tiefling",
+                "text": "tiefling",
                 "weight": 50
             },
             {
-                "name": "half-elf",
+                "text": "half-elf",
                 "weight": 50
             },
             {
-                "name": "half-orc",
+                "text": "half-orc",
                 "weight": 10
             },
             {
-                "name": "gnome",
+                "text": "gnome",
                 "weight": 25
             },
             {
-                "name": "firbolg",
+                "text": "firbolg",
                 "weight": 1
             },
             {
-                "name": "genasi",
+                "text": "genasi",
                 "weight": 1
             },
             {
-                "name": "aasimar",
+                "text": "aasimar",
                 "weight": 1
             },
             {
-                "name": "tabaxi",
+                "text": "tabaxi",
                 "weight": 1
             },
             {
-                "name": "goliath",
+                "text": "goliath",
                 "weight": 10
             },
             {
-                "name": "kenku",
+                "text": "kenku",
                 "weight": 1
             },
             {
-                "name": "lizardfolk",
+                "text": "lizardfolk",
                 "weight": 2
             },
             {
-                "name": "orc",
+                "text": "orc",
                 "weight": 2
             },
             {
-                "name": "goblin",
+                "text": "goblin",
                 "weight": 10
             }
         ],
         "Kithara": [
             {
-                "name": "human",
+                "text": "human",
                 "weight": 10
             },
             {
-                "name": "elf",
+                "text": "elf",
                 "weight": 500
             },
             {
-                "name": "halfling",
+                "text": "halfling",
                 "weight": 25
             },
             {
-                "name": "dwarf",
+                "text": "dwarf",
                 "weight": 25
             },
             {
-                "name": "tiefling",
+                "text": "tiefling",
                 "weight": 100
             },
             {
-                "name": "half-elf",
+                "text": "half-elf",
                 "weight": 50
             },
             {
-                "name": "half-orc",
+                "text": "half-orc",
                 "weight": 25
             },
             {
-                "name": "gnome",
+                "text": "gnome",
                 "weight": 5
             },
             {
-                "name": "firbolg",
+                "text": "firbolg",
                 "weight": 200
             },
             {
-                "name": "genasi",
+                "text": "genasi",
                 "weight": 10
             },
             {
-                "name": "aasimar",
+                "text": "aasimar",
                 "weight": 100
             },
             {
-                "name": "tabaxi",
+                "text": "tabaxi",
                 "weight": 50
             },
             {
-                "name": "goliath",
+                "text": "goliath",
                 "weight": 25
             },
             {
-                "name": "kenku",
+                "text": "kenku",
                 "weight": 10
             },
             {
-                "name": "lizardfolk",
+                "text": "lizardfolk",
                 "weight": 5
             },
             {
-                "name": "orc",
+                "text": "orc",
                 "weight": 5
             },
             {
-                "name": "goblin",
+                "text": "goblin",
                 "weight": 1
             }
         ],
         "Sjellan": [
             {
-                "name": "human",
+                "text": "human",
                 "weight": 50
             },
             {
-                "name": "elf",
+                "text": "elf",
                 "weight": 500
             },
             {
-                "name": "halfling",
+                "text": "halfling",
                 "weight": 50
             },
             {
-                "name": "dwarf",
+                "text": "dwarf",
                 "weight": 250
             },
             {
-                "name": "tiefling",
+                "text": "tiefling",
                 "weight": 10
             },
             {
-                "name": "half-elf",
+                "text": "half-elf",
                 "weight": 50
             },
             {
-                "name": "half-orc",
+                "text": "half-orc",
                 "weight": 50
             },
             {
-                "name": "gnome",
+                "text": "gnome",
                 "weight": 5
             },
             {
-                "name": "firbolg",
+                "text": "firbolg",
                 "weight": 100
             },
             {
-                "name": "genasi",
+                "text": "genasi",
                 "weight": 50
             },
             {
-                "name": "aasimar",
+                "text": "aasimar",
                 "weight": 5
             },
             {
-                "name": "tabaxi",
+                "text": "tabaxi",
                 "weight": 1
             },
             {
-                "name": "goliath",
+                "text": "goliath",
                 "weight": 50
             },
             {
-                "name": "kenku",
+                "text": "kenku",
                 "weight": 10
             },
             {
-                "name": "lizardfolk",
+                "text": "lizardfolk",
                 "weight": 5
             },
             {
-                "name": "orc",
+                "text": "orc",
                 "weight": 5
             },
             {
-                "name": "goblin",
+                "text": "goblin",
                 "weight": 1
             }
         ]
@@ -770,1175 +902,1175 @@
         "Varena": {
             "Masculine": [
                 {
-                    "name": "Aras"
+                    "text": "Aras"
                 },
                 {
-                    "name": "Algirdas"
+                    "text": "Algirdas"
                 },
                 {
-                    "name": "Azuolas"
+                    "text": "Azuolas"
                 },
                 {
-                    "name": "Benas"
+                    "text": "Benas"
                 },
                 {
-                    "name": "Daumantas"
+                    "text": "Daumantas"
                 },
                 {
-                    "name": "Domas"
+                    "text": "Domas"
                 },
                 {
-                    "name": "Egidijus"
+                    "text": "Egidijus"
                 },
                 {
-                    "name": "Erikas"
+                    "text": "Erikas"
                 },
                 {
-                    "name": "Gvidas"
+                    "text": "Gvidas"
                 },
                 {
-                    "name": "Ignas"
+                    "text": "Ignas"
                 },
                 {
-                    "name": "Juozas"
+                    "text": "Juozas"
                 },
                 {
-                    "name": "Jurgis"
+                    "text": "Jurgis"
                 },
                 {
-                    "name": "Kajus"
+                    "text": "Kajus"
                 },
                 {
-                    "name": "Kestutis"
+                    "text": "Kestutis"
                 },
                 {
-                    "name": "Laurynas"
+                    "text": "Laurynas"
                 },
                 {
-                    "name": "Leonas"
+                    "text": "Leonas"
                 },
                 {
-                    "name": "Linas"
+                    "text": "Linas"
                 },
                 {
-                    "name": "Mantas"
+                    "text": "Mantas"
                 },
                 {
-                    "name": "Nojus"
+                    "text": "Nojus"
                 },
                 {
-                    "name": "Ramunas"
+                    "text": "Ramunas"
                 },
                 {
-                    "name": "Simas"
+                    "text": "Simas"
                 },
                 {
-                    "name": "Tadas"
+                    "text": "Tadas"
                 },
                 {
-                    "name": "Titas"
+                    "text": "Titas"
                 },
                 {
-                    "name": "Valdemaras"
+                    "text": "Valdemaras"
                 },
                 {
-                    "name": "Vincas"
+                    "text": "Vincas"
                 },
                 {
-                    "name": "Visvaldas"
+                    "text": "Visvaldas"
                 },
                 {
-                    "name": "Zydrunas"
+                    "text": "Zydrunas"
                 }
             ],
             "Feminine": [
                 {
-                    "name": "Agne"
+                    "text": "Agne"
                 },
                 {
-                    "name": "Aldona"
+                    "text": "Aldona"
                 },
                 {
-                    "name": "Aiste"
+                    "text": "Aiste"
                 },
                 {
-                    "name": "Ausra"
+                    "text": "Ausra"
                 },
                 {
-                    "name": "Birute"
+                    "text": "Birute"
                 },
                 {
-                    "name": "Daina"
+                    "text": "Daina"
                 },
                 {
-                    "name": "Daiva"
+                    "text": "Daiva"
                 },
                 {
-                    "name": "Danute"
+                    "text": "Danute"
                 },
                 {
-                    "name": "Domante"
+                    "text": "Domante"
                 },
                 {
-                    "name": "Egle"
+                    "text": "Egle"
                 },
                 {
-                    "name": "Elze"
+                    "text": "Elze"
                 },
                 {
-                    "name": "Estera"
+                    "text": "Estera"
                 },
                 {
-                    "name": "Genovaite"
+                    "text": "Genovaite"
                 },
                 {
-                    "name": "Giedre"
+                    "text": "Giedre"
                 },
                 {
-                    "name": "Gintare"
+                    "text": "Gintare"
                 },
                 {
-                    "name": "Ieva"
+                    "text": "Ieva"
                 },
                 {
-                    "name": "Katre"
+                    "text": "Katre"
                 },
                 {
-                    "name": "Laima"
+                    "text": "Laima"
                 },
                 {
-                    "name": "Leja"
+                    "text": "Leja"
                 },
                 {
-                    "name": "Lina"
+                    "text": "Lina"
                 },
                 {
-                    "name": "Lukne"
+                    "text": "Lukne"
                 },
                 {
-                    "name": "Milda"
+                    "text": "Milda"
                 },
                 {
-                    "name": "Morta"
+                    "text": "Morta"
                 },
                 {
-                    "name": "Rasa"
+                    "text": "Rasa"
                 },
                 {
-                    "name": "Ruta"
+                    "text": "Ruta"
                 },
                 {
-                    "name": "Saule"
+                    "text": "Saule"
                 },
                 {
-                    "name": "Smilte"
+                    "text": "Smilte"
                 },
                 {
-                    "name": "Ugne"
+                    "text": "Ugne"
                 },
                 {
-                    "name": "Urte"
+                    "text": "Urte"
                 },
                 {
-                    "name": "Vilte"
+                    "text": "Vilte"
                 },
                 {
-                    "name": "Vytaute"
+                    "text": "Vytaute"
                 }
             ],
             "Agender": [
                 {
-                    "name": "Pieva"
+                    "text": "Pieva"
                 },
                 {
-                    "name": "Menulis"
+                    "text": "Menulis"
                 },
                 {
-                    "name": "Suoras"
+                    "text": "Suoras"
                 },
                 {
-                    "name": "Laimingas"
+                    "text": "Laimingas"
                 },
                 {
-                    "name": "Shvelnus"
+                    "text": "Shvelnus"
                 },
                 {
-                    "name": "Upelis"
+                    "text": "Upelis"
                 }
             ]
         },
         "Jaekol": {
             "Masculine": [
                 {
-                    "name": "Alister"
+                    "text": "Alister"
                 },
                 {
-                    "name": "Amhlaidh"
+                    "text": "Amhlaidh"
                 },
                 {
-                    "name": "Aodhan"
+                    "text": "Aodhan"
                 },
                 {
-                    "name": "Arran"
+                    "text": "Arran"
                 },
                 {
-                    "name": "Bhatair"
+                    "text": "Bhatair"
                 },
                 {
-                    "name": "Cailean"
+                    "text": "Cailean"
                 },
                 {
-                    "name": "Cinaed"
+                    "text": "Cinaed"
                 },
                 {
-                    "name": "Coinneach"
+                    "text": "Coinneach"
                 },
                 {
-                    "name": "Cormag"
+                    "text": "Cormag"
                 },
                 {
-                    "name": "Deorsa"
+                    "text": "Deorsa"
                 },
                 {
-                    "name": "Duff"
+                    "text": "Duff"
                 },
                 {
-                    "name": "Eachann"
+                    "text": "Eachann"
                 },
                 {
-                    "name": "Ealair"
+                    "text": "Ealair"
                 },
                 {
-                    "name": "Eoghan"
+                    "text": "Eoghan"
                 },
                 {
-                    "name": "Erskine"
+                    "text": "Erskine"
                 },
                 {
-                    "name": "Fearchar"
+                    "text": "Fearchar"
                 },
                 {
-                    "name": "Fearghas"
+                    "text": "Fearghas"
                 },
                 {
-                    "name": "Gawain"
+                    "text": "Gawain"
                 },
                 {
-                    "name": "Glenn"
+                    "text": "Glenn"
                 },
                 {
-                    "name": "Grier"
+                    "text": "Grier"
                 },
                 {
-                    "name": "Iagan"
+                    "text": "Iagan"
                 },
                 {
-                    "name": "Irvine"
+                    "text": "Irvine"
                 },
                 {
-                    "name": "Innes"
+                    "text": "Innes"
                 },
                 {
-                    "name": "Islay"
+                    "text": "Islay"
                 },
                 {
-                    "name": "Keir"
+                    "text": "Keir"
                 },
                 {
-                    "name": "Kentigern"
+                    "text": "Kentigern"
                 },
                 {
-                    "name": "Labhrainn"
+                    "text": "Labhrainn"
                 },
                 {
-                    "name": "Lauchlan"
+                    "text": "Lauchlan"
                 },
                 {
-                    "name": "Marcas"
+                    "text": "Marcas"
                 },
                 {
-                    "name": "Muir"
+                    "text": "Muir"
                 },
                 {
-                    "name": "Murchadh"
+                    "text": "Murchadh"
                 },
                 {
-                    "name": "Naoise"
+                    "text": "Naoise"
                 },
                 {
-                    "name": "Naomhan"
+                    "text": "Naomhan"
                 },
                 {
-                    "name": "Rab"
+                    "text": "Rab"
                 },
                 {
-                    "name": "Ruadh"
+                    "text": "Ruadh"
                 },
                 {
-                    "name": "Ruairi"
+                    "text": "Ruairi"
                 },
                 {
-                    "name": "Seoras"
+                    "text": "Seoras"
                 },
                 {
-                    "name": "Seumas"
+                    "text": "Seumas"
                 },
                 {
-                    "name": "Shug"
+                    "text": "Shug"
                 },
                 {
-                    "name": "Sioltach"
+                    "text": "Sioltach"
                 },
                 {
-                    "name": "Suibhne"
+                    "text": "Suibhne"
                 },
                 {
-                    "name": "Tadhg"
+                    "text": "Tadhg"
                 },
                 {
-                    "name": "Tearlach"
+                    "text": "Tearlach"
                 },
                 {
-                    "name": "Ualan"
+                    "text": "Ualan"
                 },
                 {
-                    "name": "Uisdean"
+                    "text": "Uisdean"
                 }
             ],
             "Feminine": [
                 {
-                    "name": "Ailsa"
+                    "text": "Ailsa"
                 },
                 {
-                    "name": "Ainsley"
+                    "text": "Ainsley"
                 },
                 {
-                    "name": "Athol"
+                    "text": "Athol"
                 },
                 {
-                    "name": "Caoimhe"
+                    "text": "Caoimhe"
                 },
                 {
-                    "name": "Deoiridh"
+                    "text": "Deoiridh"
                 },
                 {
-                    "name": "Edna"
+                    "text": "Edna"
                 },
                 {
-                    "name": "Eilidh"
+                    "text": "Eilidh"
                 },
                 {
-                    "name": "Eimhir"
+                    "text": "Eimhir"
                 },
                 {
-                    "name": "Eithne"
+                    "text": "Eithne"
                 },
                 {
-                    "name": "Finley"
+                    "text": "Finley"
                 },
                 {
-                    "name": "Gormlaith"
+                    "text": "Gormlaith"
                 },
                 {
-                    "name": "Iona"
+                    "text": "Iona"
                 },
                 {
-                    "name": "Isla"
+                    "text": "Isla"
                 },
                 {
-                    "name": "Keavy"
+                    "text": "Keavy"
                 },
                 {
-                    "name": "Kenna"
+                    "text": "Kenna"
                 },
                 {
-                    "name": "Lennox"
+                    "text": "Lennox"
                 },
                 {
-                    "name": "Lilias"
+                    "text": "Lilias"
                 },
                 {
-                    "name": "Liusaidh"
+                    "text": "Liusaidh"
                 },
                 {
-                    "name": "Marsaili"
+                    "text": "Marsaili"
                 },
                 {
-                    "name": "Moira"
+                    "text": "Moira"
                 },
                 {
-                    "name": "Morven"
+                    "text": "Morven"
                 },
                 {
-                    "name": "Oighrig"
+                    "text": "Oighrig"
                 },
                 {
-                    "name": "Seonaidh"
+                    "text": "Seonaidh"
                 },
                 {
-                    "name": "Sileas"
+                    "text": "Sileas"
                 },
                 {
-                    "name": "Slaine"
+                    "text": "Slaine"
                 },
                 {
-                    "name": "Sorcha"
+                    "text": "Sorcha"
                 },
                 {
-                    "name": "Tearlag"
+                    "text": "Tearlag"
                 }
             ],
             "Agender": [
                 {
-                    "name": "Ainsley"
+                    "text": "Ainsley"
                 },
                 {
-                    "name": "Athol"
+                    "text": "Athol"
                 },
                 {
-                    "name": "Blair"
+                    "text": "Blair"
                 },
                 {
-                    "name": "Fergie"
+                    "text": "Fergie"
                 },
                 {
-                    "name": "Finley"
+                    "text": "Finley"
                 },
                 {
-                    "name": "Greer"
+                    "text": "Greer"
                 },
                 {
-                    "name": "Innes"
+                    "text": "Innes"
                 },
                 {
-                    "name": "Lennox"
+                    "text": "Lennox"
                 },
                 {
-                    "name": "Lindsay"
+                    "text": "Lindsay"
                 },
                 {
-                    "name": "Logan"
+                    "text": "Logan"
                 }
             ]
         },
         "Kithara": {
             "Masculine": [
                 {
-                    "name": "Aamir"
+                    "text": "Aamir"
                 },
                 {
-                    "name": "Aarti"
+                    "text": "Aarti"
                 },
                 {
-                    "name": "Abhay"
+                    "text": "Abhay"
                 },
                 {
-                    "name": "Adnan"
+                    "text": "Adnan"
                 },
                 {
-                    "name": "Aishwarya"
+                    "text": "Aishwarya"
                 },
                 {
-                    "name": "Akash"
+                    "text": "Akash"
                 },
                 {
-                    "name": "Amala"
+                    "text": "Amala"
                 },
                 {
-                    "name": "Anik"
+                    "text": "Anik"
                 },
                 {
-                    "name": "Anisha"
+                    "text": "Anisha"
                 },
                 {
-                    "name": "Aruna"
+                    "text": "Aruna"
                 },
                 {
-                    "name": "Asha"
+                    "text": "Asha"
                 },
                 {
-                    "name": "Azra"
+                    "text": "Azra"
                 },
                 {
-                    "name": "Bishal"
+                    "text": "Bishal"
                 },
                 {
-                    "name": "Darshan"
+                    "text": "Darshan"
                 },
                 {
-                    "name": "Dhaval"
+                    "text": "Dhaval"
                 },
                 {
-                    "name": "Durai"
+                    "text": "Durai"
                 },
                 {
-                    "name": "Gauhar"
+                    "text": "Gauhar"
                 },
                 {
-                    "name": "Gayatri"
+                    "text": "Gayatri"
                 },
                 {
-                    "name": "Hari"
+                    "text": "Hari"
                 },
                 {
-                    "name": "Hema"
+                    "text": "Hema"
                 },
                 {
-                    "name": "Hira"
+                    "text": "Hira"
                 },
                 {
-                    "name": "Isha"
+                    "text": "Isha"
                 },
                 {
-                    "name": "Jai"
+                    "text": "Jai"
                 },
                 {
-                    "name": "Jayesh"
+                    "text": "Jayesh"
                 },
                 {
-                    "name": "Kailash"
+                    "text": "Kailash"
                 },
                 {
-                    "name": "Kalyani"
+                    "text": "Kalyani"
                 },
                 {
-                    "name": "Kanti"
+                    "text": "Kanti"
                 },
                 {
-                    "name": "Kaur"
+                    "text": "Kaur"
                 },
                 {
-                    "name": "Kiran"
+                    "text": "Kiran"
                 },
                 {
-                    "name": "Laila"
+                    "text": "Laila"
                 },
                 {
-                    "name": "Lina"
+                    "text": "Lina"
                 },
                 {
-                    "name": "Manju"
+                    "text": "Manju"
                 },
                 {
-                    "name": "Mira"
+                    "text": "Mira"
                 },
                 {
-                    "name": "Mukta"
+                    "text": "Mukta"
                 },
                 {
-                    "name": "Narayan"
+                    "text": "Narayan"
                 },
                 {
-                    "name": "Nila"
+                    "text": "Nila"
                 },
                 {
-                    "name": "Nitin"
+                    "text": "Nitin"
                 },
                 {
-                    "name": "Parvati"
+                    "text": "Parvati"
                 },
                 {
-                    "name": "Prasad"
+                    "text": "Prasad"
                 },
                 {
-                    "name": "Rachna"
+                    "text": "Rachna"
                 },
                 {
-                    "name": "Raju"
+                    "text": "Raju"
                 },
                 {
-                    "name": "Raza"
+                    "text": "Raza"
                 },
                 {
-                    "name": "Reva"
+                    "text": "Reva"
                 },
                 {
-                    "name": "Riya"
+                    "text": "Riya"
                 },
                 {
-                    "name": "Roshan"
+                    "text": "Roshan"
                 },
                 {
-                    "name": "Saira"
+                    "text": "Saira"
                 },
                 {
-                    "name": "Sakshi"
+                    "text": "Sakshi"
                 },
                 {
-                    "name": "Shila"
+                    "text": "Shila"
                 },
                 {
-                    "name": "Sitara"
+                    "text": "Sitara"
                 },
                 {
-                    "name": "Suraj"
+                    "text": "Suraj"
                 },
                 {
-                    "name": "Suriya"
+                    "text": "Suriya"
                 },
                 {
-                    "name": "Vasu"
+                    "text": "Vasu"
                 },
                 {
-                    "name": "Yasir"
+                    "text": "Yasir"
                 }
             ],
             "Feminine": [
                 {
-                    "name": "Aamir"
+                    "text": "Aamir"
                 },
                 {
-                    "name": "Aarti"
+                    "text": "Aarti"
                 },
                 {
-                    "name": "Abhay"
+                    "text": "Abhay"
                 },
                 {
-                    "name": "Adnan"
+                    "text": "Adnan"
                 },
                 {
-                    "name": "Aishwarya"
+                    "text": "Aishwarya"
                 },
                 {
-                    "name": "Akash"
+                    "text": "Akash"
                 },
                 {
-                    "name": "Amala"
+                    "text": "Amala"
                 },
                 {
-                    "name": "Anik"
+                    "text": "Anik"
                 },
                 {
-                    "name": "Anisha"
+                    "text": "Anisha"
                 },
                 {
-                    "name": "Aruna"
+                    "text": "Aruna"
                 },
                 {
-                    "name": "Asha"
+                    "text": "Asha"
                 },
                 {
-                    "name": "Azra"
+                    "text": "Azra"
                 },
                 {
-                    "name": "Bishal"
+                    "text": "Bishal"
                 },
                 {
-                    "name": "Darshan"
+                    "text": "Darshan"
                 },
                 {
-                    "name": "Dhaval"
+                    "text": "Dhaval"
                 },
                 {
-                    "name": "Durai"
+                    "text": "Durai"
                 },
                 {
-                    "name": "Gauhar"
+                    "text": "Gauhar"
                 },
                 {
-                    "name": "Gayatri"
+                    "text": "Gayatri"
                 },
                 {
-                    "name": "Hari"
+                    "text": "Hari"
                 },
                 {
-                    "name": "Hema"
+                    "text": "Hema"
                 },
                 {
-                    "name": "Hira"
+                    "text": "Hira"
                 },
                 {
-                    "name": "Isha"
+                    "text": "Isha"
                 },
                 {
-                    "name": "Jai"
+                    "text": "Jai"
                 },
                 {
-                    "name": "Jayesh"
+                    "text": "Jayesh"
                 },
                 {
-                    "name": "Kailash"
+                    "text": "Kailash"
                 },
                 {
-                    "name": "Kalyani"
+                    "text": "Kalyani"
                 },
                 {
-                    "name": "Kanti"
+                    "text": "Kanti"
                 },
                 {
-                    "name": "Kaur"
+                    "text": "Kaur"
                 },
                 {
-                    "name": "Kiran"
+                    "text": "Kiran"
                 },
                 {
-                    "name": "Laila"
+                    "text": "Laila"
                 },
                 {
-                    "name": "Lina"
+                    "text": "Lina"
                 },
                 {
-                    "name": "Manju"
+                    "text": "Manju"
                 },
                 {
-                    "name": "Mira"
+                    "text": "Mira"
                 },
                 {
-                    "name": "Mukta"
+                    "text": "Mukta"
                 },
                 {
-                    "name": "Narayan"
+                    "text": "Narayan"
                 },
                 {
-                    "name": "Nila"
+                    "text": "Nila"
                 },
                 {
-                    "name": "Nitin"
+                    "text": "Nitin"
                 },
                 {
-                    "name": "Parvati"
+                    "text": "Parvati"
                 },
                 {
-                    "name": "Prasad"
+                    "text": "Prasad"
                 },
                 {
-                    "name": "Rachna"
+                    "text": "Rachna"
                 },
                 {
-                    "name": "Raju"
+                    "text": "Raju"
                 },
                 {
-                    "name": "Raza"
+                    "text": "Raza"
                 },
                 {
-                    "name": "Reva"
+                    "text": "Reva"
                 },
                 {
-                    "name": "Riya"
+                    "text": "Riya"
                 },
                 {
-                    "name": "Roshan"
+                    "text": "Roshan"
                 },
                 {
-                    "name": "Saira"
+                    "text": "Saira"
                 },
                 {
-                    "name": "Sakshi"
+                    "text": "Sakshi"
                 },
                 {
-                    "name": "Shila"
+                    "text": "Shila"
                 },
                 {
-                    "name": "Sitara"
+                    "text": "Sitara"
                 },
                 {
-                    "name": "Suraj"
+                    "text": "Suraj"
                 },
                 {
-                    "name": "Suriya"
+                    "text": "Suriya"
                 },
                 {
-                    "name": "Vasu"
+                    "text": "Vasu"
                 },
                 {
-                    "name": "Yasir"
+                    "text": "Yasir"
                 }
             ],
             "Agender": [
                 {
-                    "name": "Aamir"
+                    "text": "Aamir"
                 },
                 {
-                    "name": "Aarti"
+                    "text": "Aarti"
                 },
                 {
-                    "name": "Abhay"
+                    "text": "Abhay"
                 },
                 {
-                    "name": "Adnan"
+                    "text": "Adnan"
                 },
                 {
-                    "name": "Aishwarya"
+                    "text": "Aishwarya"
                 },
                 {
-                    "name": "Akash"
+                    "text": "Akash"
                 },
                 {
-                    "name": "Amala"
+                    "text": "Amala"
                 },
                 {
-                    "name": "Anik"
+                    "text": "Anik"
                 },
                 {
-                    "name": "Anisha"
+                    "text": "Anisha"
                 },
                 {
-                    "name": "Aruna"
+                    "text": "Aruna"
                 },
                 {
-                    "name": "Asha"
+                    "text": "Asha"
                 },
                 {
-                    "name": "Azra"
+                    "text": "Azra"
                 },
                 {
-                    "name": "Bishal"
+                    "text": "Bishal"
                 },
                 {
-                    "name": "Darshan"
+                    "text": "Darshan"
                 },
                 {
-                    "name": "Dhaval"
+                    "text": "Dhaval"
                 },
                 {
-                    "name": "Durai"
+                    "text": "Durai"
                 },
                 {
-                    "name": "Gauhar"
+                    "text": "Gauhar"
                 },
                 {
-                    "name": "Gayatri"
+                    "text": "Gayatri"
                 },
                 {
-                    "name": "Hari"
+                    "text": "Hari"
                 },
                 {
-                    "name": "Hema"
+                    "text": "Hema"
                 },
                 {
-                    "name": "Hira"
+                    "text": "Hira"
                 },
                 {
-                    "name": "Isha"
+                    "text": "Isha"
                 },
                 {
-                    "name": "Jai"
+                    "text": "Jai"
                 },
                 {
-                    "name": "Jayesh"
+                    "text": "Jayesh"
                 },
                 {
-                    "name": "Kailash"
+                    "text": "Kailash"
                 },
                 {
-                    "name": "Kalyani"
+                    "text": "Kalyani"
                 },
                 {
-                    "name": "Kanti"
+                    "text": "Kanti"
                 },
                 {
-                    "name": "Kaur"
+                    "text": "Kaur"
                 },
                 {
-                    "name": "Kiran"
+                    "text": "Kiran"
                 },
                 {
-                    "name": "Laila"
+                    "text": "Laila"
                 },
                 {
-                    "name": "Lina"
+                    "text": "Lina"
                 },
                 {
-                    "name": "Manju"
+                    "text": "Manju"
                 },
                 {
-                    "name": "Mira"
+                    "text": "Mira"
                 },
                 {
-                    "name": "Mukta"
+                    "text": "Mukta"
                 },
                 {
-                    "name": "Narayan"
+                    "text": "Narayan"
                 },
                 {
-                    "name": "Nila"
+                    "text": "Nila"
                 },
                 {
-                    "name": "Nitin"
+                    "text": "Nitin"
                 },
                 {
-                    "name": "Parvati"
+                    "text": "Parvati"
                 },
                 {
-                    "name": "Prasad"
+                    "text": "Prasad"
                 },
                 {
-                    "name": "Rachna"
+                    "text": "Rachna"
                 },
                 {
-                    "name": "Raju"
+                    "text": "Raju"
                 },
                 {
-                    "name": "Raza"
+                    "text": "Raza"
                 },
                 {
-                    "name": "Reva"
+                    "text": "Reva"
                 },
                 {
-                    "name": "Riya"
+                    "text": "Riya"
                 },
                 {
-                    "name": "Roshan"
+                    "text": "Roshan"
                 },
                 {
-                    "name": "Saira"
+                    "text": "Saira"
                 },
                 {
-                    "name": "Sakshi"
+                    "text": "Sakshi"
                 },
                 {
-                    "name": "Shila"
+                    "text": "Shila"
                 },
                 {
-                    "name": "Sitara"
+                    "text": "Sitara"
                 },
                 {
-                    "name": "Suraj"
+                    "text": "Suraj"
                 },
                 {
-                    "name": "Suriya"
+                    "text": "Suriya"
                 },
                 {
-                    "name": "Vasu"
+                    "text": "Vasu"
                 },
                 {
-                    "name": "Yasir"
+                    "text": "Yasir"
                 }
             ]
         },
         "Sjellan": {
             "Masculine": [
                 {
-                    "name": "Aghi"
+                    "text": "Aghi"
                 },
                 {
-                    "name": "Agmundr"
+                    "text": "Agmundr"
                 },
                 {
-                    "name": "Aki"
+                    "text": "Aki"
                 },
                 {
-                    "name": "Aleifr"
+                    "text": "Aleifr"
                 },
                 {
-                    "name": "Ari"
+                    "text": "Ari"
                 },
                 {
-                    "name": "Arni"
+                    "text": "Arni"
                 },
                 {
-                    "name": "Arnvidr"
+                    "text": "Arnvidr"
                 },
                 {
-                    "name": "Asbjorn"
+                    "text": "Asbjorn"
                 },
                 {
-                    "name": "Asvaldr"
+                    "text": "Asvaldr"
                 },
                 {
-                    "name": "Bardr"
+                    "text": "Bardr"
                 },
                 {
-                    "name": "Bjarni"
+                    "text": "Bjarni"
                 },
                 {
-                    "name": "Bjartr"
+                    "text": "Bjartr"
                 },
                 {
-                    "name": "Bui"
+                    "text": "Bui"
                 },
                 {
-                    "name": "Dagr"
+                    "text": "Dagr"
                 },
                 {
-                    "name": "Einarr"
+                    "text": "Einarr"
                 },
                 {
-                    "name": "Eirikr"
+                    "text": "Eirikr"
                 },
                 {
-                    "name": "Finnr"
+                    "text": "Finnr"
                 },
                 {
-                    "name": "Folki"
+                    "text": "Folki"
                 },
                 {
-                    "name": "Gauti"
+                    "text": "Gauti"
                 },
                 {
-                    "name": "Gautstafr"
+                    "text": "Gautstafr"
                 },
                 {
-                    "name": "Gudbrandr"
+                    "text": "Gudbrandr"
                 },
                 {
-                    "name": "Hakon"
+                    "text": "Hakon"
                 },
                 {
-                    "name": "Hallr"
+                    "text": "Hallr"
                 },
                 {
-                    "name": "Havardr"
+                    "text": "Havardr"
                 },
                 {
-                    "name": "Hrafn"
+                    "text": "Hrafn"
                 },
                 {
-                    "name": "Hroarr"
+                    "text": "Hroarr"
                 },
                 {
-                    "name": "Ingimarr"
+                    "text": "Ingimarr"
                 },
                 {
-                    "name": "Ivarr"
+                    "text": "Ivarr"
                 },
                 {
-                    "name": "Jarl"
+                    "text": "Jarl"
                 },
                 {
-                    "name": "Kari"
+                    "text": "Kari"
                 },
                 {
-                    "name": "Ketill"
+                    "text": "Ketill"
                 },
                 {
-                    "name": "Knutr"
+                    "text": "Knutr"
                 },
                 {
-                    "name": "Njall"
+                    "text": "Njall"
                 },
                 {
-                    "name": "Ragnvaldr"
+                    "text": "Ragnvaldr"
                 },
                 {
-                    "name": "Runi"
+                    "text": "Runi"
                 },
                 {
-                    "name": "Sindri"
+                    "text": "Sindri"
                 },
                 {
-                    "name": "Stigr"
+                    "text": "Stigr"
                 },
                 {
-                    "name": "Sumarlidi"
+                    "text": "Sumarlidi"
                 },
                 {
-                    "name": "Sveinn"
+                    "text": "Sveinn"
                 },
                 {
-                    "name": "Tryggvi"
+                    "text": "Tryggvi"
                 },
                 {
-                    "name": "Vragi"
+                    "text": "Vragi"
                 }
             ],
             "Feminine": [
                 {
-                    "name": "Alfhildr"
+                    "text": "Alfhildr"
                 },
                 {
-                    "name": "Asa"
+                    "text": "Asa"
                 },
                 {
-                    "name": "Asdis"
+                    "text": "Asdis"
                 },
                 {
-                    "name": "Aslaug"
+                    "text": "Aslaug"
                 },
                 {
-                    "name": "Asta"
+                    "text": "Asta"
                 },
                 {
-                    "name": "Bjorg"
+                    "text": "Bjorg"
                 },
                 {
-                    "name": "Brynja"
+                    "text": "Brynja"
                 },
                 {
-                    "name": "Dagmaer"
+                    "text": "Dagmaer"
                 },
                 {
-                    "name": "Eydis"
+                    "text": "Eydis"
                 },
                 {
-                    "name": "Gulla"
+                    "text": "Gulla"
                 },
                 {
-                    "name": "Gunnvor"
+                    "text": "Gunnvor"
                 },
                 {
-                    "name": "Gudlaug"
+                    "text": "Gudlaug"
                 },
                 {
-                    "name": "Hjordis"
+                    "text": "Hjordis"
                 },
                 {
-                    "name": "Hlif"
+                    "text": "Hlif"
                 },
                 {
-                    "name": "Hreidunn"
+                    "text": "Hreidunn"
                 },
                 {
-                    "name": "Ingridr"
+                    "text": "Ingridr"
                 },
                 {
-                    "name": "Katla"
+                    "text": "Katla"
                 },
                 {
-                    "name": "Olaug"
+                    "text": "Olaug"
                 },
                 {
-                    "name": "Ragna"
+                    "text": "Ragna"
                 },
                 {
-                    "name": "Runa"
+                    "text": "Runa"
                 },
                 {
-                    "name": "Signy"
+                    "text": "Signy"
                 },
                 {
-                    "name": "Solveig"
+                    "text": "Solveig"
                 },
                 {
-                    "name": "Svanhildr"
+                    "text": "Svanhildr"
                 },
                 {
-                    "name": "Unnr"
+                    "text": "Unnr"
                 },
                 {
-                    "name": "Valdis"
+                    "text": "Valdis"
                 },
                 {
-                    "name": "Vigdis"
+                    "text": "Vigdis"
                 },
                 {
-                    "name": "Yngvildr"
+                    "text": "Yngvildr"
                 }
             ],
             "Agender": [
                 {
-                    "name": "Arnvidr"
+                    "text": "Arnvidr"
                 },
                 {
-                    "name": "Bui"
+                    "text": "Bui"
                 },
                 {
-                    "name": "Dagr"
+                    "text": "Dagr"
                 },
                 {
-                    "name": "Gudbrandr"
+                    "text": "Gudbrandr"
                 },
                 {
-                    "name": "Jarl"
+                    "text": "Jarl"
                 },
                 {
-                    "name": "Gunnvor"
+                    "text": "Gunnvor"
                 },
                 {
-                    "name": "Hlif"
+                    "text": "Hlif"
                 },
                 {
-                    "name": "Unnr"
+                    "text": "Unnr"
                 }
             ]
         }
@@ -1946,355 +2078,355 @@
     "familyName": {
         "Varena": [
             {
-                "name": "Kasparaitis"
+                "text": "Kasparaitis"
             },
             {
-                "name": "Kapranos"
+                "text": "Kapranos"
             },
             {
-                "name": "Kromas"
+                "text": "Kromas"
             },
             {
-                "name": "Ruskevicius"
+                "text": "Ruskevicius"
             },
             {
-                "name": "Minkelis"
+                "text": "Minkelis"
             },
             {
-                "name": "Jusas"
+                "text": "Jusas"
             },
             {
-                "name": "Markunas"
+                "text": "Markunas"
             },
             {
-                "name": "Vinciunas"
+                "text": "Vinciunas"
             },
             {
-                "name": "Sova"
+                "text": "Sova"
             },
             {
-                "name": "Serekytis"
+                "text": "Serekytis"
             },
             {
-                "name": "Vileniskytis"
+                "text": "Vileniskytis"
             },
             {
-                "name": "Venclauskaitis"
+                "text": "Venclauskaitis"
             },
             {
-                "name": "Neiboraitis"
+                "text": "Neiboraitis"
             },
             {
-                "name": "Asauskaitis"
+                "text": "Asauskaitis"
             },
             {
-                "name": "Stralytis"
+                "text": "Stralytis"
             },
             {
-                "name": "Nevirauskaitis"
+                "text": "Nevirauskaitis"
             },
             {
-                "name": "Adomaitis"
+                "text": "Adomaitis"
             },
             {
-                "name": "Andris"
+                "text": "Andris"
             },
             {
-                "name": "Balchunas"
+                "text": "Balchunas"
             },
             {
-                "name": "Barkus"
+                "text": "Barkus"
             },
             {
-                "name": "Danis"
+                "text": "Danis"
             },
             {
-                "name": "Dargis"
+                "text": "Dargis"
             },
             {
-                "name": "Derus"
+                "text": "Derus"
             },
             {
-                "name": "Dinius"
+                "text": "Dinius"
             },
             {
-                "name": "Gaida"
+                "text": "Gaida"
             },
             {
-                "name": "Galinis"
+                "text": "Galinis"
             },
             {
-                "name": "Grigas"
+                "text": "Grigas"
             },
             {
-                "name": "Gudaitis"
+                "text": "Gudaitis"
             },
             {
-                "name": "Kairis"
+                "text": "Kairis"
             },
             {
-                "name": "Kubilus"
+                "text": "Kubilus"
             },
             {
-                "name": "Lanka"
+                "text": "Lanka"
             },
             {
-                "name": "Melis"
+                "text": "Melis"
             },
             {
-                "name": "Miskinis"
+                "text": "Miskinis"
             },
             {
-                "name": "Moris"
+                "text": "Moris"
             },
             {
-                "name": "Norkus"
+                "text": "Norkus"
             },
             {
-                "name": "Rubis"
+                "text": "Rubis"
             },
             {
-                "name": "Shaulis"
+                "text": "Shaulis"
             },
             {
-                "name": "Vidas"
+                "text": "Vidas"
             },
             {
-                "name": "Wirkus"
+                "text": "Wirkus"
             },
             {
-                "name": "Zukas"
+                "text": "Zukas"
             }
         ],
         "Jaekol": [
             {
-                "name": "Allanach"
+                "text": "Allanach"
             },
             {
-                "name": "Arasgain"
+                "text": "Arasgain"
             },
             {
-                "name": "Ariss"
+                "text": "Ariss"
             },
             {
-                "name": "Barrach"
+                "text": "Barrach"
             },
             {
-                "name": "Bhasa"
+                "text": "Bhasa"
             },
             {
-                "name": "Blarach"
+                "text": "Blarach"
             },
             {
-                "name": "Braigheach"
+                "text": "Braigheach"
             },
             {
-                "name": "Breac"
+                "text": "Breac"
             },
             {
-                "name": "Brun"
+                "text": "Brun"
             },
             {
-                "name": "Caileanach"
+                "text": "Caileanach"
             },
             {
-                "name": "Catanach"
+                "text": "Catanach"
             },
             {
-                "name": "Ciarach"
+                "text": "Ciarach"
             },
             {
-                "name": "Dalais"
+                "text": "Dalais"
             },
             {
-                "name": "Deoir"
+                "text": "Deoir"
             },
             {
-                "name": "Dubhach"
+                "text": "Dubhach"
             },
             {
-                "name": "Dunaid"
+                "text": "Dunaid"
             },
             {
-                "name": "Folais"
+                "text": "Folais"
             },
             {
-                "name": "Flachnan"
+                "text": "Flachnan"
             },
             {
-                "name": "Gall"
+                "text": "Gall"
             },
             {
-                "name": "Greum"
+                "text": "Greum"
             },
             {
-                "name": "Griogal"
+                "text": "Griogal"
             },
             {
-                "name": "Guaire"
+                "text": "Guaire"
             },
             {
-                "name": "Iomharach"
+                "text": "Iomharach"
             },
             {
-                "name": "Liosach"
+                "text": "Liosach"
             },
             {
-                "name": "Lobhdain"
+                "text": "Lobhdain"
             },
             {
-                "name": "Lutair"
+                "text": "Lutair"
             },
             {
-                "name": "Maollosa"
+                "text": "Maollosa"
             },
             {
-                "name": "Mawr"
+                "text": "Mawr"
             },
             {
-                "name": "Meinnearach"
+                "text": "Meinnearach"
             },
             {
-                "name": "n'Tulach"
+                "text": "n'Tulach"
             },
             {
-                "name": "n'Rath"
+                "text": "n'Rath"
             },
             {
-                "name": "n'Sginnearach"
+                "text": "n'Sginnearach"
             },
             {
-                "name": "n'Sailcirc"
+                "text": "n'Sailcirc"
             },
             {
-                "name": "n'Ruaidh"
+                "text": "n'Ruaidh"
             },
             {
-                "name": "Paorach"
+                "text": "Paorach"
             },
             {
-                "name": "Ros"
+                "text": "Ros"
             },
             {
-                "name": "Salmond"
+                "text": "Salmond"
             },
             {
-                "name": "Singleir"
+                "text": "Singleir"
             },
             {
-                "name": "Sudrach"
+                "text": "Sudrach"
             },
             {
-                "name": "Tuairnear"
+                "text": "Tuairnear"
             }
         ],
         "Kithara": [
             {
-                "name": "Darjee"
+                "text": "Darjee"
             },
             {
-                "name": "Vakta"
+                "text": "Vakta"
             },
             {
-                "name": "Rasoiya"
+                "text": "Rasoiya"
             },
             {
-                "name": "Prabandhak"
+                "text": "Prabandhak"
             },
             {
-                "name": "Yaatree"
+                "text": "Yaatree"
             },
             {
-                "name": "Shikaaree"
+                "text": "Shikaaree"
             },
             {
-                "name": "Kisaan"
+                "text": "Kisaan"
             },
             {
-                "name": "Pratinidhi"
+                "text": "Pratinidhi"
             },
             {
-                "name": "Munshee"
+                "text": "Munshee"
             },
             {
-                "name": "Kavi"
+                "text": "Kavi"
             },
             {
-                "name": "Gaayak"
+                "text": "Gaayak"
             },
             {
-                "name": "Lohaar"
+                "text": "Lohaar"
             },
             {
-                "name": "Karaamaatee"
+                "text": "Karaamaatee"
             },
             {
-                "name": "Dukaanadaar"
+                "text": "Dukaanadaar"
             },
             {
-                "name": "Vaigyaanik"
+                "text": "Vaigyaanik"
             }
         ],
         "Sjellan": [
             {
-                "name": "Agmundrsson"
+                "text": "Agmundrsson"
             },
             {
-                "name": "Arnisson"
+                "text": "Arnisson"
             },
             {
-                "name": "Asvaldrsson"
+                "text": "Asvaldrsson"
             },
             {
-                "name": "Dagrsson"
+                "text": "Dagrsson"
             },
             {
-                "name": "Einarsson"
+                "text": "Einarsson"
             },
             {
-                "name": "Folkisson"
+                "text": "Folkisson"
             },
             {
-                "name": "Havardrsson"
+                "text": "Havardrsson"
             },
             {
-                "name": "Hrafnsson"
+                "text": "Hrafnsson"
             },
             {
-                "name": "Ketilsson"
+                "text": "Ketilsson"
             },
             {
-                "name": "Runisson"
+                "text": "Runisson"
             },
             {
-                "name": "Sveinsson"
+                "text": "Sveinsson"
             },
             {
-                "name": "Aslaugsson"
+                "text": "Aslaugsson"
             },
             {
-                "name": "Brynjasson"
+                "text": "Brynjasson"
             },
             {
-                "name": "Dagmaersson"
+                "text": "Dagmaersson"
             },
             {
-                "name": "Gunnvorsson"
+                "text": "Gunnvorsson"
             },
             {
-                "name": "Hjordisson"
+                "text": "Hjordisson"
             },
             {
-                "name": "Katlasson"
+                "text": "Katlasson"
             },
             {
-                "name": "Runasson"
+                "text": "Runasson"
             },
             {
-                "name": "Solveigsson"
+                "text": "Solveigsson"
             },
             {
-                "name": "Vigdisson"
+                "text": "Vigdisson"
             }
         ]
     }

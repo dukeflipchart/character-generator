@@ -1,218 +1,140 @@
 import Asa from './asa';
 
-const chooseValue = (pool, oldValue) => {
-    // taking the last value out of the pool so we get a new one every time
-    pool = pool.filter(option => option.name !== oldValue);
+const chooseAttribute = (pool, excludedTexts, excludedTags) => {
+    if (excludedTexts) {
+        pool = pool.filter(option => !excludedTexts.includes(option.text));
+    }
+    if (excludedTags) {
+        pool = pool.filter(option => option.tags.filter(tag => !excludedTags.includes(tag)).length);
+    }
     let sumWeights = 0;
     for (let index in pool) {
-        //console.log("option.weight: " + pool[index].weight);
         sumWeights += pool[index].weight ? pool[index].weight : 1;
     }
-    //console.log("sumWeights: " + sumWeights);
     let winner = Math.floor(Math.random() * sumWeights);
-    //console.log("winner: " + winner);
     for (let index in pool) {
         winner -= pool[index].weight ? pool[index].weight : 1;
-        //console.log("weight: " + pool[index].weight + ", winner is reduced to: " + winner)
         if (winner < 0) {
-            return pool[index].name;
+            
+            return pool[index];
         }
     }
 }
 
-const generateSexuality = (options, gender, oldValue) => {
-    if (gender === 'cis male' || gender === 'trans male' || gender === 'cis female' || gender === 'trans female') { gender = 'MaleFemale'; }
-    if (gender === 'genderfluid' || gender === 'agender') { gender = 'GenderfluidAgender'; }
+const generateSexuality = (options, gender, excludedText) => {
+    let sexualityGender = '';
+    if (gender === 'cis male' || gender === 'trans male' || gender === 'cis female' || gender === 'trans female') { sexualityGender = 'MaleFemale'; }
+    if (gender === 'genderfluid' || gender === 'agender') { sexualityGender = 'GenderfluidAgender'; }
 
-    return chooseValue(options[gender], oldValue);
+    return chooseAttribute(options[sexualityGender], excludedText);
 }
 
-const generateRelationship = (options, age, oldValue) => {
-    if (['adult', 'middle-aged', 'old', 'very old'].includes(age)) { age = 'older'; }
+const generateRelationship = (options, age, excludedText) => {
+    let relationshipAge = age;
+    if (['adult', 'middle-aged', 'old', 'very old'].includes(age)) { relationshipAge = 'older'; }
 
-    return chooseValue(options[age], oldValue);
+    return chooseAttribute(options[relationshipAge], excludedText);
 }
 
-const generateGivenName = (options, ancestry, gender, oldValue) => {
-    if (gender === 'cis male' || gender === 'trans male') { gender = 'Masculine'; }
-    if (gender === 'cis female' || gender === 'trans female') { gender = 'Feminine'; }
-    if (gender === 'genderfluid') { gender = (Math.random() >= 0.5) ? 'Masculine' : 'Feminine'; }
+const generateGivenName = (options, ancestry, gender, excludedText) => {
+    let nameGender = '';
+    if (gender === 'cis male' || gender === 'trans male') { nameGender = 'Masculine'; }
+    if (gender === 'cis female' || gender === 'trans female') { nameGender = 'Feminine'; }
+    if (gender === 'genderfluid') { nameGender = (Math.random() >= 0.5) ? 'Masculine' : 'Feminine'; }
+    if (gender === 'agender') { nameGender = 'Agender'; }
 
-    return chooseValue(options[ancestry][gender], oldValue);
+    return chooseAttribute(options[ancestry][nameGender], excludedText);
 }
 
-const generateFamilyName = (options, ancestry, oldValue) => chooseValue(options[ancestry], oldValue);
-const generateRace = (options, ancestry, oldValue) => chooseValue(options[ancestry], oldValue);
+const generateFamilyName = (options, ancestry, excludedText) => chooseAttribute(options[ancestry], excludedText);
+const generateRace = (options, ancestry, excludedText) => chooseAttribute(options[ancestry], excludedText);
 
 export const generateCharacter = () => {
     const character = {
-        gender: {
-            name: 'gender',
-            value: chooseValue(Asa.gender)
-        },
-        ancestry: {
-            name: 'ancestry',
-            value: chooseValue(Asa.ancestry)
-        },
-        age: {
-            name: 'age',
-            value: chooseValue(Asa.age)
-        },
-        motivation: {
-            name: 'motivation',
-            value: chooseValue(Asa.motivation)
-        },
-        usualMood: {
-            name: 'usualMood',
-            value: chooseValue(Asa.usualMood)
-        },
-        outlook: {
-            name: 'outlook',
-            value: chooseValue(Asa.outlook)
-        },
-        integrity: {
-            name: 'integrity',
-            value: chooseValue(Asa.integrity)
-        },
-        impulsiveness: {
-            name: 'impulsiveness',
-            value: chooseValue(Asa.impulsiveness)
-        },
-        friendliness: {
-            name: 'friendliness',
-            value: chooseValue(Asa.friendliness)
-        },
-        conformity: {
-            name: 'conformity',
-            value: chooseValue(Asa.conformity)
-        }
+        gender: chooseAttribute(Asa.gender),
+        ancestry: chooseAttribute(Asa.ancestry),
+        age: chooseAttribute(Asa.age),
+        motivation: chooseAttribute(Asa.motivation),
+        usualMood: chooseAttribute(Asa.usualMood),
+        appearance1: chooseAttribute(Asa.appearance),
     }
-    character.sexuality = {
-        name: 'sexuality',
-        value: generateSexuality(Asa.sexuality, character.gender.value)
-    }
-    character.givenName = {
-        name: 'givenName',
-        value: generateGivenName(Asa.givenName, character.ancestry.value, character.gender.value)
-    }
-    character.familyName = {
-        name: 'familyName',
-        value: generateFamilyName(Asa.familyName, character.ancestry.value)
-    }
-    character.race = {
-        name: 'race',
-        value: generateRace(Asa.race, character.ancestry.value)
-    }
-    character.relationship = {
-        name: 'relationship',
-        value: generateRelationship(Asa.relationship, character.age.value)
-    }
-
+    character.sexuality = generateSexuality(Asa.sexuality, character.gender.text);
+    character.givenName = generateGivenName(Asa.givenName, character.ancestry.text, character.gender.text);
+    character.familyName = generateFamilyName(Asa.familyName, character.ancestry.text);
+    character.race = generateRace(Asa.race, character.ancestry.text);
+    character.relationship = generateRelationship(Asa.relationship, character.age.text);
+    character.appearance2 = chooseAttribute(Asa.appearance, [character.appearance1.text], character.appearance1.tags);
+    
     return character;
 }
 
 export const reshuffle = (oldAttributes, targetAttribute) => {
-	let previousTargetAttributeValue = oldAttributes[targetAttribute].value;
+	let previousTargetAttribute = oldAttributes[targetAttribute];
 
 	let newAttributes;
 	switch(targetAttribute) {
         case 'givenName':
             newAttributes = {
-                [targetAttribute]: {
-                    name: 'givenName',
-                    value: generateGivenName(Asa.givenName, oldAttributes.ancestry.value, oldAttributes.gender.value, previousTargetAttributeValue)
-                }
+                givenName: generateGivenName(Asa.givenName, oldAttributes.ancestry.text, oldAttributes.gender.text, [previousTargetAttribute.text])
             };
             break;
         case 'familyName':
             newAttributes = {
-                [targetAttribute]: {
-                    name: 'familyName',
-                    value: generateFamilyName(Asa.familyName, oldAttributes.ancestry.value, previousTargetAttributeValue)
-                }
+                familyName: generateFamilyName(Asa.familyName, oldAttributes.ancestry.text, [previousTargetAttribute.text])
             };
             break;
         case 'race':
             newAttributes = {
-                [targetAttribute]: {
-                    name: 'race',
-                    value: generateRace(Asa.race, oldAttributes.ancestry.value, previousTargetAttributeValue)
-                }
+                race: generateRace(Asa.race, oldAttributes.ancestry.text, [previousTargetAttribute.text])
             };
             break;
         case 'ancestry':
-            const newAncestry = chooseValue(Asa.ancestry, previousTargetAttributeValue);
+            const newAncestry = chooseAttribute(Asa.ancestry, [previousTargetAttribute.text]);
             newAttributes = {
-                ancestry: {
-                    name: 'ancestry',
-                    value: newAncestry
-                },
-				givenName: {
-                    name: 'givenName',
-                    value: generateGivenName(Asa.givenName, newAncestry, oldAttributes.gender.value)
-                },
-				familyName: {
-                    name: 'familyName',
-                    value: generateFamilyName(Asa.familyName, newAncestry, oldAttributes.gender.value)
-                },
-				race: {
-                    name: 'race',
-                    value: generateRace(Asa.race, newAncestry)
-                }
+                ancestry: newAncestry,
+				givenName: generateGivenName(Asa.givenName, newAncestry.text, oldAttributes.gender.text),
+				familyName: generateFamilyName(Asa.familyName, newAncestry.text, oldAttributes.gender.text),
+				race: generateRace(Asa.race, newAncestry.text)
             };
             break;
         case 'gender':
-		    const newGender = chooseValue(Asa.gender, previousTargetAttributeValue);
+		    const newGender = chooseAttribute(Asa.gender, [previousTargetAttribute.text]);
 			newAttributes = {
-                gender: {
-                    name: 'gender',
-                    value: newGender
-				},
-				sexuality: {
-                    name: 'sexuality',
-                    value: generateSexuality(Asa.sexuality, newGender, oldAttributes.sexuality.value)
-				},
-				givenName: {
-                    name: 'givenName',
-                    value: generateGivenName(Asa.givenName, oldAttributes.ancestry.value, newGender, oldAttributes.givenName.value)
-                }
+                gender: newGender,
+				sexuality: generateSexuality(Asa.sexuality, newGender.text, oldAttributes.sexuality.text),
+				givenName: generateGivenName(Asa.givenName, oldAttributes.ancestry.text, newGender.text)
             };
             break;
         case 'sexuality':
             newAttributes = {
-                [targetAttribute]: {
-                    name: 'sexuality',
-                    value: generateSexuality(Asa.sexuality, oldAttributes.gender.value, previousTargetAttributeValue)
-                }
+                sexuality: generateSexuality(Asa.sexuality, oldAttributes.gender.text, [previousTargetAttribute.text])
             };
             break;
         case 'relationship':
             newAttributes = {
-                [targetAttribute]: {
-                    name: 'relationship',
-                    value: generateRelationship(Asa.relationship, oldAttributes.age.value, previousTargetAttributeValue)
-                }
+                relationship: generateRelationship(Asa.relationship, oldAttributes.age.text, [previousTargetAttribute.text])
             };
             break;
         case 'age':
-            const newAge = chooseValue(Asa[targetAttribute], previousTargetAttributeValue);
+            const newAge = chooseAttribute(Asa[targetAttribute], [previousTargetAttribute.text]);
             newAttributes = {
-                age: {
-                    name: 'age',
-                    value: newAge
-                },
-                relationship: {
-                    name: 'relationship',
-                    value: generateRelationship(Asa.relationship, newAge, oldAttributes.relationship.value)
-                }
+                age: newAge,
+                relationship: generateRelationship(Asa.relationship, newAge.text)
+            };
+            break;
+        case 'appearance1':
+            newAttributes = {
+                appearance1: chooseAttribute(Asa.appearance, [previousTargetAttribute.text, oldAttributes.appearance2.text], [...previousTargetAttribute.tags, ...oldAttributes.appearance2.tags])
+            };
+            break;
+        case 'appearance2':
+            newAttributes = {
+                appearance2: chooseAttribute(Asa.appearance, [previousTargetAttribute.text, oldAttributes.appearance1.text], [...previousTargetAttribute.tags, ...oldAttributes.appearance1.tags])
             };
             break;
         default:
             newAttributes = {
-                [targetAttribute]: {
-                    name: targetAttribute,
-                    value: chooseValue(Asa[targetAttribute], previousTargetAttributeValue)
-                }
+                [targetAttribute]: chooseAttribute(Asa[targetAttribute], [previousTargetAttribute.text])
             };
     }
 
