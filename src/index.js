@@ -42,7 +42,7 @@ const CharacterCard = ({ deleteCharacter, reshuffle, character }) => {
                 <ToolbarButton onClick={() => copy(dedent(
                         `${character.givenName.text} ${character.familyName.text}
                         ${character.gender.text} ${character.age.text} ${character.sexuality.text} ${character.race.text} from ${character.ancestry.text} 
-                        Mood: ${character.usualMood.text}
+                        Mood: ${character.mood.text}
                         Life goal: ${character.motivation.text}`
                         ))}>
                     <ClipboardSolid />
@@ -71,35 +71,35 @@ const CharacterCard = ({ deleteCharacter, reshuffle, character }) => {
                 <Column>
                     <AttributeGroup>
                         <AttributeGroupLabel>Appearance</AttributeGroupLabel>
-                        <AttributeList>
-                            <li>
-                                <Attribute capitalized name='appearance1' onClick={() => reshuffle('appearance1')} value={character.appearance1.text} />
-                            </li>
-                            <li>
-                                <Attribute capitalized name='appearance2' onClick={() => reshuffle('appearance2')} value={character.appearance2.text} />
-                            </li>
-                        </AttributeList>
+                        <Attribute name='appearance1' onClick={() => reshuffle('appearance1')} value={capitalizeFirstLetter(character.appearance1.text)} />,
+                        {' '}
+                        <Attribute name='appearance2' onClick={() => reshuffle('appearance2')} value={character.appearance2.text} />
                     </AttributeGroup>
                     <AttributeGroup>
-                        <AttributeGroupLabel>Mood</AttributeGroupLabel>
-                        <Attribute capitalized name='usualMood' onClick={() => reshuffle('usualMood')} value={character.usualMood.text} />
+                        <AttributeGroupLabel>Relationships</AttributeGroupLabel>
+                        <AttributeList>
+                            <Attribute name='sexuality' onClick={() => reshuffle('sexuality')} value={capitalizeFirstLetter(character.sexuality.text)} />,
+                            {' '}
+                            <Attribute name='relationship' onClick={() => reshuffle('relationship')} value={character.relationship.text} />
+                        </AttributeList>
                     </AttributeGroup>
                 </Column>
                 <Column>
                     <AttributeGroup>
-                        <AttributeGroupLabel>Relationships</AttributeGroupLabel>
-                        <AttributeList>
-                            <li>
-                                <Attribute name='sexuality' onClick={() => reshuffle('sexuality')} value={capitalizeFirstLetter(character.sexuality.text)} />
-                            </li>
-                            <li>
-                                <Attribute name='relationship' onClick={() => reshuffle('relationship')} value={capitalizeFirstLetter(character.relationship.text)} />
-                            </li>
-                        </AttributeList>
+                        <AttributeGroupLabel>Mood</AttributeGroupLabel>
+                        <Attribute name='mood' onClick={() => reshuffle('mood')} value={character.mood.text} />
                     </AttributeGroup>
                     <AttributeGroup>
+                        <AttributeGroupLabel>Personality</AttributeGroupLabel>
+                        <Attribute name='personality1' onClick={() => reshuffle('personality1')} value={capitalizeFirstLetter(character.personality1.text)} /> and
+                        {' '}
+                        <Attribute name='personality2' onClick={() => reshuffle('personality2')} value={character.personality2.text} />
+                    </AttributeGroup>
+                </Column>
+                <Column>
+                    <AttributeGroup>
                         <AttributeGroupLabel>Life goal</AttributeGroupLabel>
-                        <Attribute capitalized name='motivation' onClick={() => reshuffle('motivation')} value={character.motivation.text} />
+                        <Attribute name='motivation' onClick={() => reshuffle('motivation')} value={character.motivation.text} />
                     </AttributeGroup>
                 </Column>
             </Row>

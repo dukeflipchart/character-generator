@@ -17,19 +17,19 @@ export const BoardContainer = styled.div`
     width: 100%;
     padding: 1rem;
 
-    @media only screen and (min-width: 35rem) {
+    @media only screen and (min-width: 40rem) {
         padding: 2rem;
     }
 `;
 
 export const CharacterCardContainer = styled.div`
-    max-width: 35rem;
+    max-width: 40rem;
     margin: 1rem auto;
     padding: 1rem;
     border: 1px solid #ddd;
     border-radius: 1rem;
     
-    @media only screen and (min-width: 35rem) {
+    @media only screen and (min-width: 40rem) {
         margin: 2rem auto;
         padding: 2rem;
     }
@@ -69,11 +69,11 @@ export const AddCharacterButton = styled(Button)`
     align-items: center;
     margin: 0 auto 1rem;
     width: 100%;
-    max-width: 39rem;
+    max-width: 44rem;
     border-radius: 1rem;
     padding: 1rem;
 
-    @media only screen and (min-width: 35rem) {
+    @media only screen and (min-width: 40rem) {
         margin-bottom: 2rem;
     }
 `;
@@ -115,24 +115,23 @@ export const ToolbarButton = styled(Button)`
     }
 `;
 
-export const ToolbarDeleteButton = styled.button`
-    
-`;
+export const ToolbarDeleteButton = styled.button``;
 
 
 export const AttributeGroup = styled.div`
     
     :not(:last-child) {
-        margin-bottom: 1.6rem;
+        margin-bottom: 1.65rem;
     }
 `;
 
 export const AttributeGroupLabel = styled.h4`
     font-family: Montserrat, sans-serif;
     font-size: 0.75rem;
+    line-height: 2.2;
     text-transform: uppercase;
     margin-top: 0;
-    margin-bottom: 0.3rem;
+    margin-bottom: 0;
 `;
 
 export const AttributeLabel = styled.span`
@@ -159,7 +158,7 @@ export const NameWrapper = styled.h1`
 
 export const Row = styled.div`
 
-    @media only screen and (min-width: 35rem) {
+    @media only screen and (min-width: 40rem) {
         display: flex;
         flex-direction: row;
     }
@@ -169,10 +168,10 @@ export const Column = styled.div`
     flex: 1 1 50%;
 
     :not(:last-child) {
-        margin-bottom: 1.6rem;
+        margin-bottom: 1.65rem;
     }
 
-    @media only screen and (min-width: 35rem) {
+    @media only screen and (min-width: 40rem) {
 
         :not(:last-child) {
             border-right: 1px solid #ddd;

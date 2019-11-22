@@ -102,189 +102,189 @@
     ],
     "appearance": [
         {
-            "text": "Beautiful",
+            "text": "beautiful",
             "tags": [
                 "beauty"
             ],
             "weight": 10
         },
         {
-            "text": "Ugly",
+            "text": "ugly",
             "tags": [
                 "beauty"
             ],
             "weight": 10
         },
         {
-            "text": "Staggeringly beautiful",
+            "text": "staggeringly beautiful",
             "tags": [
                 "beauty"
             ],
             "weight": 1
         },
         {
-            "text": "Staggeringly ugly",
+            "text": "staggeringly ugly",
             "tags": [
                 "beauty"
             ],
             "weight": 1
         },
         {
-            "text": "Unusual eye color",
+            "text": "unusual eye color",
             "tags": [
                 "eyes"
             ],
             "weight": 1
         },
         {
-            "text": "Differently colored eyes",
+            "text": "differently colored eyes",
             "tags": [
                 "eyes"
             ],
             "weight": 1
         },
         {
-            "text": "Upturned nose",
+            "text": "upturned nose",
             "tags": [
                 "nose"
             ],
             "weight": 3
         },
         {
-            "text": "Hawk-nosed",
+            "text": "hawk-nosed",
             "tags": [
                 "nose"
             ],
             "weight": 3
         },
         {
-            "text": "Wide-nosed",
+            "text": "wide-nosed",
             "tags": [
                 "nose"
             ],
             "weight": 3
         },
         {
-            "text": "Missing teeth",
+            "text": "missing teeth",
             "tags": [
                 "teeth"
             ],
             "weight": 2
         },
         {
-            "text": "Very tall",
+            "text": "very tall",
             "tags": [
                 "height"
             ],
             "weight": 3
         },
         {
-            "text": "Tall",
+            "text": "tall",
             "tags": [
                 "height"
             ],
             "weight": 7
         },
         {
-            "text": "Short",
+            "text": "short",
             "tags": [
                 "height"
             ],
             "weight": 7
         },
         {
-            "text": "Very short",
+            "text": "very short",
             "tags": [
                 "height"
             ],
             "weight": 3
         },
         {
-            "text": "Athletic",
+            "text": "athletic",
             "tags": [
                 "build"
             ],
             "weight": 7
         },
         {
-            "text": "Heavyset",
+            "text": "heavyset",
             "tags": [
                 "build"
             ],
             "weight": 7
         },
         {
-            "text": "Skinny",
+            "text": "skinny",
             "tags": [
                 "build"
             ],
             "weight": 7
         },
         {
-            "text": "Unusual hair color",
+            "text": "unusual hair color",
             "tags": [
                 "hair"
             ],
             "weight": 1
         },
         {
-            "text": "Elaborately braided hair or beard",
+            "text": "elaborately braided hair or beard",
             "tags": [
                 "hair"
             ],
             "weight": 2
         },
         {
-            "text": "Beads in hair or beard",
+            "text": "beads in hair or beard",
             "tags": [
                 "hair"
             ],
             "weight": 1
         },
         {
-            "text": "Bald",
+            "text": "bald",
             "tags": [
                 "hair"
             ],
             "weight": 3
         },
         {
-            "text": "Waist-length hair",
+            "text": "waist-length hair",
             "tags": [
                 "hair"
             ],
             "weight": 3
         },
         {
-            "text": "Unkempt hair",
+            "text": "unkempt hair",
             "tags": [
                 "hair"
             ],
             "weight": 5
         },
         {
-            "text": "Wears a wig",
+            "text": "wears a wig",
             "tags": [
                 "hair"
             ],
             "weight": 1
         },
         {
-            "text": "Missing fingers",
+            "text": "missing fingers",
             "tags": [
                 "disability"
             ],
             "weight": 1
         },
         {
-            "text": "Noticeable scar",
+            "text": "noticeable scar",
             "tags": [
                 "disability"
             ],
             "weight": 1
         },
         {
-            "text": "Blind in one eye",
+            "text": "blind in one eye",
             "tags": [
                 "disability",
                 "eyes"
@@ -292,63 +292,64 @@
             "weight": 1
         },
         {
-            "text": "Completely blind",
+            "text": "completely blind",
             "tags": [
-                "disability"
+                "disability",
+                "eyes"
             ],
             "weight": 1
         },
         {
-            "text": "Hard of hearing",
+            "text": "hard of hearing",
             "tags": [
                 "disability"
             ],
             "weight": 2
         },
         {
-            "text": "Deaf",
+            "text": "deaf",
             "tags": [
                 "disability"
             ],
             "weight": 1
         },
         {
-            "text": "Missing an arm",
+            "text": "missing an arm",
             "tags": [
                 "disability"
             ],
             "weight": 1
         },
         {
-            "text": "Missing a leg",
+            "text": "missing a leg",
             "tags": [
                 "disability"
             ],
             "weight": 1
         },
         {
-            "text": "Holy symbol branded onto hand",
+            "text": "holy symbol branded onto hand",
             "tags": [
                 "jewelry"
             ],
             "weight": 3
         },
         {
-            "text": "Piercings",
+            "text": "piercings",
             "tags": [
                 "jewelry"
             ],
             "weight": 5
         },
         {
-            "text": "Tatoos",
+            "text": "tatoos",
             "tags": [
                 "jewelry"
             ],
             "weight": 5
         },
         {
-            "text": "Spectacles",
+            "text": "spectacles",
             "tags": [
                 "jewelry",
                 "eyes"
@@ -356,60 +357,112 @@
             "weight": 2
         },
         {
-            "text": "Religious jewelry",
+            "text": "religious jewelry",
             "tags": [
                 "jewelry"
             ],
             "weight": 5
         },
         {
-            "text": "Ostentatious jewelry",
+            "text": "ostentatious jewelry",
             "tags": [
                 "jewelry"
             ],
             "weight": 2
         },
         {
-            "text": "Muted, dark clothes",
+            "text": "muted, dark clothes",
             "tags": [
                 "clothes"
             ],
             "weight": 7
         },
         {
-            "text": "Very vibrant clothes",
+            "text": "very vibrant clothes",
             "tags": [
                 "clothes"
             ],
             "weight": 5
         },
         {
-            "text": "Expensive and flamboyant clothes",
+            "text": "expensive and flamboyant clothes",
             "tags": [
                 "clothes"
             ],
             "weight": 5
         },
         {
-            "text": "Revealing clothes",
+            "text": "revealing clothes",
             "tags": [
                 "clothes"
             ],
             "weight": 5
         },
         {
-            "text": "Ragged, dirty clothes",
+            "text": "ragged, dirty clothes",
             "tags": [
                 "clothes"
             ],
             "weight": 7
         },
         {
-            "text": "Clean, proper clothes",
+            "text": "clean, proper clothes",
             "tags": [
                 "clothes"
             ],
             "weight": 7
+        }
+    ],
+    "personality": [
+        {
+            "text": "optimistic",
+            "tags": ["outlook"],
+            "weight": 1
+        },
+        {
+            "text": "pessimistic",
+            "tags": ["outlook"],
+            "weight": 1
+        },
+        {
+            "text": "honest",
+            "tags": ["honesty"],
+            "weight": 1
+        },
+        {
+            "text": "deceitful",
+            "tags": ["honesty"],
+            "weight": 1
+        },
+        {
+            "text": "deliberate",
+            "tags": ["impulsiveness"],
+            "weight": 1
+        },
+        {
+            "text": "impulsive",
+            "tags": ["impulsiveness"],
+            "weight": 1
+        },
+        {
+            "text": "friendly",
+            "tags": ["friendliness"],
+            "weight": 1
+        },
+        {
+            "text": "unfriendly",
+            "tags": ["friendliness"],
+            "weight": 1
+        },
+        {
+            "text": "traditionalist",
+            "tags": ["progressiveness"],
+            "weight": 1
+        },
+        {
+            "text": "progressive",
+            "tags": ["progressiveness"],
+            "weight": 1
         }
     ],
     "relationship": {
@@ -635,36 +688,96 @@
             "text": "Vice - To enable or engage in self-destructive behavior"
         }
     ],
-    "usualMood": [
+    "mood": [
         {
-            "text": "Joyful"
+            "text": "Amused"
         },
         {
-            "text": "Anxious"
-        },
-        {
-            "text": "Melancholy"
-        },
-        {
-            "text": "Curious"
+            "text": "Blissful"
         },
         {
             "text": "Calm"
         },
         {
-            "text": "Angry"
+            "text": "Curious"
         },
         {
-            "text": "Contemptuous"
+            "text": "Cheerful"
+        },
+        {
+            "text": "Content"
+        },
+        {
+            "text": "Ecstatic"
+        },
+        {
+            "text": "Energetic"
         },
         {
             "text": "Excited"
+        },
+        {
+            "text": "Flirty"
+        },
+        {
+            "text": "Joyful"
+        },
+        {
+            "text": "Peaceful"
+        },
+        {
+            "text": "Silly"
+        },
+        {
+            "text": "Angry"
+        },
+        {
+            "text": "Annoyed"
+        },
+        {
+            "text": "Anxious"
         },
         {
             "text": "Apathetic"
         },
         {
             "text": "Ashamed"
+        },
+        {
+            "text": "Cranky"
+        },
+        {
+            "text": "Contemptuous"
+        },
+        {
+            "text": "Depressed"
+        },
+        {
+            "text": "Envious"
+        },
+        {
+            "text": "Frustrated"
+        },
+        {
+            "text": "Grumpy"
+        },
+        {
+            "text": "Indifferent"
+        },
+        {
+            "text": "Irritated"
+        },
+        {
+            "text": "Melancholy"
+        },
+        {
+            "text": "Restless"
+        },
+        {
+            "text": "Sad"
+        },
+        {
+            "text": "Stressed"
         }
     ],
     "outlook": [

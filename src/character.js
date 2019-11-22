@@ -55,8 +55,9 @@ export const generateCharacter = () => {
         ancestry: chooseAttribute(Asa.ancestry),
         age: chooseAttribute(Asa.age),
         motivation: chooseAttribute(Asa.motivation),
-        usualMood: chooseAttribute(Asa.usualMood),
+        mood: chooseAttribute(Asa.mood),
         appearance1: chooseAttribute(Asa.appearance),
+        personality1: chooseAttribute(Asa.personality)
     }
     character.sexuality = generateSexuality(Asa.sexuality, character.gender.text);
     character.givenName = generateGivenName(Asa.givenName, character.ancestry.text, character.gender.text);
@@ -64,6 +65,7 @@ export const generateCharacter = () => {
     character.race = generateRace(Asa.race, character.ancestry.text);
     character.relationship = generateRelationship(Asa.relationship, character.age.text);
     character.appearance2 = chooseAttribute(Asa.appearance, [character.appearance1.text], character.appearance1.tags);
+    character.personality2 = chooseAttribute(Asa.personality, [character.personality1.text], character.personality1.tags);
     
     return character;
 }
@@ -130,6 +132,16 @@ export const reshuffle = (oldAttributes, targetAttribute) => {
         case 'appearance2':
             newAttributes = {
                 appearance2: chooseAttribute(Asa.appearance, [previousTargetAttribute.text, oldAttributes.appearance1.text], [...previousTargetAttribute.tags, ...oldAttributes.appearance1.tags])
+            };
+            break;
+        case 'personality1':
+            newAttributes = {
+                personality1: chooseAttribute(Asa.personality, [previousTargetAttribute.text, oldAttributes.personality2.text], [...previousTargetAttribute.tags, ...oldAttributes.personality2.tags])
+            };
+            break;
+        case 'personality2':
+            newAttributes = {
+                personality2: chooseAttribute(Asa.personality, [previousTargetAttribute.text, oldAttributes.personality1.text], [...previousTargetAttribute.tags, ...oldAttributes.personality1.tags])
             };
             break;
         default:
