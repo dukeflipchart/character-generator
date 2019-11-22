@@ -1,6 +1,7 @@
 import Asa from './asa';
 
 const chooseAttribute = (pool, excludedValue) => {
+    console.log(pool);
     pool = pool.filter(option => option.text !== excludedValue);
     let sumWeights = 0;
     for (let index in pool) {
@@ -17,10 +18,11 @@ const chooseAttribute = (pool, excludedValue) => {
 }
 
 const generateSexuality = (options, gender, oldValue) => {
-    if (gender === 'cis male' || gender === 'trans male' || gender === 'cis female' || gender === 'trans female') { gender = 'MaleFemale'; }
-    if (gender === 'genderfluid' || gender === 'agender') { gender = 'GenderfluidAgender'; }
+    let sexualityGender = '';
+    if (gender === 'cis male' || gender === 'trans male' || gender === 'cis female' || gender === 'trans female') { sexualityGender = 'MaleFemale'; }
+    if (gender === 'genderfluid' || gender === 'agender') { sexualityGender = 'GenderfluidAgender'; }
 
-    return chooseAttribute(options[gender], oldValue);
+    return chooseAttribute(options[sexualityGender], oldValue);
 }
 
 const generateRelationship = (options, age, oldValue) => {
@@ -30,11 +32,12 @@ const generateRelationship = (options, age, oldValue) => {
 }
 
 const generateGivenName = (options, ancestry, gender, oldValue) => {
-    if (gender === 'cis male' || gender === 'trans male') { gender = 'Masculine'; }
-    if (gender === 'cis female' || gender === 'trans female') { gender = 'Feminine'; }
-    if (gender === 'genderfluid') { gender = (Math.random() >= 0.5) ? 'Masculine' : 'Feminine'; }
+    let nameGender = '';
+    if (gender === 'cis male' || gender === 'trans male') { nameGender = 'Masculine'; }
+    if (gender === 'cis female' || gender === 'trans female') { nameGender = 'Feminine'; }
+    if (gender === 'genderfluid') { nameGender = (Math.random() >= 0.5) ? 'Masculine' : 'Feminine'; }
 
-    return chooseAttribute(options[ancestry][gender], oldValue);
+    return chooseAttribute(options[ancestry][nameGender], oldValue);
 }
 
 const generateFamilyName = (options, ancestry, oldValue) => chooseAttribute(options[ancestry], oldValue);
@@ -61,54 +64,34 @@ export const generateCharacter = () => {
         usualMood: {
             name: 'usualMood',
             value: chooseAttribute(Asa.usualMood)
-        },
-        outlook: {
-            name: 'outlook',
-            value: chooseAttribute(Asa.outlook)
-        },
-        integrity: {
-            name: 'integrity',
-            value: chooseAttribute(Asa.integrity)
-        },
-        impulsiveness: {
-            name: 'impulsiveness',
-            value: chooseAttribute(Asa.impulsiveness)
-        },
-        friendliness: {
-            name: 'friendliness',
-            value: chooseAttribute(Asa.friendliness)
-        },
-        conformity: {
-            name: 'conformity',
-            value: chooseAttribute(Asa.conformity)
         }
     }
     character.sexuality = {
         name: 'sexuality',
-        value: generateSexuality(Asa.sexuality, character.gender.value)
+        value: generateSexuality(Asa.sexuality, character.gender.value.text)
     }
     character.givenName = {
         name: 'givenName',
-        value: generateGivenName(Asa.givenName, character.ancestry.value, character.gender.value)
+        value: generateGivenName(Asa.givenName, character.ancestry.value.text, character.gender.value.text)
     }
     character.familyName = {
         name: 'familyName',
-        value: generateFamilyName(Asa.familyName, character.ancestry.value)
+        value: generateFamilyName(Asa.familyName, character.ancestry.value.text)
     }
     character.race = {
         name: 'race',
-        value: generateRace(Asa.race, character.ancestry.value)
+        value: generateRace(Asa.race, character.ancestry.value.text)
     }
     character.relationship = {
         name: 'relationship',
-        value: generateRelationship(Asa.relationship, character.age.value)
+        value: generateRelationship(Asa.relationship, character.age.value.text)
     }
 
     return character;
 }
 
 export const reshuffle = (oldAttributes, targetAttribute) => {
-	let previousTargetAttributeValue = oldAttributes[targetAttribute].value;
+	let previousTargetAttributeValueText = oldAttributes[targetAttribute].value.text;
 
 	let newAttributes;
 	switch(targetAttribute) {
@@ -116,7 +99,7 @@ export const reshuffle = (oldAttributes, targetAttribute) => {
             newAttributes = {
                 [targetAttribute]: {
                     name: 'givenName',
-                    value: generateGivenName(Asa.givenName, oldAttributes.ancestry.value, oldAttributes.gender.value, previousTargetAttributeValue)
+                    value: generateGivenName(Asa.givenName, oldAttributes.ancestry.value.text, oldAttributes.gender.value.text, previousTargetAttributeValueText)
                 }
             };
             break;
@@ -124,7 +107,7 @@ export const reshuffle = (oldAttributes, targetAttribute) => {
             newAttributes = {
                 [targetAttribute]: {
                     name: 'familyName',
-                    value: generateFamilyName(Asa.familyName, oldAttributes.ancestry.value, previousTargetAttributeValue)
+                    value: generateFamilyName(Asa.familyName, oldAttributes.ancestry.value.text, previousTargetAttributeValueText)
                 }
             };
             break;
@@ -132,12 +115,12 @@ export const reshuffle = (oldAttributes, targetAttribute) => {
             newAttributes = {
                 [targetAttribute]: {
                     name: 'race',
-                    value: generateRace(Asa.race, oldAttributes.ancestry.value, previousTargetAttributeValue)
+                    value: generateRace(Asa.race, oldAttributes.ancestry.value.text, previousTargetAttributeValueText)
                 }
             };
             break;
         case 'ancestry':
-            const newAncestry = chooseAttribute(Asa.ancestry, previousTargetAttributeValue);
+            const newAncestry = chooseAttribute(Asa.ancestry, previousTargetAttributeValueText);
             newAttributes = {
                 ancestry: {
                     name: 'ancestry',
@@ -145,20 +128,20 @@ export const reshuffle = (oldAttributes, targetAttribute) => {
                 },
 				givenName: {
                     name: 'givenName',
-                    value: generateGivenName(Asa.givenName, newAncestry, oldAttributes.gender.value)
+                    value: generateGivenName(Asa.givenName, newAncestry.text, oldAttributes.gender.value.text)
                 },
 				familyName: {
                     name: 'familyName',
-                    value: generateFamilyName(Asa.familyName, newAncestry, oldAttributes.gender.value)
+                    value: generateFamilyName(Asa.familyName, newAncestry.text, oldAttributes.gender.value.text)
                 },
 				race: {
                     name: 'race',
-                    value: generateRace(Asa.race, newAncestry)
+                    value: generateRace(Asa.race, newAncestry.text)
                 }
             };
             break;
         case 'gender':
-		    const newGender = chooseAttribute(Asa.gender, previousTargetAttributeValue);
+		    const newGender = chooseAttribute(Asa.gender, previousTargetAttributeValueText);
 			newAttributes = {
                 gender: {
                     name: 'gender',
@@ -166,11 +149,11 @@ export const reshuffle = (oldAttributes, targetAttribute) => {
 				},
 				sexuality: {
                     name: 'sexuality',
-                    value: generateSexuality(Asa.sexuality, newGender, oldAttributes.sexuality.value)
+                    value: generateSexuality(Asa.sexuality, newGender.text, oldAttributes.sexuality.value.text)
 				},
 				givenName: {
                     name: 'givenName',
-                    value: generateGivenName(Asa.givenName, oldAttributes.ancestry.value, newGender, oldAttributes.givenName.value)
+                    value: generateGivenName(Asa.givenName, oldAttributes.ancestry.value.text, newGender.text)
                 }
             };
             break;
@@ -178,7 +161,7 @@ export const reshuffle = (oldAttributes, targetAttribute) => {
             newAttributes = {
                 [targetAttribute]: {
                     name: 'sexuality',
-                    value: generateSexuality(Asa.sexuality, oldAttributes.gender.value, previousTargetAttributeValue)
+                    value: generateSexuality(Asa.sexuality, oldAttributes.gender.value.text, previousTargetAttributeValueText)
                 }
             };
             break;
@@ -186,12 +169,12 @@ export const reshuffle = (oldAttributes, targetAttribute) => {
             newAttributes = {
                 [targetAttribute]: {
                     name: 'relationship',
-                    value: generateRelationship(Asa.relationship, oldAttributes.age.value, previousTargetAttributeValue)
+                    value: generateRelationship(Asa.relationship, oldAttributes.age.value.text, previousTargetAttributeValueText)
                 }
             };
             break;
         case 'age':
-            const newAge = chooseAttribute(Asa[targetAttribute], previousTargetAttributeValue);
+            const newAge = chooseAttribute(Asa[targetAttribute], previousTargetAttributeValueText);
             newAttributes = {
                 age: {
                     name: 'age',
@@ -199,7 +182,7 @@ export const reshuffle = (oldAttributes, targetAttribute) => {
                 },
                 relationship: {
                     name: 'relationship',
-                    value: generateRelationship(Asa.relationship, newAge, oldAttributes.relationship.value)
+                    value: generateRelationship(Asa.relationship, newAge.text)
                 }
             };
             break;
@@ -207,7 +190,7 @@ export const reshuffle = (oldAttributes, targetAttribute) => {
             newAttributes = {
                 [targetAttribute]: {
                     name: targetAttribute,
-                    value: chooseAttribute(Asa[targetAttribute], previousTargetAttributeValue)
+                    value: chooseAttribute(Asa[targetAttribute], previousTargetAttributeValueText)
                 }
             };
     }
