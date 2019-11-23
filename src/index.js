@@ -62,7 +62,6 @@ const CharacterCard = ({ deleteCharacter, reshuffle, character }) => {
                 {' '}
                 <Attribute name='gender' onClick={() => reshuffle('gender')} value={character.gender.text} />
                 {' '}
-                {' '}
                 <Attribute name='race' onClick={() => reshuffle('race')} value={character.race.text} />
                 {' '}
                 from <Attribute name='ancestry' onClick={() => reshuffle('ancestry')} value={character.ancestry.text} />
@@ -97,6 +96,10 @@ const CharacterCard = ({ deleteCharacter, reshuffle, character }) => {
                     </AttributeGroup>
                 </Column>
                 <Column>
+                    <AttributeGroup>
+                        <AttributeGroupLabel>Job</AttributeGroupLabel>
+                        <Attribute name='job' onClick={() => reshuffle('job')} value={capitalizeFirstLetter(character.job.text)} />
+                    </AttributeGroup>
                     <AttributeGroup>
                         <AttributeGroupLabel>Life goal</AttributeGroupLabel>
                         <Attribute name='motivation' onClick={() => reshuffle('motivation')} value={character.motivation.text} />

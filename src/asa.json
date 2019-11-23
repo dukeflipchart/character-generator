@@ -580,6 +580,263 @@
             }
         ]
     },
+    "job": [
+        {
+            "text": "blacksmith"
+        },
+        {
+            "text": "baker"
+        },
+        {
+            "text": "fletcher"
+        },
+        {
+            "text": "brewer"
+        },
+        {
+            "text": "bricklayer"
+        },
+        {
+            "text": "butcher"
+        },
+        {
+            "text": "chandler"
+        },
+        {
+            "text": "carpenter"
+        },
+        {
+            "text": "joiner"
+        },
+        {
+            "text": "baker"
+        },
+        {
+            "text": "barber"
+        },
+        {
+            "text": "cartwright"
+        },
+        {
+            "text": "tailor"
+        },
+        {
+            "text": "cobbler"
+        },
+        {
+            "text": "cooper"
+        },
+        {
+            "text": "dyer"
+        },
+        {
+            "text": "ditcher"
+        },
+        {
+            "text": "glassblower"
+        },
+        {
+            "text": "goldsmith"
+        },
+        {
+            "text": "herald"
+        },
+        {
+            "text": "innkeeper"
+        },
+        {
+            "text": "messenger"
+        },
+        {
+            "text": "bard"
+        },
+        {
+            "text": "potter"
+        },
+        {
+            "text": "leatherworker"
+        },
+        {
+            "text": "locksmith"
+        },
+        {
+            "text": "mason"
+        },
+        {
+            "text": "merchant"
+        },
+        {
+            "text": "tinker"
+        },
+        {
+            "text": "weaver"
+        },
+        {
+            "text": "boatman"
+        },
+        {
+            "text": "coachman"
+        },
+        {
+            "text": "fisherman"
+        },
+        {
+            "text": "gravedigger"
+        },
+        {
+            "text": "groom"
+        },
+        {
+            "text": "trapper"
+        },
+        {
+            "text": "hunter"
+        },
+        {
+            "text": "miller"
+        },
+        {
+            "text": "miner"
+        },
+        {
+            "text": "peddler"
+        },
+        {
+            "text": "herdsman"
+        },
+        {
+            "text": "scribe"
+        },
+        {
+            "text": "seamstress"
+        },
+        {
+            "text": "stevedore"
+        },
+        {
+            "text": "forester"
+        },
+        {
+            "text": "tollkeeper"
+        },
+        {
+            "text": "watchman"
+        },
+        {
+            "text": "servant"
+        },
+        {
+            "text": "groundskeeper"
+        },
+        {
+            "text": "herbalist"
+        },
+        {
+            "text": "stonecarver"
+        },
+        {
+            "text": "tax collector"
+        },
+        {
+            "text": "catchpole"
+        },
+        {
+            "text": "fishmonger"
+        },
+        {
+            "text": "bailiff"
+        },
+        {
+            "text": "falconer"
+        },
+        {
+            "text": "ropemaker"
+        },
+        {
+            "text": "beekeeper"
+        },
+        {
+            "text": "parchment maker"
+        },
+        {
+            "text": "woodcutter"
+        },
+        {
+            "text": "charcoal burner"
+        },
+        {
+            "text": "ratcatcher"
+        },
+        {
+            "text": "plowman"
+        },
+        {
+            "text": "priest"
+        },
+        {
+            "text": "sheriff"
+        },
+        {
+            "text": "noble"
+        },
+        {
+            "text": "farmer"
+        },
+        {
+            "text": "acolyte"
+        },
+        {
+            "text": "cleric"
+        },
+        {
+            "text": "wizard"
+        },
+        {
+            "text": "ambassador"
+        },
+        {
+            "text": "soldier"
+        },
+        {
+            "text": "druid"
+        },
+        {
+            "text": "squire"
+        },
+        {
+            "text": "knight"
+        },
+        {
+            "text": "paladin"
+        },
+        {
+            "text": "sorcerer"
+        },
+        {
+            "text": "sage"
+        },
+        {
+            "text": "sailor"
+        },
+        {
+            "text": "cutpurse"
+        },
+        {
+            "text": "thief"
+        },
+        {
+            "text": "bandit"
+        },
+        {
+            "text": "thug"
+        },
+        {
+            "text": "judge"
+        },
+        {
+            "text": "healer"
+        }
+    ],
     "motivation": [
         {
             "text": "Achievement - To overcome obstacles and succeed; to become the best"
@@ -771,46 +1028,6 @@
         },
         {
             "text": "Stressed"
-        }
-    ],
-    "outlook": [
-        {
-            "text": "Optimistic"
-        },
-        {
-            "text": "Pessimistic"
-        }
-    ],
-    "integrity": [
-        {
-            "text": "Honest, industrious"
-        },
-        {
-            "text": "Deceitful, lazy"
-        }
-    ],
-    "impulsiveness": [
-        {
-            "text": "Deliberate, cautious"
-        },
-        {
-            "text": "Spontaneous, bold"
-        }
-    ],
-    "friendliness": [
-        {
-            "text": "Friendly"
-        },
-        {
-            "text": "Unfriendly"
-        }
-    ],
-    "conformity": [
-        {
-            "text": "Traditional"
-        },
-        {
-            "text": "Progressive"
         }
     ],
     "race": {

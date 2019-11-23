@@ -57,7 +57,8 @@ export const generateCharacter = () => {
         motivation: chooseAttribute(Asa.motivation),
         mood: chooseAttribute(Asa.mood),
         appearance1: chooseAttribute(Asa.appearance),
-        personality1: chooseAttribute(Asa.personality)
+        personality1: chooseAttribute(Asa.personality),
+        job: chooseAttribute(Asa.job)
     }
     character.sexuality = generateSexuality(Asa.sexuality, character.gender.text);
     character.givenName = generateGivenName(Asa.givenName, character.ancestry.text, character.gender.text);
