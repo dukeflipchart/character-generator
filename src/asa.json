@@ -580,6 +580,60 @@
             }
         ]
     },
+    "competency": [
+        {
+            "text": "hopelessly incompetent",
+            "weight": 4
+        },
+        {
+            "text": "incompetent",
+            "weight": 8
+        },
+        {
+            "text": "inept",
+            "weight": 16
+        },
+        {
+            "text": "inexperienced",
+            "weight": 16
+        },
+        {
+            "text": "capable",
+            "weight": 16
+        },
+        {
+            "text": "talented",
+            "weight": 16
+        },
+        {
+            "text": "gifted",
+            "weight": 16
+        },
+        {
+            "text": "competent",
+            "weight": 8
+        },
+        {
+            "text": "skilled",
+            "weight": 8
+        },
+        {
+            "text": "very talented",
+            "weight": 4
+        },
+        {
+            "text": "expert",
+            "weight": 4
+        },
+        {
+            "text": "brilliant",
+            "weight": 2
+        },
+        {
+            "text": "legendary",
+            "weight": 1
+        }
+    ],
     "job": [
         {
             "text": "blacksmith"
@@ -720,7 +774,7 @@
             "text": "tollkeeper"
         },
         {
-            "text": "watchman"
+            "text": "guard"
         },
         {
             "text": "servant"
@@ -792,7 +846,7 @@
             "text": "wizard"
         },
         {
-            "text": "ambassador"
+            "text": "diplomat"
         },
         {
             "text": "soldier"
@@ -839,103 +893,103 @@
     ],
     "motivation": [
         {
-            "text": "Achievement - To overcome obstacles and succeed; to become the best"
+            "text": "To succeed, to become the best"
         },
         {
-            "text": "Acquisition - To obtain possessions/wealth"
+            "text": "To make money and buy things"
         },
         {
-            "text": "Adoration - To be cherished, admired, and wanted by others"
+            "text": "To be cherished, admired, and wanted"
         },
         {
-            "text": "Balance/Peace - To bring all things into harmony and equilibrium"
+            "text": "To make peace, to create balance"
         },
         {
-            "text": "Beneficence - To protect the helpless, heal the sick, or feed the hungry"
+            "text": "To help others"
         },
         {
-            "text": "Chaos - To disrupt, to cause confusion and discord"
+            "text": "To cause chaos"
         },
         {
-            "text": "Competition - To seek out or create rule-based win/lose scenarios; to defeat others in contests"
+            "text": "To win competitions"
         },
         {
-            "text": "Conflict - To seek out or create rivalry, fighting, or animosity"
+            "text": "To instigate fighting and animosity"
         },
         {
-            "text": "Conquest - To conquer other peoples, to bring them into one’s own culture/rule"
+            "text": "To conquer other peoples"
         },
         {
-            "text": "Corruption - To despoil, ruin, humiliate, or make depraved"
+            "text": "To corrupt"
         },
         {
-            "text": "Creation - To build or make new, such as art, culture, invention, design"
+            "text": "To create, build or invent things"
         },
         {
-            "text": "Destruction - To annihilate, exterminate, and unmake"
+            "text": "To destroy"
         },
         {
-            "text": "Discovery/Adventure - To explore, uncover mysteries, and pioneer"
+            "text": "To explore, to uncover mysteries"
         },
         {
-            "text": "Domesticity - To get married, have children, and live a family life"
+            "text": "To get married, have children, and live a family life"
         },
         {
-            "text": "Education - To provide information, teach, enlighten, or train"
+            "text": "To teach others"
         },
         {
-            "text": "Entertainment - To entertain, amuse, and delight others"
+            "text": "To entertain or amuse others"
         },
         {
-            "text": "Enslavement - To force others into servitude"
+            "text": "To force others into servitude"
         },
         {
-            "text": "Hedonism - To enjoy all things sensuous"
+            "text": "To enjoy all things sensuous"
         },
         {
-            "text": "Heroism - To find valor and honor through battle or self-sacrifice"
+            "text": "To find honor through battle or self-sacrifice"
         },
         {
-            "text": "Liberation - To free the self and/or others from perceived captivity or enslavement"
+            "text": "To free people from servitude"
         },
         {
-            "text": "Love - To experience/share affection and emotional commitment, whether romantic or platonic"
+            "text": "To love and be loved"
         },
         {
-            "text": "Nobility/Honor - To exalt ideals such as generosity, honesty, bravery, and courtliness"
+            "text": "To exalt ideals such as generosity, honesty, bravery, and courtliness"
         },
         {
-            "text": "Order - To arrange, organize, and reduce chaos"
+            "text": "To arrange, organize, and reduce chaos"
         },
         {
-            "text": "Play - To have fun, to enjoy life"
+            "text": "To have fun, to enjoy life"
         },
         {
-            "text": "Power - To control and lead others"
+            "text": "To control and lead others"
         },
         {
-            "text": "Proselytization - To spread a belief system; indoctrinate others"
+            "text": "To spread a belief system and indoctrinate others"
         },
         {
-            "text": "Purity - To achieve a state of moral or spiritual perfection, of self and/or others"
+            "text": "To achieve a state of moral or spiritual perfection"
         },
         {
-            "text": "Rebellion - To fight against power structures; to undermine authority"
+            "text": "To fight against authority"
         },
         {
-            "text": "Recognition - To gain approval, social status, or fame"
+            "text": "To become famous"
         },
         {
-            "text": "Service - To follow a person, government, order, or religion"
+            "text": "To follow a person, government, order, or religion"
         },
         {
-            "text": "Torment - To inflict pain and suffering, on others and/or the self"
+            "text": "To inflict pain and suffering, on others and/or the self"
         },
         {
-            "text": "Understanding - To seek knowledge or wisdom (spiritual, scientific, or magical)"
+            "text": "To seek knowledge or wisdom (spiritual, scientific, or magical)"
         },
         {
-            "text": "Vice - To enable or engage in self-destructive behavior"
+            "text": "To enable or engage in self-destructive behavior"
         }
     ],
     "mood": [

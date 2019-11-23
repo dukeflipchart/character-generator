@@ -69,22 +69,34 @@ const CharacterCard = ({ deleteCharacter, reshuffle, character }) => {
             <Row>
                 <Column>
                     <AttributeGroup>
+                        <AttributeGroupLabel>Job</AttributeGroupLabel>
+                        <Attribute name='competency' onClick={() => reshuffle('competency')} value={capitalizeFirstLetter(character.competency.text)} />
+                        {' '}
+                        <Attribute name='job' onClick={() => reshuffle('job')} value={character.job.text} />
+                    </AttributeGroup>
+                    <AttributeGroup>
                         <AttributeGroupLabel>Appearance</AttributeGroupLabel>
                         <Attribute name='appearance1' onClick={() => reshuffle('appearance1')} value={capitalizeFirstLetter(character.appearance1.text)} />,
                         {' '}
                         <Attribute name='appearance2' onClick={() => reshuffle('appearance2')} value={character.appearance2.text} />
                     </AttributeGroup>
+                </Column>
+                <Column>
                     <AttributeGroup>
                         <AttributeGroupLabel>Mood</AttributeGroupLabel>
                         <Attribute name='mood' onClick={() => reshuffle('mood')} value={character.mood.text} />
                     </AttributeGroup>
-                </Column>
-                <Column>
                     <AttributeGroup>
                         <AttributeGroupLabel>Personality</AttributeGroupLabel>
                         <Attribute name='personality1' onClick={() => reshuffle('personality1')} value={capitalizeFirstLetter(character.personality1.text)} /> and
                         {' '}
                         <Attribute name='personality2' onClick={() => reshuffle('personality2')} value={character.personality2.text} />
+                    </AttributeGroup>
+                </Column>
+                <Column>
+                    <AttributeGroup>
+                        <AttributeGroupLabel>Life goal</AttributeGroupLabel>
+                        <Attribute name='motivation' onClick={() => reshuffle('motivation')} value={character.motivation.text} />
                     </AttributeGroup>
                     <AttributeGroup>
                         <AttributeGroupLabel>Relationships</AttributeGroupLabel>
@@ -93,16 +105,6 @@ const CharacterCard = ({ deleteCharacter, reshuffle, character }) => {
                             {' '}
                             <Attribute name='relationship' onClick={() => reshuffle('relationship')} value={character.relationship.text} />
                         </AttributeList>
-                    </AttributeGroup>
-                </Column>
-                <Column>
-                    <AttributeGroup>
-                        <AttributeGroupLabel>Job</AttributeGroupLabel>
-                        <Attribute name='job' onClick={() => reshuffle('job')} value={capitalizeFirstLetter(character.job.text)} />
-                    </AttributeGroup>
-                    <AttributeGroup>
-                        <AttributeGroupLabel>Life goal</AttributeGroupLabel>
-                        <Attribute name='motivation' onClick={() => reshuffle('motivation')} value={character.motivation.text} />
                     </AttributeGroup>
                 </Column>
             </Row>
