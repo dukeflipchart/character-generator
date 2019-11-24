@@ -68,6 +68,10 @@
         {
             "text": "Sjellansk",
             "weight": 5
+        },
+        {
+            "text": "Huurani",
+            "weight": 3
         }
     ],
     "age": [
@@ -1364,6 +1368,76 @@
                 "text": "goblin",
                 "weight": 1
             }
+        ],
+        "Huurani": [
+            {
+                "text": "human",
+                "weight": 500
+            },
+            {
+                "text": "elf",
+                "weight": 25
+            },
+            {
+                "text": "halfling",
+                "weight": 50
+            },
+            {
+                "text": "dwarf",
+                "weight": 50
+            },
+            {
+                "text": "tiefling",
+                "weight": 200
+            },
+            {
+                "text": "half-elf",
+                "weight": 25
+            },
+            {
+                "text": "half-orc",
+                "weight": 75
+            },
+            {
+                "text": "gnome",
+                "weight": 25
+            },
+            {
+                "text": "firbolg",
+                "weight": 1
+            },
+            {
+                "text": "genasi",
+                "weight": 25
+            },
+            {
+                "text": "aasimar",
+                "weight": 2
+            },
+            {
+                "text": "tabaxi",
+                "weight": 20
+            },
+            {
+                "text": "goliath",
+                "weight": 1
+            },
+            {
+                "text": "kenku",
+                "weight": 1
+            },
+            {
+                "text": "lizardfolk",
+                "weight": 5
+            },
+            {
+                "text": "orc",
+                "weight": 50
+            },
+            {
+                "text": "goblin",
+                "weight": 25
+            }
         ]
     },
     "givenName": {
@@ -2541,6 +2615,179 @@
                     "text": "Unnr"
                 }
             ]
+        },
+        "Huurani": {
+            "Masculine": [
+                {
+                    "text": "Adina"
+                },
+                {
+                    "text": "Akiva"
+                },
+                {
+                    "text": "Amir"
+                },
+                {
+                    "text": "Aryeh"
+                },
+                {
+                    "text": "Ayal"
+                },
+                {
+                    "text": "Dar"
+                },
+                {
+                    "text": "Dori"
+                },
+                {
+                    "text": "Eiran"
+                },
+                {
+                    "text": "Eyal"
+                },
+                {
+                    "text": "Hadar"
+                },
+                {
+                    "text": "Ilan"
+                },
+                {
+                    "text": "Kfir"
+                },
+                {
+                    "text": "Li"
+                },
+                {
+                    "text": "Maor"
+                },
+                {
+                    "text": "Nir"
+                },
+                {
+                    "text": "Paz"
+                },
+                {
+                    "text": "Raanan"
+                },
+                {
+                    "text": "Reuven"
+                },
+                {
+                    "text": "Shahar"
+                },
+                {
+                    "text": "Shai"
+                },
+                {
+                    "text": "Tam"
+                },
+                {
+                    "text": "Yair"
+                },
+                {
+                    "text": "Yissakhar"
+                },
+                {
+                    "text": "Zev"
+                }
+            ],
+            "Feminine": [
+                {
+                    "text": "Adara"
+                },
+                {
+                    "text": "Ahuva"
+                },
+                {
+                    "text": "Aliya"
+                },
+                {
+                    "text": "Atara"
+                },
+                {
+                    "text": "Bracha"
+                },
+                {
+                    "text": "Chana"
+                },
+                {
+                    "text": "Dikla"
+                },
+                {
+                    "text": "Dvora"
+                },
+                {
+                    "text": "Elisheva"
+                },
+                {
+                    "text": "Hadar"
+                },
+                {
+                    "text": "Hava"
+                },
+                {
+                    "text": "Inbar"
+                },
+                {
+                    "text": "Kineret"
+                },
+                {
+                    "text": "Lior"
+                },
+                {
+                    "text": "Maya"
+                },
+                {
+                    "text": "Naama"
+                },
+                {
+                    "text": "Noya"
+                },
+                {
+                    "text": "Ori"
+                },
+                {
+                    "text": "Ravid"
+                },
+                {
+                    "text": "Rina"
+                },
+                {
+                    "text": "Shai"
+                },
+                {
+                    "text": "Tal"
+                },
+                {
+                    "text": "Yaara"
+                }
+            ],
+            "Agender": [
+                {
+                    "text": "Avia"
+                },
+                {
+                    "text": "Dar"
+                },
+                {
+                    "text": "Hadar"
+                },
+                {
+                    "text": "Neta"
+                },
+                {
+                    "text": "Noy"
+                },
+                {
+                    "text": "Raz"
+                },
+                {
+                    "text": "Yaffe"
+                },
+                {
+                    "text": "Ziv"
+                }
+            ]
         }
     },
     "familyName": {
@@ -2848,6 +3095,47 @@
             },
             {
                 "text": "Vígdísson"
+            }
+        ],
+        "Huurani": [
+            {
+                "text": "Asael"
+            },
+            {
+                "text": "Ashlag"
+            },
+            {
+                "text": "Bensaid"
+            },
+            {
+                "text": "Eliad"
+            },
+            {
+                "text": "Halevi"
+            },
+            {
+                "text": "Inbal"
+            },
+            {
+                "text": "Kasher"
+            },
+            {
+                "text": "Kenan"
+            },
+            {
+                "text": "Marshak"
+            },
+            {
+                "text": "Naor"
+            },
+            {
+                "text": "Roshal"
+            },
+            {
+                "text": "Sharir"
+            },
+            {
+                "text": "Yakir"
             }
         ]
     }
