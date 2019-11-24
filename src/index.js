@@ -116,21 +116,23 @@ const CharacterCard = ({ deleteCharacter, reshuffle, character }) => {
     )
 }
 
-
 class Board extends React.Component {
 
     constructor(props) {
 
         super(props);
         this.state = {
-            characters: {}
+            characters: {},
+            worldName: 'Asa'
         }
+
+        this.handleWorldChange = this.handleWorldChange.bind(this);
     }
 
     addCharacter() {
         this.setState({
             characters: {
-                [Date.now()]: generateCharacter(),
+                [Date.now()]: generateCharacter(this.state.worldName),
                 ...this.state.characters
             }
         });
@@ -151,15 +153,25 @@ class Board extends React.Component {
         this.setState({
             characters: {
                 ...this.state.characters,
-                [uid]: reshuffle(this.state.characters[uid], attribute)
+                [uid]: reshuffle(this.state.worldName, this.state.characters[uid], attribute)
             }
         });
-    }  
+    }
+
+    handleWorldChange(event) {
+        this.setState({
+            worldName: event.target.value
+        });
+    }
 
     render() {
 
         return (
-            <BoardContainer>
+            <BoardContainer> 
+                <select value={this.state.worldName} onChange={this.handleWorldChange}>
+                    <option>Asa</option>
+                    <option>Cyberpunk</option>
+                </select>
                 <AddCharacterButton onClick={() => this.addCharacter()}>
                     <UserPlusSolid /> Meet someone new
                 </AddCharacterButton>
