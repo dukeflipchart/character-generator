@@ -54,7 +54,7 @@
     },
     "ancestry": [
         {
-            "text": "Varenan",
+            "text": "Varénan",
             "weight": 10
         },
         {
@@ -1085,7 +1085,7 @@
         }
     ],
     "race": {
-        "Varenan": [
+        "Varénan": [
             {
                 "text": "human",
                 "weight": 500
@@ -1367,7 +1367,7 @@
         ]
     },
     "givenName": {
-        "Varenan": {
+        "Varénan": {
             "Masculine": [
                 {
                     "text": "Aras"
@@ -1576,19 +1576,19 @@
                     "text": "Amhlaidh"
                 },
                 {
-                    "text": "Aodhan"
+                    "text": "Aodhán"
                 },
                 {
                     "text": "Arran"
                 },
                 {
-                    "text": "Bhatair"
+                    "text": "Bhàtair"
                 },
                 {
                     "text": "Cailean"
                 },
                 {
-                    "text": "Cinaed"
+                    "text": "Cináed"
                 },
                 {
                     "text": "Coinneach"
@@ -1666,7 +1666,7 @@
                     "text": "Naoise"
                 },
                 {
-                    "text": "Naomhan"
+                    "text": "Naomhán"
                 },
                 {
                     "text": "Rab"
@@ -1702,7 +1702,7 @@
                     "text": "Ualan"
                 },
                 {
-                    "text": "Uisdean"
+                    "text": "Ùisdean"
                 }
             ],
             "Feminine": [
@@ -1719,7 +1719,7 @@
                     "text": "Caoimhe"
                 },
                 {
-                    "text": "Deoiridh"
+                    "text": "Deòiridh"
                 },
                 {
                     "text": "Edna"
@@ -1758,7 +1758,7 @@
                     "text": "Lilias"
                 },
                 {
-                    "text": "Liusaidh"
+                    "text": "Liùsaidh"
                 },
                 {
                     "text": "Marsaili"
@@ -1773,19 +1773,19 @@
                     "text": "Oighrig"
                 },
                 {
-                    "text": "Seonaidh"
+                    "text": "Seònaid"
                 },
                 {
-                    "text": "Sileas"
+                    "text": "Sìleas"
                 },
                 {
-                    "text": "Slaine"
+                    "text": "Slàine"
                 },
                 {
                     "text": "Sorcha"
                 },
                 {
-                    "text": "Tearlag"
+                    "text": "Teàrlag"
                 }
             ],
             "Agender": [
@@ -2315,28 +2315,28 @@
                     "text": "Agmundr"
                 },
                 {
-                    "text": "Aki"
+                    "text": "Áki"
                 },
                 {
-                    "text": "Aleifr"
+                    "text": "Áleifr"
                 },
                 {
                     "text": "Ari"
                 },
                 {
-                    "text": "Arni"
+                    "text": "Árni"
                 },
                 {
                     "text": "Arnvidr"
                 },
                 {
-                    "text": "Asbjorn"
+                    "text": "Ásbjorn"
                 },
                 {
-                    "text": "Asvaldr"
+                    "text": "Ásvaldr"
                 },
                 {
-                    "text": "Bardr"
+                    "text": "Bárdr"
                 },
                 {
                     "text": "Bjarni"
@@ -2345,7 +2345,7 @@
                     "text": "Bjartr"
                 },
                 {
-                    "text": "Bui"
+                    "text": "Búi"
                 },
                 {
                     "text": "Dagr"
@@ -2354,13 +2354,13 @@
                     "text": "Einarr"
                 },
                 {
-                    "text": "Eirikr"
+                    "text": "Eiríkr"
                 },
                 {
                     "text": "Finnr"
                 },
                 {
-                    "text": "Folki"
+                    "text": "Fólki"
                 },
                 {
                     "text": "Gauti"
@@ -2372,46 +2372,46 @@
                     "text": "Gudbrandr"
                 },
                 {
-                    "text": "Hakon"
+                    "text": "Hákon"
                 },
                 {
                     "text": "Hallr"
                 },
                 {
-                    "text": "Havardr"
+                    "text": "Hávardr"
                 },
                 {
                     "text": "Hrafn"
                 },
                 {
-                    "text": "Hroarr"
+                    "text": "Hróarr"
                 },
                 {
-                    "text": "Ingimarr"
+                    "text": "Ingimárr"
                 },
                 {
-                    "text": "Ivarr"
+                    "text": "Ívarr"
                 },
                 {
                     "text": "Jarl"
                 },
                 {
-                    "text": "Kari"
+                    "text": "Kári"
                 },
                 {
                     "text": "Ketill"
                 },
                 {
-                    "text": "Knutr"
+                    "text": "Knútr"
                 },
                 {
-                    "text": "Njall"
+                    "text": "Njáll"
                 },
                 {
                     "text": "Ragnvaldr"
                 },
                 {
-                    "text": "Runi"
+                    "text": "Rúni"
                 },
                 {
                     "text": "Sindri"
@@ -2437,16 +2437,16 @@
                     "text": "Alfhildr"
                 },
                 {
-                    "text": "Asa"
+                    "text": "Ása"
                 },
                 {
-                    "text": "Asdis"
+                    "text": "Ásdís"
                 },
                 {
-                    "text": "Aslaug"
+                    "text": "Áslaug"
                 },
                 {
-                    "text": "Asta"
+                    "text": "Ásta"
                 },
                 {
                     "text": "Bjorg"
@@ -2458,7 +2458,7 @@
                     "text": "Dagmaer"
                 },
                 {
-                    "text": "Eydis"
+                    "text": "Eydís"
                 },
                 {
                     "text": "Gulla"
@@ -2470,10 +2470,10 @@
                     "text": "Gudlaug"
                 },
                 {
-                    "text": "Hjordis"
+                    "text": "Hjordís"
                 },
                 {
-                    "text": "Hlif"
+                    "text": "Hlíf"
                 },
                 {
                     "text": "Hreidunn"
@@ -2491,13 +2491,13 @@
                     "text": "Ragna"
                 },
                 {
-                    "text": "Runa"
+                    "text": "Rúna"
                 },
                 {
                     "text": "Signy"
                 },
                 {
-                    "text": "Solveig"
+                    "text": "Sólveig"
                 },
                 {
                     "text": "Svanhildr"
@@ -2506,10 +2506,10 @@
                     "text": "Unnr"
                 },
                 {
-                    "text": "Valdis"
+                    "text": "Valdís"
                 },
                 {
-                    "text": "Vigdis"
+                    "text": "Vígdís"
                 },
                 {
                     "text": "Yngvildr"
@@ -2520,7 +2520,7 @@
                     "text": "Arnvidr"
                 },
                 {
-                    "text": "Bui"
+                    "text": "Búi"
                 },
                 {
                     "text": "Dagr"
@@ -2535,7 +2535,7 @@
                     "text": "Gunnvor"
                 },
                 {
-                    "text": "Hlif"
+                    "text": "Hlíf"
                 },
                 {
                     "text": "Unnr"
@@ -2544,7 +2544,7 @@
         }
     },
     "familyName": {
-        "Varenan": [
+        "Varénan": [
             {
                 "text": "Kasparaitis"
             },
@@ -2793,10 +2793,10 @@
                 "text": "Agmundrsson"
             },
             {
-                "text": "Arnisson"
+                "text": "Árnisson"
             },
             {
-                "text": "Asvaldrsson"
+                "text": "Ásvaldrsson"
             },
             {
                 "text": "Dagrsson"
@@ -2805,10 +2805,10 @@
                 "text": "Einarsson"
             },
             {
-                "text": "Folkisson"
+                "text": "Fólkisson"
             },
             {
-                "text": "Havardrsson"
+                "text": "Hávardrsson"
             },
             {
                 "text": "Hrafnsson"
@@ -2817,16 +2817,16 @@
                 "text": "Ketilsson"
             },
             {
-                "text": "Runisson"
+                "text": "Rúnisson"
             },
             {
                 "text": "Sveinsson"
             },
             {
-                "text": "Aslaugsson"
+                "text": "Áslaugsson"
             },
             {
-                "text": "Brynjasson"
+                "text": "Brynjarsson"
             },
             {
                 "text": "Dagmaersson"
@@ -2835,19 +2835,19 @@
                 "text": "Gunnvorsson"
             },
             {
-                "text": "Hjordisson"
+                "text": "Hjordísson"
             },
             {
                 "text": "Katlasson"
             },
             {
-                "text": "Runasson"
+                "text": "Rúnasson"
             },
             {
-                "text": "Solveigsson"
+                "text": "Sólveigsson"
             },
             {
-                "text": "Vigdisson"
+                "text": "Vígdísson"
             }
         ]
     }

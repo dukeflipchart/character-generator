@@ -88,9 +88,7 @@ const CharacterCard = ({ deleteCharacter, reshuffle, character }) => {
                 <Attribute name='familyName' onClick={() => reshuffle('familyName')} value={character.familyName.text} />
             </NameWrapper>
             <AttributeGroup>
-                {character.givenName || character.familyName
-                    ? `is ${determinerBefore(character.age.text)}`
-                    : uppercaseFirstLetter(determinerBefore(character.age.text))}
+                {uppercaseFirstLetter(determinerBefore(character.age.text))}
                 {' '}
                 <Attribute name='age' onClick={() => reshuffle('age')} value={character.age.text} />
                 {' '}
@@ -190,9 +188,25 @@ class Board extends React.Component {
     }
 
     handleWorldChange(event) {
-        this.setState({
-            worldName: event.target.value
-        });
+        switch (event.target.value) {
+            case 'Cyberpunk / Near Future':
+                this.setState({ worldName: 'Cyberpunk' });
+                break;
+            default:
+                this.setState({ worldName: 'Asa' });
+                break;
+        }
+    }
+
+    getWorldDescriptiveName() {
+        switch (this.state.worldName) {
+            case 'Cyberpunk':
+
+                return 'Cyberpunk / Near Future';
+            default:
+                
+                return 'Asa (Homebrew Fantasy)';
+        }
     }
 
     render() {
@@ -203,9 +217,9 @@ class Board extends React.Component {
                     <TopToolbarColumn>
                         <SelectContainer>
                             <Label>World</Label>
-                            <Select value={this.state.worldName} onChange={this.handleWorldChange}>
-                                <Option>Asa</Option>
-                                <Option>Cyberpunk</Option>
+                            <Select value={this.getWorldDescriptiveName()} onChange={this.handleWorldChange}>
+                                <Option>Asa (Homebrew Fantasy)</Option>
+                                <Option>Cyberpunk / Near Future</Option>
                             </Select>
                         </SelectContainer>
                     </TopToolbarColumn>
