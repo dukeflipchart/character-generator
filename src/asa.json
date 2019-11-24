@@ -54,29 +54,29 @@
     },
     "ancestry": [
         {
-            "text": "Varena",
+            "text": "Varenan",
             "weight": 10
         },
         {
-            "text": "Jaekol",
+            "text": "Jaekolish",
             "weight": 5
         },
         {
-            "text": "Kithara",
+            "text": "Kitharan",
             "weight": 5
         },
         {
-            "text": "Sjellan",
+            "text": "Sjellansk",
             "weight": 5
         }
     ],
     "age": [
         {
-            "text": "child",
+            "text": "young",
             "weight": 1
         },
         {
-            "text": "teenager",
+            "text": "teenage",
             "weight": 2
         },
         {
@@ -459,7 +459,7 @@
         }
     ],
     "relationship": {
-        "child": [
+        "young": [
             {
                 "text": "single",
                 "weight": 50
@@ -489,7 +489,7 @@
                 "weight": 1
             }
         ],
-        "teenager": [
+        "teenage": [
             {
                 "text": "single",
                 "weight": 10
@@ -1085,7 +1085,7 @@
         }
     ],
     "race": {
-        "Varena": [
+        "Varenan": [
             {
                 "text": "human",
                 "weight": 500
@@ -1155,7 +1155,7 @@
                 "weight": 5
             }
         ],
-        "Jaekol": [
+        "Jaekolish": [
             {
                 "text": "human",
                 "weight": 250
@@ -1225,7 +1225,7 @@
                 "weight": 10
             }
         ],
-        "Kithara": [
+        "Kitharan": [
             {
                 "text": "human",
                 "weight": 10
@@ -1295,7 +1295,7 @@
                 "weight": 1
             }
         ],
-        "Sjellan": [
+        "Sjellansk": [
             {
                 "text": "human",
                 "weight": 50
@@ -1367,7 +1367,7 @@
         ]
     },
     "givenName": {
-        "Varena": {
+        "Varenan": {
             "Masculine": [
                 {
                     "text": "Aras"
@@ -1567,7 +1567,7 @@
                 }
             ]
         },
-        "Jaekol": {
+        "Jaekolish": {
             "Masculine": [
                 {
                     "text": "Alister"
@@ -1821,7 +1821,7 @@
                 }
             ]
         },
-        "Kithara": {
+        "Kitharan": {
             "Masculine": [
                 {
                     "text": "Aamir"
@@ -2306,7 +2306,7 @@
                 }
             ]
         },
-        "Sjellan": {
+        "Sjellansk": {
             "Masculine": [
                 {
                     "text": "Aghi"
@@ -2544,7 +2544,7 @@
         }
     },
     "familyName": {
-        "Varena": [
+        "Varenan": [
             {
                 "text": "Kasparaitis"
             },
@@ -2666,7 +2666,7 @@
                 "text": "Zukas"
             }
         ],
-        "Jaekol": [
+        "Jaekolish": [
             {
                 "text": "Allanach"
             },
@@ -2788,54 +2788,7 @@
                 "text": "Tuairnear"
             }
         ],
-        "Kithara": [
-            {
-                "text": "Darjee"
-            },
-            {
-                "text": "Vakta"
-            },
-            {
-                "text": "Rasoiya"
-            },
-            {
-                "text": "Prabandhak"
-            },
-            {
-                "text": "Yaatree"
-            },
-            {
-                "text": "Shikaaree"
-            },
-            {
-                "text": "Kisaan"
-            },
-            {
-                "text": "Pratinidhi"
-            },
-            {
-                "text": "Munshee"
-            },
-            {
-                "text": "Kavi"
-            },
-            {
-                "text": "Gaayak"
-            },
-            {
-                "text": "Lohaar"
-            },
-            {
-                "text": "Karaamaatee"
-            },
-            {
-                "text": "Dukaanadaar"
-            },
-            {
-                "text": "Vaigyaanik"
-            }
-        ],
-        "Sjellan": [
+        "Sjellansk": [
             {
                 "text": "Agmundrsson"
             },

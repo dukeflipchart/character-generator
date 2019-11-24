@@ -1,54 +1,75 @@
 import Asa from './asa';
 import Cyberpunk from './cyberpunk';
 
-const chooseAttribute = (pool, excludedTexts, excludedTags) => {
-    if (excludedTexts) {
-        pool = pool.filter(option => !excludedTexts.includes(option.text));
-    }
-    if (excludedTags) {
-        pool = pool.filter(option => option.tags.filter(tag => !excludedTags.includes(tag)).length);
-    }
+const chooseAttribute = (options, excludedTexts, excludedTags) => {
+    if (!options || !options.length) { return false; }
+    if (excludedTexts) { options = options.filter(option => !excludedTexts.includes(option.text)); }
+    if (excludedTags) { options = options.filter(option => option.tags.filter(tag => !excludedTags.includes(tag)).length); }
+
     let sumWeights = 0;
-    for (let index in pool) {
-        sumWeights += pool[index].weight ? pool[index].weight : 1;
+    for (let index in options) {
+        sumWeights += options[index].weight ? options[index].weight : 1;
     }
+
     let winner = Math.floor(Math.random() * sumWeights);
-    for (let index in pool) {
-        winner -= pool[index].weight ? pool[index].weight : 1;
+    for (let index in options) {
+        winner -= options[index].weight ? options[index].weight : 1;
         if (winner < 0) {
             
-            return pool[index];
+            return options[index];
         }
     }
 }
 
 const generateSexuality = (options, gender, excludedText) => {
+    if (!options) { return false; }
     let sexualityGender = '';
     if (gender === 'cis male' || gender === 'trans male' || gender === 'cis female' || gender === 'trans female') { sexualityGender = 'MaleFemale'; }
     if (gender === 'genderfluid' || gender === 'agender') { sexualityGender = 'GenderfluidAgender'; }
 
-    return chooseAttribute(options[sexualityGender], excludedText);
+    return options[sexualityGender].length
+        ? chooseAttribute(options[sexualityGender], excludedText)
+        : false;
 }
 
 const generateRelationship = (options, age, excludedText) => {
+    if (!options) { return false; }
     let relationshipAge = age;
     if (['adult', 'middle-aged', 'old', 'very old'].includes(age)) { relationshipAge = 'older'; }
 
-    return chooseAttribute(options[relationshipAge], excludedText);
+    return options[relationshipAge].length
+        ? chooseAttribute(options[relationshipAge], excludedText)
+        : false;
 }
 
 const generateGivenName = (options, ancestry, gender, excludedText) => {
+    if (!options || !options[ancestry]) { return false; }
     let nameGender = '';
     if (gender === 'cis male' || gender === 'trans male') { nameGender = 'Masculine'; }
     if (gender === 'cis female' || gender === 'trans female') { nameGender = 'Feminine'; }
     if (gender === 'genderfluid') { nameGender = (Math.random() >= 0.5) ? 'Masculine' : 'Feminine'; }
     if (gender === 'agender') { nameGender = 'Agender'; }
 
-    return chooseAttribute(options[ancestry][nameGender], excludedText);
+    return options[ancestry][nameGender].length
+        ? chooseAttribute(options[ancestry][nameGender], excludedText)
+        : false;
 }
 
-const generateFamilyName = (options, ancestry, excludedText) => chooseAttribute(options[ancestry], excludedText);
-const generateRace = (options, ancestry, excludedText) => chooseAttribute(options[ancestry], excludedText);
+const generateFamilyName = (options, ancestry, excludedText) => {
+    if (!options || !options[ancestry]) { return false; }
+    
+    return options[ancestry].length
+        ? chooseAttribute(options[ancestry], excludedText)
+        : false;
+}
+
+const generateRace = (options, ancestry, excludedText) => {
+    if (!options || !options[ancestry]) { return false; }
+    
+    return options[ancestry].length
+        ? chooseAttribute(options[ancestry], excludedText)
+        : false;
+}
 
 export const generateCharacter = (worldName) => {
     let world = {};
@@ -77,7 +98,7 @@ export const generateCharacter = (worldName) => {
     character.relationship = generateRelationship(world.relationship, character.age.text);
     character.appearance2 = chooseAttribute(world.appearance, [character.appearance1.text], character.appearance1.tags);
     character.personality2 = chooseAttribute(world.personality, [character.personality1.text], character.personality1.tags);
-    
+
     return character;
 }
 

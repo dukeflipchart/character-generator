@@ -25,8 +25,29 @@ import {
     reshuffle
 } from './character';
 
-function capitalizeFirstLetter(string) {
-    return string.charAt(0).toUpperCase() + string.slice(1);
+function uppercaseFirstLetter(string) {
+
+    return string
+        ? string.charAt(0).toUpperCase() + string.slice(1)
+        : false;
+}
+
+function determinerBefore(string) {
+
+    return ['a', 'e', 'i', 'o', 'u'].includes(string.charAt(0)) ? 'an' : 'a';
+}
+
+function displayGender(age, gender) {
+
+    switch (gender) {
+        case 'cis male': return ['young', 'teenage'].includes(age) ? 'boy' : 'man';
+        case 'cis female': return ['young', 'teenage'].includes(age) ? 'girl' : 'woman';
+        case 'trans male': return ['young', 'teenage'].includes(age) ? 'trans boy' : 'trans man';
+        case 'trans female': return ['young', 'teenage'].includes(age) ? 'trans girl' : 'trans woman';
+        case 'genderfluid': return ['young', 'teenage'].includes(age) ? 'genderfluid child' : 'genderfluid person';
+        case 'agender': return ['young', 'teenage'].includes(age) ? 'agender child' : 'agender person';
+        default: return 'person';
+    }
 }
 
 function Attribute(props) {
@@ -61,26 +82,29 @@ const CharacterCard = ({ deleteCharacter, reshuffle, character }) => {
                 <Attribute name='familyName' onClick={() => reshuffle('familyName')} value={character.familyName.text} />
             </NameWrapper>
             <AttributeGroup>
-                is {['adult', 'old'].includes(character.age.text) ? 'an ' : 'a '} 
-                <Attribute name='age' onClick={() => reshuffle('age')} value={character.age.text} />
+                {character.givenName || character.familyName
+                    ? `is ${determinerBefore(character.age.text)}`
+                    : uppercaseFirstLetter(determinerBefore(character.age.text))}
                 {' '}
-                <Attribute name='gender' onClick={() => reshuffle('gender')} value={character.gender.text} />
+                <Attribute name='age' onClick={() => reshuffle('age')} value={character.age.text} />
                 {' '}
                 <Attribute name='race' onClick={() => reshuffle('race')} value={character.race.text} />
                 {' '}
-                from <Attribute name='ancestry' onClick={() => reshuffle('ancestry')} value={character.ancestry.text} />
+                <Attribute name='gender' onClick={() => reshuffle('gender')} value={displayGender(character.age.text, character.gender.text)} />
+                {' '}
+                of <Attribute name='ancestry' onClick={() => reshuffle('ancestry')} value={character.ancestry.text} /> descent
             </AttributeGroup>
             <Row>
                 <Column>
                     <AttributeGroup>
                         <AttributeGroupLabel>Job</AttributeGroupLabel>
-                        <Attribute name='competency' onClick={() => reshuffle('competency')} value={capitalizeFirstLetter(character.competency.text)} />
+                        <Attribute name='competency' onClick={() => reshuffle('competency')} value={uppercaseFirstLetter(character.competency.text)} />
                         {' '}
                         <Attribute name='job' onClick={() => reshuffle('job')} value={character.job.text} />
                     </AttributeGroup>
                     <AttributeGroup>
                         <AttributeGroupLabel>Appearance</AttributeGroupLabel>
-                        <Attribute name='appearance1' onClick={() => reshuffle('appearance1')} value={capitalizeFirstLetter(character.appearance1.text)} />,
+                        <Attribute name='appearance1' onClick={() => reshuffle('appearance1')} value={uppercaseFirstLetter(character.appearance1.text)} />,
                         {' '}
                         <Attribute name='appearance2' onClick={() => reshuffle('appearance2')} value={character.appearance2.text} />
                     </AttributeGroup>
@@ -92,7 +116,7 @@ const CharacterCard = ({ deleteCharacter, reshuffle, character }) => {
                     </AttributeGroup>
                     <AttributeGroup>
                         <AttributeGroupLabel>Personality</AttributeGroupLabel>
-                        <Attribute name='personality1' onClick={() => reshuffle('personality1')} value={capitalizeFirstLetter(character.personality1.text)} /> and
+                        <Attribute name='personality1' onClick={() => reshuffle('personality1')} value={uppercaseFirstLetter(character.personality1.text)} /> and
                         {' '}
                         <Attribute name='personality2' onClick={() => reshuffle('personality2')} value={character.personality2.text} />
                     </AttributeGroup>
@@ -105,7 +129,7 @@ const CharacterCard = ({ deleteCharacter, reshuffle, character }) => {
                     <AttributeGroup>
                         <AttributeGroupLabel>Relationships</AttributeGroupLabel>
                         <AttributeList>
-                            <Attribute name='sexuality' onClick={() => reshuffle('sexuality')} value={capitalizeFirstLetter(character.sexuality.text)} />,
+                            <Attribute name='sexuality' onClick={() => reshuffle('sexuality')} value={uppercaseFirstLetter(character.sexuality.text)} />,
                             {' '}
                             <Attribute name='relationship' onClick={() => reshuffle('relationship')} value={character.relationship.text} />
                         </AttributeList>
@@ -130,9 +154,10 @@ class Board extends React.Component {
     }
 
     addCharacter() {
+        let newCharacter = generateCharacter(this.state.worldName);
         this.setState({
             characters: {
-                [Date.now()]: generateCharacter(this.state.worldName),
+                [Date.now()]: newCharacter,
                 ...this.state.characters
             }
         });
