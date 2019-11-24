@@ -42,6 +42,7 @@ export const Button = styled.button`
     border: none;
     font-family: Montserrat, sans-serif;
     font-size: 1rem;
+    line-height: 1.65rem;
     text-transform: uppercase;
     color: #fff;
     outline: none;
@@ -50,7 +51,6 @@ export const Button = styled.button`
     svg {
         width: 2rem;
         height: 2rem;
-        margin-bottom: 0.5rem;
     }
 
     :hover,
@@ -63,18 +63,68 @@ export const Button = styled.button`
     }
 `;
 
-export const AddCharacterButton = styled(Button)`
+export const TopToolbarButton = styled(Button)`
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    margin: 0 auto 1rem;
-    width: 100%;
-    max-width: 44rem;
+    justify-content: center;
     border-radius: 1rem;
     padding: 1rem;
+    width: 100%;
 
-    @media only screen and (min-width: 35rem) {
-        margin-bottom: 2rem;
+    svg {
+        width: 2rem;
+        height: 2rem;
+        margin: -0.5rem 1rem -0.5rem -0.5rem;
+    }
+`;
+
+export const Label = styled.label`
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.75rem;
+    line-height: 2.2;
+    text-transform: uppercase;
+`;
+
+export const Select = styled.select`
+    border: 1px solid #ddd;
+    border-radius: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    height: 58px;
+    padding: 1rem;
+    outline: none;
+    text-transform: uppercase;
+    width: 100%;
+`;
+
+export const SelectContainer = styled.div``;
+
+export const Option = styled.option`
+    padding: 1rem;
+`;
+
+export const TopToolbar = styled.div`
+    display: flex;
+    margin: 0 auto 1rem;
+    max-width: 44rem;
+`;
+
+export const TopToolbarColumn = styled.div`
+    flex: 1 0 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    box-sizing: border-box;
+
+    :not(:last-child) {
+        padding-right: 1rem;
+        margin-bottom: 0;
+    }
+
+    :not(:first-child) {
+        padding-left: 1rem;
     }
 `;
 
@@ -135,7 +185,7 @@ export const AttributeGroup = styled.div`
 `;
 
 export const AttributeGroupLabel = styled.h4`
-    font-family: Montserrat, sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 0.75rem;
     line-height: 2.2;
     text-transform: uppercase;
@@ -171,7 +221,7 @@ export const NameWrapper = styled.h1`
     }
 `;
 
-export const Row = styled.div`
+export const CharacterCardRow = styled.div`
 
     @media only screen and (min-width: 35rem) {
         display: flex;
@@ -179,7 +229,7 @@ export const Row = styled.div`
     }
 `;
 
-export const Column = styled.div`
+export const CharacterCardColumn = styled.div`
     flex: 1 1 50%;
 
     :not(:last-child) {
@@ -190,12 +240,12 @@ export const Column = styled.div`
 
         :not(:last-child) {
             border-right: 1px solid #ddd;
-            padding-right: 2em;
+            padding-right: 2rem;
             margin-bottom: 0;
         }
     
         :not(:first-child) {
-            padding-left: 2em;
+            padding-left: 2rem;
         }
     }
 `;

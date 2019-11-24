@@ -12,13 +12,19 @@ import {
     AttributeLabel,
     AttributeList,
     BoardContainer,
-    ToolbarButton,
+    CharacterCardColumn,
     CharacterCardContainer,
+    CharacterCardRow,
     CharacterCardToolbar,
-    Column,
+    Label,
     NameWrapper,
-    Row,
-    AddCharacterButton
+    Option,
+    ToolbarButton,
+    TopToolbar,
+    TopToolbarButton,
+    TopToolbarColumn,
+    Select,
+    SelectContainer
     } from './styles.js';
 import {
     generateCharacter,
@@ -94,8 +100,8 @@ const CharacterCard = ({ deleteCharacter, reshuffle, character }) => {
                 {' '}
                 of <Attribute name='ancestry' onClick={() => reshuffle('ancestry')} value={character.ancestry.text} /> descent
             </AttributeGroup>
-            <Row>
-                <Column>
+            <CharacterCardRow>
+                <CharacterCardColumn>
                     <AttributeGroup>
                         <AttributeGroupLabel>Job</AttributeGroupLabel>
                         <Attribute name='competency' onClick={() => reshuffle('competency')} value={uppercaseFirstLetter(character.competency.text)} />
@@ -108,8 +114,8 @@ const CharacterCard = ({ deleteCharacter, reshuffle, character }) => {
                         {' '}
                         <Attribute name='appearance2' onClick={() => reshuffle('appearance2')} value={character.appearance2.text} />
                     </AttributeGroup>
-                </Column>
-                <Column>
+                </CharacterCardColumn>
+                <CharacterCardColumn>
                     <AttributeGroup>
                         <AttributeGroupLabel>Mood</AttributeGroupLabel>
                         <Attribute name='mood' onClick={() => reshuffle('mood')} value={character.mood.text} />
@@ -120,8 +126,8 @@ const CharacterCard = ({ deleteCharacter, reshuffle, character }) => {
                         {' '}
                         <Attribute name='personality2' onClick={() => reshuffle('personality2')} value={character.personality2.text} />
                     </AttributeGroup>
-                </Column>
-                <Column>
+                </CharacterCardColumn>
+                <CharacterCardColumn>
                     <AttributeGroup>
                         <AttributeGroupLabel>Life goal</AttributeGroupLabel>
                         <Attribute name='motivation' onClick={() => reshuffle('motivation')} value={character.motivation.text} />
@@ -134,8 +140,8 @@ const CharacterCard = ({ deleteCharacter, reshuffle, character }) => {
                             <Attribute name='relationship' onClick={() => reshuffle('relationship')} value={character.relationship.text} />
                         </AttributeList>
                     </AttributeGroup>
-                </Column>
-            </Row>
+                </CharacterCardColumn>
+            </CharacterCardRow>
         </CharacterCardContainer>
     )
 }
@@ -192,14 +198,23 @@ class Board extends React.Component {
     render() {
 
         return (
-            <BoardContainer> 
-                <select value={this.state.worldName} onChange={this.handleWorldChange}>
-                    <option>Asa</option>
-                    <option>Cyberpunk</option>
-                </select>
-                <AddCharacterButton onClick={() => this.addCharacter()}>
-                    <UserPlusSolid /> Meet someone new
-                </AddCharacterButton>
+            <BoardContainer>
+                <TopToolbar>
+                    <TopToolbarColumn>
+                        <SelectContainer>
+                            <Label>World</Label>
+                            <Select value={this.state.worldName} onChange={this.handleWorldChange}>
+                                <Option>Asa</Option>
+                                <Option>Cyberpunk</Option>
+                            </Select>
+                        </SelectContainer>
+                    </TopToolbarColumn>
+                    <TopToolbarColumn>
+                        <TopToolbarButton onClick={() => this.addCharacter()}>
+                            <UserPlusSolid /> Meet someone new
+                        </TopToolbarButton>
+                    </TopToolbarColumn>
+                </TopToolbar>
                 {Object.entries(this.state.characters)
                     .map(([uid, character]) => <CharacterCard
                         key={uid}
