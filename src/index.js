@@ -68,13 +68,13 @@ const CharacterCard = ({ deleteCharacter, reshuffle, character }) => {
             <CharacterCardToolbar>
                 <ToolbarButton onClick={() => copy(dedent(
                         `${character.givenName.text} ${character.familyName.text}
-                        ${character.gender.text} ${character.age.text} ${character.race.text} from ${character.ancestry.text} 
+                        ${uppercaseFirstLetter(determinerBefore(character.age.text))} ${character.age.text} ${character.race.text} of ${character.ancestry.text} descent
                         Job: ${character.competency.text} ${character.job.text}
                         Appearance: ${character.appearance1.text}, ${character.appearance2.text}
                         Mood: ${character.mood.text}
                         Personality: ${character.personality1.text}, ${character.personality2.text}
                         Life goal: ${character.motivation.text}
-                        Relationship: ${character.sexuality.text}, ${character.relationship.text}`
+                        Relationships: ${character.sexuality.text}, ${character.relationship.text}`
                         ))}>
                     <ClipboardSolid />
                 </ToolbarButton>
