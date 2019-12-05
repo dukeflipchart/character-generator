@@ -2619,173 +2619,179 @@
         "Huurani": {
             "Masculine": [
                 {
-                    "text": "Adina"
+                    "text": "Aali'"
                 },
                 {
-                    "text": "Akiva"
+                    "text": "Aamir"
                 },
                 {
-                    "text": "Amir"
+                    "text": "Abrar"
                 },
                 {
-                    "text": "Aryeh"
+                    "text": "Alim"
                 },
                 {
-                    "text": "Ayal"
+                    "text": "Aziz"
                 },
                 {
-                    "text": "Dar"
+                    "text": "Bahadur"
                 },
                 {
-                    "text": "Dori"
+                    "text": "Bakr"
                 },
                 {
-                    "text": "Eiran"
+                    "text": "Bilal"
                 },
                 {
-                    "text": "Eyal"
+                    "text": "Daud"
                 },
                 {
-                    "text": "Hadar"
+                    "text": "Diya"
                 },
                 {
-                    "text": "Ilan"
+                    "text": "Fakhri"
                 },
                 {
-                    "text": "Kfir"
+                    "text": "Fihr"
                 },
                 {
-                    "text": "Li"
+                    "text": "Fuad"
                 },
                 {
-                    "text": "Maor"
+                    "text": "Haris"
                 },
                 {
-                    "text": "Nir"
+                    "text": "Hidayat"
                 },
                 {
-                    "text": "Paz"
+                    "text": "Ikraam"
                 },
                 {
-                    "text": "Raanan"
+                    "text": "Khayri"
                 },
                 {
-                    "text": "Reuven"
+                    "text": "Miraj"
                 },
                 {
-                    "text": "Shahar"
+                    "text": "Mukhtar"
                 },
                 {
-                    "text": "Shai"
+                    "text": "Nima"
                 },
                 {
-                    "text": "Tam"
+                    "text": "Nur"
                 },
                 {
-                    "text": "Yair"
+                    "text": "Qadir"
                 },
                 {
-                    "text": "Yissakhar"
+                    "text": "Rad"
                 },
                 {
-                    "text": "Zev"
+                    "text": "Rauf"
+                },
+                {
+                    "text": "Sadiq"
+                },
+                {
+                    "text": "Salah"
+                },
+                {
+                    "text": "Yusha"
                 }
             ],
             "Feminine": [
                 {
-                    "text": "Adara"
+                    "text": "Afra"
                 },
                 {
-                    "text": "Ahuva"
+                    "text": "Aisha"
                 },
                 {
-                    "text": "Aliya"
+                    "text": "Aliyya"
                 },
                 {
-                    "text": "Atara"
+                    "text": "Amina"
                 },
                 {
-                    "text": "Bracha"
+                    "text": "Arwa"
                 },
                 {
-                    "text": "Chana"
+                    "text": "Fajr"
                 },
                 {
-                    "text": "Dikla"
+                    "text": "Gawahir"
                 },
                 {
-                    "text": "Dvora"
+                    "text": "Hadiya"
                 },
                 {
-                    "text": "Elisheva"
+                    "text": "Haifa"
                 },
                 {
-                    "text": "Hadar"
+                    "text": "Hasna"
                 },
                 {
-                    "text": "Hava"
+                    "text": "Ihab"
                 },
                 {
-                    "text": "Inbar"
+                    "text": "Ikram"
                 },
                 {
-                    "text": "Kineret"
+                    "text": "Inaya"
                 },
                 {
-                    "text": "Lior"
+                    "text": "Jawahir"
                 },
                 {
-                    "text": "Maya"
+                    "text": "Karima"
                 },
                 {
-                    "text": "Naama"
+                    "text": "Kubra"
                 },
                 {
-                    "text": "Noya"
+                    "text": "Nawra"
                 },
                 {
-                    "text": "Ori"
+                    "text": "Nur"
                 },
                 {
-                    "text": "Ravid"
+                    "text": "Raisa"
                 },
                 {
-                    "text": "Rina"
+                    "text": "Rana"
                 },
                 {
-                    "text": "Shai"
+                    "text": "Saliha"
                 },
                 {
-                    "text": "Tal"
+                    "text": "Sanaa"
                 },
                 {
-                    "text": "Yaara"
+                    "text": "Shaima"
+                },
+                {
+                    "text": "Zahra"
                 }
             ],
             "Agender": [
                 {
-                    "text": "Avia"
+                    "text": "Atiya"
                 },
                 {
-                    "text": "Dar"
+                    "text": "Ihab"
                 },
                 {
-                    "text": "Hadar"
+                    "text": "Ikram"
                 },
                 {
-                    "text": "Neta"
+                    "text": "Jinan"
                 },
                 {
-                    "text": "Noy"
+                    "text": "Khayrat"
                 },
                 {
-                    "text": "Raz"
-                },
-                {
-                    "text": "Yaffe"
-                },
-                {
-                    "text": "Ziv"
+                    "text": "Nur"
                 }
             ]
         }
@@ -3099,34 +3105,34 @@
         ],
         "Huurani": [
             {
-                "text": "Asael"
+                "text": "Ajam"
             },
             {
-                "text": "Ashlag"
+                "text": "Al-Amin"
             },
             {
-                "text": "Bensaid"
+                "text": "Amjad"
             },
             {
-                "text": "Eliad"
+                "text": "Bulus"
             },
             {
-                "text": "Halevi"
+                "text": "Hakim"
             },
             {
-                "text": "Inbal"
+                "text": "Karimi"
             },
             {
-                "text": "Kasher"
+                "text": "Naaji"
             },
             {
-                "text": "Kenan"
+                "text": "Najjar"
             },
             {
-                "text": "Marshak"
+                "text": "Qadir"
             },
             {
-                "text": "Naor"
+                "text": "Samara"
             },
             {
                 "text": "Roshal"

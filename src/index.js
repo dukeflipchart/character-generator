@@ -3,9 +3,10 @@ import ReactDOM from 'react-dom';
 import dedent from 'dedent';
 import copy from 'clipboard-copy';
 import './index.css';
-import ClipboardSolid from './icons/ClipboardSolid.js';
-import UserPlusSolid from './icons/UserPlusSolid.js';
-import TrashSolid from './icons/TrashSolid.js';
+import ClipboardSolid from './icons/ClipboardSolid';
+import PenSolid from './icons/PenSolid';
+import UserPlusSolid from './icons/UserPlusSolid';
+import TrashSolid from './icons/TrashSolid';
 import {
     AttributeGroup,
     AttributeGroupLabel,
@@ -62,7 +63,7 @@ function Attribute(props) {
     );
 }
 
-const CharacterCard = ({ deleteCharacter, reshuffle, character }) => {
+const CharacterCard = ({ deleteCharacter, reshuffle, character, isAttributeGroupBeingEdited, setAttributeGroupBeingEdited }) => {
     return (
         <CharacterCardContainer>
             <CharacterCardToolbar>
@@ -100,38 +101,38 @@ const CharacterCard = ({ deleteCharacter, reshuffle, character }) => {
             </AttributeGroup>
             <CharacterCardRow>
                 <CharacterCardColumn>
-                    <AttributeGroup>
-                        <AttributeGroupLabel>Job</AttributeGroupLabel>
+                    <AttributeGroup isBeingEdited={isAttributeGroupBeingEdited('job')}>
+                        <AttributeGroupLabel onClick={() => setAttributeGroupBeingEdited('job')}>Job <PenSolid /></AttributeGroupLabel>
                         <Attribute name='competency' onClick={() => reshuffle('competency')} value={uppercaseFirstLetter(character.competency.text)} />
                         {' '}
                         <Attribute name='job' onClick={() => reshuffle('job')} value={character.job.text} />
                     </AttributeGroup>
-                    <AttributeGroup>
-                        <AttributeGroupLabel>Appearance</AttributeGroupLabel>
+                    <AttributeGroup isBeingEdited={isAttributeGroupBeingEdited('appearance')}>
+                        <AttributeGroupLabel onClick={() => setAttributeGroupBeingEdited('appearance')}>Appearance <PenSolid /></AttributeGroupLabel>
                         <Attribute name='appearance1' onClick={() => reshuffle('appearance1')} value={uppercaseFirstLetter(character.appearance1.text)} />,
                         {' '}
                         <Attribute name='appearance2' onClick={() => reshuffle('appearance2')} value={character.appearance2.text} />
                     </AttributeGroup>
                 </CharacterCardColumn>
                 <CharacterCardColumn>
-                    <AttributeGroup>
-                        <AttributeGroupLabel>Mood</AttributeGroupLabel>
+                    <AttributeGroup isBeingEdited={isAttributeGroupBeingEdited('mood')}>
+                        <AttributeGroupLabel onClick={() => setAttributeGroupBeingEdited('mood')}>Mood <PenSolid /></AttributeGroupLabel>
                         <Attribute name='mood' onClick={() => reshuffle('mood')} value={character.mood.text} />
                     </AttributeGroup>
-                    <AttributeGroup>
-                        <AttributeGroupLabel>Personality</AttributeGroupLabel>
+                    <AttributeGroup isBeingEdited={isAttributeGroupBeingEdited('personality')}>
+                        <AttributeGroupLabel onClick={() => setAttributeGroupBeingEdited('personality')}>Personality <PenSolid /></AttributeGroupLabel>
                         <Attribute name='personality1' onClick={() => reshuffle('personality1')} value={uppercaseFirstLetter(character.personality1.text)} /> and
                         {' '}
                         <Attribute name='personality2' onClick={() => reshuffle('personality2')} value={character.personality2.text} />
                     </AttributeGroup>
                 </CharacterCardColumn>
                 <CharacterCardColumn>
-                    <AttributeGroup>
-                        <AttributeGroupLabel>Life goal</AttributeGroupLabel>
+                    <AttributeGroup isBeingEdited={isAttributeGroupBeingEdited('motivation')}>
+                        <AttributeGroupLabel onClick={() => setAttributeGroupBeingEdited('motivation')}>Life goal <PenSolid /></AttributeGroupLabel>
                         <Attribute name='motivation' onClick={() => reshuffle('motivation')} value={character.motivation.text} />
                     </AttributeGroup>
-                    <AttributeGroup>
-                        <AttributeGroupLabel>Relationships</AttributeGroupLabel>
+                    <AttributeGroup isBeingEdited={isAttributeGroupBeingEdited('relationships')}>
+                        <AttributeGroupLabel onClick={() => setAttributeGroupBeingEdited('relationships')}>Relationships <PenSolid /></AttributeGroupLabel>
                         <AttributeList>
                             <Attribute name='sexuality' onClick={() => reshuffle('sexuality')} value={uppercaseFirstLetter(character.sexuality.text)} />,
                             {' '}
@@ -151,7 +152,9 @@ class Board extends React.Component {
         super(props);
         this.state = {
             characters: {},
-            worldName: 'Asa'
+            worldName: 'Asa',
+            characterBeingEdited: false,
+            attributeGroupBeingEdited: false
         }
 
         this.handleWorldChange = this.handleWorldChange.bind(this);
@@ -209,6 +212,19 @@ class Board extends React.Component {
         }
     }
 
+    isAttributeGroupBeingEdited(attributeGroup) {
+        console.log(`${attributeGroup} is being edited: ${(this.state.attributeGroupBeingEdited === attributeGroup)}`);
+
+        return (this.state.attributeGroupBeingEdited === attributeGroup);
+    }
+
+    setAttributeGroupBeingEdited(attributeGroup) {
+        console.log(attributeGroup);
+        this.setState({
+            attributeGroupBeingEdited: attributeGroup
+        });
+    }
+
     render() {
 
         return (
@@ -235,6 +251,8 @@ class Board extends React.Component {
                         character={character}
                         reshuffle={(attribute) => this.reshuffleAttribute(uid, attribute)}
                         deleteCharacter={() => this.deleteCharacter(uid)}
+                        isAttributeGroupBeingEdited={(attributeGroup) => this.isAttributeGroupBeingEdited(attributeGroup)}
+                        setAttributeGroupBeingEdited={(attributeGroup) => this.setAttributeGroupBeingEdited(attributeGroup)}
                     />)
                 }
             </BoardContainer> 

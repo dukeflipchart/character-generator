@@ -59,7 +59,7 @@ export const Button = styled.button`
     }
 
     :active {
-        background-color: ${darken(0.2, colors.warlockPurple)};
+        background-color: ${colors.wizardBlue};
     }
 `;
 
@@ -155,7 +155,7 @@ export const ToolbarButton = styled(Button)`
         background-color: transparent;
 
         svg {
-            color: ${darken(0.1, colors.warlockPurple)};
+            color: ${colors.wizardBlue};
         }
     }
 
@@ -163,7 +163,7 @@ export const ToolbarButton = styled(Button)`
         background-color: transparent;
 
         svg {
-            color: ${darken(0.2, colors.warlockPurple)};;
+            color: ${darken(0.1, colors.wizardBlue)};
         }
     }
 
@@ -178,19 +178,49 @@ export const ToolbarDeleteButton = styled.button``;
 
 
 export const AttributeGroup = styled.div`
+    ${props => props.isBeingEdited && `color: ${colors.clericRed};`}
     
     :not(:last-child) {
         margin-bottom: 1.65rem;
     }
 `;
 
-export const AttributeGroupLabel = styled.h4`
+export const AttributeGroupLabel = styled.button`
+    display: block;
+    background-color: transparent;
+    border: none;
     font-family: 'Montserrat', sans-serif;
     font-size: 0.75rem;
     line-height: 2.2;
     text-transform: uppercase;
     margin-top: 0;
     margin-bottom: 0;
+    padding: 0;
+    cursor: pointer;
+    outline: none;
+
+    svg {
+        opacity: 0;
+        width: 0.6rem;
+        height: 0.6rem;
+    }
+
+    :hover,
+    :focus {
+        color: ${colors.wizardBlue}
+
+        svg {
+            opacity: 1;
+        }
+    }
+    
+    :active {
+        color: ${darken(0.1, colors.wizardBlue)}
+
+        svg {
+            opacity: 1;
+        }
+    }
 `;
 
 export const AttributeLabel = styled.span`
