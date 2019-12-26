@@ -22,5 +22,8 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "svgr": "svgr -d src/icons/ assets/"
+  },
+  "devDependencies": {
+    "react-test-renderer": "^16.12.0"
   }
 }
