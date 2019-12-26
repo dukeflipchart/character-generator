@@ -54,49 +54,52 @@ exports[`renders correctly 1`] = `
     </button>
   </div>
   <h1
-    className="sc-cSHVUG fbkGFz"
+    className="sc-fjdhpX bVFrao"
   >
-    <span
-      className="sc-fjdhpX dzfSrA"
-      onClick={[Function]}
+    <div
+      className="sc-kAzzGY iRdAlj"
     >
-      Jai
-    </span>
-     
-    <span
-      className="sc-fjdhpX dzfSrA"
-      onClick={[Function]}
-    />
+      <span
+        className="sc-jTzLTM lfaIdC"
+        onClick={[Function]}
+      >
+        Jai
+      </span>
+       
+      <span
+        className="sc-jTzLTM lfaIdC"
+        onClick={[Function]}
+      />
+      
+    </div>
   </h1>
   <div
-    className="sc-VigVT fSjgWo"
+    className="sc-kAzzGY iRdAlj"
   >
-    A
-     
+    A 
     <span
-      className="sc-fjdhpX dzfSrA"
+      className="sc-jTzLTM lfaIdC"
       onClick={[Function]}
     >
       very old
     </span>
      
     <span
-      className="sc-fjdhpX dzfSrA"
+      className="sc-jTzLTM lfaIdC"
       onClick={[Function]}
     >
       elf
     </span>
      
     <span
-      className="sc-fjdhpX dzfSrA"
+      className="sc-jTzLTM lfaIdC"
       onClick={[Function]}
     >
       man
     </span>
-     
-    of 
+     of 
     <span
-      className="sc-fjdhpX dzfSrA"
+      className="sc-jTzLTM lfaIdC"
       onClick={[Function]}
     >
       Kitharan
@@ -104,19 +107,19 @@ exports[`renders correctly 1`] = `
      descent
   </div>
   <div
-    className="sc-kAzzGY bjYUF"
+    className="sc-jzJRlG iqaRUm"
   >
     <div
-      className="sc-chPdSV gMJsyC"
+      className="sc-cSHVUG MCMkz"
     >
       <div
-        className="sc-VigVT fSjgWo"
+        className="sc-kAzzGY iRdAlj"
       >
         <button
-          className="sc-jTzLTM gYTrtc"
-          onClick={[Function]}
+          className="sc-VigVT ezYRPj"
         >
-          Job 
+          Job
+           
           <svg
             aria-hidden="true"
             className="pen-solid_svg__svg-inline--fa pen-solid_svg__fa-pen pen-solid_svg__fa-w-16"
@@ -131,27 +134,28 @@ exports[`renders correctly 1`] = `
           </svg>
         </button>
         <span
-          className="sc-fjdhpX dzfSrA"
+          className="sc-jTzLTM lfaIdC"
           onClick={[Function]}
         >
           Very talented
         </span>
          
         <span
-          className="sc-fjdhpX dzfSrA"
+          className="sc-jTzLTM lfaIdC"
           onClick={[Function]}
         >
           paladin
         </span>
+        
       </div>
       <div
-        className="sc-VigVT fSjgWo"
+        className="sc-kAzzGY iRdAlj"
       >
         <button
-          className="sc-jTzLTM gYTrtc"
-          onClick={[Function]}
+          className="sc-VigVT ezYRPj"
         >
-          Appearance 
+          Appearance
+           
           <svg
             aria-hidden="true"
             className="pen-solid_svg__svg-inline--fa pen-solid_svg__fa-pen pen-solid_svg__fa-w-16"
@@ -166,32 +170,32 @@ exports[`renders correctly 1`] = `
           </svg>
         </button>
         <span
-          className="sc-fjdhpX dzfSrA"
+          className="sc-jTzLTM lfaIdC"
           onClick={[Function]}
         >
           Athletic
         </span>
-        ,
-         
+        , 
         <span
-          className="sc-fjdhpX dzfSrA"
+          className="sc-jTzLTM lfaIdC"
           onClick={[Function]}
         >
           has several piercings
         </span>
+        
       </div>
     </div>
     <div
-      className="sc-chPdSV gMJsyC"
+      className="sc-cSHVUG MCMkz"
     >
       <div
-        className="sc-VigVT fSjgWo"
+        className="sc-kAzzGY iRdAlj"
       >
         <button
-          className="sc-jTzLTM gYTrtc"
-          onClick={[Function]}
+          className="sc-VigVT ezYRPj"
         >
-          Mood 
+          Mood
+           
           <svg
             aria-hidden="true"
             className="pen-solid_svg__svg-inline--fa pen-solid_svg__fa-pen pen-solid_svg__fa-w-16"
@@ -206,20 +210,21 @@ exports[`renders correctly 1`] = `
           </svg>
         </button>
         <span
-          className="sc-fjdhpX dzfSrA"
+          className="sc-jTzLTM lfaIdC"
           onClick={[Function]}
         >
           Amused
         </span>
+        
       </div>
       <div
-        className="sc-VigVT fSjgWo"
+        className="sc-kAzzGY iRdAlj"
       >
         <button
-          className="sc-jTzLTM gYTrtc"
-          onClick={[Function]}
+          className="sc-VigVT ezYRPj"
         >
-          Personality 
+          Personality
+           
           <svg
             aria-hidden="true"
             className="pen-solid_svg__svg-inline--fa pen-solid_svg__fa-pen pen-solid_svg__fa-w-16"
@@ -234,32 +239,32 @@ exports[`renders correctly 1`] = `
           </svg>
         </button>
         <span
-          className="sc-fjdhpX dzfSrA"
+          className="sc-jTzLTM lfaIdC"
           onClick={[Function]}
         >
           Impulsive
         </span>
-         and
-         
+         and 
         <span
-          className="sc-fjdhpX dzfSrA"
+          className="sc-jTzLTM lfaIdC"
           onClick={[Function]}
         >
           progressive
         </span>
+        
       </div>
     </div>
     <div
-      className="sc-chPdSV gMJsyC"
+      className="sc-cSHVUG MCMkz"
     >
       <div
-        className="sc-VigVT fSjgWo"
+        className="sc-kAzzGY iRdAlj"
       >
         <button
-          className="sc-jTzLTM gYTrtc"
-          onClick={[Function]}
+          className="sc-VigVT ezYRPj"
         >
-          Life goal 
+          Life goal
+           
           <svg
             aria-hidden="true"
             className="pen-solid_svg__svg-inline--fa pen-solid_svg__fa-pen pen-solid_svg__fa-w-16"
@@ -274,20 +279,21 @@ exports[`renders correctly 1`] = `
           </svg>
         </button>
         <span
-          className="sc-fjdhpX dzfSrA"
+          className="sc-jTzLTM lfaIdC"
           onClick={[Function]}
         >
           To teach others
         </span>
+        
       </div>
       <div
-        className="sc-VigVT fSjgWo"
+        className="sc-kAzzGY iRdAlj"
       >
         <button
-          className="sc-jTzLTM gYTrtc"
-          onClick={[Function]}
+          className="sc-VigVT ezYRPj"
         >
-          Relationships 
+          Relationships
+           
           <svg
             aria-hidden="true"
             className="pen-solid_svg__svg-inline--fa pen-solid_svg__fa-pen pen-solid_svg__fa-w-16"
@@ -301,24 +307,20 @@ exports[`renders correctly 1`] = `
             />
           </svg>
         </button>
-        <ul
-          className="sc-jzJRlG dyGPGf"
+        <span
+          className="sc-jTzLTM lfaIdC"
+          onClick={[Function]}
         >
-          <span
-            className="sc-fjdhpX dzfSrA"
-            onClick={[Function]}
-          >
-            Heterosexual
-          </span>
-          ,
-           
-          <span
-            className="sc-fjdhpX dzfSrA"
-            onClick={[Function]}
-          >
-            in a toxic relationship
-          </span>
-        </ul>
+          Heterosexual
+        </span>
+        , 
+        <span
+          className="sc-jTzLTM lfaIdC"
+          onClick={[Function]}
+        >
+          in a toxic relationship
+        </span>
+        
       </div>
     </div>
   </div>

@@ -1,16 +1,17 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+import styled from 'styled-components';
 
 import dedent from 'dedent';
 import copy from 'clipboard-copy';
+
+import { colors } from './styles';
 
 import ClipboardSolid from './icons/ClipboardSolid';
 import PenSolid from './icons/PenSolid';
 import TrashSolid from './icons/TrashSolid';
 
 import {
-    AttributeGroup,
     AttributeGroupLabel,
-    AttributeList,
     AttributeLabel,
     CharacterCardColumn,
     CharacterCardContainer,
@@ -20,7 +21,7 @@ import {
     ToolbarButton
 } from './styles.js';
 
-const uppercaseFirstLetter = (string) => {
+const capitalize = (string) => {
     return string
         ? string.charAt(0).toUpperCase() + string.slice(1)
         : false;
@@ -44,7 +45,7 @@ const displayGender = (age, gender) => {
 
 export const createTextDescription = (character) => dedent(
     `${character.givenName.text} ${character.familyName.text}
-    ${uppercaseFirstLetter(determinerBefore(character.age.text))} ${character.age.text} ${character.race.text} of ${character.ancestry.text} descent
+    ${capitalize(determinerBefore(character.age.text))} ${character.age.text} ${character.race.text} of ${character.ancestry.text} descent
     Job: ${character.competency.text} ${character.job.text}
     Appearance: ${character.appearance1.text}, ${character.appearance2.text}
     Mood: ${character.mood.text}
@@ -53,19 +54,71 @@ export const createTextDescription = (character) => dedent(
     Relationships: ${character.sexuality.text}, ${character.relationship.text}`
 )
 
-const Attribute = (props) => {
-    return (
-        <AttributeLabel onClick={props.onClick}>{props.value}</AttributeLabel>
-    );
-}
+const AttributeGroupWrapper = styled.div`
+    ${props => props.isBeingEdited && `color: ${colors.clericRed};`}
+    
+    :not(:last-child) {
+        margin-bottom: 1.65rem;
+    }
+`;
 
 export const CharacterCard = ({
     deleteCharacter,
     reshuffle,
     character,
-    isAttributeGroupBeingEdited,
-    setAttributeGroupBeingEdited
 }) => {
+
+    // declared in CharacterCard scope, so it has access to `character` and `reshuffle` props
+    const AttributeGroup = ({
+        label,
+        attributes
+    }) => {
+        return (
+            <AttributeGroupWrapper>
+                {label && <AttributeGroupLabel>{label} <PenSolid/></AttributeGroupLabel>}
+                {attributes.map((attribute, index) => {
+                    // first element needs to be capitalized regardless of type, check here
+                    const first = index === 0;
+                    
+                    // a string was passed
+                    if (typeof attribute === 'string') {
+                        return first
+                            ? capitalize(attribute)
+                            : attribute
+
+                    // an attribute key and separator pair was passed, render as interactive AttributeLabel
+                    } else if (Array.isArray(attribute) && attribute.length === 2) {
+
+                        const [key, separator] = attribute;
+                        
+                        // gender is an edge case, handle here
+                        const text = key === 'gender'
+                            ? displayGender(character.age.text, character.gender.text)
+                            : character[key].text
+
+                        return (
+                            <Fragment key={key}>
+                                <AttributeLabel
+                                    onClick={() => reshuffle(key)}
+                                >
+                                    {first
+                                        ? capitalize(text)
+                                        : text}
+                                </AttributeLabel>
+                                {separator}
+                            </Fragment>
+                        )
+
+                    // something got borked
+                    } else {
+                        return (<Fragment>ERR </Fragment>)
+                    }
+                })}
+
+            </AttributeGroupWrapper>
+        );
+    }
+
     return (
         <CharacterCardContainer>
             <CharacterCardToolbar>
@@ -77,61 +130,68 @@ export const CharacterCard = ({
                 </ToolbarButton>
             </CharacterCardToolbar>
             <NameWrapper>
-                <Attribute name='givenName' onClick={() => reshuffle('givenName')} value={character.givenName.text} />
-                {' '}
-                <Attribute name='familyName' onClick={() => reshuffle('familyName')} value={character.familyName.text} />
+                <AttributeGroup
+                    attributes={[
+                        ['givenName', ' '],
+                        ['familyName', '']
+                    ]}
+                />
             </NameWrapper>
-            <AttributeGroup>
-                {uppercaseFirstLetter(determinerBefore(character.age.text))}
-                {' '}
-                <Attribute name='age' onClick={() => reshuffle('age')} value={character.age.text} />
-                {' '}
-                <Attribute name='race' onClick={() => reshuffle('race')} value={character.race.text} />
-                {' '}
-                <Attribute name='gender' onClick={() => reshuffle('gender')} value={displayGender(character.age.text, character.gender.text)} />
-                {' '}
-                of <Attribute name='ancestry' onClick={() => reshuffle('ancestry')} value={character.ancestry.text} /> descent
-            </AttributeGroup>
+            <AttributeGroup
+                attributes={[
+                    `${determinerBefore(character.age.text)} `,
+                    ['age', ' '],
+                    ['race', ' '],
+                    ['gender', ' of '],
+                    ['ancestry', ' descent'],
+                ]}
+            />
             <CharacterCardRow>
                 <CharacterCardColumn>
-                    <AttributeGroup isBeingEdited={isAttributeGroupBeingEdited('job')}>
-                        <AttributeGroupLabel onClick={() => setAttributeGroupBeingEdited('job')}>Job <PenSolid /></AttributeGroupLabel>
-                        <Attribute name='competency' onClick={() => reshuffle('competency')} value={uppercaseFirstLetter(character.competency.text)} />
-                        {' '}
-                        <Attribute name='job' onClick={() => reshuffle('job')} value={character.job.text} />
-                    </AttributeGroup>
-                    <AttributeGroup isBeingEdited={isAttributeGroupBeingEdited('appearance')}>
-                        <AttributeGroupLabel onClick={() => setAttributeGroupBeingEdited('appearance')}>Appearance <PenSolid /></AttributeGroupLabel>
-                        <Attribute name='appearance1' onClick={() => reshuffle('appearance1')} value={uppercaseFirstLetter(character.appearance1.text)} />,
-                        {' '}
-                        <Attribute name='appearance2' onClick={() => reshuffle('appearance2')} value={character.appearance2.text} />
-                    </AttributeGroup>
+                    <AttributeGroup
+                        label={'Job'}
+                        attributes={[
+                           ['competency', ' '],
+                           ['job', '']
+                        ]}
+                    />
+                    <AttributeGroup
+                        label={'Appearance'}
+                        attributes={[
+                           ['appearance1', ', '],
+                           ['appearance2', '']
+                        ]}
+                    />
                 </CharacterCardColumn>
                 <CharacterCardColumn>
-                    <AttributeGroup isBeingEdited={isAttributeGroupBeingEdited('mood')}>
-                        <AttributeGroupLabel onClick={() => setAttributeGroupBeingEdited('mood')}>Mood <PenSolid /></AttributeGroupLabel>
-                        <Attribute name='mood' onClick={() => reshuffle('mood')} value={character.mood.text} />
-                    </AttributeGroup>
-                    <AttributeGroup isBeingEdited={isAttributeGroupBeingEdited('personality')}>
-                        <AttributeGroupLabel onClick={() => setAttributeGroupBeingEdited('personality')}>Personality <PenSolid /></AttributeGroupLabel>
-                        <Attribute name='personality1' onClick={() => reshuffle('personality1')} value={uppercaseFirstLetter(character.personality1.text)} /> and
-                        {' '}
-                        <Attribute name='personality2' onClick={() => reshuffle('personality2')} value={character.personality2.text} />
-                    </AttributeGroup>
+                    <AttributeGroup
+                        label={'Mood'}
+                        attributes={[
+                           ['mood', '']
+                        ]}
+                    />
+                    <AttributeGroup
+                        label={'Personality'}
+                        attributes={[
+                           ['personality1', ' and '],
+                           ['personality2', '']
+                        ]}
+                    />
                 </CharacterCardColumn>
                 <CharacterCardColumn>
-                    <AttributeGroup isBeingEdited={isAttributeGroupBeingEdited('motivation')}>
-                        <AttributeGroupLabel onClick={() => setAttributeGroupBeingEdited('motivation')}>Life goal <PenSolid /></AttributeGroupLabel>
-                        <Attribute name='motivation' onClick={() => reshuffle('motivation')} value={character.motivation.text} />
-                    </AttributeGroup>
-                    <AttributeGroup isBeingEdited={isAttributeGroupBeingEdited('relationships')}>
-                        <AttributeGroupLabel onClick={() => setAttributeGroupBeingEdited('relationships')}>Relationships <PenSolid /></AttributeGroupLabel>
-                        <AttributeList>
-                            <Attribute name='sexuality' onClick={() => reshuffle('sexuality')} value={uppercaseFirstLetter(character.sexuality.text)} />,
-                            {' '}
-                            <Attribute name='relationship' onClick={() => reshuffle('relationship')} value={character.relationship.text} />
-                        </AttributeList>
-                    </AttributeGroup>
+                    <AttributeGroup
+                        label={'Life goal'}
+                        attributes={[
+                           ['motivation', '']
+                        ]}
+                    />
+                    <AttributeGroup
+                        label={'Relationships'}
+                        attributes={[
+                           ['sexuality', ', '],
+                           ['relationship', '']
+                        ]}
+                    />  
                 </CharacterCardColumn>
             </CharacterCardRow>
         </CharacterCardContainer>
