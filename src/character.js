@@ -113,7 +113,7 @@ export const setCustomAttribute = (character, customAttributeKey, customAttribut
     }
 }
 
-export const reshuffle = (worldName, oldAttributes, targetAttribute) => {
+export const reshuffleAttribute = (worldName, oldAttributes, targetAttribute) => {
     let world = {};
     switch (worldName) {
         case 'Cyberpunk':

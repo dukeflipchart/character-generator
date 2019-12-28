@@ -18,7 +18,7 @@ import { CharacterCard } from './character-card';
 
 import {
     generateCharacter,
-    reshuffle,
+    reshuffleAttribute,
     setCustomAttribute
 } from './character';
 
@@ -62,7 +62,7 @@ class Board extends React.Component {
         this.setState({
             characters: {
                 ...this.state.characters,
-                [uid]: reshuffle(this.state.worldName, this.state.characters[uid], attribute)
+                [uid]: reshuffleAttribute(this.state.worldName, this.state.characters[uid], attribute)
             }
         });
     }
@@ -74,7 +74,6 @@ class Board extends React.Component {
                 [uid]: setCustomAttribute(this.state.characters[uid], customAttributeKey, customAttributeValue)
             }
         })
-        console.log(arguments)
     }
 
     handleWorldChange(event) {
@@ -123,7 +122,7 @@ class Board extends React.Component {
                     .map(([uid, character]) => <CharacterCard
                         key={uid}
                         character={character}
-                        reshuffle={attribute => this.reshuffleAttribute(uid, attribute)}
+                        reshuffleAttribute={attribute => this.reshuffleAttribute(uid, attribute)}
                         setCustomAttribute={(customAttributeKey, customAttributeValue) => this.setCustomAttribute(uid, customAttributeKey, customAttributeValue)}
                         deleteCharacter={() => this.deleteCharacter(uid)}
                     />)
