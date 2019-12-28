@@ -18,7 +18,8 @@ import { CharacterCard } from './character-card';
 
 import {
     generateCharacter,
-    reshuffle
+    reshuffle,
+    setCustomAttribute
 } from './character';
 
 class Board extends React.Component {
@@ -66,6 +67,16 @@ class Board extends React.Component {
         });
     }
 
+    setCustomAttribute(uid, customAttributeKey, customAttributeValue) {
+        this.setState({
+            characters: {
+                ...this.state.characters,
+                [uid]: setCustomAttribute(this.state.characters[uid], customAttributeKey, customAttributeValue)
+            }
+        })
+        console.log(arguments)
+    }
+
     handleWorldChange(event) {
         switch (event.target.value) {
             case 'Cyberpunk / Near Future':
@@ -86,19 +97,6 @@ class Board extends React.Component {
                 
                 return 'Asa (Homebrew Fantasy)';
         }
-    }
-
-    isAttributeGroupBeingEdited(attributeGroup) {
-        console.log(`${attributeGroup} is being edited: ${(this.state.attributeGroupBeingEdited === attributeGroup)}`);
-
-        return (this.state.attributeGroupBeingEdited === attributeGroup);
-    }
-
-    setAttributeGroupBeingEdited(attributeGroup) {
-        console.log(attributeGroup);
-        this.setState({
-            attributeGroupBeingEdited: attributeGroup
-        });
     }
 
     render() {
@@ -125,10 +123,9 @@ class Board extends React.Component {
                     .map(([uid, character]) => <CharacterCard
                         key={uid}
                         character={character}
-                        reshuffle={(attribute) => this.reshuffleAttribute(uid, attribute)}
+                        reshuffle={attribute => this.reshuffleAttribute(uid, attribute)}
+                        setCustomAttribute={(customAttributeKey, customAttributeValue) => this.setCustomAttribute(uid, customAttributeKey, customAttributeValue)}
                         deleteCharacter={() => this.deleteCharacter(uid)}
-                        isAttributeGroupBeingEdited={(attributeGroup) => this.isAttributeGroupBeingEdited(attributeGroup)}
-                        setAttributeGroupBeingEdited={(attributeGroup) => this.setAttributeGroupBeingEdited(attributeGroup)}
                     />)
                 }
             </BoardContainer> 

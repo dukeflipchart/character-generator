@@ -1,4 +1,8 @@
-import React, { Fragment } from 'react';
+import React, {
+    Fragment,
+    useState,
+    useRef
+} from 'react';
 import styled from 'styled-components';
 
 import dedent from 'dedent';
@@ -12,7 +16,6 @@ import TrashSolid from './icons/TrashSolid';
 
 import {
     AttributeGroupLabel,
-    AttributeLabel,
     CharacterCardColumn,
     CharacterCardContainer,
     CharacterCardRow,
@@ -21,14 +24,11 @@ import {
     ToolbarButton
 } from './styles.js';
 
-const capitalize = (string) => {
-    return string
-        ? string.charAt(0).toUpperCase() + string.slice(1)
-        : false;
-}
+const capitalize = string => string && string.charAt(0).toUpperCase() + string.slice(1);
 
-const determinerBefore = (string) => {
-    return ['a', 'e', 'i', 'o', 'u'].includes(string.charAt(0)) ? 'an' : 'a';
+const indefiniteArticleFor = string => {
+    const VOWELS = ['a', 'e', 'i', 'o', 'u'];
+    return VOWELS.includes(string.charAt(0)) ? 'an' : 'a';
 }
 
 const displayGender = (age, gender) => {
@@ -45,7 +45,7 @@ const displayGender = (age, gender) => {
 
 export const createTextDescription = (character) => dedent(
     `${character.givenName.text} ${character.familyName.text}
-    ${capitalize(determinerBefore(character.age.text))} ${character.age.text} ${character.race.text} of ${character.ancestry.text} descent
+    ${capitalize(indefiniteArticleFor(character.age.text))} ${character.age.text} ${character.race.text} of ${character.ancestry.text} descent
     Job: ${character.competency.text} ${character.job.text}
     Appearance: ${character.appearance1.text}, ${character.appearance2.text}
     Mood: ${character.mood.text}
@@ -62,59 +62,136 @@ const AttributeGroupWrapper = styled.div`
     }
 `;
 
+export const ClickableAttributeLabel = styled.span`
+    :hover {
+        color: #999;
+        cursor: pointer;
+        text-decoration: line-through;
+    }
+`;
+
+export const EditableAttributeLabel = styled.span`
+
+`;
+
+const fetchAttributeValues = (character, attributes) => attributes.map(
+    (attribute, index) => {
+        // first element needs to be capitalized regardless of type, check here
+        const first = index === 0;
+
+        if (typeof attribute === 'string') {
+            return first
+                ? capitalize(attribute)
+                : attribute
+
+        } else if (Array.isArray(attribute) && attribute.length === 2) {
+
+            const [attributeKey, separator] = attribute;
+
+            // gender is an edge case, handle here
+            const attributeValue = attributeKey === 'gender'
+                ? displayGender(character.age.text, character.gender.text)
+                : character[attributeKey].text
+
+            const capitalizedAttributeValue = first
+                ? capitalize(attributeValue)
+                : attributeValue
+
+            return [attributeKey, capitalizedAttributeValue, separator]
+
+        // something got borked
+        } else {
+            return 'ERR'
+        }
+    })
+
+const generatedAttributesAsString = ({
+    character,
+    attributes
+}) => fetchAttributeValues(character, attributes)
+    .reduce((string, attribute) => {
+        console.log(attributes)
+        if (typeof attribute === 'string') {
+            return `${string}${attribute}`
+        } else if (Array.isArray(attribute) && attribute.length === 3) {
+            const [, value, separator] = attribute;
+            return `${string}${value}${separator}`
+        } else {
+            return `${string}ERR `
+        }
+    }, '')
+
+const GeneratedAttributes = ({
+    character,
+    reshuffle,
+    attributes
+}) => fetchAttributeValues(character, attributes)
+    .map(attribute => {
+        if (typeof attribute === 'string') {
+            return attribute
+        } else if (Array.isArray(attribute) && attribute.length === 3) {
+            const [key, value, separator] = attribute;
+            return (
+                <Fragment key={key}>
+                    <ClickableAttributeLabel onClick={() => reshuffle(key)}>
+                        {value}
+                    </ClickableAttributeLabel>
+                    {separator}
+                </Fragment>
+            )
+        } else {
+            return <ClickableAttributeLabel>ERR</ClickableAttributeLabel>
+        }
+    })
+
+
 export const CharacterCard = ({
     deleteCharacter,
     reshuffle,
+    setCustomAttribute,
     character,
 }) => {
 
     // declared in CharacterCard scope, so it has access to `character` and `reshuffle` props
     const AttributeGroup = ({
         label,
-        attributes
+        attributes,
+        customAttributeKey
     }) => {
+
+        const editableElement = useRef(null);
+        const switchToCustomAttribute = () => setCustomAttribute(customAttributeKey, generatedAttributesAsString({character, attributes}));
+        const switchToGeneratedAttributes = () => setCustomAttribute(customAttributeKey, false);
+        const changeHandler = () => setCustomAttribute(customAttributeKey, editableElement.current.innerHTML);
+
+        const customAttribute = character.customAttributes[customAttributeKey];
+        const hasCustomAttribute = customAttribute === ''
+            ? true
+            : Boolean(customAttribute);
+
         return (
             <AttributeGroupWrapper>
-                {label && <AttributeGroupLabel>{label} <PenSolid/></AttributeGroupLabel>}
-                {attributes.map((attribute, index) => {
-                    // first element needs to be capitalized regardless of type, check here
-                    const first = index === 0;
-                    
-                    // a string was passed
-                    if (typeof attribute === 'string') {
-                        return first
-                            ? capitalize(attribute)
-                            : attribute
-
-                    // an attribute key and separator pair was passed, render as interactive AttributeLabel
-                    } else if (Array.isArray(attribute) && attribute.length === 2) {
-
-                        const [key, separator] = attribute;
-                        
-                        // gender is an edge case, handle here
-                        const text = key === 'gender'
-                            ? displayGender(character.age.text, character.gender.text)
-                            : character[key].text
-
-                        return (
-                            <Fragment key={key}>
-                                <AttributeLabel
-                                    onClick={() => reshuffle(key)}
-                                >
-                                    {first
-                                        ? capitalize(text)
-                                        : text}
-                                </AttributeLabel>
-                                {separator}
-                            </Fragment>
-                        )
-
-                    // something got borked
-                    } else {
-                        return (<Fragment>ERR </Fragment>)
-                    }
-                })}
-
+                {label &&
+                    <AttributeGroupLabel>
+                        {label} {hasCustomAttribute
+                            ? <span onClick={switchToGeneratedAttributes}>R</span>
+                            : <PenSolid onClick={switchToCustomAttribute}/>
+                        }
+                    </AttributeGroupLabel>
+                }
+                {hasCustomAttribute
+                    ? <EditableAttributeLabel
+                        contentEditable={true}
+                        onBlur={changeHandler} // TODO: better change handling
+                        ref={editableElement}
+                        dangerouslySetInnerHTML={{__html: customAttribute}} // TODO: __SANITIZE__
+                    />
+                    : <GeneratedAttributes
+                        character={character}
+                        reshuffle={reshuffle}
+                        attributes={attributes}
+                    />
+                }
             </AttributeGroupWrapper>
         );
     }
@@ -131,6 +208,7 @@ export const CharacterCard = ({
             </CharacterCardToolbar>
             <NameWrapper>
                 <AttributeGroup
+                    customAttributeKey={'name'}
                     attributes={[
                         ['givenName', ' '],
                         ['familyName', '']
@@ -138,8 +216,9 @@ export const CharacterCard = ({
                 />
             </NameWrapper>
             <AttributeGroup
+                customAttributeKey={'description'}
                 attributes={[
-                    `${determinerBefore(character.age.text)} `,
+                    `${indefiniteArticleFor(character.age.text)} `,
                     ['age', ' '],
                     ['race', ' '],
                     ['gender', ' of '],
@@ -149,49 +228,55 @@ export const CharacterCard = ({
             <CharacterCardRow>
                 <CharacterCardColumn>
                     <AttributeGroup
+                        customAttributeKey={'job'}
                         label={'Job'}
                         attributes={[
-                           ['competency', ' '],
-                           ['job', '']
+                            ['competency', ' '],
+                            ['job', '']
                         ]}
                     />
                     <AttributeGroup
+                        customAttributeKey={'appearance'}
                         label={'Appearance'}
                         attributes={[
-                           ['appearance1', ', '],
-                           ['appearance2', '']
+                            ['appearance1', ', '],
+                            ['appearance2', '']
                         ]}
                     />
                 </CharacterCardColumn>
                 <CharacterCardColumn>
                     <AttributeGroup
+                        customAttributeKey={'mood'}
                         label={'Mood'}
                         attributes={[
-                           ['mood', '']
+                            ['mood', '']
                         ]}
                     />
                     <AttributeGroup
+                        customAttributeKey={'personality'}
                         label={'Personality'}
                         attributes={[
-                           ['personality1', ' and '],
-                           ['personality2', '']
+                            ['personality1', ' and '],
+                            ['personality2', '']
                         ]}
                     />
                 </CharacterCardColumn>
                 <CharacterCardColumn>
                     <AttributeGroup
+                        customAttributeKey={'lifegoal'}
                         label={'Life goal'}
                         attributes={[
-                           ['motivation', '']
+                            ['motivation', '']
                         ]}
                     />
                     <AttributeGroup
+                        customAttributeKey={'relationships'}
                         label={'Relationships'}
                         attributes={[
-                           ['sexuality', ', '],
-                           ['relationship', '']
+                            ['sexuality', ', '],
+                            ['relationship', '']
                         ]}
-                    />  
+                    />
                 </CharacterCardColumn>
             </CharacterCardRow>
         </CharacterCardContainer>

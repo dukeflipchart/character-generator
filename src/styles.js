@@ -214,15 +214,6 @@ export const AttributeGroupLabel = styled.button`
     }
 `;
 
-export const AttributeLabel = styled.span`
-
-    :hover {
-        color: #999;
-        cursor: pointer;
-        text-decoration: line-through;
-    }
-`;
-
 export const NameWrapper = styled.h1`
     font-size: 1.5rem;
     margin-top: 0;

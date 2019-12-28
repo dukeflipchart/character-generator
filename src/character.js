@@ -81,6 +81,7 @@ export const generateCharacter = (worldName) => {
             world = Asa;
     }
     const character = {
+        customAttributes: {},
         gender: chooseAttribute(world.gender),
         ancestry: chooseAttribute(world.ancestry),
         age: chooseAttribute(world.age),
@@ -100,6 +101,16 @@ export const generateCharacter = (worldName) => {
     character.personality2 = chooseAttribute(world.personality, [character.personality1.text], character.personality1.tags);
 
     return character;
+}
+
+export const setCustomAttribute = (character, customAttributeKey, customAttributeValue) => {
+    return {
+        ...character,
+        customAttributes: {
+            ...character.customAttributes,
+            [customAttributeKey]: customAttributeValue
+        }
+    }
 }
 
 export const reshuffle = (worldName, oldAttributes, targetAttribute) => {
