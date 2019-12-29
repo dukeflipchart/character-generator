@@ -22,38 +22,7 @@ import {
     setCustomAttribute
 } from './character';
 
-const attributeConfigs = new Map([
-    ['name', {
-        template: '%givenName% %familyName%'
-    }],
-    ['description', {
-        template: '%INDEFINITE_ARTICLE% %age% %race% %gender% of %ancestry% descent',
-    }],
-    ['job', {
-        template: '%competency% %job%',
-        label: 'job' 
-    }],
-    ['appearance', {
-        template: '%appearance1%, %appearance2%',
-        label: 'appearance' 
-    }],
-    ['mood', {
-        template: '%mood%',
-        label: 'mood' 
-    }],
-    ['personality', {
-        template: '%personality1% and %personality2%',
-        label: 'personality' 
-    }],
-    ['lifeGoal', {
-        template: '%motivation%',
-        label: 'life goal' 
-    }],
-    ['relationships', {
-        template: '%sexuality%, %relationship%',
-        label: 'relationships'
-    }]
-]);
+import { attributeConfigs } from './attribute-configs';
 
 class Board extends React.Component {
 

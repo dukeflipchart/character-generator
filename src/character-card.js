@@ -58,11 +58,12 @@ export const ClickableAttribute = styled.span`
 
 export const EditableAttributes = styled.span``;
 
-const compileTemplate = ({
+const parseTemplate = ({
     template,
     values
-}) =>
-    template
+}) => {
+
+    const [first, ...rest] = template
         .split('%')
         .filter(string => string !== '')
         .reduceRight((acc, token) => {
@@ -87,12 +88,17 @@ const compileTemplate = ({
             }
         }, [])
 
+    return typeof first === 'string'
+        ? [capitalize(first), ...rest]
+        : [[capitalize(first[0]), first[1]], ...rest]
+}
+
 const GeneratedAttributes = ({
     template,
     values,
     reshuffleAttribute
 }) =>
-    compileTemplate({ template, values })
+    parseTemplate({ template, values })
         .map(e => {
             if (Array.isArray(e)) {
                 const [value, key] = e;
@@ -114,7 +120,7 @@ const attributesFromTemplate = ({
     template,
     values
 }) =>
-    compileTemplate({ template, values })
+    parseTemplate({ template, values })
         .map(e => Array.isArray(e) ? e[0] : e)
         .join('')
 
@@ -128,7 +134,7 @@ export const createTextDescription = ({
                 const description = values.customAttributes[id]
                     ? values.customAttributes[id]
                     : attributesFromTemplate({ template, values })
-                return `${label ? `${capitalize(label)}: ` : ''}${capitalize(description)}`
+                return `${label ? `${capitalize(label)}: ` : ''}${description}`
             }
         )
         .join('\n')

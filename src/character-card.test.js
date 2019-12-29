@@ -1,6 +1,8 @@
 import React from 'react';
 import TestRenderer from 'react-test-renderer';
 
+import { attributeConfigs } from './attribute-configs'
+
 import {
     CharacterCard,
     createTextDescription
@@ -64,15 +66,17 @@ const character = {
         "tags": [
             "progressiveness"
         ]
+    },
+    "customAttributes": {
     }
 }
 
 const props = {
     deleteCharacter: () => undefined,
-    reshuffle: () => undefined,
+    reshuffleAttribute: () => undefined,
+    setCustomAttribute: () => undefined,
     character,
-    isAttributeGroupBeingEdited: () => false,
-    setAttributeGroupBeingEdited: () => undefined
+    attributeConfigs
 }
 
 it('renders correctly', () => {
@@ -83,6 +87,6 @@ it('renders correctly', () => {
 })
 
 it('creates the text description correctly',  () => {
-    const text = createTextDescription(character);
+    const text = createTextDescription({ attributeConfigs, values: character });
     expect(text).toMatchSnapshot();
 })
