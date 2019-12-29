@@ -22,6 +22,39 @@ import {
     setCustomAttribute
 } from './character';
 
+const attributeConfigs = new Map([
+    ['name', {
+        template: '%givenName% %familyName%'
+    }],
+    ['description', {
+        template: '%INDEFINITE_ARTICLE% %age% %race% %gender% of %ancestry% descent',
+    }],
+    ['job', {
+        template: '%competency% %job%',
+        label: 'job' 
+    }],
+    ['appearance', {
+        template: '%appearance1%, %appearance2%',
+        label: 'appearance' 
+    }],
+    ['mood', {
+        template: '%mood%',
+        label: 'mood' 
+    }],
+    ['personality', {
+        template: '%personality1% and %personality2%',
+        label: 'personality' 
+    }],
+    ['lifeGoal', {
+        template: '%motivation%',
+        label: 'life goal' 
+    }],
+    ['relationships', {
+        template: '%sexuality%, %relationship%',
+        label: 'relationships'
+    }]
+]);
+
 class Board extends React.Component {
 
     constructor(props) {
@@ -122,6 +155,7 @@ class Board extends React.Component {
                     .map(([uid, character]) => <CharacterCard
                         key={uid}
                         character={character}
+                        attributeConfigs={attributeConfigs}
                         reshuffleAttribute={attribute => this.reshuffleAttribute(uid, attribute)}
                         setCustomAttribute={(customAttributeKey, customAttributeValue) => this.setCustomAttribute(uid, customAttributeKey, customAttributeValue)}
                         deleteCharacter={() => this.deleteCharacter(uid)}

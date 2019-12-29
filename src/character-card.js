@@ -55,7 +55,7 @@ export const ClickableAttribute = styled.span`
     }
 `;
 
-export const EditableAttribute = styled.span``;
+export const EditableAttributes = styled.span``;
 
 const compileTemplate = ({
     template,
@@ -68,30 +68,30 @@ const compileTemplate = ({
             // edge case
             if (token === 'gender') {
                 return [displayGender(values.age.text, values.gender.text), ...acc]
-            // a value exists
+                // a value exists
             } else if (values[token] && values[token].text) {
                 return [[values[token].text, token], ...acc]
-            // a value exists, but is empty
+                // a value exists, but is empty
             } else if (values[token] === false) { // null would be a better choice
                 return ['', ...acc]
-            // other special cases
+                // other special cases
             } else if (token === 'INDEFINITE_ARTICLE') {
                 const firstNonWhitespace = acc.find(e => e !== ' ')
                 return Array.isArray(firstNonWhitespace)
                     ? [indefiniteArticleFor(firstNonWhitespace[0]), ...acc]
                     : [indefiniteArticleFor(firstNonWhitespace), ...acc]
-            // plain text
+                // plain text
             } else {
                 return [token, ...acc]
             }
         }, [])
 
-const AttributesFromTemplate = ({
+const GeneratedAttributes = ({
     template,
     values,
     reshuffleAttribute
-}) => 
-    compileTemplate({template, values})
+}) =>
+    compileTemplate({ template, values })
         .map(e => {
             if (Array.isArray(e)) {
                 const [value, key] = e;
@@ -113,91 +113,95 @@ const attributesFromTemplate = ({
     template,
     values
 }) =>
-    compileTemplate({template, values})
+    compileTemplate({ template, values })
         .map(e => Array.isArray(e) ? e[0] : e)
         .join('')
 
 export const createTextDescription = ({
-    templates,
+    attributeConfigs,
     values
 }) =>
-    Array.from(templates.entries())
+    Array.from(attributeConfigs.entries())
         .map(
-            ([label, template]) => {
-                const description = values.customAttributes[label]
-                    ? values.customAttributes[label]
+            ([id, { label, template }]) => {
+                const description = values.customAttributes[id]
+                    ? values.customAttributes[id]
                     : attributesFromTemplate({ template, values })
-                return `${capitalize(label)}: ${capitalize(description)}`
+                return `${label ? `${capitalize(label)}: ` : ''}${capitalize(description)}`
             }
         )
         .join('\n')
+
+const AttributeGroup = ({
+    id,
+    attributeConfig: {
+        label,
+        template
+    },
+    values,
+    reshuffleAttribute,
+    setCustomAttribute,
+}) => {
+    
+    const editableElement = useRef(null);
+    
+    const switchToCustomAttributes = () => setCustomAttribute(id, attributesFromTemplate({ template, values }));
+    const switchToGeneratedAttributes = () => setCustomAttribute(id, false);
+    const changeHandler = () => setCustomAttribute(id, editableElement.current.innerHTML);
+
+    const customAttribute = values.customAttributes[id];
+    const hasCustomAttribute = customAttribute === ''
+        ? true
+        : Boolean(customAttribute);
+
+    return (
+        <AttributeGroupWrapper>
+            {label &&
+                <AttributeGroupLabel>
+                    {label} {hasCustomAttribute
+                        ? <span onClick={switchToGeneratedAttributes}>R</span> // TODO: UX change or an icon is needed
+                        : <PenSolid onClick={switchToCustomAttributes} />
+                    }
+                </AttributeGroupLabel>
+            }
+            {hasCustomAttribute
+                ? <EditableAttributes
+                    contentEditable={true}
+                    onBlur={changeHandler} // TODO: better change handling
+                    ref={editableElement}
+                    dangerouslySetInnerHTML={{ __html: customAttribute }} // TODO: __SANITIZE__
+                />
+                : <GeneratedAttributes
+                    template={template}
+                    values={values}
+                    reshuffleAttribute={reshuffleAttribute}
+                />
+            }
+        </AttributeGroupWrapper>
+    );
+}
 
 export const CharacterCard = ({
     deleteCharacter,
     reshuffleAttribute,
     setCustomAttribute,
     character,
+    attributeConfigs
 }) => {
 
-    const attributeTemplates = new Map([
-        ['name', '%givenName% %familyName%'],
-        ['description', '%INDEFINITE_ARTICLE% %age% %race% %gender% of %ancestry% descent'],
-        ['job', '%competency% %job%'],
-        ['appearance', '%appearance1%, %appearance2%'],
-        ['mood', '%mood%'],
-        ['personality', '%personality1% and %personality2%'],
-        ['life goal', '%motivation%'],
-        ['relationships', '%sexuality%, %relationship%']
-    ]);
-
-    // declared in CharacterCard scope, so it has access to `character` and `reshuffle` props
-    const AttributeGroup = ({
-        label,
-        showLabel = true
-    }) => {
-        const template = attributeTemplates.get(label);
-
-        const editableElement = useRef(null);
-        const switchToCustomAttribute = () => setCustomAttribute(label, attributesFromTemplate({ template, values: character }));
-        const switchToGeneratedAttributes = () => setCustomAttribute(label, false);
-        const changeHandler = () => setCustomAttribute(label, editableElement.current.innerHTML);
-
-        const customAttribute = character.customAttributes[label];
-        const hasCustomAttribute = customAttribute === ''
-            ? true
-            : Boolean(customAttribute);
-
-        return (
-            <AttributeGroupWrapper>
-                {showLabel &&
-                    <AttributeGroupLabel>
-                        {label} {hasCustomAttribute
-                            ? <span onClick={switchToGeneratedAttributes}>R</span> // TODO: UX change or an icon is needed
-                            : <PenSolid onClick={switchToCustomAttribute} />
-                        }
-                    </AttributeGroupLabel>
-                }
-                {hasCustomAttribute
-                    ? <EditableAttribute
-                        contentEditable={true}
-                        onBlur={changeHandler} // TODO: better change handling
-                        ref={editableElement}
-                        dangerouslySetInnerHTML={{ __html: customAttribute }} // TODO: __SANITIZE__
-                    />
-                    : <AttributesFromTemplate
-                        template={template}
-                        values={character}
-                        reshuffleAttribute={reshuffleAttribute}
-                    />
-                }
-            </AttributeGroupWrapper>
-        );
-    }
+    // helper function that passes props so you don't have to
+    const attributeGroupProps = (id) => ({
+        id,
+        attributeConfig: attributeConfigs.get(id),
+        values: character,
+        reshuffleAttribute,
+        setCustomAttribute,
+    })
 
     return (
         <CharacterCardContainer>
             <CharacterCardToolbar>
-                <ToolbarButton onClick={() => copy(createTextDescription({ templates: attributeTemplates, values: character }))}>
+                <ToolbarButton onClick={() => copy(createTextDescription({ attributeConfigs, values: character }))}>
                     <ClipboardSolid />
                 </ToolbarButton>
                 <ToolbarButton onClick={() => deleteCharacter()}>
@@ -205,21 +209,21 @@ export const CharacterCard = ({
                 </ToolbarButton>
             </CharacterCardToolbar>
             <NameWrapper>
-                <AttributeGroup label={'name'} showLabel={false}/>
+                <AttributeGroup {...attributeGroupProps('name')} />
             </NameWrapper>
-            <AttributeGroup label={'description'} showLabel={false}/>
+            <AttributeGroup {...attributeGroupProps('description')} />
             <CharacterCardRow>
                 <CharacterCardColumn>
-                    <AttributeGroup label={'job'} />
-                    <AttributeGroup label={'appearance'} />
+                    <AttributeGroup {...attributeGroupProps('job')} />
+                    <AttributeGroup {...attributeGroupProps('appearance')} />
                 </CharacterCardColumn>
                 <CharacterCardColumn>
-                    <AttributeGroup label={'mood'} />
-                    <AttributeGroup label={'personality'} />
+                    <AttributeGroup {...attributeGroupProps('mood')} />
+                    <AttributeGroup {...attributeGroupProps('personality')} />
                 </CharacterCardColumn>
                 <CharacterCardColumn>
-                    <AttributeGroup label={'life goal'} />
-                    <AttributeGroup label={'relationships'} />
+                    <AttributeGroup {...attributeGroupProps('lifeGoal')} />
+                    <AttributeGroup {...attributeGroupProps('relationships')} />
                 </CharacterCardColumn>
             </CharacterCardRow>
         </CharacterCardContainer>
