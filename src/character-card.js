@@ -65,15 +65,22 @@ const compileTemplate = ({
         .split('%')
         .filter(string => string !== '')
         .reduceRight((acc, token) => {
+            // edge case
             if (token === 'gender') {
                 return [displayGender(values.age.text, values.gender.text), ...acc]
-            } else if (values[token]) {
+            // a value exists
+            } else if (values[token] && values[token].text) {
                 return [[values[token].text, token], ...acc]
+            // a value exists, but is empty
+            } else if (values[token] === false) { // null would be a better choice
+                return ['', ...acc]
+            // other special cases
             } else if (token === 'INDEFINITE_ARTICLE') {
                 const firstNonWhitespace = acc.find(e => e !== ' ')
                 return Array.isArray(firstNonWhitespace)
                     ? [indefiniteArticleFor(firstNonWhitespace[0]), ...acc]
                     : [indefiniteArticleFor(firstNonWhitespace), ...acc]
+            // plain text
             } else {
                 return [token, ...acc]
             }
@@ -133,10 +140,10 @@ export const CharacterCard = ({
 }) => {
 
     const attributeTemplates = new Map([
-        ['name', '%givenName% %familyName'],
+        ['name', '%givenName% %familyName%'],
         ['description', '%INDEFINITE_ARTICLE% %age% %race% %gender% of %ancestry% descent'],
         ['job', '%competency% %job%'],
-        ['appearance', '%appearance1%, %appearance2'],
+        ['appearance', '%appearance1%, %appearance2%'],
         ['mood', '%mood%'],
         ['personality', '%personality1% and %personality2%'],
         ['life goal', '%motivation%'],
