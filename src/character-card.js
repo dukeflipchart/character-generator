@@ -41,17 +41,6 @@ const displayGender = (age, gender) => {
     }
 }
 
-export const createTextDescription = (character) => dedent(
-    `${character.givenName.text} ${character.familyName.text}
-    ${capitalize(indefiniteArticleFor(character.age.text))} ${character.age.text} ${character.race.text} of ${character.ancestry.text} descent
-    Job: ${character.competency.text} ${character.job.text}
-    Appearance: ${character.appearance1.text}, ${character.appearance2.text}
-    Mood: ${character.mood.text}
-    Personality: ${character.personality1.text}, ${character.personality2.text}
-    Life goal: ${character.motivation.text}
-    Relationships: ${character.sexuality.text}, ${character.relationship.text}`
-)
-
 const AttributeGroupWrapper = styled.div`
     :not(:last-child) {
         margin-bottom: 1.65rem;
@@ -68,75 +57,73 @@ export const ClickableAttribute = styled.span`
 
 export const EditableAttribute = styled.span``;
 
-const fetchAttributeValues = (character, attributes) => attributes.map(
-    (attribute, index) => {
-        // first element needs to be capitalized regardless of type, check here
-        const first = index === 0;
+const compileTemplate = ({
+    template,
+    values
+}) =>
+    template
+        .split('%')
+        .filter(string => string !== '')
+        .reduceRight((acc, token) => {
+            if (token === 'gender') {
+                return [displayGender(values.age.text, values.gender.text), ...acc]
+            } else if (values[token]) {
+                return [[values[token].text, token], ...acc]
+            } else if (token === 'INDEFINITE_ARTICLE') {
+                const firstNonWhitespace = acc.find(e => e !== ' ')
+                return Array.isArray(firstNonWhitespace)
+                    ? [indefiniteArticleFor(firstNonWhitespace[0]), ...acc]
+                    : [indefiniteArticleFor(firstNonWhitespace), ...acc]
+            } else {
+                return [token, ...acc]
+            }
+        }, [])
 
-        if (typeof attribute === 'string') {
-            return first
-                ? capitalize(attribute)
-                : attribute
+const AttributesFromTemplate = ({
+    template,
+    values,
+    reshuffleAttribute
+}) => 
+    compileTemplate({template, values})
+        .map(e => {
+            if (Array.isArray(e)) {
+                const [value, key] = e;
+                return (
+                    <Fragment key={key}>
+                        <ClickableAttribute onClick={() => reshuffleAttribute(key)}>
+                            {value}
+                        </ClickableAttribute>
+                    </Fragment>
+                )
+            } else if (typeof e === 'string') {
+                return e
+            } else {
+                return 'ERR'
+            }
+        })
 
-        } else if (Array.isArray(attribute) && attribute.length === 2) {
+const attributesFromTemplate = ({
+    template,
+    values
+}) =>
+    compileTemplate({template, values})
+        .map(e => Array.isArray(e) ? e[0] : e)
+        .join('')
 
-            const [attributeKey, separator] = attribute;
-
-            // gender is an edge case, handle here
-            const attributeValue = attributeKey === 'gender'
-                ? displayGender(character.age.text, character.gender.text)
-                : character[attributeKey].text
-
-            const capitalizedAttributeValue = first
-                ? capitalize(attributeValue)
-                : attributeValue
-
-            return [attributeKey, capitalizedAttributeValue, separator]
-
-            // something got borked
-        } else {
-            return 'ERR'
-        }
-    })
-
-const generatedAttributesAsString = ({
-    character,
-    attributes
-}) => fetchAttributeValues(character, attributes)
-    .reduce((string, attribute) => {
-        if (typeof attribute === 'string') {
-            return `${string}${attribute}`
-        } else if (Array.isArray(attribute) && attribute.length === 3) {
-            const [, value, separator] = attribute;
-            return `${string}${value}${separator}`
-        } else {
-            return `${string}ERR `
-        }
-    }, '')
-
-const GeneratedAttributes = ({
-    character,
-    reshuffleAttribute,
-    attributes
-}) => fetchAttributeValues(character, attributes)
-    .map(attribute => {
-        if (typeof attribute === 'string') {
-            return attribute
-        } else if (Array.isArray(attribute) && attribute.length === 3) {
-            const [key, value, separator] = attribute;
-            return (
-                <Fragment key={key}>
-                    <ClickableAttribute onClick={() => reshuffleAttribute(key)}>
-                        {value}
-                    </ClickableAttribute>
-                    {separator}
-                </Fragment>
-            )
-        } else {
-            return <ClickableAttribute>ERR</ClickableAttribute>
-        }
-    })
-
+export const createTextDescription = ({
+    templates,
+    values
+}) =>
+    Array.from(templates.entries())
+        .map(
+            ([label, template]) => {
+                const description = values.customAttributes[label]
+                    ? values.customAttributes[label]
+                    : attributesFromTemplate({ template, values })
+                return `${capitalize(label)}: ${capitalize(description)}`
+            }
+        )
+        .join('\n')
 
 export const CharacterCard = ({
     deleteCharacter,
@@ -145,122 +132,37 @@ export const CharacterCard = ({
     character,
 }) => {
 
-    /**
-     * The same data needs to be rendered as string (when a character desc. is copied to the clipboard),
-     * and rendered as a string. To stay DRY, instead of recreating the same templates twice in JSX and
-     * string templates, a simple config was created that describes attribute groups, in order.
-     * This reduces flexibility, but makes maintanence easier and code nicer :D This approach will also
-     * come in handy if characters need to be exported in other formats, too.
-     */
-    const attributeGroupConfigs = new Map([
-        [
-            'name',
-            {
-                attributes: [
-                    ['givenName', ' '],
-                    ['familyName', '']
-                ]
-            }
-        ],
-        [
-            'description',
-            {
-                attributes: [
-                    /**
-                     * NOTE: this function call here is the only reason why attributeGroupConfigs need to be
-                     * declared in the scope of CharacterCard.
-                     * To fix this, one can get rid of the indefinite article (easy, clean), or pass a special
-                     * string, e.g. 'INDEFINITE_ARTICLE', which will be parsed by fetchAttributeValues, replaced
-                     * with an indefinite article. This is not ugly, but will add a tiny bit of complexity, and
-                     * reduce flexibility.
-                     */
-                    `${indefiniteArticleFor(character.age.text)} `,
-                    ['age', ' '],
-                    ['race', ' '],
-                    ['gender', ' of '],
-                    ['ancestry', ' descent'],
-                ]
-            }
-        ],
-        [
-            'job',
-            {
-                label: 'Job',
-                attributes: [
-                    ['competency', ' '],
-                    ['job', '']
-                ]
-            }
-        ],
-        [
-            'appearance',
-            {
-                label: 'Appearance',
-                attributes: [
-                    ['appearance1', ', '],
-                    ['appearance2', '']
-                ]
-            }
-        ],
-        [
-            'mood',
-            {
-                label: 'Mood',
-                attributes: [
-                    ['mood', '']
-                ]
-            }
-        ],
-        [
-            'personality',
-            {
-                label: 'Personality',
-                attributes: [
-                    ['personality1', ' and '],
-                    ['personality2', '']
-                ]
-            }
-        ],
-        [
-            'lifegoal',
-            {
-                label: 'Life goal',
-                attributes: [
-                    ['motivation', '']
-                ]
-            }
-        ],
-        [
-            'relationships',
-            {
-                label: 'Relationships',
-                attributes: [
-                    ['sexuality', ', '],
-                    ['relationship', '']
-                ]
-            }
-        ]
+    const attributeTemplates = new Map([
+        ['name', '%givenName% %familyName'],
+        ['description', '%INDEFINITE_ARTICLE% %age% %race% %gender% of %ancestry% descent'],
+        ['job', '%competency% %job%'],
+        ['appearance', '%appearance1%, %appearance2'],
+        ['mood', '%mood%'],
+        ['personality', '%personality1% and %personality2%'],
+        ['life goal', '%motivation%'],
+        ['relationships', '%sexuality%, %relationship%']
     ]);
 
     // declared in CharacterCard scope, so it has access to `character` and `reshuffle` props
     const AttributeGroup = ({
-        id
+        label,
+        showLabel = true
     }) => {
-        const { label, attributes } = attributeGroupConfigs.get(id);
+        const template = attributeTemplates.get(label);
 
         const editableElement = useRef(null);
-        const switchToCustomAttribute = () => setCustomAttribute(id, generatedAttributesAsString({ character, attributes }));
-        const switchToGeneratedAttributes = () => setCustomAttribute(id, false);
-        const changeHandler = () => setCustomAttribute(id, editableElement.current.innerHTML);
+        const switchToCustomAttribute = () => setCustomAttribute(label, attributesFromTemplate({ template, values: character }));
+        const switchToGeneratedAttributes = () => setCustomAttribute(label, false);
+        const changeHandler = () => setCustomAttribute(label, editableElement.current.innerHTML);
 
-        const customAttribute = character.customAttributes[id];
+        const customAttribute = character.customAttributes[label];
         const hasCustomAttribute = customAttribute === ''
             ? true
             : Boolean(customAttribute);
 
         return (
             <AttributeGroupWrapper>
-                {label &&
+                {showLabel &&
                     <AttributeGroupLabel>
                         {label} {hasCustomAttribute
                             ? <span onClick={switchToGeneratedAttributes}>R</span> // TODO: UX change or an icon is needed
@@ -275,10 +177,10 @@ export const CharacterCard = ({
                         ref={editableElement}
                         dangerouslySetInnerHTML={{ __html: customAttribute }} // TODO: __SANITIZE__
                     />
-                    : <GeneratedAttributes
-                        character={character}
+                    : <AttributesFromTemplate
+                        template={template}
+                        values={character}
                         reshuffleAttribute={reshuffleAttribute}
-                        attributes={attributes}
                     />
                 }
             </AttributeGroupWrapper>
@@ -288,7 +190,7 @@ export const CharacterCard = ({
     return (
         <CharacterCardContainer>
             <CharacterCardToolbar>
-                <ToolbarButton onClick={() => copy(createTextDescription(character))}>
+                <ToolbarButton onClick={() => copy(createTextDescription({ templates: attributeTemplates, values: character }))}>
                     <ClipboardSolid />
                 </ToolbarButton>
                 <ToolbarButton onClick={() => deleteCharacter()}>
@@ -296,21 +198,21 @@ export const CharacterCard = ({
                 </ToolbarButton>
             </CharacterCardToolbar>
             <NameWrapper>
-                <AttributeGroup id={'name'} />
+                <AttributeGroup label={'name'} showLabel={false}/>
             </NameWrapper>
-            <AttributeGroup id={'description'} />
+            <AttributeGroup label={'description'} showLabel={false}/>
             <CharacterCardRow>
                 <CharacterCardColumn>
-                    <AttributeGroup id={'job'} />
-                    <AttributeGroup id={'appearance'} />
+                    <AttributeGroup label={'job'} />
+                    <AttributeGroup label={'appearance'} />
                 </CharacterCardColumn>
                 <CharacterCardColumn>
-                    <AttributeGroup id={'mood'} />
-                    <AttributeGroup id={'personality'} />
+                    <AttributeGroup label={'mood'} />
+                    <AttributeGroup label={'personality'} />
                 </CharacterCardColumn>
                 <CharacterCardColumn>
-                    <AttributeGroup id={'lifegoal'} />
-                    <AttributeGroup id={'relationships'} />
+                    <AttributeGroup label={'life goal'} />
+                    <AttributeGroup label={'relationships'} />
                 </CharacterCardColumn>
             </CharacterCardRow>
         </CharacterCardContainer>
