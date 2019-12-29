@@ -6,7 +6,6 @@
   "dependencies": {
     "@svgr/cli": "^4.3.3",
     "clipboard-copy": "^3.1.0",
-    "dedent": "^0.7.0",
     "gh-pages": "^2.1.1",
     "polished": "^3.4.2",
     "react": "^16.2.0",

@@ -6,7 +6,6 @@ import React, {
 } from 'react';
 import styled from 'styled-components';
 
-import dedent from 'dedent';
 import copy from 'clipboard-copy';
 
 import ClipboardSolid from './icons/ClipboardSolid';
