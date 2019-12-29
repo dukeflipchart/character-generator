@@ -1,5 +1,7 @@
 import React, {
     Fragment,
+    useState,
+    useEffect,
     useRef
 } from 'react';
 import styled from 'styled-components';
@@ -144,10 +146,23 @@ const AttributeGroup = ({
 }) => {
     
     const editableElement = useRef(null);
-    
-    const switchToCustomAttributes = () => setCustomAttribute(id, attributesFromTemplate({ template, values }));
-    const switchToGeneratedAttributes = () => setCustomAttribute(id, false);
-    const changeHandler = () => setCustomAttribute(id, editableElement.current.innerHTML);
+    const [editMode, setEditMode] = useState(false);
+
+    useEffect(() => {
+        if (editMode && editableElement.current) {
+            editableElement.current.focus();
+        }
+    })
+
+    const switchToCustomAttributes = () => {
+        setCustomAttribute(id, attributesFromTemplate({ template, values }));
+        setEditMode(true);
+    };
+
+    const changeHandler = () => {
+        setCustomAttribute(id, editableElement.current.innerHTML)
+        setEditMode(false);
+    };
 
     const customAttribute = values.customAttributes[id];
     const hasCustomAttribute = customAttribute === ''
@@ -158,10 +173,7 @@ const AttributeGroup = ({
         <AttributeGroupWrapper>
             {label &&
                 <AttributeGroupLabel>
-                    {label} {hasCustomAttribute
-                        ? <span onClick={switchToGeneratedAttributes}>R</span> // TODO: UX change or an icon is needed
-                        : <PenSolid onClick={switchToCustomAttributes} />
-                    }
+                    {label} {!hasCustomAttribute &&<PenSolid onClick={switchToCustomAttributes} />}
                 </AttributeGroupLabel>
             }
             {hasCustomAttribute

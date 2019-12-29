@@ -103,12 +103,14 @@ export const generateCharacter = (worldName) => {
     return character;
 }
 
-export const setCustomAttribute = (character, customAttributeKey, customAttributeValue) => {
+export const setCustomAttribute = (character, customAttributeKey, customAttributeValue) => { 
     return {
         ...character,
         customAttributes: {
             ...character.customAttributes,
-            [customAttributeKey]: customAttributeValue
+            [customAttributeKey]: customAttributeValue && customAttributeValue !== ''
+                ? customAttributeValue
+                : undefined
         }
     }
 }
