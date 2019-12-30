@@ -58,6 +58,19 @@ export const ClickableAttribute = styled.span`
 
 export const EditableAttributes = styled.span``;
 
+/**
+ * A hackjob of a template parser, that knows a bit of grammar.
+ * Converts templates into a format that can be rendered as text, html,
+ * or anything else if the need arises.
+ * Templates are plain strings.
+ * Anything between %% delimiters will be replaced by the corresponding
+ * value from the `values` object passed.
+ * %INDEFINITE_ARTICLE% will be replaced with the proper article for the
+ * word following it.
+ * If any other grammar issues arise (pronouns, etc.) they can be solved here.
+ * If the need for i18n arises, grammar rules should probably be pluggable,
+ * and different for each language.
+ */
 const parseTemplate = ({
     template,
     values
@@ -93,6 +106,9 @@ const parseTemplate = ({
         : [[capitalize(first[0]), first[1]], ...rest]
 }
 
+/**
+ * A react component that renders the output of `parseTemplate` as HTML.
+ */
 const GeneratedAttributes = ({
     template,
     values,
@@ -116,7 +132,10 @@ const GeneratedAttributes = ({
             }
         })
 
-const attributesFromTemplate = ({
+/**
+ * A function that renders the output of `parseTemplate` as plain text.
+ */        
+const generatedAttributes = ({
     template,
     values
 }) =>
@@ -133,7 +152,7 @@ export const createTextDescription = ({
             ([id, { label, template }]) => {
                 const description = values.customAttributes[id]
                     ? values.customAttributes[id]
-                    : attributesFromTemplate({ template, values })
+                    : generatedAttributes({ template, values })
                 return `${label ? `${capitalize(label)}: ` : ''}${description}`
             }
         )
@@ -160,7 +179,7 @@ const AttributeGroup = ({
     })
 
     const switchToCustomAttributes = () => {
-        setCustomAttribute(id, attributesFromTemplate({ template, values }));
+        setCustomAttribute(id, generatedAttributes({ template, values }));
         setEditMode(true);
     };
 
@@ -170,18 +189,15 @@ const AttributeGroup = ({
     };
 
     const customAttribute = values.customAttributes[id];
-    const hasCustomAttribute = customAttribute === ''
-        ? true
-        : Boolean(customAttribute);
 
     return (
         <AttributeGroupWrapper>
             {label &&
                 <AttributeGroupLabel>
-                    {label} {!hasCustomAttribute &&<PenSolid onClick={switchToCustomAttributes} />}
+                    {label} {!customAttribute &&<PenSolid onClick={switchToCustomAttributes} />}
                 </AttributeGroupLabel>
             }
-            {hasCustomAttribute
+            {customAttribute
                 ? <EditableAttributes
                     contentEditable={true}
                     onBlur={changeHandler} // TODO: better change handling

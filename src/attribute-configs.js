@@ -1,3 +1,12 @@
+/**
+ * Configs that describe how to turn character attributes into human-readable
+ * sentences.
+ * A js Map was used, because it's an iterable and a key-value store
+ * at the same time.
+ * If the need for i18n arises, create separate attributeConfigs for each
+ * language.
+ */
+
 export const attributeConfigs = new Map([
     ['name', {
         template: '%givenName% %familyName%'
