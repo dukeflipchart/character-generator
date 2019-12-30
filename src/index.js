@@ -49,33 +49,39 @@ class Board extends React.Component {
         });
     }
 
-    deleteCharacter(uid) {
-        const {
-            [uid]: removedCharacter,
-            ...newCharacters
-        } = this.state.characters;
-
-        this.setState({
-            characters: newCharacters
-        });
+    deleteCharacterHandler(uid) {
+        return () => {
+            const {
+                [uid]: removedCharacter,
+                ...newCharacters
+            } = this.state.characters;
+    
+            this.setState({
+                characters: newCharacters
+            });
+        }
     }
 
-    reshuffleAttribute(uid, attribute) {
-        this.setState({
-            characters: {
-                ...this.state.characters,
-                [uid]: reshuffleAttribute(this.state.worldName, this.state.characters[uid], attribute)
-            }
-        });
+    reshuffleAttributeHandler(uid) {
+        return attribute => {
+            this.setState({
+                characters: {
+                    ...this.state.characters,
+                    [uid]: reshuffleAttribute(this.state.worldName, this.state.characters[uid], attribute)
+                }
+            });
+        }
     }
 
-    setCustomAttribute(uid, customAttributeKey, customAttributeValue) {
-        this.setState({
-            characters: {
-                ...this.state.characters,
-                [uid]: setCustomAttribute(this.state.characters[uid], customAttributeKey, customAttributeValue)
-            }
-        })
+    setCustomAttributeHandler(uid) {
+        return (customAttributeKey, customAttributeValue) => {
+            this.setState({
+                characters: {
+                    ...this.state.characters,
+                    [uid]: setCustomAttribute(this.state.characters[uid], customAttributeKey, customAttributeValue)
+                }
+            })
+        }
     }
 
     handleWorldChange(event) {
@@ -125,9 +131,9 @@ class Board extends React.Component {
                         key={uid}
                         character={character}
                         attributeConfigs={attributeConfigs}
-                        reshuffleAttribute={attribute => this.reshuffleAttribute(uid, attribute)}
-                        setCustomAttribute={(customAttributeKey, customAttributeValue) => this.setCustomAttribute(uid, customAttributeKey, customAttributeValue)}
-                        deleteCharacter={() => this.deleteCharacter(uid)}
+                        reshuffleAttribute={this.reshuffleAttributeHandler(uid)}
+                        setCustomAttribute={this.setCustomAttributeHandler(uid)}
+                        deleteCharacter={this.deleteCharacterHandler(uid)}
                     />)
                 }
             </BoardContainer> 
