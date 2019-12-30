@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { darken } from 'polished';
 
-const colors = {
+export const colors = {
     bard: '#E052E0',
     clericRed: '#EB4747',
     druid: '#60DF20',
@@ -176,15 +176,6 @@ export const ToolbarButton = styled(Button)`
 
 export const ToolbarDeleteButton = styled.button``;
 
-
-export const AttributeGroup = styled.div`
-    ${props => props.isBeingEdited && `color: ${colors.clericRed};`}
-    
-    :not(:last-child) {
-        margin-bottom: 1.65rem;
-    }
-`;
-
 export const AttributeGroupLabel = styled.button`
     display: block;
     background-color: transparent;
@@ -221,22 +212,6 @@ export const AttributeGroupLabel = styled.button`
             opacity: 1;
         }
     }
-`;
-
-export const AttributeLabel = styled.span`
-
-    :hover {
-        color: #999;
-        cursor: pointer;
-        text-decoration: line-through;
-    }
-`;
-
-export const AttributeList = styled.ul`
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-left: 0;
-    list-style-type: none;
 `;
 
 export const NameWrapper = styled.h1`

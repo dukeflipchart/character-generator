@@ -1,0 +1,320 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`creates the text description correctly 1`] = `
+"Jai 
+A very old elf man of Kitharan descent
+Job: Very talented paladin
+Appearance: Athletic, has several piercings
+Mood: Amused
+Personality: Impulsive, progressive
+Life goal: To teach others
+Relationships: Heterosexual, in a toxic relationship"
+`;
+
+exports[`renders correctly 1`] = `
+<div
+  className="sc-bwzfXH eIfjiW"
+>
+  <div
+    className="sc-iwsKbI hZghQ"
+  >
+    <button
+      className="sc-htpNat sc-gZMcBi bsNiJL"
+      onClick={[Function]}
+    >
+      <svg
+        aria-hidden="true"
+        className="clipboard-solid_svg__svg-inline--fa clipboard-solid_svg__fa-clipboard clipboard-solid_svg__fa-w-12"
+        data-icon="clipboard"
+        data-prefix="fas"
+        viewBox="0 0 384 512"
+      >
+        <path
+          d="M384 112v352c0 26.51-21.49 48-48 48H48c-26.51 0-48-21.49-48-48V112c0-26.51 21.49-48 48-48h80c0-35.29 28.71-64 64-64s64 28.71 64 64h80c26.51 0 48 21.49 48 48zM192 40c-13.255 0-24 10.745-24 24s10.745 24 24 24 24-10.745 24-24-10.745-24-24-24m96 114v-20a6 6 0 00-6-6H102a6 6 0 00-6 6v20a6 6 0 006 6h180a6 6 0 006-6z"
+          fill="currentColor"
+        />
+      </svg>
+    </button>
+    <button
+      className="sc-htpNat sc-gZMcBi bsNiJL"
+      onClick={[Function]}
+    >
+      <svg
+        aria-hidden="true"
+        className="trash-solid_svg__svg-inline--fa trash-solid_svg__fa-trash trash-solid_svg__fa-w-14"
+        data-icon="trash"
+        data-prefix="fas"
+        viewBox="0 0 448 512"
+      >
+        <path
+          d="M432 32H312l-9.4-18.7A24 24 0 00281.1 0H166.8a23.72 23.72 0 00-21.4 13.3L136 32H16A16 16 0 000 48v32a16 16 0 0016 16h416a16 16 0 0016-16V48a16 16 0 00-16-16zM53.2 467a48 48 0 0047.9 45h245.8a48 48 0 0047.9-45L416 128H32z"
+          fill="currentColor"
+        />
+      </svg>
+    </button>
+  </div>
+  <h1
+    className="sc-jTzLTM iVgTwl"
+  >
+    <div
+      className="sc-cSHVUG bFFreH"
+    >
+      <span
+        className="sc-kAzzGY kxJWRz"
+        onClick={[Function]}
+      >
+        Jai
+      </span>
+       
+      
+    </div>
+  </h1>
+  <div
+    className="sc-cSHVUG bFFreH"
+  >
+    A
+     
+    <span
+      className="sc-kAzzGY kxJWRz"
+      onClick={[Function]}
+    >
+      very old
+    </span>
+     
+    <span
+      className="sc-kAzzGY kxJWRz"
+      onClick={[Function]}
+    >
+      elf
+    </span>
+     
+    man
+     of 
+    <span
+      className="sc-kAzzGY kxJWRz"
+      onClick={[Function]}
+    >
+      Kitharan
+    </span>
+     descent
+  </div>
+  <div
+    className="sc-fjdhpX iYnJBp"
+  >
+    <div
+      className="sc-jzJRlG jBoRzS"
+    >
+      <div
+        className="sc-cSHVUG bFFreH"
+      >
+        <button
+          className="sc-VigVT ezYRPj"
+        >
+          job
+           
+          <svg
+            aria-hidden="true"
+            className="pen-solid_svg__svg-inline--fa pen-solid_svg__fa-pen pen-solid_svg__fa-w-16"
+            data-icon="pen"
+            data-prefix="fas"
+            onClick={[Function]}
+            viewBox="0 0 512 512"
+          >
+            <path
+              d="M290.74 93.24l128.02 128.02-277.99 277.99-114.14 12.6C11.35 513.54-1.56 500.62.14 485.34l12.7-114.22 277.9-277.88zm207.2-19.06l-60.11-60.11c-18.75-18.75-49.16-18.75-67.91 0l-56.55 56.55 128.02 128.02 56.55-56.55c18.75-18.76 18.75-49.16 0-67.91z"
+              fill="currentColor"
+            />
+          </svg>
+        </button>
+        <span
+          className="sc-kAzzGY kxJWRz"
+          onClick={[Function]}
+        >
+          Very talented
+        </span>
+         
+        <span
+          className="sc-kAzzGY kxJWRz"
+          onClick={[Function]}
+        >
+          paladin
+        </span>
+      </div>
+      <div
+        className="sc-cSHVUG bFFreH"
+      >
+        <button
+          className="sc-VigVT ezYRPj"
+        >
+          appearance
+           
+          <svg
+            aria-hidden="true"
+            className="pen-solid_svg__svg-inline--fa pen-solid_svg__fa-pen pen-solid_svg__fa-w-16"
+            data-icon="pen"
+            data-prefix="fas"
+            onClick={[Function]}
+            viewBox="0 0 512 512"
+          >
+            <path
+              d="M290.74 93.24l128.02 128.02-277.99 277.99-114.14 12.6C11.35 513.54-1.56 500.62.14 485.34l12.7-114.22 277.9-277.88zm207.2-19.06l-60.11-60.11c-18.75-18.75-49.16-18.75-67.91 0l-56.55 56.55 128.02 128.02 56.55-56.55c18.75-18.76 18.75-49.16 0-67.91z"
+              fill="currentColor"
+            />
+          </svg>
+        </button>
+        <span
+          className="sc-kAzzGY kxJWRz"
+          onClick={[Function]}
+        >
+          Athletic
+        </span>
+        , 
+        <span
+          className="sc-kAzzGY kxJWRz"
+          onClick={[Function]}
+        >
+          has several piercings
+        </span>
+      </div>
+    </div>
+    <div
+      className="sc-jzJRlG jBoRzS"
+    >
+      <div
+        className="sc-cSHVUG bFFreH"
+      >
+        <button
+          className="sc-VigVT ezYRPj"
+        >
+          mood
+           
+          <svg
+            aria-hidden="true"
+            className="pen-solid_svg__svg-inline--fa pen-solid_svg__fa-pen pen-solid_svg__fa-w-16"
+            data-icon="pen"
+            data-prefix="fas"
+            onClick={[Function]}
+            viewBox="0 0 512 512"
+          >
+            <path
+              d="M290.74 93.24l128.02 128.02-277.99 277.99-114.14 12.6C11.35 513.54-1.56 500.62.14 485.34l12.7-114.22 277.9-277.88zm207.2-19.06l-60.11-60.11c-18.75-18.75-49.16-18.75-67.91 0l-56.55 56.55 128.02 128.02 56.55-56.55c18.75-18.76 18.75-49.16 0-67.91z"
+              fill="currentColor"
+            />
+          </svg>
+        </button>
+        <span
+          className="sc-kAzzGY kxJWRz"
+          onClick={[Function]}
+        >
+          Amused
+        </span>
+      </div>
+      <div
+        className="sc-cSHVUG bFFreH"
+      >
+        <button
+          className="sc-VigVT ezYRPj"
+        >
+          personality
+           
+          <svg
+            aria-hidden="true"
+            className="pen-solid_svg__svg-inline--fa pen-solid_svg__fa-pen pen-solid_svg__fa-w-16"
+            data-icon="pen"
+            data-prefix="fas"
+            onClick={[Function]}
+            viewBox="0 0 512 512"
+          >
+            <path
+              d="M290.74 93.24l128.02 128.02-277.99 277.99-114.14 12.6C11.35 513.54-1.56 500.62.14 485.34l12.7-114.22 277.9-277.88zm207.2-19.06l-60.11-60.11c-18.75-18.75-49.16-18.75-67.91 0l-56.55 56.55 128.02 128.02 56.55-56.55c18.75-18.76 18.75-49.16 0-67.91z"
+              fill="currentColor"
+            />
+          </svg>
+        </button>
+        <span
+          className="sc-kAzzGY kxJWRz"
+          onClick={[Function]}
+        >
+          Impulsive
+        </span>
+        , 
+        <span
+          className="sc-kAzzGY kxJWRz"
+          onClick={[Function]}
+        >
+          progressive
+        </span>
+      </div>
+    </div>
+    <div
+      className="sc-jzJRlG jBoRzS"
+    >
+      <div
+        className="sc-cSHVUG bFFreH"
+      >
+        <button
+          className="sc-VigVT ezYRPj"
+        >
+          life goal
+           
+          <svg
+            aria-hidden="true"
+            className="pen-solid_svg__svg-inline--fa pen-solid_svg__fa-pen pen-solid_svg__fa-w-16"
+            data-icon="pen"
+            data-prefix="fas"
+            onClick={[Function]}
+            viewBox="0 0 512 512"
+          >
+            <path
+              d="M290.74 93.24l128.02 128.02-277.99 277.99-114.14 12.6C11.35 513.54-1.56 500.62.14 485.34l12.7-114.22 277.9-277.88zm207.2-19.06l-60.11-60.11c-18.75-18.75-49.16-18.75-67.91 0l-56.55 56.55 128.02 128.02 56.55-56.55c18.75-18.76 18.75-49.16 0-67.91z"
+              fill="currentColor"
+            />
+          </svg>
+        </button>
+        <span
+          className="sc-kAzzGY kxJWRz"
+          onClick={[Function]}
+        >
+          To teach others
+        </span>
+      </div>
+      <div
+        className="sc-cSHVUG bFFreH"
+      >
+        <button
+          className="sc-VigVT ezYRPj"
+        >
+          relationships
+           
+          <svg
+            aria-hidden="true"
+            className="pen-solid_svg__svg-inline--fa pen-solid_svg__fa-pen pen-solid_svg__fa-w-16"
+            data-icon="pen"
+            data-prefix="fas"
+            onClick={[Function]}
+            viewBox="0 0 512 512"
+          >
+            <path
+              d="M290.74 93.24l128.02 128.02-277.99 277.99-114.14 12.6C11.35 513.54-1.56 500.62.14 485.34l12.7-114.22 277.9-277.88zm207.2-19.06l-60.11-60.11c-18.75-18.75-49.16-18.75-67.91 0l-56.55 56.55 128.02 128.02 56.55-56.55c18.75-18.76 18.75-49.16 0-67.91z"
+              fill="currentColor"
+            />
+          </svg>
+        </button>
+        <span
+          className="sc-kAzzGY kxJWRz"
+          onClick={[Function]}
+        >
+          Heterosexual
+        </span>
+        , 
+        <span
+          className="sc-kAzzGY kxJWRz"
+          onClick={[Function]}
+        >
+          in a toxic relationship
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;
