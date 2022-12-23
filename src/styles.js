@@ -176,10 +176,8 @@ export const ToolbarButton = styled(Button)`
 
 export const ToolbarDeleteButton = styled.button``;
 
-export const AttributeGroupLabel = styled.button`
+export const AttributeGroupLabel = styled.h4`
     display: block;
-    background-color: transparent;
-    border: none;
     font-family: 'Montserrat', sans-serif;
     font-size: 0.75rem;
     line-height: 2.2;
@@ -187,31 +185,6 @@ export const AttributeGroupLabel = styled.button`
     margin-top: 0;
     margin-bottom: 0;
     padding: 0;
-    cursor: pointer;
-    outline: none;
-
-    svg {
-        opacity: 0;
-        width: 0.6rem;
-        height: 0.6rem;
-    }
-
-    :hover,
-    :focus {
-        color: ${colors.wizardBlue}
-
-        svg {
-            opacity: 1;
-        }
-    }
-    
-    :active {
-        color: ${darken(0.1, colors.wizardBlue)}
-
-        svg {
-            opacity: 1;
-        }
-    }
 `;
 
 export const NameWrapper = styled.h1`

@@ -1,15 +1,11 @@
 import React, {
-    Fragment,
-    useState,
-    useEffect,
-    useRef
+    Fragment
 } from 'react';
 import styled from 'styled-components';
 
 import copy from 'clipboard-copy';
 
 import ClipboardSolid from './icons/ClipboardSolid';
-import PenSolid from './icons/PenSolid';
 import TrashSolid from './icons/TrashSolid';
 
 import {
@@ -55,8 +51,6 @@ export const ClickableAttribute = styled.span`
         text-decoration: line-through;
     }
 `;
-
-export const EditableAttributes = styled.span``;
 
 /**
  * A hackjob of a template parser, that knows a bit of grammar.
@@ -165,51 +159,21 @@ const AttributeGroup = ({
         template
     },
     values,
-    reshuffleAttribute,
-    setCustomAttribute,
+    reshuffleAttribute
 }) => {
-    
-    const editableElement = useRef(null);
-    const [editMode, setEditMode] = useState(false);
-
-    useEffect(() => {
-        if (editMode && editableElement.current) {
-            editableElement.current.focus();
-        }
-    })
-
-    const switchToCustomAttributes = () => {
-        setCustomAttribute(id, generatedAttributes({ template, values }));
-        setEditMode(true);
-    };
-
-    const changeHandler = () => {
-        setCustomAttribute(id, editableElement.current.innerHTML)
-        setEditMode(false);
-    };
-
-    const customAttribute = values.customAttributes[id];
 
     return (
         <AttributeGroupWrapper>
             {label &&
                 <AttributeGroupLabel>
-                    {label} {!customAttribute &&<PenSolid onClick={switchToCustomAttributes} />}
+                    {label}
                 </AttributeGroupLabel>
             }
-            {customAttribute
-                ? <EditableAttributes
-                    contentEditable={true}
-                    onBlur={changeHandler} // TODO: better change handling
-                    ref={editableElement}
-                    dangerouslySetInnerHTML={{ __html: customAttribute }} // TODO: __SANITIZE__
-                />
-                : <GeneratedAttributes
-                    template={template}
-                    values={values}
-                    reshuffleAttribute={reshuffleAttribute}
-                />
-            }
+            <GeneratedAttributes
+				template={template}
+				values={values}
+				reshuffleAttribute={reshuffleAttribute}
+			/>
         </AttributeGroupWrapper>
     );
 }

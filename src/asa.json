@@ -412,53 +412,53 @@
     ],
     "personality": [
         {
-            "text": "optimistic",
-            "tags": ["outlook"],
+            "text": "curious",
+            "tags": ["openness-to-experience"],
             "weight": 1
         },
         {
-            "text": "pessimistic",
-            "tags": ["outlook"],
+            "text": "closed-minded",
+            "tags": ["openness-to-experience"],
             "weight": 1
         },
         {
-            "text": "honest",
-            "tags": ["honesty"],
+            "text": "stubborn",
+            "tags": ["conscientiousness"],
             "weight": 1
         },
         {
-            "text": "deceitful",
-            "tags": ["honesty"],
+            "text": "spontaneous",
+            "tags": ["conscientiousness"],
             "weight": 1
         },
         {
-            "text": "deliberate",
-            "tags": ["impulsiveness"],
+            "text": "enthusiastic",
+            "tags": ["extraversion"],
             "weight": 1
         },
         {
-            "text": "impulsive",
-            "tags": ["impulsiveness"],
+            "text": "quiet",
+            "tags": ["extraversion"],
             "weight": 1
         },
         {
-            "text": "friendly",
-            "tags": ["friendliness"],
+            "text": "kind",
+            "tags": ["agreeableness"],
             "weight": 1
         },
         {
             "text": "unfriendly",
-            "tags": ["friendliness"],
+            "tags": ["agreeableness"],
             "weight": 1
         },
         {
-            "text": "traditionalist",
-            "tags": ["progressiveness"],
+            "text": "anxious",
+            "tags": ["neuroticism"],
             "weight": 1
         },
         {
-            "text": "progressive",
-            "tags": ["progressiveness"],
+            "text": "calm",
+            "tags": ["neuroticism"],
             "weight": 1
         }
     ],
@@ -587,19 +587,19 @@
     "competency": [
         {
             "text": "hopelessly incompetent",
-            "weight": 4
+            "weight": 1
         },
         {
             "text": "incompetent",
-            "weight": 8
+            "weight": 2
         },
         {
             "text": "inept",
-            "weight": 16
+            "weight": 4
         },
         {
             "text": "inexperienced",
-            "weight": 16
+            "weight": 8
         },
         {
             "text": "capable",
@@ -615,15 +615,15 @@
         },
         {
             "text": "competent",
-            "weight": 8
+            "weight": 16
         },
         {
             "text": "skilled",
-            "weight": 8
+            "weight": 16
         },
         {
             "text": "very talented",
-            "weight": 4
+            "weight": 8
         },
         {
             "text": "expert",
