@@ -24,7 +24,7 @@ export const attributeConfigs = new Map([
     }],
     ['mood', {
         template: '%mood%',
-        label: 'mood' 
+        label: 'current mood' 
     }],
     ['personality', {
         template: '%personality1%, %personality2%',

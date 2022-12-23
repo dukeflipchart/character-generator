@@ -627,12 +627,47 @@
             "weight": 1
         },
         {
+            "text": "sensitive",
+            "tags": ["openness-to-experience"],
+            "weight": 1
+        },
+        {
+            "text": "imaginative",
+            "tags": ["openness-to-experience"],
+            "weight": 1
+        },
+        {
+            "text": "unpredictable",
+            "tags": ["openness-to-experience"],
+            "weight": 1
+        },
+        {
+            "text": "pragmatic",
+            "tags": ["openness-to-experience"],
+            "weight": 1
+        },
+        {
+            "text": "dogmatic",
+            "tags": ["openness-to-experience"],
+            "weight": 1
+        },
+        {
             "text": "closed-minded",
             "tags": ["openness-to-experience"],
             "weight": 1
         },
         {
+            "text": "focused",
+            "tags": ["conscientiousness"],
+            "weight": 1
+        },
+        {
             "text": "stubborn",
+            "tags": ["conscientiousness"],
+            "weight": 1
+        },
+        {
+            "text": "flexible",
             "tags": ["conscientiousness"],
             "weight": 1
         },
@@ -642,7 +677,47 @@
             "weight": 1
         },
         {
+            "text": "unreliable",
+            "tags": ["conscientiousness"],
+            "weight": 1
+        },
+        {
+            "text": "sloppy",
+            "tags": ["conscientiousness"],
+            "weight": 1
+        },
+        {
             "text": "enthusiastic",
+            "tags": ["extraversion"],
+            "weight": 1
+        },
+        {
+            "text": "sociable",
+            "tags": ["extraversion"],
+            "weight": 1
+        },
+        {
+            "text": "assertive",
+            "tags": ["extraversion"],
+            "weight": 1
+        },
+        {
+            "text": "talkative",
+            "tags": ["extraversion"],
+            "weight": 1
+        },
+        {
+            "text": "brash",
+            "tags": ["extraversion"],
+            "weight": 1
+        },
+        {
+            "text": "loud",
+            "tags": ["extraversion"],
+            "weight": 1
+        },
+        {
+            "text": "deliberate",
             "tags": ["extraversion"],
             "weight": 1
         },
@@ -657,12 +732,62 @@
             "weight": 1
         },
         {
+            "text": "generous",
+            "tags": ["agreeableness"],
+            "weight": 1
+        },
+        {
+            "text": "trusting",
+            "tags": ["agreeableness"],
+            "weight": 1
+        },
+        {
+            "text": "rude",
+            "tags": ["agreeableness"],
+            "weight": 1
+        },
+        {
+            "text": "suspicious",
+            "tags": ["agreeableness"],
+            "weight": 1
+        },
+        {
             "text": "unfriendly",
             "tags": ["agreeableness"],
             "weight": 1
         },
         {
+            "text": "uncooperative",
+            "tags": ["agreeableness"],
+            "weight": 1
+        },
+        {
             "text": "anxious",
+            "tags": ["neuroticism"],
+            "weight": 1
+        },
+        {
+            "text": "temperamental",
+            "tags": ["neuroticism"],
+            "weight": 1
+        },
+        {
+            "text": "irritable",
+            "tags": ["neuroticism"],
+            "weight": 1
+        },
+        {
+            "text": "pessimistic",
+            "tags": ["neuroticism"],
+            "weight": 1
+        },
+        {
+            "text": "serene",
+            "tags": ["neuroticism"],
+            "weight": 1
+        },
+        {
+            "text": "composed",
             "tags": ["neuroticism"],
             "weight": 1
         },
@@ -1200,7 +1325,7 @@
             "text": "To inflict pain and suffering, on others and/or the self"
         },
         {
-            "text": "To seek knowledge or wisdom (spiritual, scientific, or magical)"
+            "text": "To seek knowledge or wisdom"
         },
         {
             "text": "To enable or engage in self-destructive behavior"
