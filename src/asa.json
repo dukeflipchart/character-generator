@@ -106,34 +106,6 @@
     ],
     "appearance": [
         {
-            "text": "beautiful",
-            "tags": [
-                "beauty"
-            ],
-            "weight": 10
-        },
-        {
-            "text": "ugly",
-            "tags": [
-                "beauty"
-            ],
-            "weight": 10
-        },
-        {
-            "text": "staggeringly beautiful",
-            "tags": [
-                "beauty"
-            ],
-            "weight": 1
-        },
-        {
-            "text": "staggeringly ugly",
-            "tags": [
-                "beauty"
-            ],
-            "weight": 1
-        },
-        {
             "text": "has an unusual eye color",
             "tags": [
                 "eyes"
@@ -219,6 +191,125 @@
         },
         {
             "text": "skinny",
+            "tags": [
+                "build"
+            ],
+            "weight": 7
+        },
+        {
+            "text": "thin",
+            "tags": [
+                "build"
+            ],
+            "weight": 7
+        },
+        {
+            "text": "chubby",
+            "tags": [
+                "build"
+            ],
+            "weight": 7
+        },
+        {
+            "text": "muscular",
+            "tags": [
+                "build"
+            ],
+            "weight": 7
+        },
+        {
+            "text": "lanky",
+            "tags": [
+                "build"
+            ],
+            "weight": 7
+        },
+        {
+            "text": "stocky",
+            "tags": [
+                "build"
+            ],
+            "weight": 7
+        },
+        {
+            "text": "rotund",
+            "tags": [
+                "build"
+            ],
+            "weight": 7
+        },
+        {
+            "text": "slender",
+            "tags": [
+                "build"
+            ],
+            "weight": 7
+        },
+        {
+            "text": "voluptuous",
+            "tags": [
+                "build"
+            ],
+            "weight": 7
+        },
+        {
+            "text": "curvy",
+            "tags": [
+                "build"
+            ],
+            "weight": 7
+        },
+        {
+            "text": "bony",
+            "tags": [
+                "build"
+            ],
+            "weight": 7
+        },
+        {
+            "text": "scrawny",
+            "tags": [
+                "build"
+            ],
+            "weight": 7
+        },
+        {
+            "text": "robust",
+            "tags": [
+                "build"
+            ],
+            "weight": 7
+        },
+        {
+            "text": "plump",
+            "tags": [
+                "build"
+            ],
+            "weight": 7
+        },
+        {
+            "text": "well-built",
+            "tags": [
+                "build"
+            ],
+            "weight": 7
+        },
+        {
+            "text": "broad-shouldered",
+            "tags": [
+                "build"
+            ],
+            "weight": 7
+        },
+        {
+            "text": "hefty",
+            "tags": [
+                "build"
+            ],
+            "weight": 7
+        },
+        {
+            "text": "lean",
             "tags": [
                 "build"
             ],
@@ -332,14 +423,14 @@
             "weight": 3
         },
         {
-            "text": "has several piercings",
+            "text": "has piercings",
             "tags": [
                 "jewelry"
             ],
             "weight": 5
         },
         {
-            "text": "has several tatoos",
+            "text": "has tatoos",
             "tags": [
                 "jewelry"
             ],
@@ -368,46 +459,165 @@
             "weight": 2
         },
         {
-            "text": "wears muted, dark clothes",
+            "text": "wears plain clothes",
             "tags": [
                 "clothes"
             ],
             "weight": 7
         },
         {
-            "text": "wears very vibrant clothes",
+            "text": "wears colorful clothes",
             "tags": [
                 "clothes"
             ],
             "weight": 5
         },
         {
-            "text": "wears expensive and flamboyant clothes",
+            "text": "wears elaborate clothes",
             "tags": [
                 "clothes"
             ],
             "weight": 5
         },
         {
-            "text": "wears very revealing clothes",
+            "text": "wears simple clothes",
             "tags": [
                 "clothes"
             ],
             "weight": 5
         },
         {
-            "text": "wears ragged, dirty clothes",
+            "text": "wears ornate clothes",
             "tags": [
                 "clothes"
             ],
-            "weight": 7
+            "weight": 5
         },
         {
-            "text": "wears clean, proper clothes",
+            "text": "wears practical clothes",
             "tags": [
                 "clothes"
             ],
-            "weight": 7
+            "weight": 5
+        },
+        {
+            "text": "wears fashionable clothes",
+            "tags": [
+                "clothes"
+            ],
+            "weight": 5
+        },
+        {
+            "text": "wears outdated clothes",
+            "tags": [
+                "clothes"
+            ],
+            "weight": 5
+        },
+        {
+            "text": "wears exotic clothes",
+            "tags": [
+                "clothes"
+            ],
+            "weight": 5
+        },
+        {
+            "text": "wears gaudy clothes",
+            "tags": [
+                "clothes"
+            ],
+            "weight": 5
+        },
+        {
+            "text": "wears subdued clothes",
+            "tags": [
+                "clothes"
+            ],
+            "weight": 5
+        },
+        {
+            "text": "wears stylish clothes",
+            "tags": [
+                "clothes"
+            ],
+            "weight": 5
+        },
+        {
+            "text": "wears subdued clothes",
+            "tags": [
+                "clothes"
+            ],
+            "weight": 5
+        },
+        {
+            "text": "wears drab clothes",
+            "tags": [
+                "clothes"
+            ],
+            "weight": 5
+        },
+        {
+            "text": "wears regal clothes",
+            "tags": [
+                "clothes"
+            ],
+            "weight": 5
+        },
+        {
+            "text": "wears opulent clothes",
+            "tags": [
+                "clothes"
+            ],
+            "weight": 5
+        },
+        {
+            "text": "wears rustic clothes",
+            "tags": [
+                "clothes"
+            ],
+            "weight": 5
+        },
+        {
+            "text": "wears sleek clothes",
+            "tags": [
+                "clothes"
+            ],
+            "weight": 5
+        },
+        {
+            "text": "wears elegant clothes",
+            "tags": [
+                "clothes"
+            ],
+            "weight": 5
+        },
+        {
+            "text": "wears bohemian clothes",
+            "tags": [
+                "clothes"
+            ],
+            "weight": 5
+        },
+        {
+            "text": "wears casual clothes",
+            "tags": [
+                "clothes"
+            ],
+            "weight": 5
+        },
+        {
+            "text": "wears flashy clothes",
+            "tags": [
+                "clothes"
+            ],
+            "weight": 5
+        },
+        {
+            "text": "wears formal clothes",
+            "tags": [
+                "clothes"
+            ],
+            "weight": 5
         }
     ],
     "personality": [
@@ -998,94 +1208,79 @@
     ],
     "mood": [
         {
-            "text": "Amused"
+            "text": "happy"
         },
         {
-            "text": "Blissful"
+            "text": "sad"
         },
         {
-            "text": "Calm"
+            "text": "angry"
         },
         {
-            "text": "Curious"
+            "text": "content"
         },
         {
-            "text": "Cheerful"
+            "text": "excited"
         },
         {
-            "text": "Content"
+            "text": "frustrated"
         },
         {
-            "text": "Ecstatic"
+            "text": "nervous"
         },
         {
-            "text": "Energetic"
+            "text": "calm"
         },
         {
-            "text": "Excited"
+            "text": "anxious"
         },
         {
-            "text": "Flirty"
+            "text": "confused"
         },
         {
-            "text": "Joyful"
+            "text": "annoyed"
         },
         {
-            "text": "Peaceful"
+            "text": "elated"
         },
         {
-            "text": "Silly"
+            "text": "dejected"
         },
         {
-            "text": "Angry"
+            "text": "irritable"
         },
         {
-            "text": "Annoyed"
+            "text": "thrilled"
         },
         {
-            "text": "Anxious"
+            "text": "gloomy"
         },
         {
-            "text": "Apathetic"
+            "text": "apathetic"
         },
         {
-            "text": "Ashamed"
+            "text": "perplexed"
         },
         {
-            "text": "Cranky"
+            "text": "overwhelmed"
         },
         {
-            "text": "Contemptuous"
+            "text": "joyful"
         },
         {
-            "text": "Depressed"
+            "text": "disillusioned"
         },
         {
-            "text": "Envious"
+            "text": "bitter"
         },
         {
-            "text": "Frustrated"
+            "text": "resentful"
         },
         {
-            "text": "Grumpy"
+            "text": "hopeless"
         },
         {
-            "text": "Indifferent"
-        },
-        {
-            "text": "Irritated"
-        },
-        {
-            "text": "Melancholy"
-        },
-        {
-            "text": "Restless"
-        },
-        {
-            "text": "Sad"
-        },
-        {
-            "text": "Stressed"
+            "text": "optimistic"
         }
     ],
     "race": {
