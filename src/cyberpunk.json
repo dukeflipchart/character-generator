@@ -178,34 +178,6 @@
     ],
     "appearance": [
         {
-            "text": "beautiful",
-            "tags": [
-                "beauty"
-            ],
-            "weight": 10
-        },
-        {
-            "text": "ugly",
-            "tags": [
-                "beauty"
-            ],
-            "weight": 10
-        },
-        {
-            "text": "staggeringly beautiful",
-            "tags": [
-                "beauty"
-            ],
-            "weight": 1
-        },
-        {
-            "text": "staggeringly ugly",
-            "tags": [
-                "beauty"
-            ],
-            "weight": 1
-        },
-        {
             "text": "has an unusual eye color",
             "tags": [
                 "eyes"
@@ -224,21 +196,21 @@
             "tags": [
                 "nose"
             ],
-            "weight": 3
+            "weight": 2
         },
         {
             "text": "hawk-nosed",
             "tags": [
                 "nose"
             ],
-            "weight": 3
+            "weight": 2
         },
         {
             "text": "wide-nosed",
             "tags": [
                 "nose"
             ],
-            "weight": 3
+            "weight": 2
         },
         {
             "text": "missing teeth",
@@ -252,49 +224,168 @@
             "tags": [
                 "height"
             ],
-            "weight": 3
+            "weight": 1
         },
         {
             "text": "tall",
             "tags": [
                 "height"
             ],
-            "weight": 7
+            "weight": 2
         },
         {
             "text": "short",
             "tags": [
                 "height"
             ],
-            "weight": 7
+            "weight": 2
         },
         {
             "text": "very short",
             "tags": [
                 "height"
             ],
-            "weight": 3
+            "weight": 1
         },
         {
             "text": "athletic",
             "tags": [
                 "build"
             ],
-            "weight": 7
+            "weight": 2
         },
         {
             "text": "heavyset",
             "tags": [
                 "build"
             ],
-            "weight": 7
+            "weight": 2
         },
         {
             "text": "skinny",
             "tags": [
                 "build"
             ],
-            "weight": 7
+            "weight": 2
+        },
+        {
+            "text": "thin",
+            "tags": [
+                "build"
+            ],
+            "weight": 2
+        },
+        {
+            "text": "chubby",
+            "tags": [
+                "build"
+            ],
+            "weight": 2
+        },
+        {
+            "text": "muscular",
+            "tags": [
+                "build"
+            ],
+            "weight": 2
+        },
+        {
+            "text": "lanky",
+            "tags": [
+                "build"
+            ],
+            "weight": 2
+        },
+        {
+            "text": "stocky",
+            "tags": [
+                "build"
+            ],
+            "weight": 2
+        },
+        {
+            "text": "rotund",
+            "tags": [
+                "build"
+            ],
+            "weight": 2
+        },
+        {
+            "text": "slender",
+            "tags": [
+                "build"
+            ],
+            "weight": 2
+        },
+        {
+            "text": "voluptuous",
+            "tags": [
+                "build"
+            ],
+            "weight": 1
+        },
+        {
+            "text": "curvy",
+            "tags": [
+                "build"
+            ],
+            "weight": 2
+        },
+        {
+            "text": "bony",
+            "tags": [
+                "build"
+            ],
+            "weight": 1
+        },
+        {
+            "text": "scrawny",
+            "tags": [
+                "build"
+            ],
+            "weight": 2
+        },
+        {
+            "text": "robust",
+            "tags": [
+                "build"
+            ],
+            "weight": 2
+        },
+        {
+            "text": "plump",
+            "tags": [
+                "build"
+            ],
+            "weight": 2
+        },
+        {
+            "text": "well-built",
+            "tags": [
+                "build"
+            ],
+            "weight": 2
+        },
+        {
+            "text": "broad-shouldered",
+            "tags": [
+                "build"
+            ],
+            "weight": 2
+        },
+        {
+            "text": "hefty",
+            "tags": [
+                "build"
+            ],
+            "weight": 2
+        },
+        {
+            "text": "lean",
+            "tags": [
+                "build"
+            ],
+            "weight": 2
         },
         {
             "text": "has an unusual hair color",
@@ -315,21 +406,21 @@
             "tags": [
                 "hair"
             ],
-            "weight": 3
+            "weight": 2
         },
         {
             "text": "has waist-length hair",
             "tags": [
                 "hair"
             ],
-            "weight": 3
+            "weight": 1
         },
         {
             "text": "has unkempt hair",
             "tags": [
                 "hair"
             ],
-            "weight": 5
+            "weight": 2
         },
         {
             "text": "wears a wig",
@@ -401,21 +492,21 @@
             "tags": [
                 "jewelry"
             ],
-            "weight": 3
+            "weight": 1
         },
         {
-            "text": "has several piercings",
+            "text": "has piercings",
             "tags": [
                 "jewelry"
             ],
-            "weight": 5
+            "weight": 2
         },
         {
-            "text": "has several tatoos",
+            "text": "has tatoos",
             "tags": [
                 "jewelry"
             ],
-            "weight": 5
+            "weight": 2
         },
         {
             "text": "wears spectacles",
@@ -430,7 +521,7 @@
             "tags": [
                 "jewelry"
             ],
-            "weight": 5
+            "weight": 1
         },
         {
             "text": "wears ostentatious jewelry",
@@ -440,97 +531,334 @@
             "weight": 2
         },
         {
-            "text": "wears muted, dark clothes",
+            "text": "wears plain clothes",
             "tags": [
                 "clothes"
             ],
-            "weight": 7
+            "weight": 2
         },
         {
-            "text": "wears very vibrant clothes",
+            "text": "wears colorful clothes",
             "tags": [
                 "clothes"
             ],
-            "weight": 5
+            "weight": 2
         },
         {
-            "text": "wears expensive and flamboyant clothes",
+            "text": "wears elaborate clothes",
             "tags": [
                 "clothes"
             ],
-            "weight": 5
+            "weight": 2
         },
         {
-            "text": "wears very revealing clothes",
+            "text": "wears simple clothes",
             "tags": [
                 "clothes"
             ],
-            "weight": 5
+            "weight": 2
         },
         {
-            "text": "wears ragged, dirty clothes",
+            "text": "wears ornate clothes",
             "tags": [
                 "clothes"
             ],
-            "weight": 7
+            "weight": 2
         },
         {
-            "text": "wears clean, proper clothes",
+            "text": "wears practical clothes",
             "tags": [
                 "clothes"
             ],
-            "weight": 7
+            "weight": 2
+        },
+        {
+            "text": "wears fashionable clothes",
+            "tags": [
+                "clothes"
+            ],
+            "weight": 2
+        },
+        {
+            "text": "wears outdated clothes",
+            "tags": [
+                "clothes"
+            ],
+            "weight": 2
+        },
+        {
+            "text": "wears exotic clothes",
+            "tags": [
+                "clothes"
+            ],
+            "weight": 1
+        },
+        {
+            "text": "wears gaudy clothes",
+            "tags": [
+                "clothes"
+            ],
+            "weight": 2
+        },
+        {
+            "text": "wears subdued clothes",
+            "tags": [
+                "clothes"
+            ],
+            "weight": 2
+        },
+        {
+            "text": "wears stylish clothes",
+            "tags": [
+                "clothes"
+            ],
+            "weight": 2
+        },
+        {
+            "text": "wears drab clothes",
+            "tags": [
+                "clothes"
+            ],
+            "weight": 2
+        },
+        {
+            "text": "wears regal clothes",
+            "tags": [
+                "clothes"
+            ],
+            "weight": 1
+        },
+        {
+            "text": "wears opulent clothes",
+            "tags": [
+                "clothes"
+            ],
+            "weight": 1
+        },
+        {
+            "text": "wears rustic clothes",
+            "tags": [
+                "clothes"
+            ],
+            "weight": 2
+        },
+        {
+            "text": "wears sleek clothes",
+            "tags": [
+                "clothes"
+            ],
+            "weight": 2
+        },
+        {
+            "text": "wears elegant clothes",
+            "tags": [
+                "clothes"
+            ],
+            "weight": 2
+        },
+        {
+            "text": "wears bohemian clothes",
+            "tags": [
+                "clothes"
+            ],
+            "weight": 2
+        },
+        {
+            "text": "wears casual clothes",
+            "tags": [
+                "clothes"
+            ],
+            "weight": 2
+        },
+        {
+            "text": "wears flashy clothes",
+            "tags": [
+                "clothes"
+            ],
+            "weight": 2
+        },
+        {
+            "text": "wears formal clothes",
+            "tags": [
+                "clothes"
+            ],
+            "weight": 2
         }
     ],
     "personality": [
         {
-            "text": "optimistic",
-            "tags": ["outlook"],
+            "text": "curious",
+            "tags": ["openness-to-experience"],
             "weight": 1
         },
         {
-            "text": "pessimistic",
-            "tags": ["outlook"],
+            "text": "sensitive",
+            "tags": ["openness-to-experience"],
             "weight": 1
         },
         {
-            "text": "honest",
-            "tags": ["honesty"],
+            "text": "imaginative",
+            "tags": ["openness-to-experience"],
             "weight": 1
         },
         {
-            "text": "deceitful",
-            "tags": ["honesty"],
+            "text": "unpredictable",
+            "tags": ["openness-to-experience"],
+            "weight": 1
+        },
+        {
+            "text": "pragmatic",
+            "tags": ["openness-to-experience"],
+            "weight": 1
+        },
+        {
+            "text": "dogmatic",
+            "tags": ["openness-to-experience"],
+            "weight": 1
+        },
+        {
+            "text": "closed-minded",
+            "tags": ["openness-to-experience"],
+            "weight": 1
+        },
+        {
+            "text": "focused",
+            "tags": ["conscientiousness"],
+            "weight": 1
+        },
+        {
+            "text": "stubborn",
+            "tags": ["conscientiousness"],
+            "weight": 1
+        },
+        {
+            "text": "flexible",
+            "tags": ["conscientiousness"],
+            "weight": 1
+        },
+        {
+            "text": "spontaneous",
+            "tags": ["conscientiousness"],
+            "weight": 1
+        },
+        {
+            "text": "unreliable",
+            "tags": ["conscientiousness"],
+            "weight": 1
+        },
+        {
+            "text": "sloppy",
+            "tags": ["conscientiousness"],
+            "weight": 1
+        },
+        {
+            "text": "enthusiastic",
+            "tags": ["extraversion"],
+            "weight": 1
+        },
+        {
+            "text": "sociable",
+            "tags": ["extraversion"],
+            "weight": 1
+        },
+        {
+            "text": "assertive",
+            "tags": ["extraversion"],
+            "weight": 1
+        },
+        {
+            "text": "talkative",
+            "tags": ["extraversion"],
+            "weight": 1
+        },
+        {
+            "text": "brash",
+            "tags": ["extraversion"],
+            "weight": 1
+        },
+        {
+            "text": "loud",
+            "tags": ["extraversion"],
             "weight": 1
         },
         {
             "text": "deliberate",
-            "tags": ["impulsiveness"],
+            "tags": ["extraversion"],
             "weight": 1
         },
         {
-            "text": "impulsive",
-            "tags": ["impulsiveness"],
+            "text": "quiet",
+            "tags": ["extraversion"],
             "weight": 1
         },
         {
-            "text": "friendly",
-            "tags": ["friendliness"],
+            "text": "kind",
+            "tags": ["agreeableness"],
+            "weight": 1
+        },
+        {
+            "text": "generous",
+            "tags": ["agreeableness"],
+            "weight": 1
+        },
+        {
+            "text": "trusting",
+            "tags": ["agreeableness"],
+            "weight": 1
+        },
+        {
+            "text": "rude",
+            "tags": ["agreeableness"],
+            "weight": 1
+        },
+        {
+            "text": "suspicious",
+            "tags": ["agreeableness"],
             "weight": 1
         },
         {
             "text": "unfriendly",
-            "tags": ["friendliness"],
+            "tags": ["agreeableness"],
             "weight": 1
         },
         {
-            "text": "traditionalist",
-            "tags": ["progressiveness"],
+            "text": "uncooperative",
+            "tags": ["agreeableness"],
             "weight": 1
         },
         {
-            "text": "progressive",
-            "tags": ["progressiveness"],
+            "text": "anxious",
+            "tags": ["neuroticism"],
+            "weight": 1
+        },
+        {
+            "text": "temperamental",
+            "tags": ["neuroticism"],
+            "weight": 1
+        },
+        {
+            "text": "irritable",
+            "tags": ["neuroticism"],
+            "weight": 1
+        },
+        {
+            "text": "pessimistic",
+            "tags": ["neuroticism"],
+            "weight": 1
+        },
+        {
+            "text": "serene",
+            "tags": ["neuroticism"],
+            "weight": 1
+        },
+        {
+            "text": "composed",
+            "tags": ["neuroticism"],
+            "weight": 1
+        },
+        {
+            "text": "calm",
+            "tags": ["neuroticism"],
             "weight": 1
         }
     ],

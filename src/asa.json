@@ -104,6 +104,7 @@
             "weight": 1
         }
     ],
+    
     "appearance": [
         {
             "text": "has an unusual eye color",
@@ -124,21 +125,21 @@
             "tags": [
                 "nose"
             ],
-            "weight": 3
+            "weight": 2
         },
         {
             "text": "hawk-nosed",
             "tags": [
                 "nose"
             ],
-            "weight": 3
+            "weight": 2
         },
         {
             "text": "wide-nosed",
             "tags": [
                 "nose"
             ],
-            "weight": 3
+            "weight": 2
         },
         {
             "text": "missing teeth",
@@ -152,168 +153,168 @@
             "tags": [
                 "height"
             ],
-            "weight": 3
+            "weight": 1
         },
         {
             "text": "tall",
             "tags": [
                 "height"
             ],
-            "weight": 7
+            "weight": 2
         },
         {
             "text": "short",
             "tags": [
                 "height"
             ],
-            "weight": 7
+            "weight": 2
         },
         {
             "text": "very short",
             "tags": [
                 "height"
             ],
-            "weight": 3
+            "weight": 1
         },
         {
             "text": "athletic",
             "tags": [
                 "build"
             ],
-            "weight": 7
+            "weight": 2
         },
         {
             "text": "heavyset",
             "tags": [
                 "build"
             ],
-            "weight": 7
+            "weight": 2
         },
         {
             "text": "skinny",
             "tags": [
                 "build"
             ],
-            "weight": 7
+            "weight": 2
         },
         {
             "text": "thin",
             "tags": [
                 "build"
             ],
-            "weight": 7
+            "weight": 2
         },
         {
             "text": "chubby",
             "tags": [
                 "build"
             ],
-            "weight": 7
+            "weight": 2
         },
         {
             "text": "muscular",
             "tags": [
                 "build"
             ],
-            "weight": 7
+            "weight": 2
         },
         {
             "text": "lanky",
             "tags": [
                 "build"
             ],
-            "weight": 7
+            "weight": 2
         },
         {
             "text": "stocky",
             "tags": [
                 "build"
             ],
-            "weight": 7
+            "weight": 2
         },
         {
             "text": "rotund",
             "tags": [
                 "build"
             ],
-            "weight": 7
+            "weight": 2
         },
         {
             "text": "slender",
             "tags": [
                 "build"
             ],
-            "weight": 7
+            "weight": 2
         },
         {
             "text": "voluptuous",
             "tags": [
                 "build"
             ],
-            "weight": 7
+            "weight": 1
         },
         {
             "text": "curvy",
             "tags": [
                 "build"
             ],
-            "weight": 7
+            "weight": 2
         },
         {
             "text": "bony",
             "tags": [
                 "build"
             ],
-            "weight": 7
+            "weight": 1
         },
         {
             "text": "scrawny",
             "tags": [
                 "build"
             ],
-            "weight": 7
+            "weight": 2
         },
         {
             "text": "robust",
             "tags": [
                 "build"
             ],
-            "weight": 7
+            "weight": 2
         },
         {
             "text": "plump",
             "tags": [
                 "build"
             ],
-            "weight": 7
+            "weight": 2
         },
         {
             "text": "well-built",
             "tags": [
                 "build"
             ],
-            "weight": 7
+            "weight": 2
         },
         {
             "text": "broad-shouldered",
             "tags": [
                 "build"
             ],
-            "weight": 7
+            "weight": 2
         },
         {
             "text": "hefty",
             "tags": [
                 "build"
             ],
-            "weight": 7
+            "weight": 2
         },
         {
             "text": "lean",
             "tags": [
                 "build"
             ],
-            "weight": 7
+            "weight": 2
         },
         {
             "text": "has an unusual hair color",
@@ -334,21 +335,21 @@
             "tags": [
                 "hair"
             ],
-            "weight": 3
+            "weight": 2
         },
         {
             "text": "has waist-length hair",
             "tags": [
                 "hair"
             ],
-            "weight": 3
+            "weight": 1
         },
         {
             "text": "has unkempt hair",
             "tags": [
                 "hair"
             ],
-            "weight": 5
+            "weight": 2
         },
         {
             "text": "wears a wig",
@@ -420,21 +421,21 @@
             "tags": [
                 "jewelry"
             ],
-            "weight": 3
+            "weight": 1
         },
         {
             "text": "has piercings",
             "tags": [
                 "jewelry"
             ],
-            "weight": 5
+            "weight": 2
         },
         {
             "text": "has tatoos",
             "tags": [
                 "jewelry"
             ],
-            "weight": 5
+            "weight": 2
         },
         {
             "text": "wears spectacles",
@@ -449,7 +450,7 @@
             "tags": [
                 "jewelry"
             ],
-            "weight": 5
+            "weight": 1
         },
         {
             "text": "wears ostentatious jewelry",
@@ -463,161 +464,154 @@
             "tags": [
                 "clothes"
             ],
-            "weight": 7
+            "weight": 2
         },
         {
             "text": "wears colorful clothes",
             "tags": [
                 "clothes"
             ],
-            "weight": 5
+            "weight": 2
         },
         {
             "text": "wears elaborate clothes",
             "tags": [
                 "clothes"
             ],
-            "weight": 5
+            "weight": 2
         },
         {
             "text": "wears simple clothes",
             "tags": [
                 "clothes"
             ],
-            "weight": 5
+            "weight": 2
         },
         {
             "text": "wears ornate clothes",
             "tags": [
                 "clothes"
             ],
-            "weight": 5
+            "weight": 2
         },
         {
             "text": "wears practical clothes",
             "tags": [
                 "clothes"
             ],
-            "weight": 5
+            "weight": 2
         },
         {
             "text": "wears fashionable clothes",
             "tags": [
                 "clothes"
             ],
-            "weight": 5
+            "weight": 2
         },
         {
             "text": "wears outdated clothes",
             "tags": [
                 "clothes"
             ],
-            "weight": 5
+            "weight": 2
         },
         {
             "text": "wears exotic clothes",
             "tags": [
                 "clothes"
             ],
-            "weight": 5
+            "weight": 1
         },
         {
             "text": "wears gaudy clothes",
             "tags": [
                 "clothes"
             ],
-            "weight": 5
+            "weight": 2
         },
         {
             "text": "wears subdued clothes",
             "tags": [
                 "clothes"
             ],
-            "weight": 5
+            "weight": 2
         },
         {
             "text": "wears stylish clothes",
             "tags": [
                 "clothes"
             ],
-            "weight": 5
-        },
-        {
-            "text": "wears subdued clothes",
-            "tags": [
-                "clothes"
-            ],
-            "weight": 5
+            "weight": 2
         },
         {
             "text": "wears drab clothes",
             "tags": [
                 "clothes"
             ],
-            "weight": 5
+            "weight": 2
         },
         {
             "text": "wears regal clothes",
             "tags": [
                 "clothes"
             ],
-            "weight": 5
+            "weight": 1
         },
         {
             "text": "wears opulent clothes",
             "tags": [
                 "clothes"
             ],
-            "weight": 5
+            "weight": 1
         },
         {
             "text": "wears rustic clothes",
             "tags": [
                 "clothes"
             ],
-            "weight": 5
+            "weight": 2
         },
         {
             "text": "wears sleek clothes",
             "tags": [
                 "clothes"
             ],
-            "weight": 5
+            "weight": 2
         },
         {
             "text": "wears elegant clothes",
             "tags": [
                 "clothes"
             ],
-            "weight": 5
+            "weight": 2
         },
         {
             "text": "wears bohemian clothes",
             "tags": [
                 "clothes"
             ],
-            "weight": 5
+            "weight": 2
         },
         {
             "text": "wears casual clothes",
             "tags": [
                 "clothes"
             ],
-            "weight": 5
+            "weight": 2
         },
         {
             "text": "wears flashy clothes",
             "tags": [
                 "clothes"
             ],
-            "weight": 5
+            "weight": 2
         },
         {
             "text": "wears formal clothes",
             "tags": [
                 "clothes"
             ],
-            "weight": 5
+            "weight": 2
         }
     ],
     "personality": [
@@ -926,39 +920,47 @@
         },
         {
             "text": "incompetent",
-            "weight": 2
+            "weight": 4
         },
         {
             "text": "inept",
             "weight": 4
         },
         {
+            "text": "unremarkable",
+            "weight": 8
+        },
+        {
             "text": "inexperienced",
             "weight": 8
         },
         {
+            "text": "experienced",
+            "weight": 8
+        },
+        {
             "text": "capable",
-            "weight": 16
+            "weight": 8
         },
         {
             "text": "talented",
-            "weight": 16
+            "weight": 8
         },
         {
             "text": "gifted",
-            "weight": 16
+            "weight": 8
         },
         {
             "text": "competent",
-            "weight": 16
+            "weight": 8
         },
         {
             "text": "skilled",
-            "weight": 16
+            "weight": 4
         },
         {
             "text": "very talented",
-            "weight": 8
+            "weight": 4
         },
         {
             "text": "expert",
