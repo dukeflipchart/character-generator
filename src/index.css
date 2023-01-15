@@ -1,8 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:700,700i&amp;subset=latin-ext');
-@import url('https://fonts.googleapis.com/css?family=Merriweather:400,400i&display=swap&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family="Crimson Pro":400,400i&display=swap&subset=latin-ext');
 
 body {
-    font-family: "Merriweather", sans-serif;
+    font-family: "Crimson Pro", sans-serif;
     font-size: 16px;
     line-height: 1.65;
     margin: 0;

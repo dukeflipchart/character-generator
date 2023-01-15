@@ -76,7 +76,7 @@ const parseTemplate = ({
         .reduceRight((acc, token) => {
             // edge case
             if (token === 'gender') {
-                return [displayGender(values.age.text, values.gender.text), ...acc]
+                return [[displayGender(values.age.text, values.gender.text), "gender"], ...acc]
                 // a value exists
             } else if (values[token] && values[token].text) {
                 return [[values[token].text, token], ...acc]
