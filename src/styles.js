@@ -40,7 +40,7 @@ export const Button = styled.button`
     padding: 0.5rem;
     background-color: ${colors.warlockPurple};
     border: none;
-    font-family: Montserrat, sans-serif;
+    font-family: "Crimson Pro", sans-serif;
     font-size: 1rem;
     line-height: 1.65rem;
     text-transform: uppercase;
@@ -81,7 +81,7 @@ export const TopToolbarButton = styled(Button)`
 
 export const Label = styled.label`
     display: block;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Crimson Pro", sans-serif;
     font-size: 0.75rem;
     line-height: 2.2;
     text-transform: uppercase;
@@ -90,7 +90,7 @@ export const Label = styled.label`
 export const Select = styled.select`
     border: 1px solid #ddd;
     border-radius: 1rem;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Crimson Pro", sans-serif;
     font-size: 1rem;
     height: 58px;
     padding: 1rem;

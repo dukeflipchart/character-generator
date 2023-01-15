@@ -1,5 +1,32 @@
 @import url('https://fonts.googleapis.com/css?family="Crimson Pro":400,400i&display=swap&subset=latin-ext');
 
+@font-face {
+	font-family: 'Crimson Pro';
+    src: url('fonts/CrimsonPro-Regular.ttf') format('ttf');
+    font-weight: normal;
+}
+
+@font-face {
+	font-family: 'Crimson Pro';
+    src: url('fonts/CrimsonPro-Italic.ttf') format('ttf');
+    font-weight: normal;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Crimson Pro';
+    src: url('fonts/CrimsonPro-ExtraBold.ttf') format('ttf');
+    font-weight: bold;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Crimson Pro';
+    src: url('fonts/CrimsonPro-ExtraBoldItalic.ttf') format('ttf');
+    font-weight: bold;
+	font-style: italic;
+}
+
 body {
     font-family: "Crimson Pro", sans-serif;
     font-size: 16px;
