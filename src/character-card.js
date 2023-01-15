@@ -10,9 +10,9 @@ import TrashSolid from './icons/TrashSolid';
 
 import {
     AttributeGroupLabel,
-    CharacterCardColumn,
     CharacterCardContainer,
-    CharacterCardRow,
+	CharacterCardHeader,
+    CharacterCardGrid,
     CharacterCardToolbar,
     NameWrapper,
     ToolbarButton
@@ -38,11 +38,7 @@ const displayGender = (age, gender) => {
     }
 }
 
-const AttributeGroupWrapper = styled.div`
-    :not(:last-child) {
-        margin-bottom: 1.65rem;
-    }
-`;
+const AttributeGroupWrapper = styled.div``;
 
 export const ClickableAttribute = styled.span`
     :hover {
@@ -197,32 +193,28 @@ export const CharacterCard = ({
 
     return (
         <CharacterCardContainer>
-            <CharacterCardToolbar>
-                <ToolbarButton onClick={() => copy(createTextDescription({ attributeConfigs, values: character }))}>
-                    <ClipboardSolid />
-                </ToolbarButton>
-                <ToolbarButton onClick={() => deleteCharacter()}>
-                    <TrashSolid />
-                </ToolbarButton>
-            </CharacterCardToolbar>
-            <NameWrapper>
-                <AttributeGroup {...attributeGroupProps('name')} />
-            </NameWrapper>
-            <AttributeGroup {...attributeGroupProps('description')} />
-            <CharacterCardRow>
-                <CharacterCardColumn>
-                    <AttributeGroup {...attributeGroupProps('job')} />
-                    <AttributeGroup {...attributeGroupProps('appearance')} />
-                </CharacterCardColumn>
-                <CharacterCardColumn>
-                    <AttributeGroup {...attributeGroupProps('mood')} />
-                    <AttributeGroup {...attributeGroupProps('personality')} />
-                </CharacterCardColumn>
-                <CharacterCardColumn>
-                    <AttributeGroup {...attributeGroupProps('lifeGoal')} />
-                    <AttributeGroup {...attributeGroupProps('relationships')} />
-                </CharacterCardColumn>
-            </CharacterCardRow>
+			<CharacterCardHeader>
+				<CharacterCardToolbar>
+					<ToolbarButton onClick={() => copy(createTextDescription({ attributeConfigs, values: character }))}>
+						<ClipboardSolid />
+					</ToolbarButton>
+					<ToolbarButton onClick={() => deleteCharacter()}>
+						<TrashSolid />
+					</ToolbarButton>
+				</CharacterCardToolbar>
+				<NameWrapper>
+					<AttributeGroup {...attributeGroupProps('name')} />
+				</NameWrapper>
+				<AttributeGroup {...attributeGroupProps('description')} />
+			</CharacterCardHeader>
+			<CharacterCardGrid>
+				<AttributeGroup {...attributeGroupProps('job')} />
+				<AttributeGroup {...attributeGroupProps('appearance')} />
+				<AttributeGroup {...attributeGroupProps('personality')} />
+				<AttributeGroup {...attributeGroupProps('mood')} />
+				<AttributeGroup {...attributeGroupProps('lifeGoal')} />
+				<AttributeGroup {...attributeGroupProps('relationships')} />
+            </CharacterCardGrid>
         </CharacterCardContainer>
     )
 }

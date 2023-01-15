@@ -199,31 +199,12 @@ export const NameWrapper = styled.h1`
     }
 `;
 
-export const CharacterCardRow = styled.div`
-
-    @media only screen and (min-width: 35rem) {
-        display: flex;
-        flex-direction: row;
-    }
+export const CharacterCardHeader = styled.div`
+	margin-bottom: 2rem;
 `;
 
-export const CharacterCardColumn = styled.div`
-    flex: 1 1 50%;
-
-    :not(:last-child) {
-        margin-bottom: 1.65rem;
-    }
-
-    @media only screen and (min-width: 35rem) {
-
-        :not(:last-child) {
-            border-right: 1px solid #ddd;
-            padding-right: 2rem;
-            margin-bottom: 0;
-        }
-    
-        :not(:first-child) {
-            padding-left: 2rem;
-        }
-    }
+export const CharacterCardGrid = styled.div`
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 2rem;
 `;
