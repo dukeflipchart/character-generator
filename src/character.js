@@ -87,6 +87,7 @@ export const generateCharacter = (worldName) => {
         age: chooseAttribute(world.age),
         motivation: chooseAttribute(world.motivation),
         mood: chooseAttribute(world.mood),
+        speechStyle: chooseAttribute(world.speechStyle),
         appearance1: chooseAttribute(world.appearance),
         personality1: chooseAttribute(world.personality),
         competency: chooseAttribute(world.competency),
@@ -101,18 +102,6 @@ export const generateCharacter = (worldName) => {
     character.personality2 = chooseAttribute(world.personality, [character.personality1.text], character.personality1.tags);
 
     return character;
-}
-
-export const setCustomAttribute = (character, customAttributeKey, customAttributeValue) => { 
-    return {
-        ...character,
-        customAttributes: {
-            ...character.customAttributes,
-            [customAttributeKey]: customAttributeValue && customAttributeValue !== ''
-                ? customAttributeValue
-                : undefined
-        }
-    }
 }
 
 export const reshuffleAttribute = (worldName, oldAttributes, targetAttribute) => {

@@ -18,8 +18,7 @@ import { CharacterCard } from './character-card';
 
 import {
     generateCharacter,
-    reshuffleAttribute,
-    setCustomAttribute
+    reshuffleAttribute
 } from './character';
 
 import { attributeConfigs } from './attribute-configs';
@@ -73,17 +72,6 @@ class Board extends React.Component {
         }
     }
 
-    setCustomAttributeHandler(uid) {
-        return (customAttributeKey, customAttributeValue) => {
-            this.setState({
-                characters: {
-                    ...this.state.characters,
-                    [uid]: setCustomAttribute(this.state.characters[uid], customAttributeKey, customAttributeValue)
-                }
-            })
-        }
-    }
-
     handleWorldChange(event) {
         switch (event.target.value) {
             case 'Cyberpunk / Near Future':
@@ -132,7 +120,6 @@ class Board extends React.Component {
                         character={character}
                         attributeConfigs={attributeConfigs}
                         reshuffleAttribute={this.reshuffleAttributeHandler(uid)}
-                        setCustomAttribute={this.setCustomAttributeHandler(uid)}
                         deleteCharacter={this.deleteCharacterHandler(uid)}
                     />)
                 }

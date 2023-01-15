@@ -104,7 +104,6 @@
             "weight": 1
         }
     ],
-    
     "appearance": [
         {
             "text": "has an unusual eye color",
@@ -614,6 +613,71 @@
             "weight": 2
         }
     ],
+	"speechStyle": [
+		{
+			"text": "stuttering"
+		},
+		{
+			"text": "lisping"
+		},
+		{
+			"text": "mumbling"
+		},
+		{
+			"text": "whispering"
+		},
+		{
+			"text": "yelling"
+		},
+		{
+			"text": "shouting"
+		},
+		{
+			"text": "sing-song"
+		},
+		{
+			"text": "monotone"
+		},
+		{
+			"text": "staccato"
+		},
+		{
+			"text": "drawling"
+		},
+		{
+			"text": "raspy"
+		},
+		{
+			"text": "nasal"
+		},
+		{
+			"text": "hoarse"
+		},
+		{
+			"text": "squeaky"
+		},
+		{
+			"text": "slow"
+		},
+		{
+			"text": "fast"
+		},
+		{
+			"text": "clear"
+		},
+		{
+			"text": "muted"
+		},
+		{
+			"text": "rambling"
+		},
+		{
+			"text": "slurred"
+		},
+		{
+			"text": "coughing"
+		}
+	],
     "personality": [
         {
             "text": "curious",
