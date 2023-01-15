@@ -685,6 +685,71 @@
             "weight": 2
         }
     ],
+	"speechStyle": [
+		{
+			"text": "stuttering"
+		},
+		{
+			"text": "lisping"
+		},
+		{
+			"text": "mumbling"
+		},
+		{
+			"text": "whispering"
+		},
+		{
+			"text": "yelling"
+		},
+		{
+			"text": "shouting"
+		},
+		{
+			"text": "sing-song"
+		},
+		{
+			"text": "monotone"
+		},
+		{
+			"text": "staccato"
+		},
+		{
+			"text": "drawling"
+		},
+		{
+			"text": "raspy"
+		},
+		{
+			"text": "nasal"
+		},
+		{
+			"text": "hoarse"
+		},
+		{
+			"text": "squeaky"
+		},
+		{
+			"text": "slow"
+		},
+		{
+			"text": "fast"
+		},
+		{
+			"text": "clear"
+		},
+		{
+			"text": "muted"
+		},
+		{
+			"text": "rambling"
+		},
+		{
+			"text": "slurred"
+		},
+		{
+			"text": "coughing"
+		}
+	],
     "personality": [
         {
             "text": "curious",
@@ -2443,6 +2508,83 @@
                     "text": "Yoshi"
                 }
             ]
+        },
+        "Punjabi": {
+            "Masculine": [
+                {
+                    "text": "Abhishek"
+                },
+                {
+                    "text": "Ajeet"
+                },
+                {
+                    "text": "Amar"
+                },
+                {
+                    "text": "Arif"
+                },
+                {
+                    "text": "Deepak"
+                },
+                {
+                    "text": "Imran"
+                },
+                {
+                    "text": "Kumar"
+                },
+                {
+                    "text": "Karan"
+                },
+                {
+                    "text": "Muhammad"
+                },
+                {
+                    "text": "Rahul"
+                },
+                {
+                    "text": "Rajesh"
+                },
+                {
+                    "text": "Sandeep"
+                },
+                {
+                    "text": "Shekhar"
+                },
+                {
+                    "text": "Sumeet"
+                },
+                {
+                    "text": "Vishal"
+                },
+                {
+                    "text": "Zahir"
+                }
+            ],
+            "Feminine": [
+                {
+                    "text": "Amrita"
+                },
+                {
+                    "text": "Deepa"
+                },
+                {
+                    "text": "Neha"
+                },
+                {
+                    "text": "Ritu"
+                }
+            ],
+            "Agender": [
+                {
+                    "text": "Hira"
+                },
+                {
+                    "text": "Simran"
+                },
+                {
+                    "text": "Swaran"
+                }
+            ]
         }
     },
     "familyName": {
@@ -2732,6 +2874,47 @@
             },
             {
                 "text": "Yoshida"
+            }
+        ],
+        "Punjabi": [
+            {
+                "text": "Ahluwalia"
+            },
+            {
+                "text": "Arora"
+            },
+            {
+                "text": "Bajwa"
+            },
+            {
+                "text": "Bhatia"
+            },
+            {
+                "text": "Chopra"
+            },
+            {
+                "text": "Deol"
+            },
+            {
+                "text": "Gulati"
+            },
+            {
+                "text": "Kaushal"
+            },
+            {
+                "text": "Narang"
+            },
+            {
+                "text": "Sahni"
+            },
+            {
+                "text": "Singh"
+            },
+            {
+                "text": "Suri"
+            },
+            {
+                "text": "Wahi"
             }
         ]
     }
