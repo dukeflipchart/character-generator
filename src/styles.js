@@ -178,7 +178,7 @@ export const ToolbarDeleteButton = styled.button``;
 
 export const AttributeGroupLabel = styled.h4`
     display: block;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Crimson Pro', sans-serif;
     font-size: 0.75rem;
     line-height: 2.2;
     text-transform: uppercase;
