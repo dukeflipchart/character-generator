@@ -16,7 +16,6 @@ export const BoardContainer = styled.div`
     box-sizing: border-box;
     width: 100%;
     padding: 1rem;
-
     @media only screen and (min-width: 35rem) {
         padding: 2rem;
     }
@@ -47,17 +46,14 @@ export const Button = styled.button`
     color: #fff;
     outline: none;
     cursor: pointer;
-
     svg {
         width: 2rem;
         height: 2rem;
     }
-
     :hover,
     :focus {
         background-color: ${darken(0.1, colors.warlockPurple)};
     }
-
     :active {
         background-color: ${colors.wizardBlue};
     }
@@ -71,7 +67,6 @@ export const TopToolbarButton = styled(Button)`
     border-radius: 1rem;
     padding: 1rem;
     width: 100%;
-
     svg {
         width: 2rem;
         height: 2rem;
@@ -117,12 +112,10 @@ export const TopToolbarColumn = styled.div`
     flex-direction: column;
     justify-content: flex-end;
     box-sizing: border-box;
-
     :not(:last-child) {
         padding-right: 1rem;
         margin-bottom: 0;
     }
-
     :not(:first-child) {
         padding-left: 1rem;
     }
@@ -139,34 +132,27 @@ export const ToolbarButton = styled(Button)`
     background-color: transparent;
     border: none;
     margin-top: 0.45rem;
-
     :not(:last-of-type) {
         margin-right: 1em;
     }
-
     svg {
         color: ${colors.warlockPurple};
         width: 100%;
         height: 100%;
     }
-
     :hover,
     :focus {
         background-color: transparent;
-
         svg {
             color: ${colors.wizardBlue};
         }
     }
-
     :active {
         background-color: transparent;
-
         svg {
             color: ${darken(0.1, colors.wizardBlue)};
         }
     }
-
     @media only screen and (min-width: 35rem) {
         width: 2rem;
         height: 2rem;
@@ -191,7 +177,6 @@ export const NameWrapper = styled.h1`
     font-size: 1.5rem;
     margin-top: 0;
     margin-bottom: 0.5rem;
-
     @media only screen and (min-width: 35rem) {
         font-size: 2.5rem;
         margin-top: -1rem;
@@ -200,7 +185,6 @@ export const NameWrapper = styled.h1`
 `;
 
 export const CharacterCardRow = styled.div`
-
     @media only screen and (min-width: 35rem) {
         display: flex;
         flex-direction: row;
@@ -209,13 +193,10 @@ export const CharacterCardRow = styled.div`
 
 export const CharacterCardColumn = styled.div`
     flex: 1 1 50%;
-
     :not(:last-child) {
         margin-bottom: 1.65rem;
     }
-
     @media only screen and (min-width: 35rem) {
-
         :not(:last-child) {
             border-right: 1px solid #ddd;
             padding-right: 2rem;
