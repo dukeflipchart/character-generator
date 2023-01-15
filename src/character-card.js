@@ -215,8 +215,9 @@ export const CharacterCard = ({
                     <AttributeGroup {...attributeGroupProps('appearance')} />
                 </CharacterCardColumn>
                 <CharacterCardColumn>
-                    <AttributeGroup {...attributeGroupProps('mood')} />
                     <AttributeGroup {...attributeGroupProps('personality')} />
+                    <AttributeGroup {...attributeGroupProps('speechStyle')} />
+                    <AttributeGroup {...attributeGroupProps('mood')} />
                 </CharacterCardColumn>
                 <CharacterCardColumn>
                     <AttributeGroup {...attributeGroupProps('lifeGoal')} />
