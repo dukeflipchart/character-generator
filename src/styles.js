@@ -174,7 +174,8 @@ export const AttributeGroupLabel = styled.h4`
 `;
 
 export const NameWrapper = styled.h1`
-    font-size: 1.5rem;
+    font-size: 2rem;
+	font-family: Montserrat, serif;
     margin-top: 0;
     margin-bottom: 0.5rem;
     @media only screen and (min-width: 35rem) {
