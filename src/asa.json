@@ -355,21 +355,21 @@
             "tags": [
                 "hair"
             ],
-            "weight": 1
+            "weight": 0.5
         },
         {
             "text": "missing fingers",
             "tags": [
                 "disability"
             ],
-            "weight": 1
+            "weight": 0.5
         },
         {
             "text": "noticeable scar",
             "tags": [
                 "disability"
             ],
-            "weight": 1
+            "weight": 0.5
         },
         {
             "text": "blind in one eye",
@@ -377,7 +377,7 @@
                 "disability",
                 "eyes"
             ],
-            "weight": 1
+            "weight": 0.5
         },
         {
             "text": "completely blind",
@@ -385,42 +385,42 @@
                 "disability",
                 "eyes"
             ],
-            "weight": 1
+            "weight": 0.5
         },
         {
             "text": "hard of hearing",
             "tags": [
                 "disability"
             ],
-            "weight": 2
+            "weight": 1.5
         },
         {
             "text": "deaf",
             "tags": [
                 "disability"
             ],
-            "weight": 1
+            "weight": 0.5
         },
         {
             "text": "missing an arm",
             "tags": [
                 "disability"
             ],
-            "weight": 1
+            "weight": 0.5
         },
         {
             "text": "missing a leg",
             "tags": [
                 "disability"
             ],
-            "weight": 1
+            "weight": 0.25
         },
         {
             "text": "has a holy symbol branded onto hand",
             "tags": [
                 "jewelry"
             ],
-            "weight": 1
+            "weight": 0.5
         },
         {
             "text": "has piercings",
