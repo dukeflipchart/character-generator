@@ -2,21 +2,29 @@ import styled from 'styled-components';
 import { darken } from 'polished';
 
 export const colors = {
-    bard: '#E052E0',
-    clericRed: '#EB4747',
-    druid: '#60DF20',
-    paladin: '#F5D63D',
-    ranger: '#2EA02E',
-    sorcerer: '#F2800D',
-    warlockPurple: '#A852FF',
-    wizardBlue: '#4C88FF'
+    red4: '#C34727',
+    yellow4: '#8B7409',
+    green4: '#208058',
+    green5: '#3A9D74',
+    blue4: '#456DC9',
+    blue5: '#628AE6',
+    purple4: '#984EC7',
+    purple5: '#B56DE5',
+	neutral9: `#FFFFFF`,
+	neutral7: `#C4C4C4`,
+    neutral4: '#707070',
+	neutral1: `#1C1C1C`
+}
+
+export const breakpoints = {
+	first: '40rem'
 }
 
 export const BoardContainer = styled.div`
     box-sizing: border-box;
     width: 100%;
     padding: 1rem;
-    @media only screen and (min-width: 35rem) {
+    @media only screen and (min-width: ${breakpoints.first}) {
         padding: 2rem;
     }
 `;
@@ -28,16 +36,18 @@ export const CharacterCardContainer = styled.div`
     border: 1px solid #ddd;
     border-radius: 1rem;
     
-    @media only screen and (min-width: 35rem) {
+    @media only screen and (min-width: ${breakpoints.first}) {
         margin: 2rem auto;
         padding: 2rem;
     }
 `;
 
 export const Button = styled.button`
+	border-radius: 0.75rem;
+	display: flex;
     margin: 0;
-    padding: 0.5rem;
-    background-color: ${colors.warlockPurple};
+    padding: 0.75rem;
+    background-color: ${colors.purple4};
     border: none;
     font-family: Montserrat, sans-serif;
     font-size: 1rem;
@@ -47,31 +57,34 @@ export const Button = styled.button`
     outline: none;
     cursor: pointer;
     svg {
-        width: 2rem;
+		flex: 0 0 2rem;
         height: 2rem;
     }
     :hover,
     :focus {
-        background-color: ${darken(0.1, colors.warlockPurple)};
+        background-color: ${darken(0.1, colors.purple4)};
     }
     :active {
-        background-color: ${colors.wizardBlue};
+        background-color: ${colors.blue4};
     }
 `;
 
-export const TopToolbarButton = styled(Button)`
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    border-radius: 1rem;
-    padding: 1rem;
-    width: 100%;
-    svg {
-        width: 2rem;
-        height: 2rem;
-        margin: -0.5rem 1rem -0.5rem -0.5rem;
-    }
+export const ButtonLabel = styled.span`
+	display: none;
+
+	@media only screen and (min-width: ${breakpoints.first}) {
+		display: inline;
+		margin-left: 0.5rem;
+	}
+`;
+
+export const PrimaryButton = styled(Button)`
+	@media only screen and (min-width: ${breakpoints.first}) {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+	}
 `;
 
 export const Label = styled.label`
@@ -121,6 +134,18 @@ export const TopToolbarColumn = styled.div`
     }
 `;
 
+export const TopToolbarButtonColumn = styled.div`
+    flex: 0 0 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    box-sizing: border-box;
+	padding-left: 1rem;
+	@media only screen and (min-width: ${breakpoints.first}) {
+		flex: 1 1 0;
+	}
+`;
+
 export const CharacterCardToolbar = styled.div`
     float: right;
 `;
@@ -136,7 +161,7 @@ export const ToolbarButton = styled(Button)`
         margin-right: 1em;
     }
     svg {
-        color: ${colors.warlockPurple};
+        color: ${colors.purple4};
         width: 100%;
         height: 100%;
     }
@@ -144,16 +169,16 @@ export const ToolbarButton = styled(Button)`
     :focus {
         background-color: transparent;
         svg {
-            color: ${colors.wizardBlue};
+            color: ${colors.blue4};
         }
     }
     :active {
         background-color: transparent;
         svg {
-            color: ${darken(0.1, colors.wizardBlue)};
+            color: ${darken(0.1, colors.purple4)};
         }
     }
-    @media only screen and (min-width: 35rem) {
+    @media only screen and (min-width: ${breakpoints.first}) {
         width: 2rem;
         height: 2rem;
         margin-top: 0;
@@ -178,7 +203,7 @@ export const NameWrapper = styled.h1`
 	font-family: Montserrat, serif;
     margin-top: 0;
     margin-bottom: 0.5rem;
-    @media only screen and (min-width: 35rem) {
+    @media only screen and (min-width: ${breakpoints.first}) {
         font-size: 2.5rem;
         margin-top: -1rem;
         margin-bottom: 0.5rem;
@@ -186,7 +211,7 @@ export const NameWrapper = styled.h1`
 `;
 
 export const CharacterCardRow = styled.div`
-    @media only screen and (min-width: 35rem) {
+    @media only screen and (min-width: ${breakpoints.first}) {
         display: flex;
         flex-direction: row;
     }
@@ -197,7 +222,7 @@ export const CharacterCardColumn = styled.div`
     :not(:last-child) {
         margin-bottom: 1.65rem;
     }
-    @media only screen and (min-width: 35rem) {
+    @media only screen and (min-width: ${breakpoints.first}) {
         :not(:last-child) {
             border-right: 1px solid #ddd;
             padding-right: 2rem;

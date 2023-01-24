@@ -25,7 +25,6 @@ const indefiniteArticleFor = string => {
     return VOWELS.includes(string.charAt(0)) ? 'an' : 'a';
 }
 
-// this logic should moved to the character module
 const displayGender = (age, gender) => {
     switch (gender) {
         case 'cis male': return ['young', 'teenage'].includes(age) ? 'boy' : 'man';
