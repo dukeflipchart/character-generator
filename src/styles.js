@@ -8,6 +8,7 @@ export const colors = {
     green5: '#3A9D74',
     blue4: '#456DC9',
     blue5: '#628AE6',
+	blue8: '#D2E2FE',
     purple4: '#984EC7',
     purple5: '#B56DE5',
 	neutral9: `#FFFFFF`,
@@ -45,6 +46,8 @@ export const CharacterCardContainer = styled.div`
 export const Button = styled.button`
 	border-radius: 0.75rem;
 	display: flex;
+	align-items: center;
+	justify-content: center;
     margin: 0;
     padding: 0.75rem;
     background-color: ${colors.purple4};
@@ -148,27 +151,29 @@ export const TopToolbarButtonColumn = styled.div`
 `;
 
 export const CharacterCardToolbar = styled.div`
+	display: flex;
     float: right;
+	margin: -2rem;
 `;
 
 export const ToolbarButton = styled(Button)`
-    width: 1.5rem;
-    height: 1.5rem;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+	display: flex;
+    height: 3rem;
     padding: 0;
     background-color: transparent;
     border: none;
-    margin-top: 0.45rem;
-    :not(:last-of-type) {
-        margin-right: 1em;
-    }
+	text-align: center;
+    width: 3rem;
     svg {
+		width: 1.75rem;
+		height: 1.75rem;
         color: ${colors.purple4};
-        width: 100%;
-        height: 100%;
     }
     :hover,
     :focus {
-        background-color: transparent;
+        background-color: ${colors.blue8};
         svg {
             color: ${colors.blue4};
         }
@@ -180,9 +185,8 @@ export const ToolbarButton = styled(Button)`
         }
     }
     @media only screen and (min-width: ${breakpoints.first}) {
-        width: 2rem;
-        height: 2rem;
-        margin-top: 0;
+        width: 4rem;
+        height: 4rem;
     }
 `;
 
