@@ -15,6 +15,7 @@ import {
     CharacterCardContainer,
     CharacterCardRow,
     CharacterCardToolbar,
+	ClickableAttribute,
 	MainInfoWrapper,
     NameWrapper,
     ToolbarButton,
@@ -39,14 +40,6 @@ const displayGender = (age, gender) => {
         default: return 'person';
     }
 }
-
-export const ClickableAttribute = styled.span`
-    :hover {
-        color: #999;
-        cursor: pointer;
-        text-decoration: line-through;
-    }
-`;
 
 /**
  * A hackjob of a template parser, that knows a bit of grammar.

@@ -108,7 +108,7 @@ export const Label = styled.label`
 `;
 
 export const Select = styled.select`
-    border: 1px solid #ddd;
+    border: 1px solid ${colors.neutral8};
     border-radius: 1rem;
     font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
@@ -137,13 +137,17 @@ export const TopToolbarColumn = styled.div`
     flex-direction: column;
     justify-content: flex-end;
     box-sizing: border-box;
-    :not(:last-child) {
-        padding-right: 1rem;
-        margin-bottom: 0;
-    }
-    :not(:first-child) {
-        padding-left: 1rem;
-    }
+
+	@media only screen and (min-width: ${breakpoints.first}) {
+		:not(:last-child) {
+			padding-right: 1rem;
+			margin-bottom: 0;
+		}
+
+		:not(:first-child) {
+			padding-left: 1rem;
+		}
+	}
 `;
 
 export const TopToolbarButtonColumn = styled.div`
@@ -153,6 +157,7 @@ export const TopToolbarButtonColumn = styled.div`
     justify-content: flex-end;
     box-sizing: border-box;
 	padding-left: 1rem;
+
 	@media only screen and (min-width: ${breakpoints.first}) {
 		flex: 1 1 0;
 	}
@@ -175,11 +180,11 @@ export const ToolbarButton = styled(Button)`
 	border-top-right-radius: 0;
 	display: flex;
 	text-align: center;
-	padding: 1.75rem;
+	padding: 1.5rem 0.75rem;
 
     svg {
 		width: 1.5rem;
-		height: 1.25rem;
+		height: 1.5rem;
         color: ${colors.purple4};
 
 		@media only screen and (min-width: ${breakpoints.first}) {
@@ -203,8 +208,16 @@ export const ToolbarButton = styled(Button)`
         }
     }
 
+	:last-child {
+		padding-right: 1.5rem;
+	}
+
     @media only screen and (min-width: ${breakpoints.first}) {
-		padding: 1.85rem;
+		padding: 1.85rem 1rem;
+
+		:last-child {
+			padding-right: 1.85rem;
+		}
 	}
 `;
 
@@ -225,6 +238,14 @@ export const ToolbarDeleteButton = styled(ToolbarButton)`
         svg {
             color: ${darken(0.1, colors.red3)};
         }
+    }
+`;
+
+export const ClickableAttribute = styled.span`
+    :hover {
+        color: ${colors.red4};
+        cursor: pointer;
+        text-decoration: line-through;
     }
 `;
 
