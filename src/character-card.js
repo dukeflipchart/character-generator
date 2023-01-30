@@ -10,12 +10,15 @@ import TrashSolid from './icons/TrashSolid';
 
 import {
     AttributeGroupLabel,
+	AttributeGroupWrapper,
     CharacterCardColumn,
     CharacterCardContainer,
     CharacterCardRow,
     CharacterCardToolbar,
+	MainInfoWrapper,
     NameWrapper,
-    ToolbarButton
+    ToolbarButton,
+	ToolbarDeleteButton
 } from './styles.js';
 
 const capitalize = string => string && string.charAt(0).toUpperCase() + string.slice(1);
@@ -36,12 +39,6 @@ const displayGender = (age, gender) => {
         default: return 'person';
     }
 }
-
-const AttributeGroupWrapper = styled.div`
-    :not(:last-child) {
-        margin-bottom: 1.65rem;
-    }
-`;
 
 export const ClickableAttribute = styled.span`
     :hover {
@@ -200,14 +197,16 @@ export const CharacterCard = ({
                 <ToolbarButton onClick={() => copy(createTextDescription({ attributeConfigs, values: character }))}>
                     <ClipboardSolid />
                 </ToolbarButton>
-                <ToolbarButton onClick={() => deleteCharacter()}>
+                <ToolbarDeleteButton onClick={() => deleteCharacter()}>
                     <TrashSolid />
-                </ToolbarButton>
+                </ToolbarDeleteButton>
             </CharacterCardToolbar>
             <NameWrapper>
                 <AttributeGroup {...attributeGroupProps('name')} />
             </NameWrapper>
-            <AttributeGroup {...attributeGroupProps('description')} />
+			<MainInfoWrapper>
+            	<AttributeGroup {...attributeGroupProps('description')} />
+			</MainInfoWrapper>
             <CharacterCardRow>
                 <CharacterCardColumn>
                     <AttributeGroup {...attributeGroupProps('job')} />

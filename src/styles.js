@@ -2,19 +2,27 @@ import styled from 'styled-components';
 import { darken } from 'polished';
 
 export const colors = {
+	red3: '#9C2F13',
     red4: '#C34727',
+	red8: '#FFB199',
+	red9: '#FFD9CD',
     yellow4: '#8B7409',
     green4: '#208058',
     green5: '#3A9D74',
     blue4: '#456DC9',
     blue5: '#628AE6',
 	blue8: '#D2E2FE',
+	purple3: '#7835A2',
     purple4: '#984EC7',
     purple5: '#B56DE5',
-	neutral9: `#FFFFFF`,
-	neutral7: `#C4C4C4`,
+    purple5: '#B56DE5',
+	purple8: '#E2B1FF',
+	purple9: '#F3D8FF',
+	neutral9: '#FFFFFF',
+	neutral8: '#C4C4C4',
     neutral4: '#707070',
-	neutral1: `#1C1C1C`
+	neutral2: '#393939',
+	neutral1: '#1C1C1C'
 }
 
 export const breakpoints = {
@@ -34,7 +42,7 @@ export const CharacterCardContainer = styled.div`
     max-width: 40rem;
     margin: 1rem auto;
     padding: 1rem;
-    border: 1px solid #ddd;
+    border: 1px solid ${colors.neutral8};
     border-radius: 1rem;
     
     @media only screen and (min-width: ${breakpoints.first}) {
@@ -153,44 +161,72 @@ export const TopToolbarButtonColumn = styled.div`
 export const CharacterCardToolbar = styled.div`
 	display: flex;
     float: right;
-	margin: -2rem;
+	margin: -1rem;
+	margin-left: 1rem;
+
+	@media only screen and (min-width: ${breakpoints.first}) {
+		margin: -2rem;
+    }
 `;
 
 export const ToolbarButton = styled(Button)`
+	background-color: transparent;
 	border-top-left-radius: 0;
 	border-top-right-radius: 0;
 	display: flex;
-    height: 3rem;
-    padding: 0;
-    background-color: transparent;
-    border: none;
 	text-align: center;
-    width: 3rem;
+	padding: 1.75rem;
+
     svg {
-		width: 1.75rem;
-		height: 1.75rem;
+		width: 1.5rem;
+		height: 1.25rem;
         color: ${colors.purple4};
+
+		@media only screen and (min-width: ${breakpoints.first}) {
+			width: 1.75rem;
+			height: 1.75rem;
+		}
     }
+
     :hover,
     :focus {
-        background-color: ${colors.blue8};
+        background-color: ${colors.purple9};
         svg {
-            color: ${colors.blue4};
+            color: ${colors.purple3};
         }
     }
+
     :active {
-        background-color: transparent;
+        background-color: ${colors.purple8};
         svg {
-            color: ${darken(0.1, colors.purple4)};
+            color: ${darken(0.1, colors.purple3)};
         }
     }
+
     @media only screen and (min-width: ${breakpoints.first}) {
-        width: 4rem;
-        height: 4rem;
-    }
+		padding: 1.85rem;
+	}
 `;
 
-export const ToolbarDeleteButton = styled.button``;
+export const ToolbarDeleteButton = styled(ToolbarButton)`
+	border-top-right-radius: 0.75rem;
+	border-bottom-right-radius: 0;
+	
+    :hover,
+    :focus {
+        background-color: ${colors.red9};
+        svg {
+            color: ${colors.red3};
+        }
+    }
+	
+	:active {
+        background-color: ${colors.red8};
+        svg {
+            color: ${darken(0.1, colors.red3)};
+        }
+    }
+`;
 
 export const AttributeGroupLabel = styled.h4`
     display: block;
@@ -203,15 +239,25 @@ export const AttributeGroupLabel = styled.h4`
     padding: 0;
 `;
 
+export const AttributeGroupWrapper = styled.div`
+    :not(:last-child) {
+        margin-bottom: 1.65rem;
+    }
+`;
+
+export const MainInfoWrapper = styled.div`
+    margin-bottom: 2.25rem;
+`;
+
 export const NameWrapper = styled.h1`
-    font-size: 2rem;
+    font-size: 1.75rem;
 	font-family: Montserrat, serif;
     margin-top: 0;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
     @media only screen and (min-width: ${breakpoints.first}) {
-        font-size: 2.5rem;
+        font-size: 2.25rem;
         margin-top: -1rem;
-        margin-bottom: 0.5rem;
+		margin-bottom: 0.5rem;
     }
 `;
 
