@@ -6,11 +6,13 @@ import './index.css';
 import UserPlusSolid from './icons/UserPlusSolid';
 import {
     BoardContainer,
+	ButtonLabel,
     Label,
     Option,
     TopToolbar,
-    TopToolbarButton,
+    PrimaryButton,
     TopToolbarColumn,
+	TopToolbarButtonColumn,
     Select,
     SelectContainer
 } from './styles.js';
@@ -108,11 +110,11 @@ class Board extends React.Component {
                             </Select>
                         </SelectContainer>
                     </TopToolbarColumn>
-                    <TopToolbarColumn>
-                        <TopToolbarButton onClick={() => this.addCharacter()}>
-                            <UserPlusSolid /> Meet someone new
-                        </TopToolbarButton>
-                    </TopToolbarColumn>
+                    <TopToolbarButtonColumn>
+                        <PrimaryButton onClick={() => this.addCharacter()}>
+                            <UserPlusSolid /><ButtonLabel>Meet someone new</ButtonLabel>
+                        </PrimaryButton>
+                    </TopToolbarButtonColumn>
                 </TopToolbar>
                 {Object.entries(this.state.characters)
                     .map(([uid, character]) => <CharacterCard

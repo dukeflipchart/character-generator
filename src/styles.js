@@ -2,21 +2,38 @@ import styled from 'styled-components';
 import { darken } from 'polished';
 
 export const colors = {
-    bard: '#E052E0',
-    clericRed: '#EB4747',
-    druid: '#60DF20',
-    paladin: '#F5D63D',
-    ranger: '#2EA02E',
-    sorcerer: '#F2800D',
-    warlockPurple: '#A852FF',
-    wizardBlue: '#4C88FF'
+	red3: '#9C2F13',
+    red4: '#C34727',
+	red8: '#FFB199',
+	red9: '#FFD9CD',
+    yellow4: '#8B7409',
+    green4: '#208058',
+    green5: '#3A9D74',
+    blue4: '#456DC9',
+    blue5: '#628AE6',
+	blue8: '#D2E2FE',
+	purple3: '#7835A2',
+    purple4: '#984EC7',
+    purple5: '#B56DE5',
+    purple5: '#B56DE5',
+	purple8: '#E2B1FF',
+	purple9: '#F3D8FF',
+	neutral9: '#FFFFFF',
+	neutral8: '#C4C4C4',
+    neutral4: '#707070',
+	neutral2: '#393939',
+	neutral1: '#1C1C1C'
+}
+
+export const breakpoints = {
+	first: '40rem'
 }
 
 export const BoardContainer = styled.div`
     box-sizing: border-box;
     width: 100%;
     padding: 1rem;
-    @media only screen and (min-width: 35rem) {
+    @media only screen and (min-width: ${breakpoints.first}) {
         padding: 2rem;
     }
 `;
@@ -25,19 +42,23 @@ export const CharacterCardContainer = styled.div`
     max-width: 40rem;
     margin: 1rem auto;
     padding: 1rem;
-    border: 1px solid #ddd;
+    border: 1px solid ${colors.neutral8};
     border-radius: 1rem;
     
-    @media only screen and (min-width: 35rem) {
+    @media only screen and (min-width: ${breakpoints.first}) {
         margin: 2rem auto;
         padding: 2rem;
     }
 `;
 
 export const Button = styled.button`
+	border-radius: 0.75rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
     margin: 0;
-    padding: 0.5rem;
-    background-color: ${colors.warlockPurple};
+    padding: 0.75rem;
+    background-color: ${colors.purple4};
     border: none;
     font-family: Montserrat, sans-serif;
     font-size: 1rem;
@@ -47,31 +68,35 @@ export const Button = styled.button`
     outline: none;
     cursor: pointer;
     svg {
-        width: 2rem;
+		flex: 0 0 2rem;
         height: 2rem;
     }
     :hover,
     :focus {
-        background-color: ${darken(0.1, colors.warlockPurple)};
+        background-color: ${darken(0.1, colors.purple4)};
     }
     :active {
-        background-color: ${colors.wizardBlue};
+        background-color: ${colors.blue4};
     }
 `;
 
-export const TopToolbarButton = styled(Button)`
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    border-radius: 1rem;
-    padding: 1rem;
-    width: 100%;
-    svg {
-        width: 2rem;
-        height: 2rem;
-        margin: -0.5rem 1rem -0.5rem -0.5rem;
-    }
+export const ButtonLabel = styled.span`
+	display: none;
+
+	@media only screen and (min-width: ${breakpoints.first}) {
+		display: inline;
+		margin-left: 0.5rem;
+		white-space: nowrap;
+	}
+`;
+
+export const PrimaryButton = styled(Button)`
+	@media only screen and (min-width: ${breakpoints.first}) {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+	}
 `;
 
 export const Label = styled.label`
@@ -83,7 +108,7 @@ export const Label = styled.label`
 `;
 
 export const Select = styled.select`
-    border: 1px solid #ddd;
+    border: 1px solid ${colors.neutral8};
     border-radius: 1rem;
     font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
@@ -112,55 +137,117 @@ export const TopToolbarColumn = styled.div`
     flex-direction: column;
     justify-content: flex-end;
     box-sizing: border-box;
-    :not(:last-child) {
-        padding-right: 1rem;
-        margin-bottom: 0;
-    }
-    :not(:first-child) {
-        padding-left: 1rem;
-    }
+
+	@media only screen and (min-width: ${breakpoints.first}) {
+		:not(:last-child) {
+			padding-right: 1rem;
+			margin-bottom: 0;
+		}
+
+		:not(:first-child) {
+			padding-left: 1rem;
+		}
+	}
+`;
+
+export const TopToolbarButtonColumn = styled.div`
+    flex: 0 0 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    box-sizing: border-box;
+	padding-left: 1rem;
+
+	@media only screen and (min-width: ${breakpoints.first}) {
+		flex: 1 1 0;
+	}
 `;
 
 export const CharacterCardToolbar = styled.div`
+	display: flex;
     float: right;
+	margin: -1rem;
+	margin-left: 1rem;
+
+	@media only screen and (min-width: ${breakpoints.first}) {
+		margin: -2rem;
+    }
 `;
 
 export const ToolbarButton = styled(Button)`
-    width: 1.5rem;
-    height: 1.5rem;
-    padding: 0;
-    background-color: transparent;
-    border: none;
-    margin-top: 0.45rem;
-    :not(:last-of-type) {
-        margin-right: 1em;
-    }
+	background-color: transparent;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+	display: flex;
+	text-align: center;
+	padding: 1.5rem 0.75rem;
+
     svg {
-        color: ${colors.warlockPurple};
-        width: 100%;
-        height: 100%;
+		width: 1.5rem;
+		height: 1.5rem;
+        color: ${colors.purple4};
+
+		@media only screen and (min-width: ${breakpoints.first}) {
+			width: 1.75rem;
+			height: 1.75rem;
+		}
     }
+
     :hover,
     :focus {
-        background-color: transparent;
+        background-color: ${colors.purple9};
         svg {
-            color: ${colors.wizardBlue};
+            color: ${colors.purple3};
         }
     }
+
     :active {
-        background-color: transparent;
+        background-color: ${colors.purple8};
         svg {
-            color: ${darken(0.1, colors.wizardBlue)};
+            color: ${darken(0.1, colors.purple3)};
         }
     }
-    @media only screen and (min-width: 35rem) {
-        width: 2rem;
-        height: 2rem;
-        margin-top: 0;
+
+	:last-child {
+		padding-right: 1.5rem;
+	}
+
+    @media only screen and (min-width: ${breakpoints.first}) {
+		padding: 1.85rem 1rem;
+
+		:last-child {
+			padding-right: 1.85rem;
+		}
+	}
+`;
+
+export const ToolbarDeleteButton = styled(ToolbarButton)`
+	border-top-right-radius: 0.75rem;
+	border-bottom-right-radius: 0;
+	
+    :hover,
+    :focus {
+        background-color: ${colors.red9};
+        svg {
+            color: ${colors.red3};
+        }
+    }
+	
+	:active {
+        background-color: ${colors.red8};
+        svg {
+            color: ${darken(0.1, colors.red3)};
+        }
     }
 `;
 
-export const ToolbarDeleteButton = styled.button``;
+export const ClickableAttribute = styled.span`
+    :hover {
+        color: ${colors.red4};
+        cursor: pointer;
+        text-decoration: line-through;
+    }
+`;
 
 export const AttributeGroupLabel = styled.h4`
     display: block;
@@ -173,20 +260,30 @@ export const AttributeGroupLabel = styled.h4`
     padding: 0;
 `;
 
+export const AttributeGroupWrapper = styled.div`
+    :not(:last-child) {
+        margin-bottom: 1.65rem;
+    }
+`;
+
+export const MainInfoWrapper = styled.div`
+    margin-bottom: 2.25rem;
+`;
+
 export const NameWrapper = styled.h1`
-    font-size: 2rem;
+    font-size: 1.75rem;
 	font-family: Montserrat, serif;
     margin-top: 0;
-    margin-bottom: 0.5rem;
-    @media only screen and (min-width: 35rem) {
-        font-size: 2.5rem;
+    margin-bottom: 0.75rem;
+    @media only screen and (min-width: ${breakpoints.first}) {
+        font-size: 2.25rem;
         margin-top: -1rem;
-        margin-bottom: 0.5rem;
+		margin-bottom: 0.5rem;
     }
 `;
 
 export const CharacterCardRow = styled.div`
-    @media only screen and (min-width: 35rem) {
+    @media only screen and (min-width: ${breakpoints.first}) {
         display: flex;
         flex-direction: row;
     }
@@ -197,7 +294,7 @@ export const CharacterCardColumn = styled.div`
     :not(:last-child) {
         margin-bottom: 1.65rem;
     }
-    @media only screen and (min-width: 35rem) {
+    @media only screen and (min-width: ${breakpoints.first}) {
         :not(:last-child) {
             border-right: 1px solid #ddd;
             padding-right: 2rem;
