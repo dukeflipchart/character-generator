@@ -112,7 +112,7 @@ class Board extends React.Component {
                     </TopToolbarColumn>
                     <TopToolbarButtonColumn>
                         <PrimaryButton onClick={() => this.addCharacter()}>
-                            <UserPlusSolid /><ButtonLabel>Generate character</ButtonLabel>
+                            <UserPlusSolid /><ButtonLabel>Meet someone new</ButtonLabel>
                         </PrimaryButton>
                     </TopToolbarButtonColumn>
                 </TopToolbar>

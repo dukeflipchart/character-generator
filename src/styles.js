@@ -75,6 +75,7 @@ export const ButtonLabel = styled.span`
 	@media only screen and (min-width: ${breakpoints.first}) {
 		display: inline;
 		margin-left: 0.5rem;
+		white-space: nowrap;
 	}
 `;
 
