@@ -15,7 +15,6 @@ export const colors = {
 	purple3: '#7835A2',
     purple4: '#984EC7',
     purple5: '#B56DE5',
-    purple5: '#B56DE5',
 	purple8: '#E2B1FF',
 	purple9: '#F3D8FF',
 	neutral9: '#FFFFFF',
