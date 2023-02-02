@@ -215,9 +215,10 @@
         {
             "text": "missing teeth",
             "tags": [
-                "teeth"
+                "teeth",
+				"disability"
             ],
-            "weight": 2
+            "weight": 1
         },
         {
             "text": "very tall",
@@ -304,27 +305,6 @@
             "weight": 2
         },
         {
-            "text": "rotund",
-            "tags": [
-                "build"
-            ],
-            "weight": 2
-        },
-        {
-            "text": "slender",
-            "tags": [
-                "build"
-            ],
-            "weight": 2
-        },
-        {
-            "text": "voluptuous",
-            "tags": [
-                "build"
-            ],
-            "weight": 1
-        },
-        {
             "text": "curvy",
             "tags": [
                 "build"
@@ -337,27 +317,6 @@
                 "build"
             ],
             "weight": 1
-        },
-        {
-            "text": "scrawny",
-            "tags": [
-                "build"
-            ],
-            "weight": 2
-        },
-        {
-            "text": "robust",
-            "tags": [
-                "build"
-            ],
-            "weight": 2
-        },
-        {
-            "text": "plump",
-            "tags": [
-                "build"
-            ],
-            "weight": 2
         },
         {
             "text": "well-built",
@@ -374,20 +333,6 @@
             "weight": 2
         },
         {
-            "text": "hefty",
-            "tags": [
-                "build"
-            ],
-            "weight": 2
-        },
-        {
-            "text": "lean",
-            "tags": [
-                "build"
-            ],
-            "weight": 2
-        },
-        {
             "text": "has an unusual hair color",
             "tags": [
                 "hair"
@@ -395,7 +340,7 @@
             "weight": 1
         },
         {
-            "text": "has elaborately braided hair or beard",
+            "text": "has elaborately braided hair",
             "tags": [
                 "hair"
             ],
@@ -427,21 +372,21 @@
             "tags": [
                 "hair"
             ],
-            "weight": 1
+            "weight": 0.5
         },
         {
             "text": "missing fingers",
             "tags": [
                 "disability"
             ],
-            "weight": 1
+            "weight": 0.25
         },
         {
             "text": "noticeable scar",
             "tags": [
                 "disability"
             ],
-            "weight": 1
+            "weight": 0.5
         },
         {
             "text": "blind in one eye",
@@ -449,7 +394,7 @@
                 "disability",
                 "eyes"
             ],
-            "weight": 1
+            "weight": 0.25
         },
         {
             "text": "completely blind",
@@ -457,56 +402,56 @@
                 "disability",
                 "eyes"
             ],
-            "weight": 1
+            "weight": 0.25
         },
         {
             "text": "hard of hearing",
             "tags": [
                 "disability"
             ],
-            "weight": 2
+            "weight": 1
         },
         {
             "text": "deaf",
             "tags": [
                 "disability"
             ],
-            "weight": 1
+            "weight": 0.25
         },
         {
             "text": "missing an arm",
             "tags": [
                 "disability"
             ],
-            "weight": 1
+            "weight": 0.25
         },
         {
             "text": "missing a leg",
             "tags": [
                 "disability"
             ],
-            "weight": 1
+            "weight": 0.25
         },
         {
             "text": "has a holy symbol branded onto hand",
             "tags": [
                 "jewelry"
             ],
-            "weight": 1
+            "weight": 0.25
         },
         {
             "text": "has piercings",
             "tags": [
                 "jewelry"
             ],
-            "weight": 2
+            "weight": 0.75
         },
         {
             "text": "has tatoos",
             "tags": [
                 "jewelry"
             ],
-            "weight": 2
+            "weight": 0.75
         },
         {
             "text": "wears spectacles",
@@ -514,7 +459,7 @@
                 "jewelry",
                 "eyes"
             ],
-            "weight": 2
+            "weight": 1
         },
         {
             "text": "wears religious jewelry",
@@ -528,105 +473,28 @@
             "tags": [
                 "jewelry"
             ],
-            "weight": 2
+            "weight": 1
         },
         {
             "text": "wears plain clothes",
             "tags": [
                 "clothes"
             ],
-            "weight": 2
+            "weight": 1
         },
         {
             "text": "wears colorful clothes",
             "tags": [
                 "clothes"
             ],
-            "weight": 2
-        },
-        {
-            "text": "wears elaborate clothes",
-            "tags": [
-                "clothes"
-            ],
-            "weight": 2
-        },
-        {
-            "text": "wears simple clothes",
-            "tags": [
-                "clothes"
-            ],
-            "weight": 2
-        },
-        {
-            "text": "wears ornate clothes",
-            "tags": [
-                "clothes"
-            ],
-            "weight": 2
-        },
-        {
-            "text": "wears practical clothes",
-            "tags": [
-                "clothes"
-            ],
-            "weight": 2
-        },
-        {
-            "text": "wears fashionable clothes",
-            "tags": [
-                "clothes"
-            ],
-            "weight": 2
-        },
-        {
-            "text": "wears outdated clothes",
-            "tags": [
-                "clothes"
-            ],
-            "weight": 2
-        },
-        {
-            "text": "wears exotic clothes",
-            "tags": [
-                "clothes"
-            ],
             "weight": 1
-        },
-        {
-            "text": "wears gaudy clothes",
-            "tags": [
-                "clothes"
-            ],
-            "weight": 2
-        },
-        {
-            "text": "wears subdued clothes",
-            "tags": [
-                "clothes"
-            ],
-            "weight": 2
-        },
-        {
-            "text": "wears stylish clothes",
-            "tags": [
-                "clothes"
-            ],
-            "weight": 2
-        },
-        {
-            "text": "wears drab clothes",
-            "tags": [
-                "clothes"
-            ],
-            "weight": 2
         },
         {
             "text": "wears regal clothes",
             "tags": [
                 "clothes"
             ],
-            "weight": 1
+            "weight": 0.25
         },
         {
             "text": "wears opulent clothes",
@@ -640,49 +508,28 @@
             "tags": [
                 "clothes"
             ],
-            "weight": 2
-        },
-        {
-            "text": "wears sleek clothes",
-            "tags": [
-                "clothes"
-            ],
-            "weight": 2
+            "weight": 1
         },
         {
             "text": "wears elegant clothes",
             "tags": [
                 "clothes"
             ],
-            "weight": 2
-        },
-        {
-            "text": "wears bohemian clothes",
-            "tags": [
-                "clothes"
-            ],
-            "weight": 2
-        },
-        {
-            "text": "wears casual clothes",
-            "tags": [
-                "clothes"
-            ],
-            "weight": 2
+            "weight": 1
         },
         {
             "text": "wears flashy clothes",
             "tags": [
                 "clothes"
             ],
-            "weight": 2
+            "weight": 1
         },
         {
             "text": "wears formal clothes",
             "tags": [
                 "clothes"
             ],
-            "weight": 2
+            "weight": 0.5
         }
     ],
 	"speechStyle": [
@@ -1616,94 +1463,67 @@
     ],
     "mood": [
         {
-            "text": "Amused"
+            "text": "happy"
         },
         {
-            "text": "Blissful"
+            "text": "sad"
         },
         {
-            "text": "Calm"
+            "text": "angry"
         },
         {
-            "text": "Curious"
+            "text": "content"
         },
         {
-            "text": "Cheerful"
+            "text": "excited"
         },
         {
-            "text": "Content"
+            "text": "frustrated"
         },
         {
-            "text": "Ecstatic"
+            "text": "nervous"
         },
         {
-            "text": "Energetic"
+            "text": "calm"
         },
         {
-            "text": "Excited"
+            "text": "confused"
         },
         {
-            "text": "Flirty"
+            "text": "annoyed"
         },
         {
-            "text": "Joyful"
+            "text": "elated"
         },
         {
-            "text": "Peaceful"
+            "text": "irritable"
         },
         {
-            "text": "Silly"
+            "text": "thrilled"
         },
         {
-            "text": "Angry"
+            "text": "gloomy"
         },
         {
-            "text": "Annoyed"
+            "text": "apathetic"
         },
         {
-            "text": "Anxious"
+            "text": "perplexed"
         },
         {
-            "text": "Apathetic"
+            "text": "overwhelmed"
         },
         {
-            "text": "Ashamed"
+            "text": "joyful"
         },
         {
-            "text": "Cranky"
+            "text": "disillusioned"
         },
         {
-            "text": "Contemptuous"
+            "text": "bitter"
         },
         {
-            "text": "Depressed"
-        },
-        {
-            "text": "Envious"
-        },
-        {
-            "text": "Frustrated"
-        },
-        {
-            "text": "Grumpy"
-        },
-        {
-            "text": "Indifferent"
-        },
-        {
-            "text": "Irritated"
-        },
-        {
-            "text": "Melancholy"
-        },
-        {
-            "text": "Restless"
-        },
-        {
-            "text": "Sad"
-        },
-        {
-            "text": "Stressed"
+            "text": "resentful"
         }
     ],
     "givenName": {
