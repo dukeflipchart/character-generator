@@ -899,31 +899,39 @@
     "competency": [
         {
             "text": "hopelessly incompetent",
-            "weight": 4
+            "weight": 1
         },
         {
             "text": "incompetent",
-            "weight": 8
+            "weight": 4
         },
         {
             "text": "inept",
-            "weight": 16
+            "weight": 4
+        },
+        {
+            "text": "unremarkable",
+            "weight": 8
         },
         {
             "text": "inexperienced",
-            "weight": 16
+            "weight": 8
+        },
+        {
+            "text": "experienced",
+            "weight": 8
         },
         {
             "text": "capable",
-            "weight": 16
+            "weight": 8
         },
         {
             "text": "talented",
-            "weight": 16
+            "weight": 8
         },
         {
             "text": "gifted",
-            "weight": 16
+            "weight": 8
         },
         {
             "text": "competent",
@@ -931,7 +939,7 @@
         },
         {
             "text": "skilled",
-            "weight": 8
+            "weight": 4
         },
         {
             "text": "very talented",
