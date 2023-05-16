@@ -98,18 +98,6 @@
             "weight": 9
         },
         { 
-            "text": "Javanese", 
-            "weight": 8
-        },
-        { 
-            "text": "Malay", 
-            "weight": 7
-        },
-        { 
-            "text": "Telugu", 
-            "weight": 7
-        },
-        { 
             "text": "Vietnamese", 
             "weight": 7
         },
@@ -1569,6 +1557,60 @@
                 },
                 {
                     "text": "Gang"
+                },
+                {
+                    "text": "Fang"
+                },
+                {
+                    "text": "Lim"
+                },
+                {
+                    "text": "Huang"
+                },
+                {
+                    "text": "Tu"
+                },
+                {
+                    "text": "Xun"
+                },
+                {
+                    "text": "Ling"
+                },
+                {
+                    "text": "Shun"
+                },
+                {
+                    "text": "Li"
+                },
+                {
+                    "text": "Zhen"
+                },
+                {
+                    "text": "Zhou"
+                },
+                {
+                    "text": "Jia"
+                },
+                {
+                    "text": "Xinyi"
+                },
+                {
+                    "text": "Gang"
+                },
+                {
+                    "text": "Jiang"
+                },
+                {
+                    "text": "Zan"
+                },
+                {
+                    "text": "Wu"
+                },
+                {
+                    "text": "Bai"
+                },
+                {
+                    "text": "Zhihao"
                 }
             ],
             "Feminine": [
@@ -1606,7 +1648,61 @@
                     "text": "Xia"
                 },
                 {
-                    "text": "Guiying"
+                    "text": "Mei"
+                },
+                {
+                    "text": "Yu"
+                },
+                {
+                    "text": "He"
+                },
+                {
+                    "text": "Xiang"
+                },
+                {
+                    "text": "Fang"
+                },
+                {
+                    "text": "Guo"
+                },
+                {
+                    "text": "Yun"
+                },
+                {
+                    "text": "Wu"
+                },
+                {
+                    "text": "Guo"
+                },
+                {
+                    "text": "Xiang"
+                },
+                {
+                    "text": "Min"
+                },
+                {
+                    "text": "Qiu"
+                },
+                {
+                    "text": "Ling"
+                },
+                {
+                    "text": "Xue"
+                },
+                {
+                    "text": "Wen"
+                },
+                {
+                    "text": "Yating"
+                },
+                {
+                    "text": "Yaling"
+                },
+                {
+                    "text": "Yijun"
+                },
+                {
+                    "text": "Hui"
                 }
             ],
             "Agender": 
@@ -1624,7 +1720,34 @@
                     "text": "Fang"
                 },
                 {
-                    "text": "Min"
+                    "text": "Mu"
+                },
+                {
+                    "text": "Lan"
+                },
+                {
+                    "text": "Yin"
+                },
+                {
+                    "text": "Ming"
+                },
+                {
+                    "text": "Lin"
+                },
+                {
+                    "text": "Guanting"
+                },
+                {
+                    "text": "Hai"
+                },
+                {
+                    "text": "Ning"
+                },
+                {
+                    "text": "Chen"
+                },
+                {
+                    "text": "Chin"
                 }
             ]
         },
@@ -1658,7 +1781,79 @@
                     "text": "Benjamín"
                 },
                 {
-                    "text": "Daniel"
+                    "text": "Samuel"
+                },
+                {
+                    "text": "Valeriano"
+                },
+                {
+                    "text": "Carmelo"
+                },
+                {
+                    "text": "Miguel Ángel"
+                },
+                {
+                    "text": "Maikel"
+                },
+                {
+                    "text": "Ruz"
+                },
+                {
+                    "text": "Graciano"
+                },
+                {
+                    "text": "Pelayo"
+                },
+                {
+                    "text": "Anselmo"
+                },
+                {
+                    "text": "Vidal"
+                },
+                {
+                    "text": "Rafael"
+                },
+                {
+                    "text": "Bolívar"
+                },
+                {
+                    "text": "Zacarías Luis"
+                },
+                {
+                    "text": "Ulises"
+                },
+                {
+                    "text": "Bernabé"
+                },
+                {
+                    "text": "Eberardo"
+                },
+                {
+                    "text": "Ruperto"
+                },
+                {
+                    "text": "Constantino"
+                },
+                {
+                    "text": "Natalio"
+                },
+                {
+                    "text": "Esteban"
+                },
+                {
+                    "text": "Pedro"
+                },
+                {
+                    "text": "Efraín"
+                },
+                {
+                    "text": "Juan Carlos"
+                },
+                {
+                    "text": "Juan"
+                },
+                {
+                    "text": "Carlos"
                 }
             ],
             "Feminine": [
@@ -1691,6 +1886,75 @@
                 },
                 {
                     "text": "Victoria"
+                },
+                {
+                    "text": "Estela Eva"
+                },
+                {
+                    "text": "María"
+                },
+                {
+                    "text": "Chita"
+                },
+                {
+                    "text": "Teresita María"
+                },
+                {
+                    "text": "Emigdia"
+                },
+                {
+                    "text": "Javiera"
+                },
+                {
+                    "text": "Sonia"
+                },
+                {
+                    "text": "Sarita"
+                },
+                {
+                    "text": "Estela"
+                },
+                {
+                    "text": "Florencia"
+                },
+                {
+                    "text": "Alexandra"
+                },
+                {
+                    "text": "Dorita"
+                },
+                {
+                    "text": "Octavia"
+                },
+                {
+                    "text": "Marianita"
+                },
+                {
+                    "text": "Pastora"
+                },
+                {
+                    "text": "Angelina"
+                },
+                {
+                    "text": "Marina"
+                },
+                {
+                    "text": "Etelvina"
+                },
+                {
+                    "text": "Yessenia"
+                },
+                {
+                    "text": "Bethania"
+                },
+                {
+                    "text": "Robertina"
+                },
+                {
+                    "text": "Yadira"
+                },
+                {
+                    "text": "María Luisa"
                 }
             ],
             "Agender": [
@@ -1710,7 +1974,19 @@
                     "text": "Reyes"
                 },
                 {
+                    "text": "Lucero"
+                },
+                {
+                    "text": "Lupe"
+                },
+                {
                     "text": "Trinidad"
+                },
+                {
+                    "text": "Cruz"
+                },
+                {
+                    "text": "Patrocinio"
                 }
             ]
         },
@@ -2413,6 +2689,140 @@
                     "text": "Swaran"
                 }
             ]
+        },
+        "German": {
+            "Masculine": [
+                {
+                    "text": "Ivo"
+                },
+                {
+                    "text": "Reinhardt"
+                },
+                {
+                    "text": "Arthur"
+                },
+                {
+                    "text": "Karlheinz"
+                },
+                {
+                    "text": "Theodor"
+                },
+                {
+                    "text": "Samuel"
+                },
+                {
+                    "text": "Paul"
+                },
+                {
+                    "text": "Klaus"
+                },
+                {
+                    "text": "Jonas"
+                },
+                {
+                    "text": "Diethelm"
+                },
+                {
+                    "text": "Jonathan"
+                },
+                {
+                    "text": "Rafael"
+                },
+                {
+                    "text": "Heino"
+                },
+                {
+                    "text": "Gottlieb"
+                },
+                {
+                    "text": "David"
+                },
+                {
+                    "text": "Axel"
+                }
+            ],
+            "Feminine": [
+                {
+                    "text": "Gloria"
+                },
+                {
+                    "text": "Ingeburg"
+                },
+                {
+                    "text": "Diana"
+                },
+                {
+                    "text": "Marianne"
+                },
+                {
+                    "text": "Ingrid"
+                },
+                {
+                    "text": "Emma"
+                },
+                {
+                    "text": "Maximiliane"
+                },
+                {
+                    "text": "Ilona"
+                },
+                {
+                    "text": "Krista"
+                },
+                {
+                    "text": "Amalie"
+                },
+                {
+                    "text": "Edith"
+                },
+                {
+                    "text": "Brigitte"
+                },
+                {
+                    "text": "Traudl"
+                },
+                {
+                    "text": "Irmhild"
+                },
+                {
+                    "text": "Regina"
+                },
+                {
+                    "text": "Adelheid"
+                },
+                {
+                    "text": "Ruth"
+                },
+                {
+                    "text": "Katharina"
+                },
+                {
+                    "text": "Gertrud"
+                }
+            ],
+            "Agender": [
+                {
+                    "text": "Heike"
+                },
+                {
+                    "text": "Eike"
+                },
+                {
+                    "text": "Chris"
+                },
+                {
+                    "text": "Maria"
+                },
+                {
+                    "text": "Ulli"
+                },
+                {
+                    "text": "Sigi"
+                },
+                {
+                    "text": "Maxi"
+                }
+            ]
         }
     },
     "familyName": {
@@ -2446,6 +2856,84 @@
             },
             {
                 "text": "Zhou"
+            },
+            {
+                "text": "Yan"
+            },
+            {
+                "text": "Jian"
+            },
+            {
+                "text": "Yazhu"
+            },
+            {
+                "text": "Xue"
+            },
+            {
+                "text": "Guanting"
+            },
+            {
+                "text": "Shui"
+            },
+            {
+                "text": "Zan"
+            },
+            {
+                "text": "Yazhu"
+            },
+            {
+                "text": "Hua"
+            },
+            {
+                "text": "Lian"
+            },
+            {
+                "text": "Yun"
+            },
+            {
+                "text": "Yong"
+            },
+            {
+                "text": "Xiuying"
+            },
+            {
+                "text": "Hong"
+            },
+            {
+                "text": "Yu"
+            },
+            {
+                "text": "Chao"
+            },
+            {
+                "text": "Yin"
+            },
+            {
+                "text": "Jian"
+            },
+            {
+                "text": "Zedong"
+            },
+            {
+                "text": "Ya"
+            },
+            {
+                "text": "Ru"
+            },
+            {
+                "text": "Xiulan"
+            },
+            {
+                "text": "Ling"
+            },
+            {
+                "text": "Zhihao"
+            },
+            {
+                "text": "Shui"
+            },
+            {
+                "text": "Chang"
             }
         ],
         "Spanish": [
@@ -2478,6 +2966,75 @@
             },
             {
                 "text": "Gómez"
+            },
+            {
+                "text": "Giménez"
+            },
+            {
+                "text": "Silva"
+            },
+            {
+                "text": "Borja"
+            },
+            {
+                "text": "Ojeda"
+            },
+            {
+                "text": "Espinoza"
+            },
+            {
+                "text": "Salvador"
+            },
+            {
+                "text": "Cuéllar"
+            },
+            {
+                "text": "Campo"
+            },
+            {
+                "text": "Romero"
+            },
+            {
+                "text": "Vega"
+            },
+            {
+                "text": "Quixada"
+            },
+            {
+                "text": "Castro"
+            },
+            {
+                "text": "Figueroa"
+            },
+            {
+                "text": "Santiago"
+            },
+            {
+                "text": "Vásquez"
+            },
+            {
+                "text": "Núñez"
+            },
+            {
+                "text": "Escárcega"
+            },
+            {
+                "text": "Diego"
+            },
+            {
+                "text": "Trujillo"
+            },
+            {
+                "text": "Holguín"
+            },
+            {
+                "text": "Montaña"
+            },
+            {
+                "text": "Caballero"
+            },
+            {
+                "text": "Gutiérrez"
             }
         ],
         "English": [
@@ -2510,6 +3067,144 @@
             },
             {
                 "text": "Taylor"
+            },
+            {
+                "text": "Baker"
+            },
+            {
+                "text": "Kendal"
+            },
+            {
+                "text": "Lennon"
+            },
+            {
+                "text": "Dalton"
+            },
+            {
+                "text": "Clarence"
+            },
+            {
+                "text": "Trey"
+            },
+            {
+                "text": "Dewey"
+            },
+            {
+                "text": "Emerson"
+            },
+            {
+                "text": "Leigh"
+            },
+            {
+                "text": "Brandt"
+            },
+            {
+                "text": "Read"
+            },
+            {
+                "text": "Addison"
+            },
+            {
+                "text": "Collin"
+            },
+            {
+                "text": "Kirsty"
+            },
+            {
+                "text": "Roddy"
+            },
+            {
+                "text": "Shea"
+            },
+            {
+                "text": "Willis"
+            },
+            {
+                "text": "Frances"
+            },
+            {
+                "text": "Nell"
+            },
+            {
+                "text": "Duncan"
+            },
+            {
+                "text": "Ryker"
+            },
+            {
+                "text": "Kaley"
+            },
+            {
+                "text": "Greer"
+            },
+            {
+                "text": "Randell"
+            },
+            {
+                "text": "Spears"
+            },
+            {
+                "text": "Quincy"
+            },
+            {
+                "text": "Lawson"
+            },
+            {
+                "text": "Short"
+            },
+            {
+                "text": "Leavitt"
+            },
+            {
+                "text": "Winfield"
+            },
+            {
+                "text": "Morrison"
+            },
+            {
+                "text": "Huff"
+            },
+            {
+                "text": "Breckinridge"
+            },
+            {
+                "text": "Barker"
+            },
+            {
+                "text": "Cannon"
+            },
+            {
+                "text": "Haines"
+            },
+            {
+                "text": "Brandon"
+            },
+            {
+                "text": "Russel"
+            },
+            {
+                "text": "Tracy"
+            },
+            {
+                "text": "Arrington"
+            },
+            {
+                "text": "Lynwood"
+            },
+            {
+                "text": "Boone"
+            },
+            {
+                "text": "Frank"
+            },
+            {
+                "text": "Ainsworth"
+            },
+            {
+                "text": "Rodney"
+            },
+            {
+                "text": "Richards"
             }
         ],
         "Hindi": [
@@ -2743,6 +3438,71 @@
             },
             {
                 "text": "Wahi"
+            }
+        ],
+        "German": [
+            {
+                "text": "Krantz"
+            },
+            {
+                "text": "Freudenberger"
+            },
+            {
+                "text": "Baumann"
+            },
+            {
+                "text": "Bach"
+            },
+            {
+                "text": "Böhmer"
+            },
+            {
+                "text": "Beiler"
+            },
+            {
+                "text": "Großer"
+            },
+            {
+                "text": "Köhler"
+            },
+            {
+                "text": "Schlosser"
+            },
+            {
+                "text": "Berger"
+            },
+            {
+                "text": "Biermann"
+            },
+            {
+                "text": "Weiß"
+            },
+            {
+                "text": "Schmitt"
+            },
+            {
+                "text": "Maurer"
+            },
+            {
+                "text": "Hahn"
+            },
+            {
+                "text": "Fuchs"
+            },
+            {
+                "text": "Feigenbaum"
+            },
+            {
+                "text": "Lange"
+            },
+            {
+                "text": "Nussbaum"
+            },
+            {
+                "text": "Käufer"
+            },
+            {
+                "text": "Baumgartner"
             }
         ]
     }
